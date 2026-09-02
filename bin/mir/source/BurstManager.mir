@@ -1,0 +1,229 @@
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Activity,1,14,22]; ]
+import Toybox.Activity;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+import Toybox.System;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Time,4,14,18]; ]
+import Toybox.Time;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 6; @symbol_moduledef = [BurstManager,6,7,19]; ]
+module BurstManager {
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 8; @position = 8; @symbol_vardef = [burstCount,8,8,18]; @symbol_type<0> = [Number,8,22,28]; ]
+    var burstCount as Number = 0;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 10; @position = 8; @symbol_vardef = [_isBursting,10,8,19]; @symbol_type<0> = [Boolean,10,23,30]; ]
+    var _isBursting as Boolean = false;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 11; @position = 8; @symbol_vardef = [_lastBurstTime,11,8,22]; @symbol_type<0> = [Number,11,26,32]; ]
+    var _lastBurstTime as Number = 0;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 15; @position = 10; @symbol_constdef = [BURST_SPEED_THRESHOLD,15,10,31]; @symbol_type<0> = [Float,15,35,40]; ]
+    const BURST_SPEED_THRESHOLD as Float = 3.61;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 18; @position = 10; @symbol_constdef = [BURST_RESET_THRESHOLD,18,10,31]; @symbol_type<0> = [Float,18,35,40]; ]
+    const BURST_RESET_THRESHOLD as Float = 3.06;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 21; @position = 10; @symbol_constdef = [COOLDOWN_SECONDS,21,10,26]; @symbol_type<0> = [Number,21,30,36]; ]
+    const COOLDOWN_SECONDS as Number = 4;
+    //! Resetuje licznik zrywów przed nowym meczem
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 24; @symbol_functiondef = [reset,24,13,18]; ]
+    function reset() as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_24_29_28_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 25 8 ]
+        %tmp.1 = 0;
+        symbol [ burstCount ? 25 8 18 ];
+        putv self :burstCount %tmp.1;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 26 8 ]
+        %tmp.2 = false;
+        symbol [ _isBursting ? 26 8 19 ];
+        putv self :_isBursting %tmp.2;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 27 8 ]
+        %tmp.3 = 0;
+        symbol [ _lastBurstTime ? 27 8 22 ];
+        putv self :_lastBurstTime %tmp.3;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_24_29_28_4_stop:
+    }
+    //! Metoda wywo³ywana cyklicznie (co 1 sekundê)
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 31; @symbol_functiondef = [update,31,13,19]; ]
+    function update() as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_31_30_55_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 32 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_31_30_55_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_31_30_55_4_stop" ]
+        %info.1 = local;
+        symbol [ info %info.1 32 12 16 ];
+        symbol [ Activity %tmp.1 32 19 27 ];
+        %tmp.1 = getm $.Toybox.Activity;
+        symbol [ getActivityInfo %tmp.2 32 28 43 ];
+        %tmp.2 = getv function %tmp.1 :getActivityInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %info.1 %tmp.3;
+        symbol [ info %info.1 32 12 16 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 34 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_34_8_54_8_if_stmt:
+        %tmp.4 = lgetv %info.1;
+        symbol [ info %tmp.4 34 12 16 ];
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_34_8_54_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_34_8_54_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_34_26_54_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 35 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_34_26_54_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_34_26_54_8_stop" ]
+        %speed.2 = local;
+        symbol [ speed %speed.2 35 16 21 ];
+        %tmp.7 = lgetv %info.1;
+        symbol [ info %tmp.7 35 24 28 ];
+        %tmp.8 = as %tmp.7 { (!Null) };
+        symbol [ currentSpeed %tmp.9 35 29 41 ];
+        %tmp.9 = getv %tmp.8 :currentSpeed;
+        lputv %speed.2 %tmp.9;
+        symbol [ speed %speed.2 35 16 21 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 36 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_36_12_38_12_if_stmt:
+        %tmp.10 = lgetv %speed.2;
+        symbol [ speed %tmp.10 36 16 21 ];
+        %tmp.11 = null;
+        %tmp.12 = eq %tmp.10 %tmp.11;
+        bf %tmp.12 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_36_12_38_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_36_12_38_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_36_31_38_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 37 16 ]
+        %tmp.13 = 0.0;
+        lputv %speed.2 %tmp.13;
+        symbol [ speed %speed.2 37 16 21 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_36_31_38_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_36_12_38_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_36_12_38_12_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 40 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_34_26_54_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_34_26_54_8_stop" ]
+        %currentTime.3 = local;
+        symbol [ currentTime %currentTime.3 40 16 27 ];
+        symbol [ Time %tmp.14 40 30 34 ];
+        %tmp.14 = getm $.Toybox.Time;
+        symbol [ now %tmp.15 40 35 38 ];
+        %tmp.15 = getv function %tmp.14 :now;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        symbol [ value %tmp.17 40 41 46 ];
+        %tmp.17 = getv function %tmp.16 :value;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        lputv %currentTime.3 %tmp.18;
+        symbol [ currentTime %currentTime.3 40 16 27 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 43 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_43_12_53_12_if_stmt:
+        %tmp.19 = lgetv %speed.2;
+        symbol [ speed %tmp.19 43 16 21 ];
+        symbol [ BURST_SPEED_THRESHOLD %tmp.21 43 25 46 ];
+        %tmp.21 = getv ? :BURST_SPEED_THRESHOLD;
+        %tmp.22 = gte %tmp.19 %tmp.21;
+        bf %tmp.22 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_43_12_53_12_if_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_43_12_53_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_43_48_50_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 44 16 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_16_49_16_if_stmt:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_20_44_70_begin:
+        symbol [ _isBursting %tmp.24 44 21 32 ];
+        %tmp.24 = getv ? :_isBursting;
+        %tmp.25 = not %tmp.24;
+        bf %tmp.25 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_16_49_16_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_36_44_70_true:
+        %tmp.26 = lgetv %currentTime.3;
+        symbol [ currentTime %tmp.26 44 37 48 ];
+        symbol [ _lastBurstTime %tmp.28 44 51 65 ];
+        %tmp.28 = getv ? :_lastBurstTime;
+        %tmp.29 = sub %tmp.26 %tmp.28;
+        symbol [ COOLDOWN_SECONDS %tmp.31 44 70 86 ];
+        %tmp.31 = getv ? :COOLDOWN_SECONDS;
+        %tmp.32 = gte %tmp.29 %tmp.31;
+        push %tmp.32;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_36_44_70_end:
+        %tmp.33 = phi [%tmp.25 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_20_44_70_begin] [%tmp.32 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_36_44_70_true] [%tmp.33 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_36_44_70_end];
+        bf %tmp.33 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_16_49_16_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_16_49_16_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_88_49_16_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 45 20 ]
+        %tmp.34 = true;
+        symbol [ _isBursting ? 45 20 31 ];
+        putv self :_isBursting %tmp.34;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 46 20 ]
+        symbol [ burstCount %tmp.37 46 20 30 ];
+        %tmp.37 = getv ? :burstCount;
+        %tmp.38 = add %tmp.37 1;
+        symbol [ burstCount ? 46 20 30 ];
+        putv self :burstCount dup %tmp.38;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 47 20 ]
+        %tmp.39 = lgetv %currentTime.3;
+        symbol [ currentTime %tmp.39 47 37 48 ];
+        symbol [ _lastBurstTime ? 47 20 34 ];
+        putv self :_lastBurstTime %tmp.39;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 48 20 ]
+        symbol [ System %tmp.40 48 20 26 ];
+        %tmp.40 = getm $.Toybox.System;
+        symbol [ println %tmp.41 48 27 34 ];
+        %tmp.41 = getv function %tmp.40 :println;
+        %tmp.42 = "BurstManager: Wykryto zryw! £¹cznie: ";
+        symbol [ burstCount %tmp.44 48 77 87 ];
+        %tmp.44 = getv ? :burstCount;
+        %tmp.45 = add %tmp.42 %tmp.44;
+        %tmp.46 = " (Prêdkoœæ: ";
+        %tmp.47 = add %tmp.45 %tmp.46;
+        %tmp.48 = lgetv %speed.2;
+        symbol [ speed %tmp.48 48 108 113 ];
+        %tmp.49 = 3.6;
+        %tmp.50 = mul %tmp.48 %tmp.49;
+        %tmp.51 = add %tmp.47 %tmp.50;
+        %tmp.52 = " km/h)";
+        %tmp.53 = add %tmp.51 %tmp.52;
+        invoke %tmp.40 %tmp.41(%tmp.53);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_88_49_16_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_16_49_16_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_16_49_16_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_43_48_50_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_43_12_53_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_43_12_53_12_if_false:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 50 19 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_50_19_53_12_if_stmt:
+        %tmp.54 = lgetv %speed.2;
+        symbol [ speed %tmp.54 50 23 28 ];
+        symbol [ BURST_RESET_THRESHOLD %tmp.56 50 31 52 ];
+        %tmp.56 = getv ? :BURST_RESET_THRESHOLD;
+        %tmp.57 = lt %tmp.54 %tmp.56;
+        bf %tmp.57 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_50_19_53_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_50_19_53_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_50_54_53_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 52 16 ]
+        %tmp.58 = false;
+        symbol [ _isBursting ? 52 16 27 ];
+        putv self :_isBursting %tmp.58;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_50_54_53_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_50_19_53_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_50_19_53_12_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_43_12_53_12_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_34_26_54_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_34_8_54_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_34_8_54_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_31_30_55_4_stop:
+    }
+    //! Opcjonalna mo¿liwoœæ rêcznego dodania zrywu (np. przyciskiem)
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 58; @symbol_functiondef = [addManualBurst,58,13,27]; ]
+    function addManualBurst() as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_58_38_61_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 59 8 ]
+        symbol [ burstCount %tmp.3 59 8 18 ];
+        %tmp.3 = getv ? :burstCount;
+        %tmp.4 = add %tmp.3 1;
+        symbol [ burstCount ? 59 8 18 ];
+        putv self :burstCount dup %tmp.4;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc" 60 8 ]
+        symbol [ System %tmp.5 60 8 14 ];
+        %tmp.5 = getm $.Toybox.System;
+        symbol [ println %tmp.6 60 15 22 ];
+        %tmp.6 = getv function %tmp.5 :println;
+        %tmp.7 = "BurstManager: Rêcznie dodano zryw. £¹cznie: ";
+        symbol [ burstCount %tmp.9 60 72 82 ];
+        %tmp.9 = getv ? :burstCount;
+        %tmp.10 = add %tmp.7 %tmp.9;
+        invoke %tmp.5 %tmp.6(%tmp.10);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_58_38_61_4_stop:
+    }
+}
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 1; ]
+<init> {
+}

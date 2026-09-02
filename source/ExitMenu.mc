@@ -58,14 +58,15 @@ class ExitMenuDelegate extends WatchUi.Menu2InputDelegate {
         if (id.equals("save")) {
             var scoreA = ScoreManager.scoreA;
             var scoreB = ScoreManager.scoreB;
+            var burstCount = BurstManager.burstCount; // <-- Pobranie zrywów
 
             // 1. Zatrzymujemy stoper aplikacji (jeśli działa)
             if (TimerManager.isRunning) {
                 TimerManager.toggleTimer();
             }
 
-            // 2. Zapisujemy wyniki i kończymy sesję FIT
-            SessionManager.saveSession(scoreA, scoreB);
+            // 2. Zapisujemy wyniki, zrywy i kończymy sesję FIT
+            SessionManager.saveSession(scoreA, scoreB, burstCount); // <-- Przekazujemy 3 argumenty
 
             // 3. Całkowite zamknięcie aplikacji Garmin i wyjście do systemu zegarka
             System.exit();

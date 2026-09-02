@@ -24,4 +24,9 @@
     <string id="ScoreALabel">Wynik Drużyny A</string>
     <string id="ScoreBLabel">Wynik Drużyny B</string>
     <string id="ScoreUnits">pkt</string>
+<string id="BurstLabel">Zrywy</string>
+<string id="BurstUnits">zrywów</string>
+    <!-- Nowe wpisy dla wykresu różnicy punktowej -->
+    <string id="ScoreMarginChartLabel">Różnica wyników (A - B)</string>
+    <string id="ScoreMarginDataLabel">Przewaga</string>
 </resources>

@@ -10,6 +10,7 @@ module Rez {
     } // Drawables
 
     module Strings {
+        (:initialized) var ScoreMarginChartLabel as ResourceId;
         (:initialized) var DiscardAndExit as ResourceId;
         (:initialized) var StatusToChange as ResourceId;
         (:initialized) var MainMenuTitle as ResourceId;
@@ -19,6 +20,7 @@ module Rez {
         (:initialized) var ScoreBLabel as ResourceId;
         (:initialized) var FootballRun as ResourceId;
         (:initialized) var ColorWhite as ResourceId;
+        (:initialized) var BurstLabel as ResourceId;
         (:initialized) var Volleyball as ResourceId;
         (:initialized) var ExitMenuTitle as ResourceId;
         (:initialized) var ColorBlack as ResourceId;
@@ -28,7 +30,9 @@ module Rez {
         (:initialized) var TeamA as ResourceId;
         (:initialized) var StatusPause as ResourceId;
         (:initialized) var Football as ResourceId;
+        (:initialized) var ScoreMarginDataLabel as ResourceId;
         (:initialized) var Screen1Text as ResourceId;
+        (:initialized) var BurstUnits as ResourceId;
         (:initialized) var ScoreUnits as ResourceId;
         (:initialized) var StopTimer as ResourceId;
         (:initialized) var Screen2Text as ResourceId;

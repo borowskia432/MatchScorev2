@@ -1,4 +1,3 @@
-
 import Toybox.WatchUi;
 import Toybox.Graphics;
 import Toybox.Activity;
@@ -97,57 +96,9 @@ class Screen1View extends WatchUi.View {
 
         dc.drawText(
             cx,
-            52,
-            Graphics.FONT_SMALL,
+            65,
+            Graphics.FONT_MEDIUM,
             TimerManager.getFormattedTime(),
-            Graphics.TEXT_JUSTIFY_CENTER |
-            Graphics.TEXT_JUSTIFY_VCENTER
-        );
-
-        // =====================================================
-        // DRUŻYNA A
-        // =====================================================
-
-        dc.drawText(
-            cx - 65,
-            90,
-            Graphics.FONT_SMALL,
-            WatchUi.loadResource(
-                Rez.Strings.TeamA
-            ) as String,
-            Graphics.TEXT_JUSTIFY_CENTER |
-            Graphics.TEXT_JUSTIFY_VCENTER
-        );
-
-        // =====================================================
-        // DRUŻYNA B
-        // =====================================================
-
-        dc.drawText(
-            cx + 65,
-            90,
-            Graphics.FONT_SMALL,
-            WatchUi.loadResource(
-                Rez.Strings.TeamB
-            ) as String,
-            Graphics.TEXT_JUSTIFY_CENTER |
-            Graphics.TEXT_JUSTIFY_VCENTER
-        );
-
-        // =====================================================
-        // WYNIK
-        // =====================================================
-
-        var scoreString =
-            ScoreManager.scoreA.toString() +
-            " : " +
-            ScoreManager.scoreB.toString();
-
-        dc.drawText(
-            cx,
-            130,
-            Graphics.FONT_NUMBER_HOT,
-            scoreString,
             Graphics.TEXT_JUSTIFY_CENTER |
             Graphics.TEXT_JUSTIFY_VCENTER
         );
@@ -168,8 +119,7 @@ class Screen1View extends WatchUi.View {
             maxSpeedMps = info.maxSpeed;
         }
 
-        var vmaxKmH =
-            maxSpeedMps * 3.6;
+        var vmaxKmH = maxSpeedMps * 3.6;
 
         // =====================================================
         // AKTUALNA PRĘDKOŚĆ
@@ -181,8 +131,7 @@ class Screen1View extends WatchUi.View {
             currentSpeedMps = info.currentSpeed;
         }
 
-        var metersPerMin =
-            currentSpeedMps * 60.0;
+        var metersPerMin = currentSpeedMps * 60.0;
 
         // =====================================================
         // VMAX + M/MIN
@@ -197,7 +146,7 @@ class Screen1View extends WatchUi.View {
 
         dc.drawText(
             cx,
-            178,
+            140,
             Graphics.FONT_XTINY,
             speedMetricsText,
             Graphics.TEXT_JUSTIFY_CENTER |
@@ -210,11 +159,8 @@ class Screen1View extends WatchUi.View {
 
         var hrVal = "--";
 
-        if (info != null &&
-            info.currentHeartRate != null) {
-
-            hrVal =
-                info.currentHeartRate.toString();
+        if (info != null && info.currentHeartRate != null) {
+            hrVal = info.currentHeartRate.toString();
         }
 
         // =====================================================
@@ -223,11 +169,8 @@ class Screen1View extends WatchUi.View {
 
         var distVal = 0.00;
 
-        if (info != null &&
-            info.elapsedDistance != null) {
-
-            distVal =
-                info.elapsedDistance / 1000.0;
+        if (info != null && info.elapsedDistance != null) {
+            distVal = info.elapsedDistance / 1000.0;
         }
 
         var hrDistText =
@@ -239,7 +182,7 @@ class Screen1View extends WatchUi.View {
 
         dc.drawText(
             cx,
-            202,
+            175,
             Graphics.FONT_SMALL,
             hrDistText,
             Graphics.TEXT_JUSTIFY_CENTER |
@@ -250,8 +193,7 @@ class Screen1View extends WatchUi.View {
         // GODZINA
         // =====================================================
 
-        var sysTime =
-            System.getClockTime();
+        var sysTime = System.getClockTime();
 
         var timeString =
             sysTime.hour.format("%02d") +
@@ -260,23 +202,13 @@ class Screen1View extends WatchUi.View {
 
         dc.drawText(
             cx,
-            262,
+            230,
             Graphics.FONT_SMALL,
             timeString,
             Graphics.TEXT_JUSTIFY_CENTER |
             Graphics.TEXT_JUSTIFY_VCENTER
         );
     }
-
-
-    // =========================================================
-    // PASEK HR
-    //
-    // Grubość:
-    // -3, -2, -1, 0, +1, +2
-    //
-    // Łącznie 6 nakładanych łuków.
-    // =========================================================
 
     private function drawHrArc(
         dc as Graphics.Dc,
@@ -285,286 +217,99 @@ class Screen1View extends WatchUi.View {
         width as Number
     ) as Void {
 
-        // =====================================================
-        // PROMIEŃ
-        // =====================================================
+        var baseRadius = (width / 2) - 6;
 
-        var baseRadius =
-            (width / 2) - 6;
-
-
-        // =====================================================
         // STREFA NIEBIESKA
-        // =====================================================
-
-        dc.setColor(
-            Graphics.COLOR_BLUE,
-            Graphics.COLOR_TRANSPARENT
-        );
-
-        for (var rOffset = -3;
-             rOffset <= 2;
-             rOffset++) {
-
-            dc.drawArc(
-                cx,
-                cy,
-                baseRadius + rOffset,
-                Graphics.ARC_CLOCKWISE,
-                140,
-                121
-            );
+        dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_TRANSPARENT);
+        for (var rOffset = -3; rOffset <= 2; rOffset++) {
+            dc.drawArc(cx, cy, baseRadius + rOffset, Graphics.ARC_CLOCKWISE, 140, 121);
         }
 
-
-        // =====================================================
         // STREFA ZIELONA
-        // =====================================================
-
-        dc.setColor(
-            Graphics.COLOR_GREEN,
-            Graphics.COLOR_TRANSPARENT
-        );
-
-        for (var rOffset = -3;
-             rOffset <= 2;
-             rOffset++) {
-
-            dc.drawArc(
-                cx,
-                cy,
-                baseRadius + rOffset,
-                Graphics.ARC_CLOCKWISE,
-                119,
-                101
-            );
+        dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
+        for (var rOffset = -3; rOffset <= 2; rOffset++) {
+            dc.drawArc(cx, cy, baseRadius + rOffset, Graphics.ARC_CLOCKWISE, 119, 101);
         }
 
-
-        // =====================================================
         // STREFA ŻÓŁTA
-        // =====================================================
-
-        dc.setColor(
-            Graphics.COLOR_YELLOW,
-            Graphics.COLOR_TRANSPARENT
-        );
-
-        for (var rOffset = -3;
-             rOffset <= 2;
-             rOffset++) {
-
-            dc.drawArc(
-                cx,
-                cy,
-                baseRadius + rOffset,
-                Graphics.ARC_CLOCKWISE,
-                99,
-                81
-            );
+        dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_TRANSPARENT);
+        for (var rOffset = -3; rOffset <= 2; rOffset++) {
+            dc.drawArc(cx, cy, baseRadius + rOffset, Graphics.ARC_CLOCKWISE, 99, 81);
         }
 
-
-        // =====================================================
         // STREFA POMARAŃCZOWA
-        // =====================================================
-
-        dc.setColor(
-            Graphics.COLOR_ORANGE,
-            Graphics.COLOR_TRANSPARENT
-        );
-
-        for (var rOffset = -3;
-             rOffset <= 2;
-             rOffset++) {
-
-            dc.drawArc(
-                cx,
-                cy,
-                baseRadius + rOffset,
-                Graphics.ARC_CLOCKWISE,
-                79,
-                61
-            );
+        dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT);
+        for (var rOffset = -3; rOffset <= 2; rOffset++) {
+            dc.drawArc(cx, cy, baseRadius + rOffset, Graphics.ARC_CLOCKWISE, 79, 61);
         }
 
-
-        // =====================================================
         // STREFA CZERWONA
-        // =====================================================
-
-        dc.setColor(
-            Graphics.COLOR_RED,
-            Graphics.COLOR_TRANSPARENT
-        );
-
-        for (var rOffset = -3;
-             rOffset <= 2;
-             rOffset++) {
-
-            dc.drawArc(
-                cx,
-                cy,
-                baseRadius + rOffset,
-                Graphics.ARC_CLOCKWISE,
-                59,
-                40
-            );
+        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+        for (var rOffset = -3; rOffset <= 2; rOffset++) {
+            dc.drawArc(cx, cy, baseRadius + rOffset, Graphics.ARC_CLOCKWISE, 59, 40);
         }
 
-
-        // =====================================================
         // ZAKRES HR
-        // =====================================================
-
         var minHr = 100;
         var maxHr = 190;
 
         if (UserProfile has :getHeartRateZones) {
-
-            var zones =
-                UserProfile.getHeartRateZones(
-                    UserProfile.HR_ZONE_SPORT_GENERIC
-                );
-
-            if (zones != null &&
-                zones.size() >= 6) {
-
+            var zones = UserProfile.getHeartRateZones(UserProfile.HR_ZONE_SPORT_GENERIC);
+            if (zones != null && zones.size() >= 6) {
                 minHr = zones[0];
                 maxHr = zones[5];
             }
-
         } else {
-
-            var profile =
-                UserProfile.getProfile();
-
+            var profile = UserProfile.getProfile();
             var age = 30;
 
-            if (profile != null &&
-                profile.birthYear != null) {
-
-                var currentYear =
-                    Time.Gregorian.info(
-                        Time.now(),
-                        Time.FORMAT_SHORT
-                    ).year;
-
-                age =
-                    currentYear -
-                    profile.birthYear;
+            if (profile != null && profile.birthYear != null) {
+                var currentYear = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT).year;
+                age = currentYear - profile.birthYear;
             }
 
-            maxHr =
-                220 -
-                age;
-
-            minHr =
-                (maxHr * 0.5).toNumber();
+            maxHr = 220 - age;
+            minHr = (maxHr * 0.5).toNumber();
         }
-
-
-        // =====================================================
-        // ZABEZPIECZENIE HR
-        // =====================================================
 
         if (minHr >= maxHr) {
             minHr = 100;
             maxHr = 190;
         }
 
-
-        // =====================================================
         // AKTUALNE HR
-        // =====================================================
-
-        var info =
-            Activity.getActivityInfo();
-
+        var info = Activity.getActivityInfo();
         var currentHr = 0;
 
-        if (info != null &&
-            info.currentHeartRate != null) {
-
-            currentHr =
-                info.currentHeartRate;
+        if (info != null && info.currentHeartRate != null) {
+            currentHr = info.currentHeartRate;
         }
 
-
-        // =====================================================
         // KĄT WSKAŹNIKA
-        // =====================================================
-
         var angle = 140.0;
 
         if (currentHr > 0) {
-
             if (currentHr <= minHr) {
-
                 angle = 140.0;
-
             } else if (currentHr >= maxHr) {
-
                 angle = 40.0;
-
             } else {
-
-                var ratio =
-                    (currentHr - minHr).toFloat() /
-                    (maxHr - minHr).toFloat();
-
-                angle =
-                    140.0 -
-                    (ratio * 100.0);
+                var ratio = (currentHr - minHr).toFloat() / (maxHr - minHr).toFloat();
+                angle = 140.0 - (ratio * 100.0);
             }
         }
 
-
-        // =====================================================
         // WSKAŹNIK HR
-        // =====================================================
+        var rad = Math.toRadians(angle);
+        var rInner = baseRadius - 6;
+        var rOuter = baseRadius + 6;
 
-        var rad =
-            Math.toRadians(angle);
+        var x1 = cx + (rInner * Math.cos(rad));
+        var y1 = cy - (rInner * Math.sin(rad));
+        var x2 = cx + (rOuter * Math.cos(rad));
+        var y2 = cy - (rOuter * Math.sin(rad));
 
-        var rInner =
-            baseRadius - 6;
-
-        var rOuter =
-            baseRadius + 6;
-
-        var x1 =
-            cx +
-            (rInner * Math.cos(rad));
-
-        var y1 =
-            cy -
-            (rInner * Math.sin(rad));
-
-        var x2 =
-            cx +
-            (rOuter * Math.cos(rad));
-
-        var y2 =
-            cy -
-            (rOuter * Math.sin(rad));
-
-
-        // =====================================================
-        // RYSOWANIE WSKAŹNIKA
-        // =====================================================
-
-        dc.setColor(
-            AppConfig.getTextColor(),
-            Graphics.COLOR_TRANSPARENT
-        );
-
-        dc.drawLine(
-            x1.toNumber(),
-            y1.toNumber(),
-            x2.toNumber(),
-            y2.toNumber()
-        );
+        dc.setColor(AppConfig.getTextColor(), Graphics.COLOR_TRANSPARENT);
+        dc.drawLine(x1.toNumber(), y1.toNumber(), x2.toNumber(), y2.toNumber());
     }
 }
-

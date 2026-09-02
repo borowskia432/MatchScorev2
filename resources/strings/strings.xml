@@ -24,5 +24,9 @@
     <string id="ScoreALabel">Team A Score</string>
     <string id="ScoreBLabel">Team B Score</string>
     <string id="ScoreUnits">pts</string>
+<string id="BurstLabel">Bursts</string>
+    <string id="BurstUnits">bursts</string>
+    <!-- Nowe wpisy dla wykresu różnicy punktowej -->
+    <string id="ScoreMarginChartLabel">Score Difference (A - B)</string>
+    <string id="ScoreMarginDataLabel">Margin</string>
 </resources>
-

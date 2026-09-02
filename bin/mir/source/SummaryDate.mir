@@ -24,13 +24,16 @@ class SummaryData {
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDate.mc"; @line = 8; @position = 15; @symbol_vardef = [sprintsCount,8,15,27]; @symbol_type<0> = [Number,8,31,37]; ]
     public
     var sprintsCount as Number = 0;
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDate.mc"; @line = 11; @position = 15; @symbol_vardef = [hasScore,11,15,23]; @symbol_type<0> = [Boolean,11,27,34]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDate.mc"; @line = 9; @position = 15; @symbol_vardef = [calories,9,15,23]; @symbol_type<0> = [Number,9,27,33]; ]
+    public
+    var calories as Number = 0;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDate.mc"; @line = 12; @position = 15; @symbol_vardef = [hasScore,12,15,23]; @symbol_type<0> = [Boolean,12,27,34]; ]
     public
     var hasScore as Boolean = false;
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDate.mc"; @line = 12; @position = 15; @symbol_vardef = [scoreTeamA,12,15,25]; @symbol_type<0> = [Number,12,29,35]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDate.mc"; @line = 13; @position = 15; @symbol_vardef = [scoreTeamA,13,15,25]; @symbol_type<0> = [Number,13,29,35]; ]
     public
     var scoreTeamA as Number = 0;
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDate.mc"; @line = 13; @position = 15; @symbol_vardef = [scoreTeamB,13,15,25]; @symbol_type<0> = [Number,13,29,35]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDate.mc"; @line = 14; @position = 15; @symbol_vardef = [scoreTeamB,14,15,25]; @symbol_type<0> = [Number,14,29,35]; ]
     public
     var scoreTeamB as Number = 0;
 }

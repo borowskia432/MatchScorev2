@@ -71,6 +71,17 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_15_60_17_4_sta
         putv self :isBlackBackground %tmp.1;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_15_60_17_4_stop:
     }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 20; @symbol_functiondef = [toggleBackgroundColor,20,13,34]; ]
+    function toggleBackgroundColor() as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_20_45_22_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 21 8 ]
+        symbol [ isBlackBackground %tmp.2 21 29 46 ];
+        %tmp.2 = getv ? :isBlackBackground;
+        %tmp.3 = not %tmp.2;
+        symbol [ isBlackBackground ? 21 8 25 ];
+        putv self :isBlackBackground %tmp.3;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_20_45_22_4_stop:
+    }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 1; ]
 <init> {

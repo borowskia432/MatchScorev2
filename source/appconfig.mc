@@ -15,4 +15,9 @@ module AppConfig {
     function setBlackBackground(isBlack as Boolean) as Void {
         isBlackBackground = isBlack;
     }
+
+    // Dodana metoda obsługująca przełączanie motywu
+    function toggleBackgroundColor() as Void {
+        isBlackBackground = !isBlackBackground;
+    }
 }

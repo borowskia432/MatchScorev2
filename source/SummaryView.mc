@@ -30,7 +30,6 @@ class SummaryView extends WatchUi.View {
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
         );
 
-        // Poprawiona stała koloru: Graphics.COLOR_DK_GRAY
         dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawLine(cx - 50, 30, cx + 50, 30);
 
@@ -69,6 +68,11 @@ class SummaryView extends WatchUi.View {
 
         var sprintsStr = "Ilość zrywów: " + _data.sprintsCount;
         dc.drawText(cx, y, Graphics.FONT_XTINY, sprintsStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        y += 22;
+
+        // KALORIE
+        var calStr = "Kalorie: " + _data.calories + " kcal";
+        dc.drawText(cx, y, Graphics.FONT_XTINY, calStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         // STOPKA
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);

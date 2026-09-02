@@ -66,6 +66,7 @@ class SettingsMenuDelegate extends WatchUi.Menu2InputDelegate {
         if (id.equals("toggle_timer")) {
             TimerManager.toggleTimer();
             WatchUi.popView(WatchUi.SLIDE_DOWN);
+            WatchUi.requestUpdate();
         }
         else if (id.equals("set_duration")) {
             openDurationSubMenu();
@@ -77,7 +78,12 @@ class SettingsMenuDelegate extends WatchUi.Menu2InputDelegate {
             WatchUi.requestUpdate();
         }
         else if (id.equals("screen_color")) {
+            // Dodano obsługę zmiany koloru tła (sprawdź, czy funkcja nazywa się toggleBackgroundColor w AppConfig)
+            if (AppConfig has :toggleBackgroundColor) {
+                AppConfig.toggleBackgroundColor();
+            }
             WatchUi.popView(WatchUi.SLIDE_DOWN);
+            WatchUi.requestUpdate();
         }
     }
 
@@ -118,6 +124,7 @@ class DurationMenuDelegate extends WatchUi.Menu2InputDelegate {
 
         WatchUi.popView(WatchUi.SLIDE_DOWN);
         WatchUi.popView(WatchUi.SLIDE_DOWN);
+        WatchUi.requestUpdate();
     }
 
     function onBack() as Void {

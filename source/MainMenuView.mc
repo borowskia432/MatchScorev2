@@ -4,24 +4,30 @@ import Toybox.Lang;
 
 module MainMenu {
     function createMenu() as [ Views, InputDelegates ] {
-        var menu = new WatchUi.Menu2({:title => WatchUi.loadResource(Rez.Strings.MainMenuTitle) as String});
+        // Poprawne wywołanie loadResource bez błędnego rzutowania na Lang.Symbol
+        var titleStr = WatchUi.loadResource(Rez.Strings.MainMenuTitle) as String;
+        var runStr   = WatchUi.loadResource(Rez.Strings.FootballRun) as String;
+        var fbStr    = WatchUi.loadResource(Rez.Strings.Football) as String;
+        var vbStr    = WatchUi.loadResource(Rez.Strings.Volleyball) as String;
+
+        var menu = new WatchUi.Menu2({:title => titleStr});
 
         menu.addItem(new WatchUi.MenuItem(
-            WatchUi.loadResource(Rez.Strings.FootballRun) as String,
+            runStr,
             null,
             "fb_run",
             null
         ));
 
         menu.addItem(new WatchUi.MenuItem(
-            WatchUi.loadResource(Rez.Strings.Football) as String,
+            fbStr,
             null,
             "fb",
             null
         ));
 
         menu.addItem(new WatchUi.MenuItem(
-            WatchUi.loadResource(Rez.Strings.Volleyball) as String,
+            vbStr,
             null,
             "vb",
             null
@@ -42,7 +48,6 @@ class MainMenuDelegate extends WatchUi.Menu2InputDelegate {
 
         if (id.equals("fb_run")) {
             SessionManager.startSession("Football Run", Activity.SPORT_RUNNING);
-            // Stoper NIE uruchamia się automatycznie. Gracz uruchamia go z poziomu Menu.
             WatchUi.pushView(new Screen1View(), new Screen1Delegate(), WatchUi.SLIDE_LEFT);
         } else if (id.equals("fb")) {
             SessionManager.startSession("Football", Activity.SPORT_SOCCER);

@@ -4,11 +4,15 @@ import Toybox.Lang;
 
 module SettingsMenu {
 
-    function createMenu() as Array<WatchUi.Menu2 or WatchUi.Menu2InputDelegate> {
-        var menu = new WatchUi.Menu2({ :title => "Ustawienia" });
+   function createMenu() as [ Views, InputDelegates ] {
+        var titleStr = WatchUi.loadResource(Rez.Strings.SettingsTitle) as String;
+        var menu = new WatchUi.Menu2({ :title => titleStr });
 
-        // 1. Uruchom / Zatrzymaj stoper
-        var timerTitle = TimerManager.isRunning ? "Zatrzymaj stoper" : "Uruchom stoper";
+        // 1. Uruchom / Zatrzymaj stoper (poprawiony operator 'has')
+        var isRunning = (TimerManager has :isRunning) ? TimerManager.isRunning : false;
+        var timerTitleRes = isRunning ? Rez.Strings.StopTimer : Rez.Strings.StartTimer;
+        var timerTitle = WatchUi.loadResource(timerTitleRes) as String;
+        
         menu.addItem(
             new WatchUi.MenuItem(
                 timerTitle,
@@ -20,9 +24,10 @@ module SettingsMenu {
 
         // 2. Wybór czasu stopera
         var currentFormatted = TimerManager.getFormattedTime();
+        var durationLabelStr = WatchUi.loadResource(Rez.Strings.TimerDurationLabel) as String;
         menu.addItem(
             new WatchUi.MenuItem(
-                "Czas stopera",
+                durationLabelStr,
                 currentFormatted,
                 "set_duration",
                 null
@@ -30,10 +35,14 @@ module SettingsMenu {
         );
 
         // 3. Włączenie / Wyłączenie dźwięku
-        var soundStatus = TimerManager.isSoundEnabled ? "Włączone" : "Wyłączone";
+        var soundEnabled = TimerManager.isSoundEnabled;
+        var soundStatusRes = soundEnabled ? Rez.Strings.StatusOn : Rez.Strings.StatusOff;
+        var soundStatus = WatchUi.loadResource(soundStatusRes) as String;
+        var soundLabelStr = WatchUi.loadResource(Rez.Strings.SoundLabel) as String;
+        
         menu.addItem(
             new WatchUi.MenuItem(
-                "Dźwięk przy zmianie",
+                soundLabelStr,
                 soundStatus,
                 "toggle_sound",
                 null
@@ -41,16 +50,17 @@ module SettingsMenu {
         );
 
         // 4. Kolor ekranu
+        var colorLabelStr = WatchUi.loadResource(Rez.Strings.ScreenColor) as String;
         menu.addItem(
             new WatchUi.MenuItem(
-                "Kolor ekranu",
+                colorLabelStr,
                 null,
                 "screen_color",
                 null
             )
         );
 
-        return [menu, new SettingsMenuDelegate()] as Array<WatchUi.Menu2 or WatchUi.Menu2InputDelegate>;
+        return [menu, new SettingsMenuDelegate()] as [ Views, InputDelegates ];
     }
 }
 
@@ -73,12 +83,12 @@ class SettingsMenuDelegate extends WatchUi.Menu2InputDelegate {
         }
         else if (id.equals("toggle_sound")) {
             TimerManager.toggleSound();
-            var newStatus = TimerManager.isSoundEnabled ? "Włączone" : "Wyłączone";
+            var newStatusRes = TimerManager.isSoundEnabled ? Rez.Strings.StatusOn : Rez.Strings.StatusOff;
+            var newStatus = WatchUi.loadResource(newStatusRes) as String;
             item.setSubLabel(newStatus);
             WatchUi.requestUpdate();
         }
         else if (id.equals("screen_color")) {
-            // Dodano obsługę zmiany koloru tła (sprawdź, czy funkcja nazywa się toggleBackgroundColor w AppConfig)
             if (AppConfig has :toggleBackgroundColor) {
                 AppConfig.toggleBackgroundColor();
             }
@@ -88,12 +98,13 @@ class SettingsMenuDelegate extends WatchUi.Menu2InputDelegate {
     }
 
     private function openDurationSubMenu() as Void {
-        var subMenu = new WatchUi.Menu2({ :title => "Czas stopera" });
+        var subTitleStr = WatchUi.loadResource(Rez.Strings.TimerDurationLabel) as String;
+        var subMenu = new WatchUi.Menu2({ :title => subTitleStr });
 
-        subMenu.addItem(new WatchUi.MenuItem("30 sekund", null, "dur_30", null));
-        subMenu.addItem(new WatchUi.MenuItem("5 minut", null, "dur_300", null));
-        subMenu.addItem(new WatchUi.MenuItem("10 minut", null, "dur_600", null));
-        subMenu.addItem(new WatchUi.MenuItem("15 minut", null, "dur_900", null));
+        subMenu.addItem(new WatchUi.MenuItem("30 s", null, "dur_30", null));
+        subMenu.addItem(new WatchUi.MenuItem("5 min", null, "dur_300", null));
+        subMenu.addItem(new WatchUi.MenuItem("10 min", null, "dur_600", null));
+        subMenu.addItem(new WatchUi.MenuItem("15 min", null, "dur_900", null));
 
         WatchUi.pushView(subMenu, new DurationMenuDelegate(), WatchUi.SLIDE_UP);
     }

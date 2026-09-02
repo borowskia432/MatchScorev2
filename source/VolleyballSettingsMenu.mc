@@ -4,20 +4,14 @@ import Toybox.Lang;
 module VolleyballSettingsMenu {
 
     function createMenu() as [ Views, InputDelegates ] {
-        var title = "Ustawienia";
-        if (Rez has :Strings && Rez.Strings has :SettingsTitle) {
-            title = WatchUi.loadResource(Rez.Strings.SettingsTitle) as String;
-        }
+        // Bezpośrednie ładowanie zasobów tekstowych
+        var titleStr = WatchUi.loadResource(Rez.Strings.SettingsTitle) as String;
+        var menu = new WatchUi.Menu2({:title => titleStr});
 
-        var menu = new WatchUi.Menu2({:title => title});
-
-        var colorLabel = "Kolor ekranu";
-        if (Rez has :Strings && Rez.Strings has :ColorTheme) {
-            colorLabel = WatchUi.loadResource(Rez.Strings.ColorTheme) as String;
-        }
+        var colorLabelStr = WatchUi.loadResource(Rez.Strings.ScreenColor) as String;
 
         menu.addItem(new WatchUi.MenuItem(
-            colorLabel,
+            colorLabelStr,
             null,
             "toggle_color",
             null
@@ -41,7 +35,7 @@ class VolleyballSettingsMenuDelegate extends WatchUi.Menu2InputDelegate {
                 AppConfig.toggleBackgroundColor();
             }
             
-            // Zamknij menu natychmiastowo, co powróci do Screen3View i zmusi go do przerysowania
+            // Zamknij menu natychmiastowo, co powróci do ekranu i zmusi go do przerysowania
             WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
         }
     }

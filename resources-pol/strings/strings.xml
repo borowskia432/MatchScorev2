@@ -1,9 +1,14 @@
 <resources>
+    <!-- Ogólne / Aplikacja -->
     <string id="AppName">MatchScore V2</string>
     <string id="MainMenuTitle">Wybierz sesję</string>
+    
+    <!-- Menu główne - Sesje -->
     <string id="FootballRun">Piłka Nożna - Bieganie</string>
     <string id="Football">Piłka Nożna</string>
     <string id="Volleyball">Siatkówka</string>
+    
+    <!-- Ekrany i Statusy -->
     <string id="Screen1Text">EKRAN 1</string>
     <string id="Screen2Text">EKRAN 2</string>
     <string id="Screen3Text">EKRAN 3</string>
@@ -21,12 +26,34 @@
     <string id="TeamB">Drużyna B</string>
     <string id="StatusPause">Pauza</string>
     <string id="StatusToChange">Do zmiany</string>
+    <string id="TimerDurationLabel">Czas stopera</string>
+<string id="StatusOn">Włączone</string>
+<string id="StatusOff">Wyłączone</string>
+<string id="SoundLabel">Dźwięk przy zmianie</string>
+    
+    <!-- Wyniki i Statystyki bieżące -->
     <string id="ScoreALabel">Wynik Drużyny A</string>
     <string id="ScoreBLabel">Wynik Drużyny B</string>
     <string id="ScoreUnits">pkt</string>
-<string id="BurstLabel">Zrywy</string>
-<string id="BurstUnits">zrywów</string>
-    <!-- Nowe wpisy dla wykresu różnicy punktowej -->
+    <string id="BurstLabel">Zrywy</string>
+    <string id="BurstUnits">zrywów</string>
+    
+    <!-- Zrywy i wysyskoki (widoki treningowe) -->
+    <string id="LabelBursts">Zrywy</string>
+    <string id="LabelJumps">Wyskoki</string>
+    <string id="LabelSummarySprints">Ilość zrywów</string>
+    <string id="LabelSummaryJumps">Ilość wyskoków</string>
+    
+    <!-- Wykres różnicy punktowej -->
     <string id="ScoreMarginChartLabel">Różnica wyników (A - B)</string>
     <string id="ScoreMarginDataLabel">Przewaga</string>
+    
+    <!-- Ekran podsumowania (SummaryView) -->
+    <string id="SummaryTitle">PODSUMOWANIE</string>
+    <string id="SummaryMatchLabel">Mecz:</string>
+    <string id="DistanceLabel">Dystans:</string>
+    <string id="MaxSpeedLabel">Vmax:</string>
+    <string id="HrLabel">HR Max/Min:</string>
+    <string id="CaloriesLabel">Kalorie:</string>
+    <string id="CloseHint">[SELECT] Zamknij</string>
 </resources>

@@ -20,13 +20,15 @@ class SummaryView extends WatchUi.View {
 
         dc.setAntiAlias(true);
 
+        // =====================================================
         // NAGŁÓWEK
+        // =====================================================
         dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
             cx,
             18,
             Graphics.FONT_XTINY,
-            "PODSUMOWANIE",
+            WatchUi.loadResource(Rez.Strings.SummaryTitle) as String,
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
         );
 
@@ -35,10 +37,13 @@ class SummaryView extends WatchUi.View {
 
         var y = 48;
 
+        // =====================================================
         // WYNIK MECZU (Widoczny tylko gdy hasScore = true)
+        // =====================================================
         if (_data.hasScore) {
             dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
-            var scoreText = "Mecz: " + _data.scoreTeamA + " : " + _data.scoreTeamB;
+            var matchLabel = WatchUi.loadResource(Rez.Strings.SummaryMatchLabel) as String;
+            var scoreText = Lang.format("$1$ $2$ : $3$", [matchLabel, _data.scoreTeamA, _data.scoreTeamB]);
             dc.drawText(
                 cx,
                 y,
@@ -49,38 +54,57 @@ class SummaryView extends WatchUi.View {
             y += 28;
         }
 
+        // =====================================================
         // STATYSTYKI TRENINGU
+        // =====================================================
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        var distStr = "Dystans: " + _data.distanceKm.format("%.2f") + " km";
+        var distLabel = WatchUi.loadResource(Rez.Strings.DistanceLabel) as String;
+        var distStr = Lang.format("$1$ $2$ km", [distLabel, _data.distanceKm.format("%.2f")]);
         dc.drawText(cx, y, Graphics.FONT_XTINY, distStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         y += 22;
 
-        var speedStr = "Vmax: " + _data.maxSpeedKmH.format("%.1f") + " km/h";
+        var speedLabel = WatchUi.loadResource(Rez.Strings.MaxSpeedLabel) as String;
+        var speedStr = Lang.format("$1$ $2$ km/h", [speedLabel, _data.maxSpeedKmH.format("%.1f")]);
         dc.drawText(cx, y, Graphics.FONT_XTINY, speedStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         y += 22;
 
         var minHrStr = (_data.minHr > 0) ? _data.minHr.toString() : "--";
         var maxHrStr = (_data.maxHr > 0) ? _data.maxHr.toString() : "--";
-        var hrStr = "HR Max/Min: " + maxHrStr + " / " + minHrStr;
+        var hrLabel = WatchUi.loadResource(Rez.Strings.HrLabel) as String;
+        var hrStr = Lang.format("$1$ $2$ / $3$", [hrLabel, maxHrStr, minHrStr]);
         dc.drawText(cx, y, Graphics.FONT_XTINY, hrStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         y += 22;
 
-        var sprintsStr = "Ilość zrywów: " + _data.sprintsCount;
+        // Zrywy (wykorzystuje Twoje nowe klucze)
+        var sprintsLabel = WatchUi.loadResource(Rez.Strings.LabelSummarySprints) as String;
+        var sprintsStr = Lang.format("$1$: $2$", [sprintsLabel, _data.sprintsCount]);
         dc.drawText(cx, y, Graphics.FONT_XTINY, sprintsStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         y += 22;
 
+        // Wyskoki (wykorzystuje Twoje nowe klucze)
+        var jumpsCount = ((_data has :jumpsCount) && (_data.jumpsCount != null)) ? _data.jumpsCount : 0;
+        var jumpsLabel = WatchUi.loadResource(Rez.Strings.LabelSummaryJumps) as String;
+        var jumpsStr = Lang.format("$1$: $2$", [jumpsLabel, jumpsCount]);
+        dc.drawText(cx, y, Graphics.FONT_XTINY, jumpsStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        y += 22;
+
+        // =====================================================
         // KALORIE
-        var calStr = "Kalorie: " + _data.calories + " kcal";
+        // =====================================================
+        var calLabel = WatchUi.loadResource(Rez.Strings.CaloriesLabel) as String;
+        var calStr = Lang.format("$1$ $2$ kcal", [calLabel, _data.calories]);
         dc.drawText(cx, y, Graphics.FONT_XTINY, calStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
+        // =====================================================
         // STOPKA
+        // =====================================================
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
             cx,
             height - 20,
             Graphics.FONT_XTINY,
-            "[SELECT] Zamknij",
+            WatchUi.loadResource(Rez.Strings.CloseHint) as String,
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
         );
     }

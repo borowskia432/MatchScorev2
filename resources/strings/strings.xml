@@ -1,12 +1,17 @@
 <resources>
+    <!-- Ogólne / Aplikacja -->
     <string id="AppName">MatchScore V2</string>
     <string id="MainMenuTitle">Select Session</string>
+    
+    <!-- Menu główne - Sesje -->
     <string id="FootballRun">Football - Running</string>
     <string id="Football">Football</string>
     <string id="Volleyball">Volleyball</string>
-    <string id="Screen1Text">EKRAN 1</string>
-    <string id="Screen2Text">EKRAN 2</string>
-    <string id="Screen3Text">EKRAN 3</string>
+    
+    <!-- Ekrany i Statusy -->
+    <string id="Screen1Text">SCREEN 1</string>
+    <string id="Screen2Text">SCREEN 2</string>
+    <string id="Screen3Text">SCREEN 3</string>
     <string id="ExitMenuTitle">Exit</string>
     <string id="SaveAndExit">Save &amp; Exit</string>
     <string id="DiscardAndExit">Exit without saving</string>
@@ -21,12 +26,34 @@
     <string id="TeamB">Team B</string>
     <string id="StatusPause">Pause</string>
     <string id="StatusToChange">To change</string>
+    <string id="TimerDurationLabel">Timer Duration</string>
+<string id="StatusOn">Enabled</string>
+<string id="StatusOff">Disabled</string>
+<string id="SoundLabel">Sound on change</string>
+    
+    <!-- Wyniki i Statystyki bieżące -->
     <string id="ScoreALabel">Team A Score</string>
     <string id="ScoreBLabel">Team B Score</string>
     <string id="ScoreUnits">pts</string>
-<string id="BurstLabel">Bursts</string>
+    <string id="BurstLabel">Bursts</string>
     <string id="BurstUnits">bursts</string>
-    <!-- Nowe wpisy dla wykresu różnicy punktowej -->
+    
+    <!-- Zrywy i wysyskoki (widoki treningowe) -->
+    <string id="LabelBursts">Sprints</string>
+    <string id="LabelJumps">Jumps</string>
+    <string id="LabelSummarySprints">Sprints count</string>
+    <string id="LabelSummaryJumps">Jumps count</string>
+    
+    <!-- Wykres różnicy punktowej -->
     <string id="ScoreMarginChartLabel">Score Difference (A - B)</string>
     <string id="ScoreMarginDataLabel">Margin</string>
+    
+    <!-- Ekran podsumowania (SummaryView) -->
+    <string id="SummaryTitle">SUMMARY</string>
+    <string id="SummaryMatchLabel">Match:</string>
+    <string id="DistanceLabel">Distance:</string>
+    <string id="MaxSpeedLabel">Vmax:</string>
+    <string id="HrLabel">HR Max/Min:</string>
+    <string id="CaloriesLabel">Calories:</string>
+    <string id="CloseHint">[SELECT] Close</string>
 </resources>

@@ -6,7 +6,8 @@ class SummaryData {
     public var maxHr as Number = 0;
     public var minHr as Number = 0;
     public var sprintsCount as Number = 0;
-    public var calories as Number = 0; // Dodane pole na kalorie
+    public var jumpsCount as Number = 0; // Dodane pole na wyskoki
+    public var calories as Number = 0;
 
     // Pola dla View2
     public var hasScore as Boolean = false;

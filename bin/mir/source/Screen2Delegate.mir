@@ -304,7 +304,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_30_8_68_
         ret %tmp.86;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_27_60_71_4_stop:
     }
-    //! Callback pojedynczego klikniÄ™cia UP (dodanie gola dla DruÅ¼yny A)
+    //! Callback pojedynczego klikniêcia UP (dodanie gola dla Dru¿yny A)
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc"; @line = 74; @symbol_functiondef = [onKeyUpTimeout,74,13,27]; ]
     function onKeyUpTimeout() as Void {
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_74_38_78_4_start:
@@ -327,7 +327,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_74_38_78
         invoke %tmp.6 %tmp.7();
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_74_38_78_4_stop:
     }
-    //! Callback pojedynczego klikniÄ™cia DOWN (dodanie gola dla DruÅ¼yny B)
+    //! Callback pojedynczego klikniêcia DOWN (dodanie gola dla Dru¿yny B)
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc"; @line = 81; @symbol_functiondef = [onKeyDownTimeout,81,13,29]; ]
     function onKeyDownTimeout() as Void {
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_81_40_85_4_start:
@@ -484,7 +484,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_105_8_10
         ret %tmp.25;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_101_64_113_4_stop:
     }
-    //! Czyszczenie stoperÃ³w przy wyjÅ›ciu z widoku
+    //! Czyszczenie stoperów przy wyjœciu z widoku
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc"; @line = 116; @symbol_functiondef = [cancelPendingTimers,116,21,40]; ]
     private
     function cancelPendingTimers() as Void {

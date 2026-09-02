@@ -23,7 +23,7 @@ module TimerManager {
     var _restSeconds as Number = 0;
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc"; @line = 16; @position = 8; @symbol_vardef = [isSoundEnabled,16,8,22]; @symbol_type<0> = [Boolean,16,26,33]; ]
     var isSoundEnabled as Boolean = true;
-    //! PrzeÅ‚Ä…cza stan powiadomieÅ„ dÅºwiÄ™kowych
+    //! Prze³¹cza stan powiadomieñ dŸwiêkowych
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc"; @line = 19; @symbol_functiondef = [toggleSound,19,13,24]; ]
     function toggleSound() as Void {
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_19_35_21_4_start:
@@ -35,7 +35,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_19_35_21_4_
         putv self :isSoundEnabled %tmp.3;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_19_35_21_4_stop:
     }
-    //! Ustawia nowy czas stopera i resetuje odliczanie (jeÅ›li stoper stoi)
+    //! Ustawia nowy czas stopera i resetuje odliczanie (jeœli stoper stoi)
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc"; @line = 24; @symbol_functiondef = [setDuration,24,13,24]; @symbol_param<0> = [seconds,24,25,32]; @symbol_param<0>_type<0> = [Number,24,36,42]; ]
     function setDuration(seconds as Number) as Void {
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_24_52_29_4_start:

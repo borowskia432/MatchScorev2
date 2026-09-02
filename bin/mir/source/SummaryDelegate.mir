@@ -53,56 +53,32 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_16_33_19
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 21; @symbol_functiondef = [saveAndExit,21,21,32]; ]
     private
     function saveAndExit() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_31_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 22 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_31_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_31_4_stop" ]
-        %scoreA.1 = local;
-        symbol [ scoreA %scoreA.1 22 12 18 ];
-        symbol [ ScoreManager %tmp.2 22 21 33 ];
-        %tmp.2 = getv ? :ScoreManager;
-        symbol [ scoreA %tmp.3 22 34 40 ];
-        %tmp.3 = getv %tmp.2 :scoreA;
-        lputv %scoreA.1 %tmp.3;
-        symbol [ scoreA %scoreA.1 22 12 18 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_30_4_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 23 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_31_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_31_4_stop" ]
-        %scoreB.2 = local;
-        symbol [ scoreB %scoreB.2 23 12 18 ];
-        symbol [ ScoreManager %tmp.5 23 21 33 ];
-        %tmp.5 = getv ? :ScoreManager;
-        symbol [ scoreB %tmp.6 23 34 40 ];
-        %tmp.6 = getv %tmp.5 :scoreB;
-        lputv %scoreB.2 %tmp.6;
-        symbol [ scoreB %scoreB.2 23 12 18 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 24 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_31_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_31_4_stop" ]
-        %burstCount.3 = local;
-        symbol [ burstCount %burstCount.3 24 12 22 ];
-        symbol [ BurstManager %tmp.8 24 25 37 ];
-        %tmp.8 = getv ? :BurstManager;
-        symbol [ burstCount %tmp.9 24 38 48 ];
-        %tmp.9 = getv %tmp.8 :burstCount;
-        lputv %burstCount.3 %tmp.9;
-        symbol [ burstCount %burstCount.3 24 12 22 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 27 8 ]
-        symbol [ SessionManager %tmp.11 27 8 22 ];
-        %tmp.11 = getv ? :SessionManager;
-        symbol [ saveSession %tmp.12 27 23 34 ];
-        %tmp.12 = getv function %tmp.11 :saveSession;
-        %tmp.13 = lgetv %scoreA.1;
-        symbol [ scoreA %tmp.13 27 35 41 ];
-        %tmp.14 = lgetv %scoreB.2;
-        symbol [ scoreB %tmp.14 27 43 49 ];
-        %tmp.15 = lgetv %burstCount.3;
-        symbol [ burstCount %tmp.15 27 51 61 ];
-        invoke %tmp.11 %tmp.12(%tmp.13, %tmp.14, %tmp.15);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 30 8 ]
-        symbol [ System %tmp.16 30 8 14 ];
-        %tmp.16 = getm $.Toybox.System;
-        symbol [ exit %tmp.17 30 15 19 ];
-        %tmp.17 = getv function %tmp.16 :exit;
-        invoke %tmp.16 %tmp.17();
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_31_4_stop:
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_30_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_30_4_stop" ]
+        %burstCount.1 = local;
+        symbol [ burstCount %burstCount.1 23 12 22 ];
+        symbol [ BurstManager %tmp.2 23 25 37 ];
+        %tmp.2 = getv ? :BurstManager;
+        symbol [ burstCount %tmp.3 23 38 48 ];
+        %tmp.3 = getv %tmp.2 :burstCount;
+        lputv %burstCount.1 %tmp.3;
+        symbol [ burstCount %burstCount.1 23 12 22 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 26 8 ]
+        symbol [ SessionManager %tmp.5 26 8 22 ];
+        %tmp.5 = getv ? :SessionManager;
+        symbol [ saveSession %tmp.6 26 23 34 ];
+        %tmp.6 = getv function %tmp.5 :saveSession;
+        %tmp.7 = lgetv %burstCount.1;
+        symbol [ burstCount %tmp.7 26 35 45 ];
+        invoke %tmp.5 %tmp.6(%tmp.7);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 29 8 ]
+        symbol [ System %tmp.8 29 8 14 ];
+        %tmp.8 = getm $.Toybox.System;
+        symbol [ exit %tmp.9 29 15 19 ];
+        %tmp.9 = getv function %tmp.8 :exit;
+        invoke %tmp.8 %tmp.9();
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_30_4_stop:
     }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 1; ]

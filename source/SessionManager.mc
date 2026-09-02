@@ -39,6 +39,8 @@ module SessionManager {
         if (session == null) {
             System.println("SessionManager: Tworzenie nowej sesji...");
             
+            // Wyresetuj stan meczu przy starcie nowej sesji
+            AppConfig.resetMatch();
             GPSManager.startGPS();
 
             session = ActivityRecording.createSession({
@@ -168,17 +170,21 @@ module SessionManager {
                            ", Zrywy: " + currentBursts + 
                            ", Wyskoki: " + currentJumps);
 
-            // 1. Zapisz dane obecnego seta do pól lapa FIT (w tym wyskoki!)
+            // 1. Zapisz dane obecnego seta do pól lapa FIT
             if (_lapScoreAField != null) { _lapScoreAField.setData(currentScoreA); }
             if (_lapScoreBField != null) { _lapScoreBField.setData(currentScoreB); }
             if (_lapBurstField != null)  { _lapBurstField.setData(currentBursts); }
             if (_lapJumpField != null)   { _lapJumpField.setData(currentJumps); }
 
-            // 2. Dodaj fizyczny lap w pliku FIT (zamyka obecny set)
-            s.addLap();
-            System.println("SessionManager: Wywołano s.addLap() - set zamknięty.");
+            // 2. Dodaj punkty seta do skumulowanego wyniku meczu
+            AppConfig.matchScoreA += currentScoreA;
+            AppConfig.matchScoreB += currentScoreB;
 
-            // 3. Wyzeruj liczniki dla kolejnego seta
+            // 3. Dodaj fizyczny lap w pliku FIT (zamyka obecny set)
+            s.addLap();
+            System.println("SessionManager: Wywołano s.addLap() - set zamknięty. Skumulowany mecz -> A: " + AppConfig.matchScoreA + ", B: " + AppConfig.matchScoreB);
+
+            // 4. Wyzeruj liczniki dla kolejnego seta
             AppConfig.resetVolleyballScores();
             BurstManager.burstCount = 0;
             JumpManager.jumpCount = 0;
@@ -187,14 +193,38 @@ module SessionManager {
         }
     }
 
-    function saveSession(scoreA as Number, scoreB as Number, burstCount as Number) as Boolean {
+    function saveSession(burstCount as Number) as Boolean {
         var s = session;
         if (s != null) {
-            // Zapisz dane podsumowujące sesję (całego meczu)
-            if (_scoreASummaryField != null) { _scoreASummaryField.setData(scoreA); }
-            if (_scoreBSummaryField != null) { _scoreBSummaryField.setData(scoreB); }
-            if (_burstSummaryField != null) { _burstSummaryField.setData(burstCount); }
-            if (_jumpSummaryField != null) { _jumpSummaryField.setData(JumpManager.jumpCount); }
+            
+            // 1. Zapisz dane OSTATNIEGO (aktywnego) seta do pól lapa przed zamknięciem sesji
+            if (s.isRecording()) {
+                var currentScoreA = AppConfig.volleyballScoreA;
+                var currentScoreB = AppConfig.volleyballScoreB;
+                var currentBursts = BurstManager.burstCount;
+                var currentJumps  = JumpManager.jumpCount;
+
+                System.println("SessionManager [SAVE DEBUG]: Zapisywanie ostatniego seta -> Wynik A: " + currentScoreA + 
+                               ", Wynik B: " + currentScoreB);
+
+                if (_lapScoreAField != null) { _lapScoreAField.setData(currentScoreA); }
+                if (_lapScoreBField != null) { _lapScoreBField.setData(currentScoreB); }
+                if (_lapBurstField != null)  { _lapBurstField.setData(currentBursts); }
+                if (_lapJumpField != null)   { _lapJumpField.setData(currentJumps); }
+
+                // Dodaj punkty ostatniego seta do wyniku meczu
+                AppConfig.matchScoreA += currentScoreA;
+                AppConfig.matchScoreB += currentScoreB;
+
+                // Zamknij ostatni lap (set) w pliku FIT
+                s.addLap();
+            }
+
+            // 2. Zapisz skumulowane dane całego meczu w polach sesji FIT
+            if (_scoreASummaryField != null) { _scoreASummaryField.setData(AppConfig.matchScoreA); }
+            if (_scoreBSummaryField != null) { _scoreBSummaryField.setData(AppConfig.matchScoreB); }
+            if (_burstSummaryField != null)  { _burstSummaryField.setData(burstCount); }
+            if (_jumpSummaryField != null)   { _jumpSummaryField.setData(JumpManager.jumpCount); }
 
             if (s.isRecording()) {
                 s.stop();

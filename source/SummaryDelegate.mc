@@ -19,12 +19,11 @@ class SummaryDelegate extends WatchUi.BehaviorDelegate {
     }
 
     private function saveAndExit() as Void {
-        var scoreA = ScoreManager.scoreA;
-        var scoreB = ScoreManager.scoreB;
+     
         var burstCount = BurstManager.burstCount;
 
         // Zapis sesji FIT do pamięci zegarka
-        SessionManager.saveSession(scoreA, scoreB, burstCount);
+        SessionManager.saveSession(burstCount);
 
         // Wyjście z aplikacji (zamyka proces)
         System.exit();

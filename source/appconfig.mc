@@ -10,9 +10,13 @@ module AppConfig {
     var selectedSportName as String = "Volleyball";
     var selectedSportEnum as Activity.Sport = Activity.SPORT_VOLLEYBALL;
 
-    // Stan punktacji dla siatkówki (dostępny globalnie w całej aplikacji)
+    // Stan punktacji dla BIEŻĄCEGO seta
     var volleyballScoreA as Number = 0;
     var volleyballScoreB as Number = 0;
+
+    // Skumulowany wynik CAŁEGO MECZU (suma ze wszystkich setów)
+    var matchScoreA as Number = 0;
+    var matchScoreB as Number = 0;
 
     function getBackgroundColor() as Graphics.ColorValue {
         return isBlackBackground ? Graphics.COLOR_BLACK : Graphics.COLOR_WHITE;
@@ -30,9 +34,17 @@ module AppConfig {
         isBlackBackground = !isBlackBackground;
     }
 
-    // Resetowanie punktów po rozpoczęciu nowego seta
+    // Resetowanie punktów tylko dla bieżącego seta
     function resetVolleyballScores() as Void {
         volleyballScoreA = 0;
         volleyballScoreB = 0;
+    }
+
+    // Reset całego meczu (wywoływane przy starcie nowej sesji)
+    function resetMatch() as Void {
+        volleyballScoreA = 0;
+        volleyballScoreB = 0;
+        matchScoreA = 0;
+        matchScoreB = 0;
     }
 }

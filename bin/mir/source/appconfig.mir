@@ -27,35 +27,13 @@ module AppConfig {
     var volleyballScoreA as Number = 0;
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 15; @position = 8; @symbol_vardef = [volleyballScoreB,15,8,24]; @symbol_type<0> = [Number,15,28,34]; ]
     var volleyballScoreB as Number = 0;
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 17; @symbol_functiondef = [getBackgroundColor,17,13,31]; @symbol_return<0> = [Graphics,17,37,45]; @symbol_return<1> = [ColorValue,17,46,56]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 18; @position = 8; @symbol_vardef = [matchScoreA,18,8,19]; @symbol_type<0> = [Number,18,23,29]; ]
+    var matchScoreA as Number = 0;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 19; @position = 8; @symbol_vardef = [matchScoreB,19,8,19]; @symbol_type<0> = [Number,19,23,29]; ]
+    var matchScoreB as Number = 0;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 21; @symbol_functiondef = [getBackgroundColor,21,13,31]; @symbol_return<0> = [Graphics,21,37,45]; @symbol_return<1> = [ColorValue,21,46,56]; ]
     function getBackgroundColor() as Graphics.ColorValue {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_17_57_19_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 18 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_18_15_18_67_begin:
-        symbol [ isBlackBackground %tmp.2 18 15 32 ];
-        %tmp.2 = getv ? :isBlackBackground;
-        bf %tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_18_15_18_67_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_18_15_18_67_true:
-        symbol [ Graphics %tmp.3 18 35 43 ];
-        %tmp.3 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.4 18 44 55 ];
-        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
-        push %tmp.4;
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_18_15_18_67_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_18_15_18_67_else_false:
-        symbol [ Graphics %tmp.5 18 58 66 ];
-        %tmp.5 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.6 18 67 78 ];
-        %tmp.6 = getv %tmp.5 :COLOR_WHITE;
-        push %tmp.6;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_18_15_18_67_end:
-        %tmp.7 = phi [%tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_18_15_18_67_begin] [%tmp.4 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_18_15_18_67_true] [%tmp.6 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_18_15_18_67_else_false] [%tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_18_15_18_67_end];
-        ret %tmp.7;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_17_57_19_4_stop:
-    }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 21; @symbol_functiondef = [getTextColor,21,13,25]; @symbol_return<0> = [Graphics,21,31,39]; @symbol_return<1> = [ColorValue,21,40,50]; ]
-    function getTextColor() as Graphics.ColorValue {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_21_51_23_4_start:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_21_57_23_4_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 22 8 ]
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_22_15_22_67_begin:
         symbol [ isBlackBackground %tmp.2 22 15 32 ];
@@ -64,54 +42,101 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_22_15_22_67_be
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_22_15_22_67_true:
         symbol [ Graphics %tmp.3 22 35 43 ];
         %tmp.3 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.4 22 44 55 ];
-        %tmp.4 = getv %tmp.3 :COLOR_WHITE;
+        symbol [ COLOR_BLACK %tmp.4 22 44 55 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
         push %tmp.4;
         goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_22_15_22_67_end;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_22_15_22_67_else_false:
         symbol [ Graphics %tmp.5 22 58 66 ];
         %tmp.5 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.6 22 67 78 ];
-        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        symbol [ COLOR_WHITE %tmp.6 22 67 78 ];
+        %tmp.6 = getv %tmp.5 :COLOR_WHITE;
         push %tmp.6;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_22_15_22_67_end:
         %tmp.7 = phi [%tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_22_15_22_67_begin] [%tmp.4 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_22_15_22_67_true] [%tmp.6 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_22_15_22_67_else_false] [%tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_22_15_22_67_end];
         ret %tmp.7;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_21_51_23_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_21_57_23_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 25; @symbol_functiondef = [setBlackBackground,25,13,31]; @symbol_param<0> = [isBlack,25,32,39]; @symbol_param<0>_type<0> = [Boolean,25,43,50]; ]
-    function setBlackBackground(isBlack as Boolean) as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_25_60_27_4_start:
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 25; @symbol_functiondef = [getTextColor,25,13,25]; @symbol_return<0> = [Graphics,25,31,39]; @symbol_return<1> = [ColorValue,25,40,50]; ]
+    function getTextColor() as Graphics.ColorValue {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_25_51_27_4_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 26 8 ]
-        %tmp.1 = lgetv %isBlack;
-        symbol [ isBlack %tmp.1 26 28 35 ];
-        symbol [ isBlackBackground ? 26 8 25 ];
-        putv self :isBlackBackground %tmp.1;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_25_60_27_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_26_15_26_67_begin:
+        symbol [ isBlackBackground %tmp.2 26 15 32 ];
+        %tmp.2 = getv ? :isBlackBackground;
+        bf %tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_26_15_26_67_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_26_15_26_67_true:
+        symbol [ Graphics %tmp.3 26 35 43 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.4 26 44 55 ];
+        %tmp.4 = getv %tmp.3 :COLOR_WHITE;
+        push %tmp.4;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_26_15_26_67_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_26_15_26_67_else_false:
+        symbol [ Graphics %tmp.5 26 58 66 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 26 67 78 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        push %tmp.6;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_26_15_26_67_end:
+        %tmp.7 = phi [%tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_26_15_26_67_begin] [%tmp.4 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_26_15_26_67_true] [%tmp.6 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_26_15_26_67_else_false] [%tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_26_15_26_67_end];
+        ret %tmp.7;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_25_51_27_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 29; @symbol_functiondef = [toggleBackgroundColor,29,13,34]; ]
-    function toggleBackgroundColor() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_29_45_31_4_start:
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 29; @symbol_functiondef = [setBlackBackground,29,13,31]; @symbol_param<0> = [isBlack,29,32,39]; @symbol_param<0>_type<0> = [Boolean,29,43,50]; ]
+    function setBlackBackground(isBlack as Boolean) as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_29_60_31_4_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 30 8 ]
-        symbol [ isBlackBackground %tmp.2 30 29 46 ];
+        %tmp.1 = lgetv %isBlack;
+        symbol [ isBlack %tmp.1 30 28 35 ];
+        symbol [ isBlackBackground ? 30 8 25 ];
+        putv self :isBlackBackground %tmp.1;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_29_60_31_4_stop:
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 33; @symbol_functiondef = [toggleBackgroundColor,33,13,34]; ]
+    function toggleBackgroundColor() as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_33_45_35_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 34 8 ]
+        symbol [ isBlackBackground %tmp.2 34 29 46 ];
         %tmp.2 = getv ? :isBlackBackground;
         %tmp.3 = not %tmp.2;
-        symbol [ isBlackBackground ? 30 8 25 ];
+        symbol [ isBlackBackground ? 34 8 25 ];
         putv self :isBlackBackground %tmp.3;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_29_45_31_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_33_45_35_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 34; @symbol_functiondef = [resetVolleyballScores,34,13,34]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 38; @symbol_functiondef = [resetVolleyballScores,38,13,34]; ]
     function resetVolleyballScores() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_34_45_37_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 35 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_38_45_41_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 39 8 ]
         %tmp.1 = 0;
-        symbol [ volleyballScoreA ? 35 8 24 ];
+        symbol [ volleyballScoreA ? 39 8 24 ];
         putv self :volleyballScoreA %tmp.1;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 36 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 40 8 ]
         %tmp.2 = 0;
-        symbol [ volleyballScoreB ? 36 8 24 ];
+        symbol [ volleyballScoreB ? 40 8 24 ];
         putv self :volleyballScoreB %tmp.2;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_34_45_37_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_38_45_41_4_stop:
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 44; @symbol_functiondef = [resetMatch,44,13,23]; ]
+    function resetMatch() as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_44_34_49_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 45 8 ]
+        %tmp.1 = 0;
+        symbol [ volleyballScoreA ? 45 8 24 ];
+        putv self :volleyballScoreA %tmp.1;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 46 8 ]
+        %tmp.2 = 0;
+        symbol [ volleyballScoreB ? 46 8 24 ];
+        putv self :volleyballScoreB %tmp.2;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 47 8 ]
+        %tmp.3 = 0;
+        symbol [ matchScoreA ? 47 8 19 ];
+        putv self :matchScoreA %tmp.3;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 48 8 ]
+        %tmp.4 = 0;
+        symbol [ matchScoreB ? 48 8 19 ];
+        putv self :matchScoreB %tmp.4;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_44_34_49_4_stop:
     }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 1; ]

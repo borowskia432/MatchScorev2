@@ -30,17 +30,22 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_TeamSportsApp_mc_7_26_9_4_s
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\TeamSportsApp.mc"; @line = 14; @symbol_functiondef = [onStop,14,13,19]; @symbol_param<0> = [state,14,20,25]; @symbol_param<0>_type<0> = [Dictionary,14,29,39]; ]
     function onStop(state as Dictionary or Null) as Void {
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\TeamSportsApp.mc"; @line = 17; @symbol_functiondef = [getInitialView,17,13,27]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\TeamSportsApp.mc"; @line = 19; @symbol_functiondef = [getInitialView,19,13,27]; ]
     function getInitialView() {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_TeamSportsApp_mc_17_30_19_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\TeamSportsApp.mc" 18 8 ]
-        symbol [ MainMenu %tmp.2 18 15 23 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_TeamSportsApp_mc_19_30_21_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\TeamSportsApp.mc" 20 8 ]
+        symbol [ MainMenu %tmp.2 20 15 23 ];
         %tmp.2 = getv ? :MainMenu;
-        symbol [ createMenu %tmp.3 18 24 34 ];
+        symbol [ createMenu %tmp.3 20 24 34 ];
         %tmp.3 = getv function %tmp.2 :createMenu;
         %tmp.4 = invoke %tmp.2 %tmp.3();
-        ret %tmp.4;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_TeamSportsApp_mc_17_30_19_4_stop:
+        %tmp.5 = as %tmp.4 [WatchUi.Views, WatchUi.InputDelegates];
+        symbol [ WatchUi %tmp.5 20 41 48 ];
+        symbol [ Views %tmp.5 20 49 54 ];
+        symbol [ WatchUi %tmp.5 20 56 63 ];
+        symbol [ InputDelegates %tmp.5 20 64 78 ];
+        ret %tmp.5;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_TeamSportsApp_mc_19_30_21_4_stop:
     }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\TeamSportsApp.mc"; @line = 1; ]

@@ -13,13 +13,14 @@ module SessionManager {
     var _scoreASummaryField as FitContributor.Field or Null = null;
     var _scoreBSummaryField as FitContributor.Field or Null = null;
     var _burstSummaryField as FitContributor.Field or Null = null;
+    var _jumpSummaryField as FitContributor.Field or Null = null; // Dodane pole dla wyskoków
 
-    // Usunięto słowo 'private' – zmienne w module nie używają modyfikatorów dostępu
     var _nextLapDistanceMeters as Float = 1000.0;
 
     const FIT_SCORE_A_SUM_ID = 1;
     const FIT_SCORE_B_SUM_ID = 2;
     const FIT_BURST_SUM_ID = 3;
+    const FIT_JUMP_SUM_ID = 4; // Unikalne ID dla wyskoków
 
     function startSession(sessionName as String, sport as Activity.Sport) as Void {
         if (session == null) {
@@ -58,8 +59,16 @@ module SessionManager {
                     { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "zrywów" }
                 );
 
+                // Tworzenie pola FIT dla wyskoków
+                _jumpSummaryField = s.createField(
+                    "jump_count_final",
+                    FIT_JUMP_SUM_ID,
+                    FitContributor.DATA_TYPE_UINT16,
+                    { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "wyskoki" }
+                );
+
                 s.start();
-                System.println("SessionManager: Sesja wystartowała z obsługą GPS.");
+                System.println("SessionManager: Sesja wystartowała z obsługą pól FIT.");
             }
         }
     }
@@ -114,6 +123,13 @@ module SessionManager {
             var fBurst = _burstSummaryField;
             if (fBurst != null) { fBurst.setData(burstCount); }
 
+            // Zapisanie liczby wyskoków z JumpManager do pliku FIT przed zamknięciem sesji
+            var fJump = _jumpSummaryField;
+            if (fJump != null) {
+                var jumps = (JumpManager has :jumpCount) ? JumpManager.jumpCount : 0;
+                fJump.setData(jumps);
+            }
+
             if (s.isRecording()) {
                 s.stop();
             }
@@ -123,6 +139,7 @@ module SessionManager {
             _scoreASummaryField = null;
             _scoreBSummaryField = null;
             _burstSummaryField = null;
+            _jumpSummaryField = null; // Wyczyszczenie referencji
 
             GPSManager.stopGPS();
             return success;
@@ -143,6 +160,7 @@ module SessionManager {
             _scoreASummaryField = null;
             _scoreBSummaryField = null;
             _burstSummaryField = null;
+            _jumpSummaryField = null;
         }
 
         GPSManager.stopGPS();

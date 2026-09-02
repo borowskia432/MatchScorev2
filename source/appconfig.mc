@@ -1,8 +1,14 @@
 import Toybox.Graphics;
 import Toybox.Lang;
+import Toybox.Activity;
 
 module AppConfig {
+    var isAutoLapEnabled as Boolean = false;
     var isBlackBackground as Boolean = true;
+
+    // Przechowywanie wybranego sportu z MainMenu
+    var selectedSportName as String = "Volleyball";
+    var selectedSportEnum as Activity.Sport = Activity.SPORT_VOLLEYBALL;
 
     function getBackgroundColor() as Graphics.ColorValue {
         return isBlackBackground ? Graphics.COLOR_BLACK : Graphics.COLOR_WHITE;
@@ -16,7 +22,6 @@ module AppConfig {
         isBlackBackground = isBlack;
     }
 
-    // Dodana metoda obsługująca przełączanie motywu
     function toggleBackgroundColor() as Void {
         isBlackBackground = !isBlackBackground;
     }

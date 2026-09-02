@@ -9,6 +9,14 @@
     <string id="Volleyball">Siatkówka</string>
     
     <!-- Ekrany i Statusy -->
+    <string id="MainMenuTitle">Wybierz sport</string>
+    <string id="FootballRun">Piłka nożna / Bieganie</string>
+    <string id="Football">Piłka nożna</string>
+    <string id="Volleyball">Siatkówka</string>
+    
+    <string id="SelectModeTitle">Wybierz tryb</string>
+    <string id="ModeManual">Ręczne sety / Lapy</string>
+    <string id="ModeAuto">Auto-Lap (1km)</string>
     <string id="Screen1Text">EKRAN 1</string>
     <string id="Screen2Text">EKRAN 2</string>
     <string id="Screen3Text">EKRAN 3</string>
@@ -30,6 +38,9 @@
 <string id="StatusOn">Włączone</string>
 <string id="StatusOff">Wyłączone</string>
 <string id="SoundLabel">Dźwięk przy zmianie</string>
+<string id="SelectModeTitle">Wybierz tryb</string>
+<string id="ModeVolleyball">Siatkówka (Ręczne sety)</string>
+<string id="ModeTraining">Trening (Auto-Lap 1km)</string>
     
     <!-- Wyniki i Statystyki bieżące -->
     <string id="ScoreALabel">Wynik Drużyny A</string>

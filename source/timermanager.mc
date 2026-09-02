@@ -56,8 +56,7 @@ module TimerManager {
             return;
         }
 
-        // Cykliczne sprawdzanie Auto Lapa co 1 sekundę trwania treningu
-        SessionManager.checkAutoLap();
+        // Usunięto wywołanie SessionManager.checkAutoLap();
 
         if (_restSeconds > 0) {
             _restSeconds--;

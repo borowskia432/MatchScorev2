@@ -4,7 +4,6 @@ import Toybox.Lang;
 
 module MainMenu {
     function createMenu() as [ Views, InputDelegates ] {
-        // Poprawne wywołanie loadResource bez błędnego rzutowania na Lang.Symbol
         var titleStr = WatchUi.loadResource(Rez.Strings.MainMenuTitle) as String;
         var runStr   = WatchUi.loadResource(Rez.Strings.FootballRun) as String;
         var fbStr    = WatchUi.loadResource(Rez.Strings.Football) as String;
@@ -12,26 +11,9 @@ module MainMenu {
 
         var menu = new WatchUi.Menu2({:title => titleStr});
 
-        menu.addItem(new WatchUi.MenuItem(
-            runStr,
-            null,
-            "fb_run",
-            null
-        ));
-
-        menu.addItem(new WatchUi.MenuItem(
-            fbStr,
-            null,
-            "fb",
-            null
-        ));
-
-        menu.addItem(new WatchUi.MenuItem(
-            vbStr,
-            null,
-            "vb",
-            null
-        ));
+        menu.addItem(new WatchUi.MenuItem(runStr, null, "fb_run", null));
+        menu.addItem(new WatchUi.MenuItem(fbStr, null, "fb", null));
+        menu.addItem(new WatchUi.MenuItem(vbStr, null, "vb", null));
 
         return [menu, new MainMenuDelegate()] as [ Views, InputDelegates ];
     }
@@ -46,15 +28,20 @@ class MainMenuDelegate extends WatchUi.Menu2InputDelegate {
     function onSelect(item as WatchUi.MenuItem) as Void {
         var id = item.getId() as String;
 
+        // 1. Zapisujemy wybrany sport w AppConfig do późniejszego wykorzystania
         if (id.equals("fb_run")) {
-            SessionManager.startSession("Football Run", Activity.SPORT_RUNNING);
-            WatchUi.pushView(new Screen1View(), new Screen1Delegate(), WatchUi.SLIDE_LEFT);
+            AppConfig.selectedSportName = "Football Run";
+            AppConfig.selectedSportEnum = Activity.SPORT_RUNNING;
         } else if (id.equals("fb")) {
-            SessionManager.startSession("Football", Activity.SPORT_SOCCER);
-            WatchUi.pushView(new Screen2View(), new Screen2Delegate(), WatchUi.SLIDE_LEFT);
+            AppConfig.selectedSportName = "Football";
+            AppConfig.selectedSportEnum = Activity.SPORT_SOCCER;
         } else if (id.equals("vb")) {
-            SessionManager.startSession("Volleyball", Activity.SPORT_VOLLEYBALL);
-            WatchUi.pushView(new Screen3View(), new Screen3Delegate(), WatchUi.SLIDE_LEFT);
+            AppConfig.selectedSportName = "Volleyball";
+            AppConfig.selectedSportEnum = Activity.SPORT_VOLLEYBALL;
         }
+
+        // 2. Przechodzimy do menu wyboru trybu okrążeń zamiast od razu startować sesję
+        var modeMenuData = ModeSelectMenu.createMenu();
+        WatchUi.pushView(modeMenuData[0], modeMenuData[1], WatchUi.SLIDE_LEFT);
     }
 }

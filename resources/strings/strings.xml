@@ -9,6 +9,14 @@
     <string id="Volleyball">Volleyball</string>
     
     <!-- Ekrany i Statusy -->
+    <string id="MainMenuTitle">Select Sport</string>
+    <string id="FootballRun">Football / Run</string>
+    <string id="Football">Football (Soccer)</string>
+    <string id="Volleyball">Volleyball</string>
+    
+    <string id="SelectModeTitle">Select Mode</string>
+    <string id="ModeManual">Manual Laps / Sets</string>
+    <string id="ModeAuto">Auto-Lap (1km)</string>
     <string id="Screen1Text">SCREEN 1</string>
     <string id="Screen2Text">SCREEN 2</string>
     <string id="Screen3Text">SCREEN 3</string>
@@ -30,6 +38,9 @@
 <string id="StatusOn">Enabled</string>
 <string id="StatusOff">Disabled</string>
 <string id="SoundLabel">Sound on change</string>
+<string id="SelectModeTitle">Select Mode</string>
+<string id="ModeVolleyball">Volleyball (Manual Laps/Sets)</string>
+<string id="ModeTraining">Training (Auto-Lap 1km)</string>
     
     <!-- Wyniki i Statystyki bieżące -->
     <string id="ScoreALabel">Team A Score</string>

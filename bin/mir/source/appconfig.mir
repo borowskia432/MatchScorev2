@@ -1,0 +1,77 @@
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 4; @symbol_moduledef = [AppConfig,4,7,16]; ]
+module AppConfig {
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 5; @position = 8; @symbol_vardef = [isBlackBackground,5,8,25]; @symbol_type<0> = [Boolean,5,29,36]; ]
+    var isBlackBackground as Boolean = true;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 7; @symbol_functiondef = [getBackgroundColor,7,13,31]; @symbol_return<0> = [Graphics,7,37,45]; @symbol_return<1> = [ColorValue,7,46,56]; ]
+    function getBackgroundColor() as Graphics.ColorValue {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_7_57_9_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 8 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_8_15_8_67_begin:
+        symbol [ isBlackBackground %tmp.2 8 15 32 ];
+        %tmp.2 = getv ? :isBlackBackground;
+        bf %tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_8_15_8_67_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_8_15_8_67_true:
+        symbol [ Graphics %tmp.3 8 35 43 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 8 44 55 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        push %tmp.4;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_8_15_8_67_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_8_15_8_67_else_false:
+        symbol [ Graphics %tmp.5 8 58 66 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.6 8 67 78 ];
+        %tmp.6 = getv %tmp.5 :COLOR_WHITE;
+        push %tmp.6;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_8_15_8_67_end:
+        %tmp.7 = phi [%tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_8_15_8_67_begin] [%tmp.4 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_8_15_8_67_true] [%tmp.6 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_8_15_8_67_else_false] [%tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_8_15_8_67_end];
+        ret %tmp.7;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_7_57_9_4_stop:
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 11; @symbol_functiondef = [getTextColor,11,13,25]; @symbol_return<0> = [Graphics,11,31,39]; @symbol_return<1> = [ColorValue,11,40,50]; ]
+    function getTextColor() as Graphics.ColorValue {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_11_51_13_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 12 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_12_15_12_67_begin:
+        symbol [ isBlackBackground %tmp.2 12 15 32 ];
+        %tmp.2 = getv ? :isBlackBackground;
+        bf %tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_12_15_12_67_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_12_15_12_67_true:
+        symbol [ Graphics %tmp.3 12 35 43 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.4 12 44 55 ];
+        %tmp.4 = getv %tmp.3 :COLOR_WHITE;
+        push %tmp.4;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_12_15_12_67_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_12_15_12_67_else_false:
+        symbol [ Graphics %tmp.5 12 58 66 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 12 67 78 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        push %tmp.6;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_12_15_12_67_end:
+        %tmp.7 = phi [%tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_12_15_12_67_begin] [%tmp.4 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_12_15_12_67_true] [%tmp.6 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_12_15_12_67_else_false] [%tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_12_15_12_67_end];
+        ret %tmp.7;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_11_51_13_4_stop:
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 15; @symbol_functiondef = [setBlackBackground,15,13,31]; @symbol_param<0> = [isBlack,15,32,39]; @symbol_param<0>_type<0> = [Boolean,15,43,50]; ]
+    function setBlackBackground(isBlack as Boolean) as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_15_60_17_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc" 16 8 ]
+        %tmp.1 = lgetv %isBlack;
+        symbol [ isBlack %tmp.1 16 28 35 ];
+        symbol [ isBlackBackground ? 16 8 25 ];
+        putv self :isBlackBackground %tmp.1;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_appconfig_mc_15_60_17_4_stop:
+    }
+}
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\appconfig.mc"; @line = 1; ]
+<init> {
+}

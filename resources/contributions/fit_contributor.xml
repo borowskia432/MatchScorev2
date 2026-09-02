@@ -1,0 +1,23 @@
+<resources>
+    <fitContributions>
+        <fitField id="0"
+            displayInChart="false"
+            displayInActivitySummary="true"
+            sortOrder="0"
+            precision="0"
+            chartTitle="@Strings.ScoreALabel"
+            dataLabel="@Strings.ScoreALabel"
+            unitLabel="@Strings.ScoreUnits" />
+
+        <fitField id="1"
+            displayInChart="false"
+            displayInActivitySummary="true"
+            sortOrder="1"
+            precision="0"
+            chartTitle="@Strings.ScoreBLabel"
+            dataLabel="@Strings.ScoreBLabel"
+            unitLabel="@Strings.ScoreUnits" />
+
+            
+    </fitContributions>
+</resources>

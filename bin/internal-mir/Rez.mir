@@ -1,0 +1,1486 @@
+[ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,9,27,39]; @symbol_type<0> = [ResourceId,9,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 12; @symbol_moduledef = [Strings,12,11,18]; ]
+    module Strings {
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 13; @position = 27; initialized = true; @symbol_vardef = [DiscardAndExit,13,27,41]; @symbol_type<0> = [ResourceId,13,45,55]; ]
+        var DiscardAndExit as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 14; @position = 27; initialized = true; @symbol_vardef = [StatusToChange,14,27,41]; @symbol_type<0> = [ResourceId,14,45,55]; ]
+        var StatusToChange as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 15; @position = 27; initialized = true; @symbol_vardef = [MainMenuTitle,15,27,40]; @symbol_type<0> = [ResourceId,15,44,54]; ]
+        var MainMenuTitle as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 16; @position = 27; initialized = true; @symbol_vardef = [StartTimer,16,27,37]; @symbol_type<0> = [ResourceId,16,41,51]; ]
+        var StartTimer as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 17; @position = 27; initialized = true; @symbol_vardef = [AppName,17,27,34]; @symbol_type<0> = [ResourceId,17,38,48]; ]
+        var AppName as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 18; @position = 27; initialized = true; @symbol_vardef = [SaveAndExit,18,27,38]; @symbol_type<0> = [ResourceId,18,42,52]; ]
+        var SaveAndExit as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 19; @position = 27; initialized = true; @symbol_vardef = [ScoreBLabel,19,27,38]; @symbol_type<0> = [ResourceId,19,42,52]; ]
+        var ScoreBLabel as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 20; @position = 27; initialized = true; @symbol_vardef = [FootballRun,20,27,38]; @symbol_type<0> = [ResourceId,20,42,52]; ]
+        var FootballRun as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 21; @position = 27; initialized = true; @symbol_vardef = [ColorWhite,21,27,37]; @symbol_type<0> = [ResourceId,21,41,51]; ]
+        var ColorWhite as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 22; @position = 27; initialized = true; @symbol_vardef = [Volleyball,22,27,37]; @symbol_type<0> = [ResourceId,22,41,51]; ]
+        var Volleyball as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 23; @position = 27; initialized = true; @symbol_vardef = [ExitMenuTitle,23,27,40]; @symbol_type<0> = [ResourceId,23,44,54]; ]
+        var ExitMenuTitle as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 24; @position = 27; initialized = true; @symbol_vardef = [ColorBlack,24,27,37]; @symbol_type<0> = [ResourceId,24,41,51]; ]
+        var ColorBlack as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 25; @position = 27; initialized = true; @symbol_vardef = [Screen3Text,25,27,38]; @symbol_type<0> = [ResourceId,25,42,52]; ]
+        var Screen3Text as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 26; @position = 27; initialized = true; @symbol_vardef = [SettingsTitle,26,27,40]; @symbol_type<0> = [ResourceId,26,44,54]; ]
+        var SettingsTitle as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 27; @position = 27; initialized = true; @symbol_vardef = [TeamB,27,27,32]; @symbol_type<0> = [ResourceId,27,36,46]; ]
+        var TeamB as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 28; @position = 27; initialized = true; @symbol_vardef = [TeamA,28,27,32]; @symbol_type<0> = [ResourceId,28,36,46]; ]
+        var TeamA as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 29; @position = 27; initialized = true; @symbol_vardef = [StatusPause,29,27,38]; @symbol_type<0> = [ResourceId,29,42,52]; ]
+        var StatusPause as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 30; @position = 27; initialized = true; @symbol_vardef = [Football,30,27,35]; @symbol_type<0> = [ResourceId,30,39,49]; ]
+        var Football as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 31; @position = 27; initialized = true; @symbol_vardef = [Screen1Text,31,27,38]; @symbol_type<0> = [ResourceId,31,42,52]; ]
+        var Screen1Text as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 32; @position = 27; initialized = true; @symbol_vardef = [ScoreUnits,32,27,37]; @symbol_type<0> = [ResourceId,32,41,51]; ]
+        var ScoreUnits as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 33; @position = 27; initialized = true; @symbol_vardef = [StopTimer,33,27,36]; @symbol_type<0> = [ResourceId,33,40,50]; ]
+        var StopTimer as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 34; @position = 27; initialized = true; @symbol_vardef = [Screen2Text,34,27,38]; @symbol_type<0> = [ResourceId,34,42,52]; ]
+        var Screen2Text as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 35; @position = 27; initialized = true; @symbol_vardef = [ScreenColor,35,27,38]; @symbol_type<0> = [ResourceId,35,42,52]; ]
+        var ScreenColor as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 36; @position = 27; initialized = true; @symbol_vardef = [ReturnToMain,36,27,39]; @symbol_type<0> = [ResourceId,36,43,53]; ]
+        var ReturnToMain as ResourceId;
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 37; @position = 27; initialized = true; @symbol_vardef = [ScoreALabel,37,27,38]; @symbol_type<0> = [ResourceId,37,42,52]; ]
+        var ScoreALabel as ResourceId;
+    }
+    [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 40; @symbol_moduledef = [Styles,40,11,17]; ]
+    module Styles {
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 40; ]
+        <init> {
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 41; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,41,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 41; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 42; @position = 18; @symbol_constdef = [exclude,42,18,25]; @symbol_type<0> = [Boolean,42,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 45; @symbol_moduledef = [system_size__menu_header,45,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 45; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 46; @position = 18; @symbol_constdef = [width,46,18,23]; @symbol_type<0> = [Number,46,27,33]; ]
+            const width as Number = 280;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 47; @position = 18; @symbol_constdef = [height,47,18,24]; @symbol_type<0> = [Number,47,28,34]; ]
+            const height as Number = 87;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 50; @symbol_moduledef = [system_loc__hint_button_left_bottom,50,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 50; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 51; @position = 18; @symbol_constdef = [x,51,18,19]; @symbol_type<0> = [Number,51,23,29]; ]
+            const x as Number = 11;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 52; @position = 18; @symbol_constdef = [y,52,18,19]; @symbol_type<0> = [Number,52,23,29]; ]
+            const y as Number = 185;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 55; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,55,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 55; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 56; @position = 18; @symbol_constdef = [exclude,56,18,25]; @symbol_type<0> = [Boolean,56,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 59; @symbol_moduledef = [prompt_loc__body_no_title,59,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 59; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 60; @position = 18; @symbol_constdef = [x,60,18,19]; @symbol_type<0> = [Number,60,23,29]; ]
+            const x as Number = 28;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 61; @position = 18; @symbol_constdef = [y,61,18,19]; @symbol_type<0> = [Number,61,23,29]; ]
+            const y as Number = 28;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 64; @symbol_moduledef = [system_icon_dark__about,64,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 64; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 65; @position = 18; @symbol_constdef = [filename,65,18,26]; @symbol_type<0> = [String,65,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__about.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 66; @position = 18; @symbol_constdef = [compress,66,18,26]; @symbol_type<0> = [String,66,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 67; @position = 18; @symbol_constdef = [dithering,67,18,27]; @symbol_type<0> = [String,67,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 68; @position = 18; @symbol_constdef = [automaticPalette,68,18,34]; @symbol_type<0> = [String,68,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 71; @symbol_moduledef = [system_icon_light__question,71,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 71; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 72; @position = 18; @symbol_constdef = [filename,72,18,26]; @symbol_type<0> = [String,72,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__question.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 73; @position = 18; @symbol_constdef = [dithering,73,18,27]; @symbol_type<0> = [String,73,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 76; @symbol_moduledef = [system_loc__hint_button_left_top,76,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 76; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 77; @position = 18; @symbol_constdef = [exclude,77,18,25]; @symbol_type<0> = [Boolean,77,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 80; @symbol_moduledef = [prompt_font__title,80,15,33]; ]
+        module prompt_font__title {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 80; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 81 18 ]
+                symbol [ Graphics %tmp.1 81 34 42 ];
+                %tmp.1 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.2 81 43 62 ];
+                %tmp.2 = getv %tmp.1 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.3 81 63 71 ];
+                %tmp.3 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.4 81 72 92 ];
+                %tmp.4 = getv %tmp.3 :TEXT_JUSTIFY_VCENTER;
+                %tmp.5 = bitor %tmp.2 %tmp.4;
+                putv self :justification %tmp.5;
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 82 18 ]
+                symbol [ Graphics %tmp.6 82 25 33 ];
+                %tmp.6 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.7 82 34 44 ];
+                %tmp.7 = getv %tmp.6 :FONT_XTINY;
+                putv self :font %tmp.7;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 81; @position = 18; @symbol_constdef = [justification,81,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 82; @position = 18; @symbol_constdef = [font,82,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 85; @symbol_moduledef = [system_icon_dark__discard,85,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 85; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 86; @position = 18; @symbol_constdef = [filename,86,18,26]; @symbol_type<0> = [String,86,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__discard.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 87; @position = 18; @symbol_constdef = [compress,87,18,26]; @symbol_type<0> = [String,87,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 88; @position = 18; @symbol_constdef = [dithering,88,18,27]; @symbol_type<0> = [String,88,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 89; @position = 18; @symbol_constdef = [automaticPalette,89,18,34]; @symbol_type<0> = [String,89,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 92; @symbol_moduledef = [system_size__menu_item,92,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 92; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 93; @position = 18; @symbol_constdef = [width,93,18,23]; @symbol_type<0> = [Number,93,27,33]; ]
+            const width as Number = 280;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 94; @position = 18; @symbol_constdef = [height,94,18,24]; @symbol_type<0> = [Number,94,28,34]; ]
+            const height as Number = 73;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 97; @symbol_moduledef = [system_color_dark__text,97,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 97; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 99 18 ]
+                symbol [ Graphics %tmp.8 99 31 39 ];
+                %tmp.8 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.9 99 40 57 ];
+                %tmp.9 = getv %tmp.8 :COLOR_TRANSPARENT;
+                putv self :background %tmp.9;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 98; @position = 18; @symbol_constdef = [color,98,18,23]; @symbol_type<0> = [Number,98,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 99; @position = 18; @symbol_constdef = [background,99,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 102; @symbol_moduledef = [system_icon_destructive__discard,102,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 102; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 103; @position = 18; @symbol_constdef = [filename,103,18,26]; @symbol_type<0> = [String,103,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_destructive__discard.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 104; @position = 18; @symbol_constdef = [dithering,104,18,27]; @symbol_type<0> = [String,104,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 107; @symbol_moduledef = [system_icon_dark__hint_action_menu,107,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 107; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 108; @position = 18; @symbol_constdef = [filename,108,18,26]; @symbol_type<0> = [String,108,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 109; @position = 18; @symbol_constdef = [dithering,109,18,27]; @symbol_type<0> = [String,109,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 112; @symbol_moduledef = [prompt_size__title,112,15,33]; ]
+        module prompt_size__title {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 112; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 113; @position = 18; @symbol_constdef = [width,113,18,23]; @symbol_type<0> = [Number,113,27,33]; ]
+            const width as Number = 224;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 114; @position = 18; @symbol_constdef = [height,114,18,24]; @symbol_type<0> = [Number,114,28,34]; ]
+            const height as Number = 42;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 117; @symbol_moduledef = [confirmation_font__body,117,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 117; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 118 18 ]
+                symbol [ Graphics %tmp.10 118 34 42 ];
+                %tmp.10 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.11 118 43 62 ];
+                %tmp.11 = getv %tmp.10 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.12 118 63 71 ];
+                %tmp.12 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.13 118 72 92 ];
+                %tmp.13 = getv %tmp.12 :TEXT_JUSTIFY_VCENTER;
+                %tmp.14 = bitor %tmp.11 %tmp.13;
+                putv self :justification %tmp.14;
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 119 18 ]
+                symbol [ Graphics %tmp.15 119 25 33 ];
+                %tmp.15 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.16 119 34 43 ];
+                %tmp.16 = getv %tmp.15 :FONT_TINY;
+                putv self :font %tmp.16;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 118; @position = 18; @symbol_constdef = [justification,118,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 119; @position = 18; @symbol_constdef = [font,119,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 122; @symbol_moduledef = [system_color_dark__background,122,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 122; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 123; @position = 18; @symbol_constdef = [color,123,18,23]; @symbol_type<0> = [Number,123,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 124; @position = 18; @symbol_constdef = [background,124,18,28]; @symbol_type<0> = [Number,124,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 127; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,127,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 127; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 128; @position = 18; @symbol_constdef = [filename,128,18,26]; @symbol_type<0> = [String,128,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_destructive__hint_button_left_top.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 129; @position = 18; @symbol_constdef = [dithering,129,18,27]; @symbol_type<0> = [String,129,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 132; @symbol_moduledef = [system_size__launch_icon,132,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 132; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 133; @position = 18; @symbol_constdef = [scaleX,133,18,24]; @symbol_type<0> = [Number,133,28,34]; ]
+            const scaleX as Number = 40;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 134; @position = 18; @symbol_constdef = [scaleY,134,18,24]; @symbol_type<0> = [Number,134,28,34]; ]
+            const scaleY as Number = 40;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 135; @position = 18; @symbol_constdef = [scaleRelativeTo,135,18,33]; @symbol_type<0> = [String,135,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 138; @symbol_moduledef = [confirmation_input__confirm,138,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 138; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 139 18 ]
+                symbol [ WatchUi %tmp.17 139 27 34 ];
+                %tmp.17 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.18 139 35 44 ];
+                %tmp.18 = getv %tmp.17 :KEY_ENTER;
+                putv self :button %tmp.18;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 139; @position = 18; @symbol_constdef = [button,139,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 142; @symbol_moduledef = [prompt_font__body_with_title,142,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 142; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 143 18 ]
+                symbol [ Graphics %tmp.19 143 34 42 ];
+                %tmp.19 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.20 143 43 62 ];
+                %tmp.20 = getv %tmp.19 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.20;
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 144 18 ]
+                symbol [ Graphics %tmp.21 144 25 33 ];
+                %tmp.21 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.22 144 34 43 ];
+                %tmp.22 = getv %tmp.21 :FONT_TINY;
+                putv self :font %tmp.22;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 143; @position = 18; @symbol_constdef = [justification,143,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 144; @position = 18; @symbol_constdef = [font,144,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 147; @symbol_moduledef = [confirmation_loc__body,147,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 147; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 148; @position = 18; @symbol_constdef = [x,148,18,19]; @symbol_type<0> = [Number,148,23,29]; ]
+            const x as Number = 56;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 149; @position = 18; @symbol_constdef = [y,149,18,19]; @symbol_type<0> = [Number,149,23,29]; ]
+            const y as Number = 56;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 152; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,152,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 152; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 153; @position = 18; @symbol_constdef = [filename,153,18,26]; @symbol_type<0> = [String,153,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_destructive__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 154; @position = 18; @symbol_constdef = [dithering,154,18,27]; @symbol_type<0> = [String,154,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 157; @symbol_moduledef = [prompt_color_dark__background,157,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 157; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 158; @position = 18; @symbol_constdef = [color,158,18,23]; @symbol_type<0> = [Number,158,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 159; @position = 18; @symbol_constdef = [background,159,18,28]; @symbol_type<0> = [Number,159,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 162; @symbol_moduledef = [system_icon_destructive__hint_action_menu,162,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 162; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 163; @position = 18; @symbol_constdef = [filename,163,18,26]; @symbol_type<0> = [String,163,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 164; @position = 18; @symbol_constdef = [dithering,164,18,27]; @symbol_type<0> = [String,164,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 167; @symbol_moduledef = [system_loc__hint_action_menu,167,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 167; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 168; @position = 18; @symbol_constdef = [x,168,18,19]; @symbol_type<0> = [Number,168,23,29]; ]
+            const x as Number = 242;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 169; @position = 18; @symbol_constdef = [y,169,18,19]; @symbol_type<0> = [Number,169,23,29]; ]
+            const y as Number = 52;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 172; @symbol_moduledef = [confirmation_icon__hint_confirm,172,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 172; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 173; @position = 18; @symbol_constdef = [filename,173,18,26]; @symbol_type<0> = [String,173,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 174; @position = 18; @symbol_constdef = [dithering,174,18,27]; @symbol_type<0> = [String,174,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 177; @symbol_moduledef = [system_loc__hint_button_left_middle,177,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 177; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 178; @position = 18; @symbol_constdef = [x,178,18,19]; @symbol_type<0> = [Number,178,23,29]; ]
+            const x as Number = 3;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 179; @position = 18; @symbol_constdef = [y,179,18,19]; @symbol_type<0> = [Number,179,23,29]; ]
+            const y as Number = 116;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 182; @symbol_moduledef = [prompt_size__body_no_title,182,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 182; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 183; @position = 18; @symbol_constdef = [width,183,18,23]; @symbol_type<0> = [Number,183,27,33]; ]
+            const width as Number = 224;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 184; @position = 18; @symbol_constdef = [height,184,18,24]; @symbol_type<0> = [Number,184,28,34]; ]
+            const height as Number = 224;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 187; @symbol_moduledef = [system_icon_light__hint_button_left_top,187,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 187; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 188; @position = 18; @symbol_constdef = [filename,188,18,26]; @symbol_type<0> = [String,188,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__hint_button_left_top.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 189; @position = 18; @symbol_constdef = [dithering,189,18,27]; @symbol_type<0> = [String,189,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 192; @symbol_moduledef = [prompt_color_light__background,192,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 192; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 193; @position = 18; @symbol_constdef = [color,193,18,23]; @symbol_type<0> = [Number,193,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 194; @position = 18; @symbol_constdef = [background,194,18,28]; @symbol_type<0> = [Number,194,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 197; @symbol_moduledef = [confirmation_input__delete,197,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 197; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 198 18 ]
+                symbol [ WatchUi %tmp.23 198 27 34 ];
+                %tmp.23 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.24 198 35 44 ];
+                %tmp.24 = getv %tmp.23 :KEY_ENTER;
+                putv self :button %tmp.24;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 198; @position = 18; @symbol_constdef = [button,198,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 201; @symbol_moduledef = [system_icon_dark__hint_button_left_top,201,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 201; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 202; @position = 18; @symbol_constdef = [filename,202,18,26]; @symbol_type<0> = [String,202,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__hint_button_left_top.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 203; @position = 18; @symbol_constdef = [dithering,203,18,27]; @symbol_type<0> = [String,203,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 206; @symbol_moduledef = [system_input__action_menu,206,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 206; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 207 18 ]
+                symbol [ WatchUi %tmp.25 207 27 34 ];
+                %tmp.25 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.26 207 35 44 ];
+                %tmp.26 = getv %tmp.25 :KEY_ENTER;
+                putv self :button %tmp.26;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 207; @position = 18; @symbol_constdef = [button,207,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 210; @symbol_moduledef = [system_icon_light__save,210,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 210; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 211; @position = 18; @symbol_constdef = [filename,211,18,26]; @symbol_type<0> = [String,211,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__save.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 212; @position = 18; @symbol_constdef = [dithering,212,18,27]; @symbol_type<0> = [String,212,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 215; @symbol_moduledef = [prompt_color_light__body,215,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 215; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 217 18 ]
+                symbol [ Graphics %tmp.27 217 31 39 ];
+                %tmp.27 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.28 217 40 57 ];
+                %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+                putv self :background %tmp.28;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 216; @position = 18; @symbol_constdef = [color,216,18,23]; @symbol_type<0> = [Number,216,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 217; @position = 18; @symbol_constdef = [background,217,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 220; @symbol_moduledef = [system_loc__subwindow,220,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 220; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 221; @position = 18; @symbol_constdef = [exclude,221,18,25]; @symbol_type<0> = [Boolean,221,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 224; @symbol_moduledef = [system_icon_light__warning,224,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 224; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 225; @position = 18; @symbol_constdef = [filename,225,18,26]; @symbol_type<0> = [String,225,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__warning.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 226; @position = 18; @symbol_constdef = [dithering,226,18,27]; @symbol_type<0> = [String,226,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 229; @symbol_moduledef = [confirmation_color_light__body,229,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 229; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 231 18 ]
+                symbol [ Graphics %tmp.29 231 31 39 ];
+                %tmp.29 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.30 231 40 57 ];
+                %tmp.30 = getv %tmp.29 :COLOR_TRANSPARENT;
+                putv self :background %tmp.30;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 230; @position = 18; @symbol_constdef = [color,230,18,23]; @symbol_type<0> = [Number,230,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 231; @position = 18; @symbol_constdef = [background,231,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 234; @symbol_moduledef = [confirmation_icon_light__hint_keep,234,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 234; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 235; @position = 18; @symbol_constdef = [filename,235,18,26]; @symbol_type<0> = [String,235,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 236; @position = 18; @symbol_constdef = [dithering,236,18,27]; @symbol_type<0> = [String,236,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 239; @symbol_moduledef = [activity_color_light__background,239,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 239; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 240; @position = 18; @symbol_constdef = [color,240,18,23]; @symbol_type<0> = [Number,240,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 241; @position = 18; @symbol_constdef = [background,241,18,28]; @symbol_type<0> = [Number,241,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 244; @symbol_moduledef = [system_icon_positive__hint_button_right_top,244,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 244; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 245; @position = 18; @symbol_constdef = [filename,245,18,26]; @symbol_type<0> = [String,245,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 246; @position = 18; @symbol_constdef = [dithering,246,18,27]; @symbol_type<0> = [String,246,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 249; @symbol_moduledef = [system_size__screen,249,15,34]; ]
+        module system_size__screen {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 249; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 250; @position = 18; @symbol_constdef = [width,250,18,23]; @symbol_type<0> = [Number,250,27,33]; ]
+            const width as Number = 280;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 251; @position = 18; @symbol_constdef = [height,251,18,24]; @symbol_type<0> = [Number,251,28,34]; ]
+            const height as Number = 280;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 254; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,254,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 254; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 255; @position = 18; @symbol_constdef = [filename,255,18,26]; @symbol_type<0> = [String,255,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_destructive__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 256; @position = 18; @symbol_constdef = [dithering,256,18,27]; @symbol_type<0> = [String,256,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 259; @symbol_moduledef = [system_color_light__background,259,15,45]; ]
+        module system_color_light__background {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 259; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 260; @position = 18; @symbol_constdef = [color,260,18,23]; @symbol_type<0> = [Number,260,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 261; @position = 18; @symbol_constdef = [background,261,18,28]; @symbol_type<0> = [Number,261,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 264; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,264,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 264; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 265; @position = 18; @symbol_constdef = [filename,265,18,26]; @symbol_type<0> = [String,265,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 266; @position = 18; @symbol_constdef = [dithering,266,18,27]; @symbol_type<0> = [String,266,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 269; @symbol_moduledef = [confirmation_loc__hint_confirm,269,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 269; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 270; @position = 18; @symbol_constdef = [x,270,18,19]; @symbol_type<0> = [Number,270,23,29]; ]
+            const x as Number = 226;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 271; @position = 18; @symbol_constdef = [y,271,18,19]; @symbol_type<0> = [Number,271,23,29]; ]
+            const y as Number = 52;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 274; @symbol_moduledef = [activity_color_dark__text,274,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 274; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 276 18 ]
+                symbol [ Graphics %tmp.31 276 31 39 ];
+                %tmp.31 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.32 276 40 57 ];
+                %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
+                putv self :background %tmp.32;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 275; @position = 18; @symbol_constdef = [color,275,18,23]; @symbol_type<0> = [Number,275,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 276; @position = 18; @symbol_constdef = [background,276,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 279; @symbol_moduledef = [confirmation_input__keep,279,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 279; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 280 18 ]
+                symbol [ WatchUi %tmp.33 280 27 34 ];
+                %tmp.33 = getm $.Toybox.WatchUi;
+                symbol [ KEY_DOWN %tmp.34 280 35 43 ];
+                %tmp.34 = getv %tmp.33 :KEY_DOWN;
+                putv self :button %tmp.34;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 280; @position = 18; @symbol_constdef = [button,280,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 283; @symbol_moduledef = [prompt_loc__body_with_title,283,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 283; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 284; @position = 18; @symbol_constdef = [x,284,18,19]; @symbol_type<0> = [Number,284,23,29]; ]
+            const x as Number = 28;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 285; @position = 18; @symbol_constdef = [y,285,18,19]; @symbol_type<0> = [Number,285,23,29]; ]
+            const y as Number = 84;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 288; @symbol_moduledef = [system_icon_dark__search,288,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 288; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 289; @position = 18; @symbol_constdef = [filename,289,18,26]; @symbol_type<0> = [String,289,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__search.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 290; @position = 18; @symbol_constdef = [compress,290,18,26]; @symbol_type<0> = [String,290,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 291; @position = 18; @symbol_constdef = [dithering,291,18,27]; @symbol_type<0> = [String,291,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 292; @position = 18; @symbol_constdef = [automaticPalette,292,18,34]; @symbol_type<0> = [String,292,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 295; @symbol_moduledef = [activity_color_light__text,295,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 295; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 297 18 ]
+                symbol [ Graphics %tmp.35 297 31 39 ];
+                %tmp.35 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.36 297 40 57 ];
+                %tmp.36 = getv %tmp.35 :COLOR_TRANSPARENT;
+                putv self :background %tmp.36;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 296; @position = 18; @symbol_constdef = [color,296,18,23]; @symbol_type<0> = [Number,296,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 297; @position = 18; @symbol_constdef = [background,297,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 300; @symbol_moduledef = [confirmation_icon__hint_keep,300,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 300; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 301; @position = 18; @symbol_constdef = [filename,301,18,26]; @symbol_type<0> = [String,301,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 302; @position = 18; @symbol_constdef = [dithering,302,18,27]; @symbol_type<0> = [String,302,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 305; @symbol_moduledef = [system_icon_dark__save,305,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 305; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 306; @position = 18; @symbol_constdef = [filename,306,18,26]; @symbol_type<0> = [String,306,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__save.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 307; @position = 18; @symbol_constdef = [compress,307,18,26]; @symbol_type<0> = [String,307,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 308; @position = 18; @symbol_constdef = [dithering,308,18,27]; @symbol_type<0> = [String,308,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 309; @position = 18; @symbol_constdef = [automaticPalette,309,18,34]; @symbol_type<0> = [String,309,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 312; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,312,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 312; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 313; @position = 18; @symbol_constdef = [filename,313,18,26]; @symbol_type<0> = [String,313,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_destructive__hint_button_left_middle.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 314; @position = 18; @symbol_constdef = [dithering,314,18,27]; @symbol_type<0> = [String,314,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 317; @symbol_moduledef = [system_icon_light__search,317,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 317; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 318; @position = 18; @symbol_constdef = [filename,318,18,26]; @symbol_type<0> = [String,318,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__search.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 319; @position = 18; @symbol_constdef = [dithering,319,18,27]; @symbol_type<0> = [String,319,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 322; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,322,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 322; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 323; @position = 18; @symbol_constdef = [filename,323,18,26]; @symbol_type<0> = [String,323,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 324; @position = 18; @symbol_constdef = [dithering,324,18,27]; @symbol_type<0> = [String,324,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 327; @symbol_moduledef = [system_icon_positive__hint_button_left_top,327,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 327; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 328; @position = 18; @symbol_constdef = [filename,328,18,26]; @symbol_type<0> = [String,328,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_positive__hint_button_left_top.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 329; @position = 18; @symbol_constdef = [dithering,329,18,27]; @symbol_type<0> = [String,329,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 332; @symbol_moduledef = [system_loc__hint_button_right_bottom,332,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 332; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 333; @position = 18; @symbol_constdef = [x,333,18,19]; @symbol_type<0> = [Number,333,23,29]; ]
+            const x as Number = 242;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 334; @position = 18; @symbol_constdef = [y,334,18,19]; @symbol_type<0> = [Number,334,23,29]; ]
+            const y as Number = 185;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 337; @symbol_moduledef = [confirmation_icon_dark__hint_reject,337,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 337; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 338; @position = 18; @symbol_constdef = [filename,338,18,26]; @symbol_type<0> = [String,338,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 339; @position = 18; @symbol_constdef = [dithering,339,18,27]; @symbol_type<0> = [String,339,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 342; @symbol_moduledef = [confirmation_color_dark__body,342,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 342; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 344 18 ]
+                symbol [ Graphics %tmp.37 344 31 39 ];
+                %tmp.37 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.38 344 40 57 ];
+                %tmp.38 = getv %tmp.37 :COLOR_TRANSPARENT;
+                putv self :background %tmp.38;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 343; @position = 18; @symbol_constdef = [color,343,18,23]; @symbol_type<0> = [Number,343,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 344; @position = 18; @symbol_constdef = [background,344,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 347; @symbol_moduledef = [confirmation_icon_light__hint_confirm,347,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 347; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 348; @position = 18; @symbol_constdef = [filename,348,18,26]; @symbol_type<0> = [String,348,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 349; @position = 18; @symbol_constdef = [dithering,349,18,27]; @symbol_type<0> = [String,349,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 352; @symbol_moduledef = [prompt_color_dark__title,352,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 352; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 354 18 ]
+                symbol [ Graphics %tmp.39 354 31 39 ];
+                %tmp.39 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.40 354 40 57 ];
+                %tmp.40 = getv %tmp.39 :COLOR_TRANSPARENT;
+                putv self :background %tmp.40;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 353; @position = 18; @symbol_constdef = [color,353,18,23]; @symbol_type<0> = [Number,353,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 354; @position = 18; @symbol_constdef = [background,354,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 357; @symbol_moduledef = [system_icon_destructive__cancel,357,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 357; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 358; @position = 18; @symbol_constdef = [filename,358,18,26]; @symbol_type<0> = [String,358,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_destructive__cancel.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 359; @position = 18; @symbol_constdef = [dithering,359,18,27]; @symbol_type<0> = [String,359,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 362; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,362,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 362; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 363; @position = 18; @symbol_constdef = [filename,363,18,26]; @symbol_type<0> = [String,363,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 364; @position = 18; @symbol_constdef = [dithering,364,18,27]; @symbol_type<0> = [String,364,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 367; @symbol_moduledef = [prompt_loc__title,367,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 367; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 368; @position = 18; @symbol_constdef = [x,368,18,19]; @symbol_type<0> = [Number,368,23,29]; ]
+            const x as Number = 28;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 369; @position = 18; @symbol_constdef = [y,369,18,19]; @symbol_type<0> = [Number,369,23,29]; ]
+            const y as Number = 21;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 372; @symbol_moduledef = [confirmation_font_enhanced_readability__body,372,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 372; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 373; @position = 18; @symbol_constdef = [exclude,373,18,25]; @symbol_type<0> = [Boolean,373,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 376; @symbol_moduledef = [prompt_color_light__title,376,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 376; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 378 18 ]
+                symbol [ Graphics %tmp.41 378 31 39 ];
+                %tmp.41 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.42 378 40 57 ];
+                %tmp.42 = getv %tmp.41 :COLOR_TRANSPARENT;
+                putv self :background %tmp.42;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 377; @position = 18; @symbol_constdef = [color,377,18,23]; @symbol_type<0> = [Number,377,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 378; @position = 18; @symbol_constdef = [background,378,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 381; @symbol_moduledef = [system_icon_dark__hint_button_right_top,381,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 381; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 382; @position = 18; @symbol_constdef = [filename,382,18,26]; @symbol_type<0> = [String,382,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 383; @position = 18; @symbol_constdef = [dithering,383,18,27]; @symbol_type<0> = [String,383,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 386; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,386,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 386; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 387; @position = 18; @symbol_constdef = [filename,387,18,26]; @symbol_type<0> = [String,387,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__hint_button_left_middle.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 388; @position = 18; @symbol_constdef = [dithering,388,18,27]; @symbol_type<0> = [String,388,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 391; @symbol_moduledef = [confirmation_icon_dark__hint_keep,391,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 391; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 392; @position = 18; @symbol_constdef = [filename,392,18,26]; @symbol_type<0> = [String,392,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 393; @position = 18; @symbol_constdef = [dithering,393,18,27]; @symbol_type<0> = [String,393,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 396; @symbol_moduledef = [system_icon_light__cancel,396,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 396; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 397; @position = 18; @symbol_constdef = [filename,397,18,26]; @symbol_type<0> = [String,397,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__cancel.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 398; @position = 18; @symbol_constdef = [dithering,398,18,27]; @symbol_type<0> = [String,398,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 401; @symbol_moduledef = [confirmation_icon_light__hint_reject,401,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 401; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 402; @position = 18; @symbol_constdef = [filename,402,18,26]; @symbol_type<0> = [String,402,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 403; @position = 18; @symbol_constdef = [dithering,403,18,27]; @symbol_type<0> = [String,403,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 406; @symbol_moduledef = [system_icon_light__about,406,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 406; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 407; @position = 18; @symbol_constdef = [filename,407,18,26]; @symbol_type<0> = [String,407,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__about.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 408; @position = 18; @symbol_constdef = [dithering,408,18,27]; @symbol_type<0> = [String,408,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 411; @symbol_moduledef = [system_size__toast_icon,411,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 411; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 412; @position = 18; @symbol_constdef = [scaleX,412,18,24]; @symbol_type<0> = [Number,412,28,34]; ]
+            const scaleX as Number = 40;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 413; @position = 18; @symbol_constdef = [scaleY,413,18,24]; @symbol_type<0> = [Number,413,28,34]; ]
+            const scaleY as Number = 40;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 414; @position = 18; @symbol_constdef = [scaleRelativeTo,414,18,33]; @symbol_type<0> = [String,414,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 417; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,417,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 417; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 418; @position = 18; @symbol_constdef = [exclude,418,18,25]; @symbol_type<0> = [Boolean,418,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 421; @symbol_moduledef = [confirmation_icon__hint_reject,421,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 421; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 422; @position = 18; @symbol_constdef = [filename,422,18,26]; @symbol_type<0> = [String,422,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 423; @position = 18; @symbol_constdef = [dithering,423,18,27]; @symbol_type<0> = [String,423,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 426; @symbol_moduledef = [system_icon_light__hint_action_menu,426,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 426; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 427; @position = 18; @symbol_constdef = [filename,427,18,26]; @symbol_type<0> = [String,427,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 428; @position = 18; @symbol_constdef = [dithering,428,18,27]; @symbol_type<0> = [String,428,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 431; @symbol_moduledef = [system_icon_light__hint_button_right_middle,431,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 431; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 432; @position = 18; @symbol_constdef = [exclude,432,18,25]; @symbol_type<0> = [Boolean,432,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 435; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,435,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 435; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 436; @position = 18; @symbol_constdef = [exclude,436,18,25]; @symbol_type<0> = [Boolean,436,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 439; @symbol_moduledef = [confirmation_loc__hint_reject,439,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 439; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 440; @position = 18; @symbol_constdef = [x,440,18,19]; @symbol_type<0> = [Number,440,23,29]; ]
+            const x as Number = 11;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 441; @position = 18; @symbol_constdef = [y,441,18,19]; @symbol_type<0> = [Number,441,23,29]; ]
+            const y as Number = 185;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 442; @position = 18; @symbol_constdef = [horizontalJustification,442,18,41]; @symbol_type<0> = [String,442,45,51]; ]
+            const horizontalJustification as String = "left";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 445; @symbol_moduledef = [confirmation_icon_dark__hint_delete,445,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 445; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 446; @position = 18; @symbol_constdef = [filename,446,18,26]; @symbol_type<0> = [String,446,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 447; @position = 18; @symbol_constdef = [dithering,447,18,27]; @symbol_type<0> = [String,447,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 450; @symbol_moduledef = [activity_color_dark__background,450,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 450; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 451; @position = 18; @symbol_constdef = [color,451,18,23]; @symbol_type<0> = [Number,451,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 452; @position = 18; @symbol_constdef = [background,452,18,28]; @symbol_type<0> = [Number,452,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 455; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,455,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 455; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 456; @position = 18; @symbol_constdef = [filename,456,18,26]; @symbol_type<0> = [String,456,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 457; @position = 18; @symbol_constdef = [dithering,457,18,27]; @symbol_type<0> = [String,457,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 460; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,460,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 460; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 461; @position = 18; @symbol_constdef = [filename,461,18,26]; @symbol_type<0> = [String,461,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_positive__hint_button_left_middle.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 462; @position = 18; @symbol_constdef = [dithering,462,18,27]; @symbol_type<0> = [String,462,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 465; @symbol_moduledef = [system_size__menu_icon,465,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 465; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 466; @position = 18; @symbol_constdef = [scaleX,466,18,24]; @symbol_type<0> = [Number,466,28,34]; ]
+            const scaleX as Number = 40;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 467; @position = 18; @symbol_constdef = [scaleY,467,18,24]; @symbol_type<0> = [Number,467,28,34]; ]
+            const scaleY as Number = 40;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 468; @position = 18; @symbol_constdef = [scaleRelativeTo,468,18,33]; @symbol_type<0> = [String,468,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 471; @symbol_moduledef = [system_icon_destructive__warning,471,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 471; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 472; @position = 18; @symbol_constdef = [filename,472,18,26]; @symbol_type<0> = [String,472,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_destructive__warning.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 473; @position = 18; @symbol_constdef = [dithering,473,18,27]; @symbol_type<0> = [String,473,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 476; @symbol_moduledef = [system_loc__hint_button_right_middle,476,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 476; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 477; @position = 18; @symbol_constdef = [exclude,477,18,25]; @symbol_type<0> = [Boolean,477,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 480; @symbol_moduledef = [system_icon_dark__cancel,480,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 480; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 481; @position = 18; @symbol_constdef = [filename,481,18,26]; @symbol_type<0> = [String,481,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__cancel.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 482; @position = 18; @symbol_constdef = [compress,482,18,26]; @symbol_type<0> = [String,482,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 483; @position = 18; @symbol_constdef = [dithering,483,18,27]; @symbol_type<0> = [String,483,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 484; @position = 18; @symbol_constdef = [automaticPalette,484,18,34]; @symbol_type<0> = [String,484,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 487; @symbol_moduledef = [prompt_size__body_with_title,487,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 487; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 488; @position = 18; @symbol_constdef = [width,488,18,23]; @symbol_type<0> = [Number,488,27,33]; ]
+            const width as Number = 224;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 489; @position = 18; @symbol_constdef = [height,489,18,24]; @symbol_type<0> = [Number,489,28,34]; ]
+            const height as Number = 168;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 492; @symbol_moduledef = [system_loc__hint_button_right_top,492,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 492; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 493; @position = 18; @symbol_constdef = [x,493,18,19]; @symbol_type<0> = [Number,493,23,29]; ]
+            const x as Number = 242;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 494; @position = 18; @symbol_constdef = [y,494,18,19]; @symbol_type<0> = [Number,494,23,29]; ]
+            const y as Number = 52;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 497; @symbol_moduledef = [system_color_light__text,497,15,39]; ]
+        module system_color_light__text {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 497; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 499 18 ]
+                symbol [ Graphics %tmp.43 499 31 39 ];
+                %tmp.43 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.44 499 40 57 ];
+                %tmp.44 = getv %tmp.43 :COLOR_TRANSPARENT;
+                putv self :background %tmp.44;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 498; @position = 18; @symbol_constdef = [color,498,18,23]; @symbol_type<0> = [Number,498,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 499; @position = 18; @symbol_constdef = [background,499,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 502; @symbol_moduledef = [system_icon_light__check,502,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 502; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 503; @position = 18; @symbol_constdef = [filename,503,18,26]; @symbol_type<0> = [String,503,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__check.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 504; @position = 18; @symbol_constdef = [dithering,504,18,27]; @symbol_type<0> = [String,504,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 507; @symbol_moduledef = [confirmation_input__reject,507,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 507; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 508 18 ]
+                symbol [ WatchUi %tmp.45 508 27 34 ];
+                %tmp.45 = getm $.Toybox.WatchUi;
+                symbol [ KEY_DOWN %tmp.46 508 35 43 ];
+                %tmp.46 = getv %tmp.45 :KEY_DOWN;
+                putv self :button %tmp.46;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 508; @position = 18; @symbol_constdef = [button,508,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 511; @symbol_moduledef = [system_icon_light__revert,511,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 511; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 512; @position = 18; @symbol_constdef = [filename,512,18,26]; @symbol_type<0> = [String,512,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__revert.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 513; @position = 18; @symbol_constdef = [dithering,513,18,27]; @symbol_type<0> = [String,513,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 516; @symbol_moduledef = [system_size__subwindow,516,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 516; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 517; @position = 18; @symbol_constdef = [exclude,517,18,25]; @symbol_type<0> = [Boolean,517,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 520; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,520,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 520; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 521; @position = 18; @symbol_constdef = [filename,521,18,26]; @symbol_type<0> = [String,521,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_positive__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 522; @position = 18; @symbol_constdef = [dithering,522,18,27]; @symbol_type<0> = [String,522,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 525; @symbol_moduledef = [system_icon_dark__check,525,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 525; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 526; @position = 18; @symbol_constdef = [filename,526,18,26]; @symbol_type<0> = [String,526,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__check.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 527; @position = 18; @symbol_constdef = [compress,527,18,26]; @symbol_type<0> = [String,527,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 528; @position = 18; @symbol_constdef = [dithering,528,18,27]; @symbol_type<0> = [String,528,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 529; @position = 18; @symbol_constdef = [automaticPalette,529,18,34]; @symbol_type<0> = [String,529,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 532; @symbol_moduledef = [confirmation_loc__hint_keep,532,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 532; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 533; @position = 18; @symbol_constdef = [x,533,18,19]; @symbol_type<0> = [Number,533,23,29]; ]
+            const x as Number = 11;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 534; @position = 18; @symbol_constdef = [y,534,18,19]; @symbol_type<0> = [Number,534,23,29]; ]
+            const y as Number = 185;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 535; @position = 18; @symbol_constdef = [horizontalJustification,535,18,41]; @symbol_type<0> = [String,535,45,51]; ]
+            const horizontalJustification as String = "left";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 538; @symbol_moduledef = [confirmation_loc__hint_delete,538,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 538; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 539; @position = 18; @symbol_constdef = [x,539,18,19]; @symbol_type<0> = [Number,539,23,29]; ]
+            const x as Number = 226;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 540; @position = 18; @symbol_constdef = [y,540,18,19]; @symbol_type<0> = [Number,540,23,29]; ]
+            const y as Number = 52;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 543; @symbol_moduledef = [system_icon_positive__hint_action_menu,543,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 543; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 544; @position = 18; @symbol_constdef = [filename,544,18,26]; @symbol_type<0> = [String,544,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 545; @position = 18; @symbol_constdef = [dithering,545,18,27]; @symbol_type<0> = [String,545,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 548; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,548,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 548; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 549; @position = 18; @symbol_constdef = [exclude,549,18,25]; @symbol_type<0> = [Boolean,549,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 552; @symbol_moduledef = [system_icon_light__hint_button_left_middle,552,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 552; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 553; @position = 18; @symbol_constdef = [filename,553,18,26]; @symbol_type<0> = [String,553,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__hint_button_left_middle.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 554; @position = 18; @symbol_constdef = [dithering,554,18,27]; @symbol_type<0> = [String,554,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 557; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,557,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 557; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 558; @position = 18; @symbol_constdef = [filename,558,18,26]; @symbol_type<0> = [String,558,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 559; @position = 18; @symbol_constdef = [dithering,559,18,27]; @symbol_type<0> = [String,559,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 562; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,562,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 562; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 563; @position = 18; @symbol_constdef = [filename,563,18,26]; @symbol_type<0> = [String,563,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_positive__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 564; @position = 18; @symbol_constdef = [dithering,564,18,27]; @symbol_type<0> = [String,564,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 567; @symbol_moduledef = [system_icon_dark__revert,567,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 567; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 568; @position = 18; @symbol_constdef = [filename,568,18,26]; @symbol_type<0> = [String,568,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__revert.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 569; @position = 18; @symbol_constdef = [compress,569,18,26]; @symbol_type<0> = [String,569,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 570; @position = 18; @symbol_constdef = [dithering,570,18,27]; @symbol_type<0> = [String,570,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 571; @position = 18; @symbol_constdef = [automaticPalette,571,18,34]; @symbol_type<0> = [String,571,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 574; @symbol_moduledef = [confirmation_icon_light__hint_delete,574,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 574; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 575; @position = 18; @symbol_constdef = [filename,575,18,26]; @symbol_type<0> = [String,575,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 576; @position = 18; @symbol_constdef = [dithering,576,18,27]; @symbol_type<0> = [String,576,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 579; @symbol_moduledef = [system_icon_dark__question,579,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 579; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 580; @position = 18; @symbol_constdef = [filename,580,18,26]; @symbol_type<0> = [String,580,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__question.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 581; @position = 18; @symbol_constdef = [compress,581,18,26]; @symbol_type<0> = [String,581,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 582; @position = 18; @symbol_constdef = [dithering,582,18,27]; @symbol_type<0> = [String,582,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 583; @position = 18; @symbol_constdef = [automaticPalette,583,18,34]; @symbol_type<0> = [String,583,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 586; @symbol_moduledef = [system_icon_light__discard,586,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 586; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 587; @position = 18; @symbol_constdef = [filename,587,18,26]; @symbol_type<0> = [String,587,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__discard.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 588; @position = 18; @symbol_constdef = [dithering,588,18,27]; @symbol_type<0> = [String,588,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 591; @symbol_moduledef = [device_info,591,15,26]; ]
+        module device_info {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 591; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 593 18 ]
+                symbol [ Toybox %tmp.48 593 32 38 ];
+                %tmp.48 = getv ? :Toybox;
+                symbol [ System %tmp.49 593 39 45 ];
+                %tmp.49 = getv %tmp.48 :System;
+                symbol [ SCREEN_SHAPE_ROUND %tmp.50 593 46 64 ];
+                %tmp.50 = getv %tmp.49 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.50;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 592; @position = 18; @symbol_constdef = [screenWidth,592,18,29]; @symbol_type<0> = [Number,592,33,39]; ]
+            const screenWidth as Number = 280;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 593; @position = 18; @symbol_constdef = [screenShape,593,18,29]; ]
+            const screenShape;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 594; @position = 18; @symbol_constdef = [hasNightMode,594,18,30]; @symbol_type<0> = [Boolean,594,34,41]; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 595; @position = 18; @symbol_constdef = [hasGpu,595,18,24]; @symbol_type<0> = [Boolean,595,28,35]; ]
+            const hasGpu as Boolean = true;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 596; @position = 18; @symbol_constdef = [screenHeight,596,18,30]; @symbol_type<0> = [Number,596,34,40]; ]
+            const screenHeight as Number = 280;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 597; @position = 18; @symbol_constdef = [hasTouchScreen,597,18,32]; @symbol_type<0> = [Boolean,597,36,43]; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 598; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,598,18,44]; @symbol_type<0> = [Boolean,598,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 601; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,601,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 601; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 602; @position = 18; @symbol_constdef = [filename,602,18,26]; @symbol_type<0> = [String,602,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 603; @position = 18; @symbol_constdef = [dithering,603,18,27]; @symbol_type<0> = [String,603,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 606; @symbol_moduledef = [prompt_font__body_no_title,606,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 606; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 607 18 ]
+                symbol [ Graphics %tmp.51 607 34 42 ];
+                %tmp.51 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.52 607 43 62 ];
+                %tmp.52 = getv %tmp.51 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.53 607 63 71 ];
+                %tmp.53 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.54 607 72 92 ];
+                %tmp.54 = getv %tmp.53 :TEXT_JUSTIFY_VCENTER;
+                %tmp.55 = bitor %tmp.52 %tmp.54;
+                putv self :justification %tmp.55;
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 608 18 ]
+                symbol [ Graphics %tmp.56 608 25 33 ];
+                %tmp.56 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.57 608 34 43 ];
+                %tmp.57 = getv %tmp.56 :FONT_TINY;
+                putv self :font %tmp.57;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 607; @position = 18; @symbol_constdef = [justification,607,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 608; @position = 18; @symbol_constdef = [font,608,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 611; @symbol_moduledef = [prompt_size__title_icon,611,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 611; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 612; @position = 18; @symbol_constdef = [scaleX,612,18,24]; @symbol_type<0> = [Float,612,28,33]; ]
+            const scaleX as Float = 0.15;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 613; @position = 18; @symbol_constdef = [scaleRelativeTo,613,18,33]; @symbol_type<0> = [String,613,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 616; @symbol_moduledef = [system_icon_dark__warning,616,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 616; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 617; @position = 18; @symbol_constdef = [filename,617,18,26]; @symbol_type<0> = [String,617,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_dark__warning.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 618; @position = 18; @symbol_constdef = [compress,618,18,26]; @symbol_type<0> = [String,618,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 619; @position = 18; @symbol_constdef = [dithering,619,18,27]; @symbol_type<0> = [String,619,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 620; @position = 18; @symbol_constdef = [automaticPalette,620,18,34]; @symbol_type<0> = [String,620,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 623; @symbol_moduledef = [prompt_loc__title_icon,623,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 623; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 624; @position = 18; @symbol_constdef = [x,624,18,19]; @symbol_type<0> = [Number,624,23,29]; ]
+            const x as Number = 140;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 625; @position = 18; @symbol_constdef = [y,625,18,19]; @symbol_type<0> = [Number,625,23,29]; ]
+            const y as Number = 42;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 626; @position = 18; @symbol_constdef = [horizontalJustification,626,18,41]; @symbol_type<0> = [String,626,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 627; @position = 18; @symbol_constdef = [verticalJustification,627,18,39]; @symbol_type<0> = [String,627,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 630; @symbol_moduledef = [prompt_font_enhanced_readability__title,630,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 630; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 631; @position = 18; @symbol_constdef = [exclude,631,18,25]; @symbol_type<0> = [Boolean,631,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 634; @symbol_moduledef = [prompt_color_dark__body,634,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 634; ]
+            <init> {
+[ "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen" 636 18 ]
+                symbol [ Graphics %tmp.58 636 31 39 ];
+                %tmp.58 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.59 636 40 57 ];
+                %tmp.59 = getv %tmp.58 :COLOR_TRANSPARENT;
+                putv self :background %tmp.59;
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 635; @position = 18; @symbol_constdef = [color,635,18,23]; @symbol_type<0> = [Number,635,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 636; @position = 18; @symbol_constdef = [background,636,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 639; @symbol_moduledef = [confirmation_icon__hint_delete,639,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 639; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 640; @position = 18; @symbol_constdef = [filename,640,18,26]; @symbol_type<0> = [String,640,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 641; @position = 18; @symbol_constdef = [dithering,641,18,27]; @symbol_type<0> = [String,641,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 644; @symbol_moduledef = [system_icon_light__hint_button_right_top,644,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 644; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 645; @position = 18; @symbol_constdef = [filename,645,18,26]; @symbol_type<0> = [String,645,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 646; @position = 18; @symbol_constdef = [dithering,646,18,27]; @symbol_type<0> = [String,646,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 649; @symbol_moduledef = [confirmation_size__body,649,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 649; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 650; @position = 18; @symbol_constdef = [width,650,18,23]; @symbol_type<0> = [Number,650,27,33]; ]
+            const width as Number = 168;
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 651; @position = 18; @symbol_constdef = [height,651,18,24]; @symbol_type<0> = [Number,651,28,34]; ]
+            const height as Number = 168;
+        }
+        [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 654; @symbol_moduledef = [system_icon_positive__check,654,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 654; ]
+            <init> {
+            }
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 655; @position = 18; @symbol_constdef = [filename,655,18,26]; @symbol_type<0> = [String,655,30,36]; ]
+            const filename as String = "C:\\Users\\Arek\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix7xpro\\system_icon_positive__check.svg";
+            [ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 656; @position = 18; @symbol_constdef = [dithering,656,18,27]; @symbol_type<0> = [String,656,31,37]; ]
+            const dithering as String = "none";
+        }
+    }
+}
+[ @file = "c:\Users\Arek\Desktop\MatchScore\MatchScoreV2\bin\gen\006-B4376-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}

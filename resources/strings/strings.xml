@@ -1,0 +1,28 @@
+<resources>
+    <string id="AppName">MatchScore V2</string>
+    <string id="MainMenuTitle">Select Session</string>
+    <string id="FootballRun">Football - Running</string>
+    <string id="Football">Football</string>
+    <string id="Volleyball">Volleyball</string>
+    <string id="Screen1Text">EKRAN 1</string>
+    <string id="Screen2Text">EKRAN 2</string>
+    <string id="Screen3Text">EKRAN 3</string>
+    <string id="ExitMenuTitle">Exit</string>
+    <string id="SaveAndExit">Save &amp; Exit</string>
+    <string id="DiscardAndExit">Exit without saving</string>
+    <string id="ReturnToMain">Back to main screen</string>
+    <string id="SettingsTitle">SETTINGS</string>
+    <string id="StartTimer">Start Timer</string>
+    <string id="StopTimer">Stop Timer</string>
+    <string id="ScreenColor">Screen Color</string>
+    <string id="ColorBlack">Black</string>
+    <string id="ColorWhite">White</string>
+    <string id="TeamA">Team A</string>
+    <string id="TeamB">Team B</string>
+    <string id="StatusPause">Pause</string>
+    <string id="StatusToChange">To change</string>
+    <string id="ScoreALabel">Team A Score</string>
+    <string id="ScoreBLabel">Team B Score</string>
+    <string id="ScoreUnits">pts</string>
+</resources>
+

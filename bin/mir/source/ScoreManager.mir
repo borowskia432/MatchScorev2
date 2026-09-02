@@ -1,0 +1,89 @@
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 3; @symbol_moduledef = [ScoreManager,3,7,19]; ]
+module ScoreManager {
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 5; @position = 8; @symbol_vardef = [scoreA,5,8,14]; @symbol_type<0> = [Number,5,18,24]; ]
+    var scoreA as Number = 0;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 6; @position = 8; @symbol_vardef = [scoreB,6,8,14]; @symbol_type<0> = [Number,6,18,24]; ]
+    var scoreB as Number = 0;
+    //! Dodaje punkty dla Dru¿yny A
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 9; @symbol_functiondef = [addScoreA,9,13,22]; @symbol_param<0> = [delta,9,23,28]; @symbol_param<0>_type<0> = [Number,9,32,38]; ]
+    function addScoreA(delta as Number) as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_9_48_14_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 10 8 ]
+        symbol [ scoreA %tmp.1 10 8 14 ];
+        %tmp.1 = getv self :scoreA;
+        %tmp.2 = lgetv %delta;
+        symbol [ delta %tmp.2 10 18 23 ];
+        %tmp.3 = add %tmp.1 %tmp.2;
+        symbol [ scoreA ? 10 8 14 ];
+        putv self :scoreA dup %tmp.3;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 11 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_11_8_13_8_if_stmt:
+        symbol [ scoreA %tmp.5 11 12 18 ];
+        %tmp.5 = getv ? :scoreA;
+        %tmp.6 = 0;
+        %tmp.7 = lt %tmp.5 %tmp.6;
+        bf %tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_11_8_13_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_11_8_13_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_11_24_13_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 12 12 ]
+        %tmp.8 = 0;
+        symbol [ scoreA ? 12 12 18 ];
+        putv self :scoreA %tmp.8;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_11_24_13_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_11_8_13_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_11_8_13_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_9_48_14_4_stop:
+    }
+    //! Dodaje punkty dla Dru¿yny B
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 17; @symbol_functiondef = [addScoreB,17,13,22]; @symbol_param<0> = [delta,17,23,28]; @symbol_param<0>_type<0> = [Number,17,32,38]; ]
+    function addScoreB(delta as Number) as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_17_48_22_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 18 8 ]
+        symbol [ scoreB %tmp.1 18 8 14 ];
+        %tmp.1 = getv self :scoreB;
+        %tmp.2 = lgetv %delta;
+        symbol [ delta %tmp.2 18 18 23 ];
+        %tmp.3 = add %tmp.1 %tmp.2;
+        symbol [ scoreB ? 18 8 14 ];
+        putv self :scoreB dup %tmp.3;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 19 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_8_21_8_if_stmt:
+        symbol [ scoreB %tmp.5 19 12 18 ];
+        %tmp.5 = getv ? :scoreB;
+        %tmp.6 = 0;
+        %tmp.7 = lt %tmp.5 %tmp.6;
+        bf %tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_8_21_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_8_21_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_24_21_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 20 12 ]
+        %tmp.8 = 0;
+        symbol [ scoreB ? 20 12 18 ];
+        putv self :scoreB %tmp.8;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_24_21_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_8_21_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_8_21_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_17_48_22_4_stop:
+    }
+    //! Resetuje wynik meczu
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 25; @symbol_functiondef = [resetScore,25,13,23]; ]
+    function resetScore() as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_25_34_28_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 26 8 ]
+        %tmp.1 = 0;
+        symbol [ scoreA ? 26 8 14 ];
+        putv self :scoreA %tmp.1;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 27 8 ]
+        %tmp.2 = 0;
+        symbol [ scoreB ? 27 8 14 ];
+        putv self :scoreB %tmp.2;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_25_34_28_4_stop:
+    }
+}
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 1; ]
+<init> {
+}

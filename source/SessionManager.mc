@@ -157,20 +157,33 @@ module SessionManager {
     function addManualLap() as Void {
         var s = session;
         if (s != null && s.isRecording()) {
-            // 1. Zapisz dane obecnego seta do pól lapa FIT
-            if (_lapScoreAField != null) { _lapScoreAField.setData(AppConfig.volleyballScoreA); }
-            if (_lapScoreBField != null) { _lapScoreBField.setData(AppConfig.volleyballScoreB); }
-            if (_lapBurstField != null) { _lapBurstField.setData(BurstManager.burstCount); }
-            if (_lapJumpField != null) { _lapJumpField.setData(JumpManager.jumpCount); }
+            
+            var currentScoreA = AppConfig.volleyballScoreA;
+            var currentScoreB = AppConfig.volleyballScoreB;
+            var currentBursts = BurstManager.burstCount;
+            var currentJumps  = JumpManager.jumpCount;
 
-            // 2. Dodaj fizyczny lap w pliku FIT (zamyka obecny set w historii Garmin)
+            System.println("SessionManager [LAP DEBUG]: Zapisywanie seta -> Wynik A: " + currentScoreA + 
+                           ", Wynik B: " + currentScoreB + 
+                           ", Zrywy: " + currentBursts + 
+                           ", Wyskoki: " + currentJumps);
+
+            // 1. Zapisz dane obecnego seta do pól lapa FIT (w tym wyskoki!)
+            if (_lapScoreAField != null) { _lapScoreAField.setData(currentScoreA); }
+            if (_lapScoreBField != null) { _lapScoreBField.setData(currentScoreB); }
+            if (_lapBurstField != null)  { _lapBurstField.setData(currentBursts); }
+            if (_lapJumpField != null)   { _lapJumpField.setData(currentJumps); }
+
+            // 2. Dodaj fizyczny lap w pliku FIT (zamyka obecny set)
             s.addLap();
-            System.println("SessionManager: Zapisano lap seta do FIT i utworzono nowy.");
+            System.println("SessionManager: Wywołano s.addLap() - set zamknięty.");
 
             // 3. Wyzeruj liczniki dla kolejnego seta
             AppConfig.resetVolleyballScores();
             BurstManager.burstCount = 0;
             JumpManager.jumpCount = 0;
+        } else {
+            System.println("SessionManager [OSTRZEŻENIE]: Próba dodania lapa, ale sesja jest null lub nie nagrywa!");
         }
     }
 

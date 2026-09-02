@@ -32,6 +32,61 @@
     "sort-order" : 3,
     "precision" : 0,
     "fill-color" : null
+  }, {
+    "id" : 4,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "JumpLabel",
+    "unit-label-key" : "JumpUnits",
+    "sort-order" : 4,
+    "precision" : 0,
+    "fill-color" : null
+  }, {
+    "id" : 11,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "ScoreALabel",
+    "unit-label-key" : "ScoreUnits",
+    "sort-order" : 11,
+    "precision" : 0,
+    "fill-color" : null
+  }, {
+    "id" : 12,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "ScoreBLabel",
+    "unit-label-key" : "ScoreUnits",
+    "sort-order" : 12,
+    "precision" : 0,
+    "fill-color" : null
+  }, {
+    "id" : 13,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "BurstLabel",
+    "unit-label-key" : "BurstUnits",
+    "sort-order" : 13,
+    "precision" : 0,
+    "fill-color" : null
+  }, {
+    "id" : 14,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "JumpLabel",
+    "unit-label-key" : "JumpUnits",
+    "sort-order" : 14,
+    "precision" : 0,
+    "fill-color" : null
   } ],
   "strings" : {
     "pl-PL" : {
@@ -39,14 +94,18 @@
       "ScoreUnits" : "pkt",
       "ScoreBLabel" : "Wynik Drużyny B",
       "BurstLabel" : "Zrywy",
-      "BurstUnits" : "zrywów"
+      "BurstUnits" : "zrywów",
+      "JumpLabel" : "Wyskoki",
+      "JumpUnits" : "wyskoki"
     },
     "default" : {
       "ScoreALabel" : "Team A Score",
       "ScoreUnits" : "pts",
       "ScoreBLabel" : "Team B Score",
       "BurstLabel" : "Bursts",
-      "BurstUnits" : "bursts"
+      "BurstUnits" : "bursts",
+      "JumpLabel" : "Jumps",
+      "JumpUnits" : "Jumps"
     }
   }
 }

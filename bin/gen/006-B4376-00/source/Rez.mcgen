@@ -56,8 +56,10 @@ module Rez {
         (:initialized) var LabelBursts as ResourceId;
         (:initialized) var LabelSummaryJumps as ResourceId;
         (:initialized) var StatusOff as ResourceId;
+        (:initialized) var JumpLabel as ResourceId;
         (:initialized) var ModeAuto as ResourceId;
         (:initialized) var BurstUnits as ResourceId;
+        (:initialized) var JumpUnits as ResourceId;
         (:initialized) var ScreenColor as ResourceId;
         (:initialized) var TimerDurationLabel as ResourceId;
     } // Strings

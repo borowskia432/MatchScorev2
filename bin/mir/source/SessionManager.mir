@@ -650,9 +650,9 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_149_37_15
     }
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc"; @line = 157; @symbol_functiondef = [addManualLap,157,13,25]; ]
     function addManualLap() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_157_36_175_4_start:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_157_36_188_4_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 158 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_157_36_175_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_157_36_175_4_stop" ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_157_36_188_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_157_36_188_4_stop" ]
         %s.1 = local;
         symbol [ s %s.1 158 12 13 ];
         symbol [ session %tmp.2 158 16 23 ];
@@ -660,13 +660,13 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_157_36_17
         lputv %s.1 %tmp.2;
         symbol [ s %s.1 158 12 13 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 159 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_8_174_8_if_stmt:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_8_187_8_if_stmt:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_12_159_39_begin:
         %tmp.3 = lgetv %s.1;
         symbol [ s %tmp.3 159 12 13 ];
         %tmp.4 = null;
         %tmp.5 = ne %tmp.3 %tmp.4;
-        bf %tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_8_174_8_if_end;
+        bf %tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_8_187_8_if_else_false;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_25_159_39_true:
         %tmp.6 = lgetv %s.1;
         symbol [ s %tmp.6 159 25 26 ];
@@ -677,466 +677,533 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_25_15
         push %tmp.9;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_25_159_39_end:
         %tmp.10 = phi [%tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_12_159_39_begin] [%tmp.9 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_25_159_39_true] [%tmp.10 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_25_159_39_end];
-        bf %tmp.10 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_8_174_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_8_174_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_42_174_8_start:
+        bf %tmp.10 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_8_187_8_if_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_8_187_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_42_185_8_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 161 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_161_12_161_96_if_stmt:
-        symbol [ _lapScoreAField %tmp.12 161 16 31 ];
-        %tmp.12 = getv ? :_lapScoreAField;
-        %tmp.13 = null;
-        %tmp.14 = ne %tmp.12 %tmp.13;
-        bf %tmp.14 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_161_12_161_96_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_161_12_161_96_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_161_41_161_96_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 161 43 ]
-        symbol [ _lapScoreAField %tmp.16 161 43 58 ];
-        %tmp.16 = getv ? :_lapScoreAField;
-        %tmp.17 = as %tmp.16 { (!Null) };
-        symbol [ setData %tmp.18 161 59 66 ];
-        %tmp.18 = getv function %tmp.17 :setData;
-        symbol [ AppConfig %tmp.20 161 67 76 ];
-        %tmp.20 = getv ? :AppConfig;
-        symbol [ volleyballScoreA %tmp.21 161 77 93 ];
-        %tmp.21 = getv %tmp.20 :volleyballScoreA;
-        invoke %tmp.17 %tmp.18(%tmp.21);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_161_41_161_96_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_161_12_161_96_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_161_12_161_96_if_end:
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_42_185_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_42_185_8_stop" ]
+        %currentScoreA.2 = local;
+        symbol [ currentScoreA %currentScoreA.2 161 16 29 ];
+        symbol [ AppConfig %tmp.12 161 32 41 ];
+        %tmp.12 = getv ? :AppConfig;
+        symbol [ volleyballScoreA %tmp.13 161 42 58 ];
+        %tmp.13 = getv %tmp.12 :volleyballScoreA;
+        lputv %currentScoreA.2 %tmp.13;
+        symbol [ currentScoreA %currentScoreA.2 161 16 29 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 162 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_162_12_162_96_if_stmt:
-        symbol [ _lapScoreBField %tmp.23 162 16 31 ];
-        %tmp.23 = getv ? :_lapScoreBField;
-        %tmp.24 = null;
-        %tmp.25 = ne %tmp.23 %tmp.24;
-        bf %tmp.25 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_162_12_162_96_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_162_12_162_96_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_162_41_162_96_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 162 43 ]
-        symbol [ _lapScoreBField %tmp.27 162 43 58 ];
-        %tmp.27 = getv ? :_lapScoreBField;
-        %tmp.28 = as %tmp.27 { (!Null) };
-        symbol [ setData %tmp.29 162 59 66 ];
-        %tmp.29 = getv function %tmp.28 :setData;
-        symbol [ AppConfig %tmp.31 162 67 76 ];
-        %tmp.31 = getv ? :AppConfig;
-        symbol [ volleyballScoreB %tmp.32 162 77 93 ];
-        %tmp.32 = getv %tmp.31 :volleyballScoreB;
-        invoke %tmp.28 %tmp.29(%tmp.32);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_162_41_162_96_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_162_12_162_96_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_162_12_162_96_if_end:
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_42_185_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_42_185_8_stop" ]
+        %currentScoreB.3 = local;
+        symbol [ currentScoreB %currentScoreB.3 162 16 29 ];
+        symbol [ AppConfig %tmp.15 162 32 41 ];
+        %tmp.15 = getv ? :AppConfig;
+        symbol [ volleyballScoreB %tmp.16 162 42 58 ];
+        %tmp.16 = getv %tmp.15 :volleyballScoreB;
+        lputv %currentScoreB.3 %tmp.16;
+        symbol [ currentScoreB %currentScoreB.3 162 16 29 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 163 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_163_12_163_91_if_stmt:
-        symbol [ _lapBurstField %tmp.34 163 16 30 ];
-        %tmp.34 = getv ? :_lapBurstField;
-        %tmp.35 = null;
-        %tmp.36 = ne %tmp.34 %tmp.35;
-        bf %tmp.36 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_163_12_163_91_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_163_12_163_91_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_163_40_163_91_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 163 42 ]
-        symbol [ _lapBurstField %tmp.38 163 42 56 ];
-        %tmp.38 = getv ? :_lapBurstField;
-        %tmp.39 = as %tmp.38 { (!Null) };
-        symbol [ setData %tmp.40 163 57 64 ];
-        %tmp.40 = getv function %tmp.39 :setData;
-        symbol [ BurstManager %tmp.42 163 65 77 ];
-        %tmp.42 = getv ? :BurstManager;
-        symbol [ burstCount %tmp.43 163 78 88 ];
-        %tmp.43 = getv %tmp.42 :burstCount;
-        invoke %tmp.39 %tmp.40(%tmp.43);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_163_40_163_91_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_163_12_163_91_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_163_12_163_91_if_end:
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_42_185_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_42_185_8_stop" ]
+        %currentBursts.4 = local;
+        symbol [ currentBursts %currentBursts.4 163 16 29 ];
+        symbol [ BurstManager %tmp.18 163 32 44 ];
+        %tmp.18 = getv ? :BurstManager;
+        symbol [ burstCount %tmp.19 163 45 55 ];
+        %tmp.19 = getv %tmp.18 :burstCount;
+        lputv %currentBursts.4 %tmp.19;
+        symbol [ currentBursts %currentBursts.4 163 16 29 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 164 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_164_12_164_87_if_stmt:
-        symbol [ _lapJumpField %tmp.45 164 16 29 ];
-        %tmp.45 = getv ? :_lapJumpField;
-        %tmp.46 = null;
-        %tmp.47 = ne %tmp.45 %tmp.46;
-        bf %tmp.47 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_164_12_164_87_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_164_12_164_87_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_164_39_164_87_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 164 41 ]
-        symbol [ _lapJumpField %tmp.49 164 41 54 ];
-        %tmp.49 = getv ? :_lapJumpField;
-        %tmp.50 = as %tmp.49 { (!Null) };
-        symbol [ setData %tmp.51 164 55 62 ];
-        %tmp.51 = getv function %tmp.50 :setData;
-        symbol [ JumpManager %tmp.53 164 63 74 ];
-        %tmp.53 = getv ? :JumpManager;
-        symbol [ jumpCount %tmp.54 164 75 84 ];
-        %tmp.54 = getv %tmp.53 :jumpCount;
-        invoke %tmp.50 %tmp.51(%tmp.54);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_164_39_164_87_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_164_12_164_87_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_164_12_164_87_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 167 12 ]
-        %tmp.55 = lgetv %s.1;
-        symbol [ s %tmp.55 167 12 13 ];
-        %tmp.56 = as %tmp.55 { (!Null) };
-        symbol [ addLap %tmp.57 167 14 20 ];
-        %tmp.57 = getv function %tmp.56 :addLap;
-        invoke %tmp.56 %tmp.57();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 168 12 ]
-        symbol [ System %tmp.58 168 12 18 ];
-        %tmp.58 = getm $.Toybox.System;
-        symbol [ println %tmp.59 168 19 26 ];
-        %tmp.59 = getv function %tmp.58 :println;
-        %tmp.60 = "SessionManager: Zapisano lap seta do FIT i utworzono nowy.";
-        invoke %tmp.58 %tmp.59(%tmp.60);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 171 12 ]
-        symbol [ AppConfig %tmp.62 171 12 21 ];
-        %tmp.62 = getv ? :AppConfig;
-        symbol [ resetVolleyballScores %tmp.63 171 22 43 ];
-        %tmp.63 = getv function %tmp.62 :resetVolleyballScores;
-        invoke %tmp.62 %tmp.63();
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_42_185_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_42_185_8_stop" ]
+        %currentJumps.5 = local;
+        symbol [ currentJumps %currentJumps.5 164 16 28 ];
+        symbol [ JumpManager %tmp.21 164 32 43 ];
+        %tmp.21 = getv ? :JumpManager;
+        symbol [ jumpCount %tmp.22 164 44 53 ];
+        %tmp.22 = getv %tmp.21 :jumpCount;
+        lputv %currentJumps.5 %tmp.22;
+        symbol [ currentJumps %currentJumps.5 164 16 28 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 166 12 ]
+        symbol [ System %tmp.23 166 12 18 ];
+        %tmp.23 = getm $.Toybox.System;
+        symbol [ println %tmp.24 166 19 26 ];
+        %tmp.24 = getv function %tmp.23 :println;
+        %tmp.25 = "SessionManager [LAP DEBUG]: Zapisywanie seta -> Wynik A: ";
+        %tmp.26 = lgetv %currentScoreA.2;
+        symbol [ currentScoreA %tmp.26 166 89 102 ];
+        %tmp.27 = add %tmp.25 %tmp.26;
+        %tmp.28 = ", Wynik B: ";
+        %tmp.29 = add %tmp.27 %tmp.28;
+        %tmp.30 = lgetv %currentScoreB.3;
+        symbol [ currentScoreB %tmp.30 167 43 56 ];
+        %tmp.31 = add %tmp.29 %tmp.30;
+        %tmp.32 = ", Zrywy: ";
+        %tmp.33 = add %tmp.31 %tmp.32;
+        %tmp.34 = lgetv %currentBursts.4;
+        symbol [ currentBursts %tmp.34 168 41 54 ];
+        %tmp.35 = add %tmp.33 %tmp.34;
+        %tmp.36 = ", Wyskoki: ";
+        %tmp.37 = add %tmp.35 %tmp.36;
+        %tmp.38 = lgetv %currentJumps.5;
+        symbol [ currentJumps %tmp.38 169 43 55 ];
+        %tmp.39 = add %tmp.37 %tmp.38;
+        invoke %tmp.23 %tmp.24(%tmp.39);
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 172 12 ]
-        symbol [ BurstManager %tmp.64 172 12 24 ];
-        %tmp.64 = getv self :BurstManager;
-        %tmp.65 = 0;
-        symbol [ burstCount ? 172 25 35 ];
-        putv %tmp.64 :burstCount %tmp.65;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_172_12_172_83_if_stmt:
+        symbol [ _lapScoreAField %tmp.41 172 16 31 ];
+        %tmp.41 = getv ? :_lapScoreAField;
+        %tmp.42 = null;
+        %tmp.43 = ne %tmp.41 %tmp.42;
+        bf %tmp.43 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_172_12_172_83_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_172_12_172_83_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_172_41_172_83_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 172 43 ]
+        symbol [ _lapScoreAField %tmp.45 172 43 58 ];
+        %tmp.45 = getv ? :_lapScoreAField;
+        %tmp.46 = as %tmp.45 { (!Null) };
+        symbol [ setData %tmp.47 172 59 66 ];
+        %tmp.47 = getv function %tmp.46 :setData;
+        %tmp.48 = lgetv %currentScoreA.2;
+        symbol [ currentScoreA %tmp.48 172 67 80 ];
+        invoke %tmp.46 %tmp.47(%tmp.48);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_172_41_172_83_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_172_12_172_83_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_172_12_172_83_if_end:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 173 12 ]
-        symbol [ JumpManager %tmp.66 173 12 23 ];
-        %tmp.66 = getv self :JumpManager;
-        %tmp.67 = 0;
-        symbol [ jumpCount ? 173 24 33 ];
-        putv %tmp.66 :jumpCount %tmp.67;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_42_174_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_8_174_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_8_174_8_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_157_36_175_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_173_12_173_83_if_stmt:
+        symbol [ _lapScoreBField %tmp.50 173 16 31 ];
+        %tmp.50 = getv ? :_lapScoreBField;
+        %tmp.51 = null;
+        %tmp.52 = ne %tmp.50 %tmp.51;
+        bf %tmp.52 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_173_12_173_83_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_173_12_173_83_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_173_41_173_83_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 173 43 ]
+        symbol [ _lapScoreBField %tmp.54 173 43 58 ];
+        %tmp.54 = getv ? :_lapScoreBField;
+        %tmp.55 = as %tmp.54 { (!Null) };
+        symbol [ setData %tmp.56 173 59 66 ];
+        %tmp.56 = getv function %tmp.55 :setData;
+        %tmp.57 = lgetv %currentScoreB.3;
+        symbol [ currentScoreB %tmp.57 173 67 80 ];
+        invoke %tmp.55 %tmp.56(%tmp.57);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_173_41_173_83_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_173_12_173_83_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_173_12_173_83_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 174 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_174_12_174_82_if_stmt:
+        symbol [ _lapBurstField %tmp.59 174 16 30 ];
+        %tmp.59 = getv ? :_lapBurstField;
+        %tmp.60 = null;
+        %tmp.61 = ne %tmp.59 %tmp.60;
+        bf %tmp.61 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_174_12_174_82_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_174_12_174_82_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_174_41_174_82_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 174 43 ]
+        symbol [ _lapBurstField %tmp.63 174 43 57 ];
+        %tmp.63 = getv ? :_lapBurstField;
+        %tmp.64 = as %tmp.63 { (!Null) };
+        symbol [ setData %tmp.65 174 58 65 ];
+        %tmp.65 = getv function %tmp.64 :setData;
+        %tmp.66 = lgetv %currentBursts.4;
+        symbol [ currentBursts %tmp.66 174 66 79 ];
+        invoke %tmp.64 %tmp.65(%tmp.66);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_174_41_174_82_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_174_12_174_82_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_174_12_174_82_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 175 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_175_12_175_80_if_stmt:
+        symbol [ _lapJumpField %tmp.68 175 16 29 ];
+        %tmp.68 = getv ? :_lapJumpField;
+        %tmp.69 = null;
+        %tmp.70 = ne %tmp.68 %tmp.69;
+        bf %tmp.70 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_175_12_175_80_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_175_12_175_80_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_175_41_175_80_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 175 43 ]
+        symbol [ _lapJumpField %tmp.72 175 43 56 ];
+        %tmp.72 = getv ? :_lapJumpField;
+        %tmp.73 = as %tmp.72 { (!Null) };
+        symbol [ setData %tmp.74 175 57 64 ];
+        %tmp.74 = getv function %tmp.73 :setData;
+        %tmp.75 = lgetv %currentJumps.5;
+        symbol [ currentJumps %tmp.75 175 65 77 ];
+        invoke %tmp.73 %tmp.74(%tmp.75);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_175_41_175_80_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_175_12_175_80_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_175_12_175_80_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 178 12 ]
+        %tmp.76 = lgetv %s.1;
+        symbol [ s %tmp.76 178 12 13 ];
+        %tmp.77 = as %tmp.76 { (!Null) };
+        symbol [ addLap %tmp.78 178 14 20 ];
+        %tmp.78 = getv function %tmp.77 :addLap;
+        invoke %tmp.77 %tmp.78();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 179 12 ]
+        symbol [ System %tmp.79 179 12 18 ];
+        %tmp.79 = getm $.Toybox.System;
+        symbol [ println %tmp.80 179 19 26 ];
+        %tmp.80 = getv function %tmp.79 :println;
+        %tmp.81 = "SessionManager: Wywołano s.addLap() - set zamknięty.";
+        invoke %tmp.79 %tmp.80(%tmp.81);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 182 12 ]
+        symbol [ AppConfig %tmp.83 182 12 21 ];
+        %tmp.83 = getv ? :AppConfig;
+        symbol [ resetVolleyballScores %tmp.84 182 22 43 ];
+        %tmp.84 = getv function %tmp.83 :resetVolleyballScores;
+        invoke %tmp.83 %tmp.84();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 183 12 ]
+        symbol [ BurstManager %tmp.85 183 12 24 ];
+        %tmp.85 = getv self :BurstManager;
+        %tmp.86 = 0;
+        symbol [ burstCount ? 183 25 35 ];
+        putv %tmp.85 :burstCount %tmp.86;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 184 12 ]
+        symbol [ JumpManager %tmp.87 184 12 23 ];
+        %tmp.87 = getv self :JumpManager;
+        %tmp.88 = 0;
+        symbol [ jumpCount ? 184 24 33 ];
+        putv %tmp.87 :jumpCount %tmp.88;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_42_185_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_8_187_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_8_187_8_if_else_false:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_185_15_187_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 186 12 ]
+        symbol [ System %tmp.89 186 12 18 ];
+        %tmp.89 = getm $.Toybox.System;
+        symbol [ println %tmp.90 186 19 26 ];
+        %tmp.90 = getv function %tmp.89 :println;
+        %tmp.91 = "SessionManager [OSTRZEŻENIE]: Próba dodania lapa, ale sesja jest null lub nie nagrywa!";
+        invoke %tmp.89 %tmp.90(%tmp.91);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_185_15_187_8_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_159_8_187_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_157_36_188_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc"; @line = 177; @symbol_functiondef = [saveSession,177,13,24]; @symbol_param<0> = [scoreA,177,25,31]; @symbol_param<0>_type<0> = [Number,177,35,41]; @symbol_param<1> = [scoreB,177,43,49]; @symbol_param<1>_type<0> = [Number,177,53,59]; @symbol_param<2> = [burstCount,177,61,71]; @symbol_param<2>_type<0> = [Number,177,75,81]; @symbol_return<0> = [Boolean,177,86,93]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc"; @line = 190; @symbol_functiondef = [saveSession,190,13,24]; @symbol_param<0> = [scoreA,190,25,31]; @symbol_param<0>_type<0> = [Number,190,35,41]; @symbol_param<1> = [scoreB,190,43,49]; @symbol_param<1>_type<0> = [Number,190,53,59]; @symbol_param<2> = [burstCount,190,61,71]; @symbol_param<2>_type<0> = [Number,190,75,81]; @symbol_return<0> = [Boolean,190,86,93]; ]
     function saveSession(scoreA as Number, scoreB as Number, burstCount as Number) as Boolean {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_177_94_207_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 178 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_177_94_207_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_177_94_207_4_stop" ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_190_94_220_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 191 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_190_94_220_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_190_94_220_4_stop" ]
         %s.1 = local;
-        symbol [ s %s.1 178 12 13 ];
-        symbol [ session %tmp.2 178 16 23 ];
+        symbol [ s %s.1 191 12 13 ];
+        symbol [ session %tmp.2 191 16 23 ];
         %tmp.2 = getv ? :session;
         lputv %s.1 %tmp.2;
-        symbol [ s %s.1 178 12 13 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 179 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_179_8_203_8_if_stmt:
+        symbol [ s %s.1 191 12 13 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 192 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_192_8_216_8_if_stmt:
         %tmp.3 = lgetv %s.1;
-        symbol [ s %tmp.3 179 12 13 ];
+        symbol [ s %tmp.3 192 12 13 ];
         %tmp.4 = null;
         %tmp.5 = ne %tmp.3 %tmp.4;
-        bf %tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_179_8_203_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_179_8_203_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_179_23_203_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 181 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_181_12_181_84_if_stmt:
-        symbol [ _scoreASummaryField %tmp.7 181 16 35 ];
+        bf %tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_192_8_216_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_192_8_216_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_192_23_216_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 194 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_194_12_194_84_if_stmt:
+        symbol [ _scoreASummaryField %tmp.7 194 16 35 ];
         %tmp.7 = getv ? :_scoreASummaryField;
         %tmp.8 = null;
         %tmp.9 = ne %tmp.7 %tmp.8;
-        bf %tmp.9 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_181_12_181_84_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_181_12_181_84_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_181_45_181_84_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 181 47 ]
-        symbol [ _scoreASummaryField %tmp.11 181 47 66 ];
+        bf %tmp.9 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_194_12_194_84_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_194_12_194_84_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_194_45_194_84_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 194 47 ]
+        symbol [ _scoreASummaryField %tmp.11 194 47 66 ];
         %tmp.11 = getv ? :_scoreASummaryField;
         %tmp.12 = as %tmp.11 { (!Null) };
-        symbol [ setData %tmp.13 181 67 74 ];
+        symbol [ setData %tmp.13 194 67 74 ];
         %tmp.13 = getv function %tmp.12 :setData;
         %tmp.14 = lgetv %scoreA;
-        symbol [ scoreA %tmp.14 181 75 81 ];
+        symbol [ scoreA %tmp.14 194 75 81 ];
         invoke %tmp.12 %tmp.13(%tmp.14);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_181_45_181_84_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_181_12_181_84_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_181_12_181_84_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 182 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_182_12_182_84_if_stmt:
-        symbol [ _scoreBSummaryField %tmp.16 182 16 35 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_194_45_194_84_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_194_12_194_84_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_194_12_194_84_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 195 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_195_12_195_84_if_stmt:
+        symbol [ _scoreBSummaryField %tmp.16 195 16 35 ];
         %tmp.16 = getv ? :_scoreBSummaryField;
         %tmp.17 = null;
         %tmp.18 = ne %tmp.16 %tmp.17;
-        bf %tmp.18 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_182_12_182_84_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_182_12_182_84_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_182_45_182_84_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 182 47 ]
-        symbol [ _scoreBSummaryField %tmp.20 182 47 66 ];
+        bf %tmp.18 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_195_12_195_84_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_195_12_195_84_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_195_45_195_84_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 195 47 ]
+        symbol [ _scoreBSummaryField %tmp.20 195 47 66 ];
         %tmp.20 = getv ? :_scoreBSummaryField;
         %tmp.21 = as %tmp.20 { (!Null) };
-        symbol [ setData %tmp.22 182 67 74 ];
+        symbol [ setData %tmp.22 195 67 74 ];
         %tmp.22 = getv function %tmp.21 :setData;
         %tmp.23 = lgetv %scoreB;
-        symbol [ scoreB %tmp.23 182 75 81 ];
+        symbol [ scoreB %tmp.23 195 75 81 ];
         invoke %tmp.21 %tmp.22(%tmp.23);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_182_45_182_84_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_182_12_182_84_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_182_12_182_84_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 183 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_183_12_183_86_if_stmt:
-        symbol [ _burstSummaryField %tmp.25 183 16 34 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_195_45_195_84_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_195_12_195_84_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_195_12_195_84_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 196 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_196_12_196_86_if_stmt:
+        symbol [ _burstSummaryField %tmp.25 196 16 34 ];
         %tmp.25 = getv ? :_burstSummaryField;
         %tmp.26 = null;
         %tmp.27 = ne %tmp.25 %tmp.26;
-        bf %tmp.27 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_183_12_183_86_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_183_12_183_86_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_183_44_183_86_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 183 46 ]
-        symbol [ _burstSummaryField %tmp.29 183 46 64 ];
+        bf %tmp.27 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_196_12_196_86_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_196_12_196_86_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_196_44_196_86_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 196 46 ]
+        symbol [ _burstSummaryField %tmp.29 196 46 64 ];
         %tmp.29 = getv ? :_burstSummaryField;
         %tmp.30 = as %tmp.29 { (!Null) };
-        symbol [ setData %tmp.31 183 65 72 ];
+        symbol [ setData %tmp.31 196 65 72 ];
         %tmp.31 = getv function %tmp.30 :setData;
         %tmp.32 = lgetv %burstCount;
-        symbol [ burstCount %tmp.32 183 73 83 ];
+        symbol [ burstCount %tmp.32 196 73 83 ];
         invoke %tmp.30 %tmp.31(%tmp.32);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_183_44_183_86_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_183_12_183_86_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_183_12_183_86_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 184 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_184_12_184_95_if_stmt:
-        symbol [ _jumpSummaryField %tmp.34 184 16 33 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_196_44_196_86_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_196_12_196_86_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_196_12_196_86_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 197 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_197_12_197_95_if_stmt:
+        symbol [ _jumpSummaryField %tmp.34 197 16 33 ];
         %tmp.34 = getv ? :_jumpSummaryField;
         %tmp.35 = null;
         %tmp.36 = ne %tmp.34 %tmp.35;
-        bf %tmp.36 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_184_12_184_95_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_184_12_184_95_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_184_43_184_95_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 184 45 ]
-        symbol [ _jumpSummaryField %tmp.38 184 45 62 ];
+        bf %tmp.36 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_197_12_197_95_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_197_12_197_95_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_197_43_197_95_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 197 45 ]
+        symbol [ _jumpSummaryField %tmp.38 197 45 62 ];
         %tmp.38 = getv ? :_jumpSummaryField;
         %tmp.39 = as %tmp.38 { (!Null) };
-        symbol [ setData %tmp.40 184 63 70 ];
+        symbol [ setData %tmp.40 197 63 70 ];
         %tmp.40 = getv function %tmp.39 :setData;
-        symbol [ JumpManager %tmp.42 184 71 82 ];
+        symbol [ JumpManager %tmp.42 197 71 82 ];
         %tmp.42 = getv ? :JumpManager;
-        symbol [ jumpCount %tmp.43 184 83 92 ];
+        symbol [ jumpCount %tmp.43 197 83 92 ];
         %tmp.43 = getv %tmp.42 :jumpCount;
         invoke %tmp.39 %tmp.40(%tmp.43);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_184_43_184_95_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_184_12_184_95_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_184_12_184_95_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 186 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_186_12_188_12_if_stmt:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_197_43_197_95_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_197_12_197_95_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_197_12_197_95_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 199 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_199_12_201_12_if_stmt:
         %tmp.44 = lgetv %s.1;
-        symbol [ s %tmp.44 186 16 17 ];
+        symbol [ s %tmp.44 199 16 17 ];
         %tmp.45 = as %tmp.44 { (!Null) };
-        symbol [ isRecording %tmp.46 186 18 29 ];
+        symbol [ isRecording %tmp.46 199 18 29 ];
         %tmp.46 = getv function %tmp.45 :isRecording;
         %tmp.47 = invoke %tmp.45 %tmp.46();
-        bf %tmp.47 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_186_12_188_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_186_12_188_12_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_186_33_188_12_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 187 16 ]
+        bf %tmp.47 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_199_12_201_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_199_12_201_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_199_33_201_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 200 16 ]
         %tmp.48 = lgetv %s.1;
-        symbol [ s %tmp.48 187 16 17 ];
+        symbol [ s %tmp.48 200 16 17 ];
         %tmp.49 = as %tmp.48 { (!Null) };
-        symbol [ stop %tmp.50 187 18 22 ];
+        symbol [ stop %tmp.50 200 18 22 ];
         %tmp.50 = getv function %tmp.49 :stop;
         invoke %tmp.49 %tmp.50();
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_186_33_188_12_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_186_12_188_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_186_12_188_12_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 190 12 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_179_23_203_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_179_23_203_8_stop" ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_199_33_201_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_199_12_201_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_199_12_201_12_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 203 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_192_23_216_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_192_23_216_8_stop" ]
         %success.2 = local;
-        symbol [ success %success.2 190 16 23 ];
+        symbol [ success %success.2 203 16 23 ];
         %tmp.51 = lgetv %s.1;
-        symbol [ s %tmp.51 190 26 27 ];
+        symbol [ s %tmp.51 203 26 27 ];
         %tmp.52 = as %tmp.51 { (!Null) };
-        symbol [ save %tmp.53 190 28 32 ];
+        symbol [ save %tmp.53 203 28 32 ];
         %tmp.53 = getv function %tmp.52 :save;
         %tmp.54 = invoke %tmp.52 %tmp.53();
         lputv %success.2 %tmp.54;
-        symbol [ success %success.2 190 16 23 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 191 12 ]
+        symbol [ success %success.2 203 16 23 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 204 12 ]
         %tmp.55 = null;
-        symbol [ session ? 191 12 19 ];
+        symbol [ session ? 204 12 19 ];
         putv self :session %tmp.55;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 192 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 205 12 ]
         %tmp.56 = null;
-        symbol [ _scoreASummaryField ? 192 12 31 ];
+        symbol [ _scoreASummaryField ? 205 12 31 ];
         putv self :_scoreASummaryField %tmp.56;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 193 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 206 12 ]
         %tmp.57 = null;
-        symbol [ _scoreBSummaryField ? 193 12 31 ];
+        symbol [ _scoreBSummaryField ? 206 12 31 ];
         putv self :_scoreBSummaryField %tmp.57;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 194 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 207 12 ]
         %tmp.58 = null;
-        symbol [ _burstSummaryField ? 194 12 30 ];
+        symbol [ _burstSummaryField ? 207 12 30 ];
         putv self :_burstSummaryField %tmp.58;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 195 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 208 12 ]
         %tmp.59 = null;
-        symbol [ _jumpSummaryField ? 195 12 29 ];
+        symbol [ _jumpSummaryField ? 208 12 29 ];
         putv self :_jumpSummaryField %tmp.59;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 196 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 209 12 ]
         %tmp.60 = null;
-        symbol [ _lapScoreAField ? 196 12 27 ];
+        symbol [ _lapScoreAField ? 209 12 27 ];
         putv self :_lapScoreAField %tmp.60;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 197 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 210 12 ]
         %tmp.61 = null;
-        symbol [ _lapScoreBField ? 197 12 27 ];
+        symbol [ _lapScoreBField ? 210 12 27 ];
         putv self :_lapScoreBField %tmp.61;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 198 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 211 12 ]
         %tmp.62 = null;
-        symbol [ _lapBurstField ? 198 12 26 ];
+        symbol [ _lapBurstField ? 211 12 26 ];
         putv self :_lapBurstField %tmp.62;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 199 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 212 12 ]
         %tmp.63 = null;
-        symbol [ _lapJumpField ? 199 12 25 ];
+        symbol [ _lapJumpField ? 212 12 25 ];
         putv self :_lapJumpField %tmp.63;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 201 12 ]
-        symbol [ GPSManager %tmp.65 201 12 22 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 214 12 ]
+        symbol [ GPSManager %tmp.65 214 12 22 ];
         %tmp.65 = getv ? :GPSManager;
-        symbol [ stopGPS %tmp.66 201 23 30 ];
+        symbol [ stopGPS %tmp.66 214 23 30 ];
         %tmp.66 = getv function %tmp.65 :stopGPS;
         invoke %tmp.65 %tmp.66();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 202 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 215 12 ]
         %tmp.67 = lgetv %success.2;
-        symbol [ success %tmp.67 202 19 26 ];
+        symbol [ success %tmp.67 215 19 26 ];
         ret %tmp.67;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_179_23_203_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_179_8_203_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_179_8_203_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 205 8 ]
-        symbol [ GPSManager %tmp.69 205 8 18 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_192_23_216_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_192_8_216_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_192_8_216_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 218 8 ]
+        symbol [ GPSManager %tmp.69 218 8 18 ];
         %tmp.69 = getv ? :GPSManager;
-        symbol [ stopGPS %tmp.70 205 19 26 ];
+        symbol [ stopGPS %tmp.70 218 19 26 ];
         %tmp.70 = getv function %tmp.69 :stopGPS;
         invoke %tmp.69 %tmp.70();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 206 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 219 8 ]
         %tmp.71 = false;
         ret %tmp.71;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_177_94_207_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_190_94_220_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc"; @line = 209; @symbol_functiondef = [discardSession,209,13,27]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc"; @line = 222; @symbol_functiondef = [discardSession,222,13,27]; ]
     function discardSession() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_209_38_228_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 210 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_209_38_228_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_209_38_228_4_stop" ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_222_38_241_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 223 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_222_38_241_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_222_38_241_4_stop" ]
         %s.1 = local;
-        symbol [ s %s.1 210 12 13 ];
-        symbol [ session %tmp.2 210 16 23 ];
+        symbol [ s %s.1 223 12 13 ];
+        symbol [ session %tmp.2 223 16 23 ];
         %tmp.2 = getv ? :session;
         lputv %s.1 %tmp.2;
-        symbol [ s %s.1 210 12 13 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 211 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_211_8_225_8_if_stmt:
+        symbol [ s %s.1 223 12 13 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 224 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_224_8_238_8_if_stmt:
         %tmp.3 = lgetv %s.1;
-        symbol [ s %tmp.3 211 12 13 ];
+        symbol [ s %tmp.3 224 12 13 ];
         %tmp.4 = null;
         %tmp.5 = ne %tmp.3 %tmp.4;
-        bf %tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_211_8_225_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_211_8_225_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_211_23_225_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 212 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_212_12_214_12_if_stmt:
+        bf %tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_224_8_238_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_224_8_238_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_224_23_238_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 225 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_225_12_227_12_if_stmt:
         %tmp.6 = lgetv %s.1;
-        symbol [ s %tmp.6 212 16 17 ];
+        symbol [ s %tmp.6 225 16 17 ];
         %tmp.7 = as %tmp.6 { (!Null) };
-        symbol [ isRecording %tmp.8 212 18 29 ];
+        symbol [ isRecording %tmp.8 225 18 29 ];
         %tmp.8 = getv function %tmp.7 :isRecording;
         %tmp.9 = invoke %tmp.7 %tmp.8();
-        bf %tmp.9 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_212_12_214_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_212_12_214_12_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_212_33_214_12_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 213 16 ]
+        bf %tmp.9 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_225_12_227_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_225_12_227_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_225_33_227_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 226 16 ]
         %tmp.10 = lgetv %s.1;
-        symbol [ s %tmp.10 213 16 17 ];
+        symbol [ s %tmp.10 226 16 17 ];
         %tmp.11 = as %tmp.10 { (!Null) };
-        symbol [ stop %tmp.12 213 18 22 ];
+        symbol [ stop %tmp.12 226 18 22 ];
         %tmp.12 = getv function %tmp.11 :stop;
         invoke %tmp.11 %tmp.12();
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_212_33_214_12_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_212_12_214_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_212_12_214_12_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 215 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_225_33_227_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_225_12_227_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_225_12_227_12_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 228 12 ]
         %tmp.13 = lgetv %s.1;
-        symbol [ s %tmp.13 215 12 13 ];
+        symbol [ s %tmp.13 228 12 13 ];
         %tmp.14 = as %tmp.13 { (!Null) };
-        symbol [ discard %tmp.15 215 14 21 ];
+        symbol [ discard %tmp.15 228 14 21 ];
         %tmp.15 = getv function %tmp.14 :discard;
         invoke %tmp.14 %tmp.15();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 216 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 229 12 ]
         %tmp.16 = null;
-        symbol [ session ? 216 12 19 ];
+        symbol [ session ? 229 12 19 ];
         putv self :session %tmp.16;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 217 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 230 12 ]
         %tmp.17 = null;
-        symbol [ _scoreASummaryField ? 217 12 31 ];
+        symbol [ _scoreASummaryField ? 230 12 31 ];
         putv self :_scoreASummaryField %tmp.17;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 218 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 231 12 ]
         %tmp.18 = null;
-        symbol [ _scoreBSummaryField ? 218 12 31 ];
+        symbol [ _scoreBSummaryField ? 231 12 31 ];
         putv self :_scoreBSummaryField %tmp.18;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 219 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 232 12 ]
         %tmp.19 = null;
-        symbol [ _burstSummaryField ? 219 12 30 ];
+        symbol [ _burstSummaryField ? 232 12 30 ];
         putv self :_burstSummaryField %tmp.19;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 220 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 233 12 ]
         %tmp.20 = null;
-        symbol [ _jumpSummaryField ? 220 12 29 ];
+        symbol [ _jumpSummaryField ? 233 12 29 ];
         putv self :_jumpSummaryField %tmp.20;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 221 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 234 12 ]
         %tmp.21 = null;
-        symbol [ _lapScoreAField ? 221 12 27 ];
+        symbol [ _lapScoreAField ? 234 12 27 ];
         putv self :_lapScoreAField %tmp.21;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 222 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 235 12 ]
         %tmp.22 = null;
-        symbol [ _lapScoreBField ? 222 12 27 ];
+        symbol [ _lapScoreBField ? 235 12 27 ];
         putv self :_lapScoreBField %tmp.22;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 223 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 236 12 ]
         %tmp.23 = null;
-        symbol [ _lapBurstField ? 223 12 26 ];
+        symbol [ _lapBurstField ? 236 12 26 ];
         putv self :_lapBurstField %tmp.23;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 224 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 237 12 ]
         %tmp.24 = null;
-        symbol [ _lapJumpField ? 224 12 25 ];
+        symbol [ _lapJumpField ? 237 12 25 ];
         putv self :_lapJumpField %tmp.24;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_211_23_225_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_211_8_225_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_211_8_225_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 227 8 ]
-        symbol [ GPSManager %tmp.26 227 8 18 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_224_23_238_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_224_8_238_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_224_8_238_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 240 8 ]
+        symbol [ GPSManager %tmp.26 240 8 18 ];
         %tmp.26 = getv ? :GPSManager;
-        symbol [ stopGPS %tmp.27 227 19 26 ];
+        symbol [ stopGPS %tmp.27 240 19 26 ];
         %tmp.27 = getv function %tmp.26 :stopGPS;
         invoke %tmp.26 %tmp.27();
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_209_38_228_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_222_38_241_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc"; @line = 230; @symbol_functiondef = [isRecording,230,13,24]; @symbol_return<0> = [Boolean,230,30,37]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc"; @line = 243; @symbol_functiondef = [isRecording,243,13,24]; @symbol_return<0> = [Boolean,243,30,37]; ]
     function isRecording() as Boolean {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_230_38_233_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 231 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_230_38_233_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_230_38_233_4_stop" ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_243_38_246_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 244 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_243_38_246_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_243_38_246_4_stop" ]
         %s.1 = local;
-        symbol [ s %s.1 231 12 13 ];
-        symbol [ session %tmp.2 231 16 23 ];
+        symbol [ s %s.1 244 12 13 ];
+        symbol [ session %tmp.2 244 16 23 ];
         %tmp.2 = getv ? :session;
         lputv %s.1 %tmp.2;
-        symbol [ s %s.1 231 12 13 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 232 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_232_15_232_47_begin:
+        symbol [ s %s.1 244 12 13 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc" 245 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_245_15_245_47_begin:
         %tmp.3 = lgetv %s.1;
-        symbol [ s %tmp.3 232 16 17 ];
+        symbol [ s %tmp.3 245 16 17 ];
         %tmp.4 = null;
         %tmp.5 = ne %tmp.3 %tmp.4;
-        bf %tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_232_15_232_47_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_232_15_232_47_true:
+        bf %tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_245_15_245_47_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_245_15_245_47_true:
         %tmp.6 = lgetv %s.1;
-        symbol [ s %tmp.6 232 29 30 ];
+        symbol [ s %tmp.6 245 29 30 ];
         %tmp.7 = as %tmp.6 { (!Null) };
-        symbol [ isRecording %tmp.8 232 31 42 ];
+        symbol [ isRecording %tmp.8 245 31 42 ];
         %tmp.8 = getv function %tmp.7 :isRecording;
         %tmp.9 = invoke %tmp.7 %tmp.8();
         push %tmp.9;
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_232_15_232_47_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_232_15_232_47_else_false:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_245_15_245_47_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_245_15_245_47_else_false:
         %tmp.10 = false;
         push %tmp.10;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_232_15_232_47_end:
-        %tmp.11 = phi [%tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_232_15_232_47_begin] [%tmp.9 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_232_15_232_47_true] [%tmp.10 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_232_15_232_47_else_false] [%tmp.11 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_232_15_232_47_end];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_245_15_245_47_end:
+        %tmp.11 = phi [%tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_245_15_245_47_begin] [%tmp.9 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_245_15_245_47_true] [%tmp.10 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_245_15_245_47_else_false] [%tmp.11 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_245_15_245_47_end];
         ret %tmp.11;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_230_38_233_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_243_38_246_4_stop:
     }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SessionManager.mc"; @line = 1; ]

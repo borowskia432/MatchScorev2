@@ -54,7 +54,8 @@
     <string id="LabelJumps">Jumps</string>
     <string id="LabelSummarySprints">Sprints count</string>
     <string id="LabelSummaryJumps">Jumps count</string>
-    
+    <string id="JumpLabel">Jumps</string>
+    <string id="JumpUnits">Jumps</string>
     <!-- Wykres różnicy punktowej -->
     <string id="ScoreMarginChartLabel">Score Difference (A - B)</string>
     <string id="ScoreMarginDataLabel">Margin</string>

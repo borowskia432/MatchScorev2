@@ -2,7 +2,7 @@ import Toybox.Lang;
 
 module JumpManager {
     // Licznik wyskoków
-    public var jumpCount as Number = 0;
+    var jumpCount as Number = 0;
 
     // Metoda do inkrementacji (możesz ją wywoływać po wykryciu wyskoku)
     function addJump() as Void {

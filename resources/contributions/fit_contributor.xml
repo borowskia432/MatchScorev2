@@ -1,6 +1,10 @@
 <resources>
     <fitContributions>
-        <!-- Wynik Drużyna A -->
+        <!-- ========================================== -->
+        <!-- POLA SESJI (Podsumowanie całego meczu)     -->
+        <!-- ========================================== -->
+        
+        <!-- Wynik Drużyna A (ID 1) -->
         <fitField id="1"
             displayInChart="false"
             displayInActivitySummary="true"
@@ -9,7 +13,7 @@
             dataLabel="@Strings.ScoreALabel"
             unitLabel="@Strings.ScoreUnits" />
 
-        <!-- Wynik Drużyna B -->
+        <!-- Wynik Drużyna B (ID 2) -->
         <fitField id="2"
             displayInChart="false"
             displayInActivitySummary="true"
@@ -18,7 +22,7 @@
             dataLabel="@Strings.ScoreBLabel"
             unitLabel="@Strings.ScoreUnits" />
 
-        <!-- Liczba Zrywów -->
+        <!-- Liczba Zrywów - Sesja (ID 3) -->
         <fitField id="3"
             displayInChart="false"
             displayInActivitySummary="true"
@@ -26,5 +30,56 @@
             precision="0"
             dataLabel="@Strings.BurstLabel"
             unitLabel="@Strings.BurstUnits" />
+
+        <!-- Liczba Wyskoki - Sesja (ID 4) -->
+        <fitField id="4"
+            displayInChart="false"
+            displayInActivitySummary="true"
+            sortOrder="4"
+            precision="0"
+            dataLabel="@Strings.JumpLabel"
+            unitLabel="@Strings.JumpUnits" />
+
+
+        <!-- ========================================== -->
+        <!-- POLA LAPA / SETA (Statystyki dla każdego)  -->
+        <!-- ========================================== -->
+
+        <!-- Wynik Drużyna A - Set (ID 11) -->
+        <fitField id="11"
+            displayInChart="false"
+            displayInActivitySummary="true"
+            sortOrder="11"
+            precision="0"
+            dataLabel="@Strings.ScoreALabel"
+            unitLabel="@Strings.ScoreUnits" />
+
+        <!-- Wynik Drużyna B - Set (ID 12) -->
+        <fitField id="12"
+            displayInChart="false"
+            displayInActivitySummary="true"
+            sortOrder="12"
+            precision="0"
+            dataLabel="@Strings.ScoreBLabel"
+            unitLabel="@Strings.ScoreUnits" />
+
+        <!-- Liczba Zrywów - Set (ID 13) -->
+        <fitField id="13"
+            displayInChart="false"
+            displayInActivitySummary="true"
+            sortOrder="13"
+            precision="0"
+            dataLabel="@Strings.BurstLabel"
+            unitLabel="@Strings.BurstUnits" />
+
+        <!-- Liczba Wyskoki - Set (ID 14) -->
+        <fitField id="14"
+            displayInChart="false"
+            displayInActivitySummary="true"
+            sortOrder="14"
+            precision="0"
+            dataLabel="@Strings.JumpLabel"
+            unitLabel="@Strings.JumpUnits" />
+
     </fitContributions>
 </resources>

@@ -1,23 +1,43 @@
 <resources>
     <fitContributions>
+        <!-- Wykres Wynik Drużyna A (RECORD) -->
         <fitField id="0"
-            displayInChart="false"
-            displayInActivitySummary="true"
+            displayInChart="true"
+            displayInActivitySummary="false"
             sortOrder="0"
             precision="0"
             chartTitle="@Strings.ScoreALabel"
             dataLabel="@Strings.ScoreALabel"
-            unitLabel="@Strings.ScoreUnits" />
+            unitLabel="@Strings.ScoreUnits"
+            fillColor="#FF0000" />
 
+        <!-- Wykres Wynik Drużyna B (RECORD) -->
         <fitField id="1"
-            displayInChart="false"
-            displayInActivitySummary="true"
+            displayInChart="true"
+            displayInActivitySummary="false"
             sortOrder="1"
             precision="0"
             chartTitle="@Strings.ScoreBLabel"
             dataLabel="@Strings.ScoreBLabel"
+            unitLabel="@Strings.ScoreUnits"
+            fillColor="#0055FF" />
+
+        <!-- Podsumowanie Wynik Drużyna A (SESSION) -->
+        <fitField id="2"
+            displayInChart="false"
+            displayInActivitySummary="true"
+            sortOrder="2"
+            precision="0"
+            dataLabel="@Strings.ScoreALabel"
             unitLabel="@Strings.ScoreUnits" />
 
-            
+        <!-- Podsumowanie Wynik Drużyna B (SESSION) -->
+        <fitField id="3"
+            displayInChart="false"
+            displayInActivitySummary="true"
+            sortOrder="3"
+            precision="0"
+            dataLabel="@Strings.ScoreBLabel"
+            unitLabel="@Strings.ScoreUnits" />
     </fitContributions>
 </resources>

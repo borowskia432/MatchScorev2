@@ -1,24 +1,46 @@
 {
   "datafields" : [ {
     "id" : 0,
-    "chart-visible" : false,
-    "activity-visible" : true,
+    "chart-visible" : true,
+    "activity-visible" : false,
     "lap-visible" : false,
     "chart-title-key" : "ScoreALabel",
     "label-key" : "ScoreALabel",
     "unit-label-key" : "ScoreUnits",
     "sort-order" : 0,
     "precision" : 0,
-    "fill-color" : null
+    "fill-color" : "rgba(255, 0, 0, 1.0)"
   }, {
     "id" : 1,
-    "chart-visible" : false,
-    "activity-visible" : true,
+    "chart-visible" : true,
+    "activity-visible" : false,
     "lap-visible" : false,
     "chart-title-key" : "ScoreBLabel",
     "label-key" : "ScoreBLabel",
     "unit-label-key" : "ScoreUnits",
     "sort-order" : 1,
+    "precision" : 0,
+    "fill-color" : "rgba(0, 85, 255, 1.0)"
+  }, {
+    "id" : 2,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "ScoreALabel",
+    "unit-label-key" : "ScoreUnits",
+    "sort-order" : 2,
+    "precision" : 0,
+    "fill-color" : null
+  }, {
+    "id" : 3,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "ScoreBLabel",
+    "unit-label-key" : "ScoreUnits",
+    "sort-order" : 3,
     "precision" : 0,
     "fill-color" : null
   } ],

@@ -9,10 +9,10 @@ module ScoreManager {
     var scoreA as Number = 0;
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 6; @position = 8; @symbol_vardef = [scoreB,6,8,14]; @symbol_type<0> = [Number,6,18,24]; ]
     var scoreB as Number = 0;
-    //! Dodaje punkty dla Druøyny A
+    //! Dodaje lub odejmuje punkty dla Dru≈ºyny A
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 9; @symbol_functiondef = [addScoreA,9,13,22]; @symbol_param<0> = [delta,9,23,28]; @symbol_param<0>_type<0> = [Number,9,32,38]; ]
     function addScoreA(delta as Number) as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_9_48_14_4_start:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_9_48_16_4_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 10 8 ]
         symbol [ scoreA %tmp.1 10 8 14 ];
         %tmp.1 = getv self :scoreA;
@@ -37,51 +37,81 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_11_24_13_8_
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_11_24_13_8_stop:
         goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_11_8_13_8_if_end;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_11_8_13_8_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_9_48_14_4_stop:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 15 8 ]
+        symbol [ SessionManager %tmp.10 15 8 22 ];
+        %tmp.10 = getv ? :SessionManager;
+        symbol [ updateScoreChart %tmp.11 15 23 39 ];
+        %tmp.11 = getv function %tmp.10 :updateScoreChart;
+        symbol [ scoreA %tmp.13 15 40 46 ];
+        %tmp.13 = getv ? :scoreA;
+        symbol [ scoreB %tmp.15 15 48 54 ];
+        %tmp.15 = getv ? :scoreB;
+        invoke %tmp.10 %tmp.11(%tmp.13, %tmp.15);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_9_48_16_4_stop:
     }
-    //! Dodaje punkty dla Druøyny B
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 17; @symbol_functiondef = [addScoreB,17,13,22]; @symbol_param<0> = [delta,17,23,28]; @symbol_param<0>_type<0> = [Number,17,32,38]; ]
+    //! Dodaje lub odejmuje punkty dla Dru≈ºyny B
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 19; @symbol_functiondef = [addScoreB,19,13,22]; @symbol_param<0> = [delta,19,23,28]; @symbol_param<0>_type<0> = [Number,19,32,38]; ]
     function addScoreB(delta as Number) as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_17_48_22_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 18 8 ]
-        symbol [ scoreB %tmp.1 18 8 14 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_48_26_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 20 8 ]
+        symbol [ scoreB %tmp.1 20 8 14 ];
         %tmp.1 = getv self :scoreB;
         %tmp.2 = lgetv %delta;
-        symbol [ delta %tmp.2 18 18 23 ];
+        symbol [ delta %tmp.2 20 18 23 ];
         %tmp.3 = add %tmp.1 %tmp.2;
-        symbol [ scoreB ? 18 8 14 ];
+        symbol [ scoreB ? 20 8 14 ];
         putv self :scoreB dup %tmp.3;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 19 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_8_21_8_if_stmt:
-        symbol [ scoreB %tmp.5 19 12 18 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 21 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_21_8_23_8_if_stmt:
+        symbol [ scoreB %tmp.5 21 12 18 ];
         %tmp.5 = getv ? :scoreB;
         %tmp.6 = 0;
         %tmp.7 = lt %tmp.5 %tmp.6;
-        bf %tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_8_21_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_8_21_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_24_21_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 20 12 ]
+        bf %tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_21_8_23_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_21_8_23_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_21_24_23_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 22 12 ]
         %tmp.8 = 0;
-        symbol [ scoreB ? 20 12 18 ];
+        symbol [ scoreB ? 22 12 18 ];
         putv self :scoreB %tmp.8;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_24_21_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_8_21_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_8_21_8_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_17_48_22_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_21_24_23_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_21_8_23_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_21_8_23_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 25 8 ]
+        symbol [ SessionManager %tmp.10 25 8 22 ];
+        %tmp.10 = getv ? :SessionManager;
+        symbol [ updateScoreChart %tmp.11 25 23 39 ];
+        %tmp.11 = getv function %tmp.10 :updateScoreChart;
+        symbol [ scoreA %tmp.13 25 40 46 ];
+        %tmp.13 = getv ? :scoreA;
+        symbol [ scoreB %tmp.15 25 48 54 ];
+        %tmp.15 = getv ? :scoreB;
+        invoke %tmp.10 %tmp.11(%tmp.13, %tmp.15);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_19_48_26_4_stop:
     }
     //! Resetuje wynik meczu
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 25; @symbol_functiondef = [resetScore,25,13,23]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 29; @symbol_functiondef = [resetScore,29,13,23]; ]
     function resetScore() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_25_34_28_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 26 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_29_34_33_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 30 8 ]
         %tmp.1 = 0;
-        symbol [ scoreA ? 26 8 14 ];
+        symbol [ scoreA ? 30 8 14 ];
         putv self :scoreA %tmp.1;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 27 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 31 8 ]
         %tmp.2 = 0;
-        symbol [ scoreB ? 27 8 14 ];
+        symbol [ scoreB ? 31 8 14 ];
         putv self :scoreB %tmp.2;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_25_34_28_4_stop:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc" 32 8 ]
+        symbol [ SessionManager %tmp.4 32 8 22 ];
+        %tmp.4 = getv ? :SessionManager;
+        symbol [ updateScoreChart %tmp.5 32 23 39 ];
+        %tmp.5 = getv function %tmp.4 :updateScoreChart;
+        symbol [ scoreA %tmp.7 32 40 46 ];
+        %tmp.7 = getv ? :scoreA;
+        symbol [ scoreB %tmp.9 32 48 54 ];
+        %tmp.9 = getv ? :scoreB;
+        invoke %tmp.4 %tmp.5(%tmp.7, %tmp.9);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_29_34_33_4_stop:
     }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ScoreManager.mc"; @line = 1; ]

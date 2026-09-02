@@ -104,11 +104,11 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_33_26_33_69
         %tmp.43 = getv %tmp.42 :isSoundEnabled;
         bf %tmp.43 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_33_26_33_69_else_false;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_33_26_33_69_true:
-        %tmp.44 = "W³¹czone";
+        %tmp.44 = "WÅ‚Ä…czone";
         push %tmp.44;
         goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_33_26_33_69_end;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_33_26_33_69_else_false:
-        %tmp.45 = "Wy³¹czone";
+        %tmp.45 = "WyÅ‚Ä…czone";
         push %tmp.45;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_33_26_33_69_end:
         %tmp.46 = phi [%tmp.43 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_33_26_33_69_begin] [%tmp.44 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_33_26_33_69_true] [%tmp.45 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_33_26_33_69_else_false] [%tmp.46 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_33_26_33_69_end];
@@ -123,7 +123,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_33_26_33_69
         %tmp.51 = getm $.Toybox.WatchUi;
         symbol [ MenuItem %tmp.52 35 24 32 ];
         %tmp.52 = getv function ? %tmp.51 :MenuItem;
-        %tmp.53 = "DŸwiêk przy zmianie";
+        %tmp.53 = "DÅºwiÄ™k przy zmianie";
         %tmp.54 = lgetv %soundStatus.4;
         symbol [ soundStatus %tmp.54 37 16 27 ];
         %tmp.55 = "toggle_sound";
@@ -278,11 +278,11 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_75_28_75_71
         %tmp.31 = getv %tmp.30 :isSoundEnabled;
         bf %tmp.31 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_75_28_75_71_else_false;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_75_28_75_71_true:
-        %tmp.32 = "W³¹czone";
+        %tmp.32 = "WÅ‚Ä…czone";
         push %tmp.32;
         goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_75_28_75_71_end;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_75_28_75_71_else_false:
-        %tmp.33 = "Wy³¹czone";
+        %tmp.33 = "WyÅ‚Ä…czone";
         push %tmp.33;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_75_28_75_71_end:
         %tmp.34 = phi [%tmp.31 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_75_28_75_71_begin] [%tmp.32 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_75_28_75_71_true] [%tmp.33 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_75_28_75_71_else_false] [%tmp.34 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsMenu_mc_75_28_75_71_end];

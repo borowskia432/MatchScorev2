@@ -7,20 +7,16 @@ module TimerManager {
     var _timer as Timer.Timer or Null = null;
     var isRunning as Boolean = false;
     
-    // Zmienne obsługi długości odliczania
-    var defaultDurationSeconds as Number = 300; // Domyślnie 5 minut (300 s)
+    var defaultDurationSeconds as Number = 300; 
     var secondsRemaining as Number = 300;
     var _restSeconds as Number = 0;
 
-    // Flaga włączająca/wyłączająca sygnały dźwiękowe
     var isSoundEnabled as Boolean = true;
 
-    //! Przełącza stan powiadomień dźwiękowych
     function toggleSound() as Void {
         isSoundEnabled = !isSoundEnabled;
     }
 
-    //! Ustawia nowy czas stopera i resetuje odliczanie (jeśli stoper stoi)
     function setDuration(seconds as Number) as Void {
         defaultDurationSeconds = seconds;
         if (!isRunning) {
@@ -60,6 +56,9 @@ module TimerManager {
             return;
         }
 
+        // Cykliczne sprawdzanie Auto Lapa co 1 sekundę trwania treningu
+        SessionManager.checkAutoLap();
+
         if (_restSeconds > 0) {
             _restSeconds--;
             if (_restSeconds == 0) {
@@ -90,7 +89,6 @@ module TimerManager {
     }
 
     function notify10SecondsRemaining() as Void {
-        // Dźwięk odtwarzany tylko przy włączonej opcji isSoundEnabled
         if (isSoundEnabled && (Attention has :playTone)) {
             Attention.playTone(5 as Attention.Tone);
         }
@@ -108,7 +106,6 @@ module TimerManager {
     }
 
     function notifyTimeUp() as Void {
-        // Dźwięk odtwarzany tylko przy włączonej opcji isSoundEnabled
         if (isSoundEnabled && (Attention has :playTone)) {
             Attention.playTone(12 as Attention.Tone);
         }

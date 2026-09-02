@@ -1,6 +1,7 @@
 import Toybox.ActivityRecording;
 import Toybox.Activity;
 import Toybox.FitContributor;
+import Toybox.Attention;
 import Toybox.Lang;
 import Toybox.System;
 
@@ -13,6 +14,9 @@ module SessionManager {
     var _scoreBSummaryField as FitContributor.Field or Null = null;
     var _burstSummaryField as FitContributor.Field or Null = null;
 
+    // Usunięto słowo 'private' – zmienne w module nie używają modyfikatorów dostępu
+    var _nextLapDistanceMeters as Float = 1000.0;
+
     const FIT_SCORE_A_SUM_ID = 1;
     const FIT_SCORE_B_SUM_ID = 2;
     const FIT_BURST_SUM_ID = 3;
@@ -21,7 +25,6 @@ module SessionManager {
         if (session == null) {
             System.println("SessionManager: Tworzenie nowej sesji...");
             
-            // 1. Włączamy odbiór GPS przed rozpoczęciem nagrywania
             GPSManager.startGPS();
 
             session = ActivityRecording.createSession({
@@ -29,6 +32,8 @@ module SessionManager {
                 :sport => sport,
                 :subSport => Activity.SUB_SPORT_MATCH
             });
+
+            _nextLapDistanceMeters = 1000.0;
 
             var s = session;
             if (s != null) {
@@ -55,6 +60,30 @@ module SessionManager {
 
                 s.start();
                 System.println("SessionManager: Sesja wystartowała z obsługą GPS.");
+            }
+        }
+    }
+
+    function checkAutoLap() as Void {
+        var s = session;
+        if (s != null && s.isRecording()) {
+            var info = Activity.getActivityInfo();
+            if (info != null && info.elapsedDistance != null) {
+                var currentDistance = info.elapsedDistance as Float;
+
+                if (currentDistance >= _nextLapDistanceMeters) {
+                    s.addLap();
+                    _nextLapDistanceMeters += 1000.0;
+
+                    if (Attention has :vibrate) {
+                        var vibeProfile = [
+                            new Attention.VibeProfile(80, 150),
+                            new Attention.VibeProfile(0, 100),
+                            new Attention.VibeProfile(80, 150)
+                        ] as Array<Attention.VibeProfile>;
+                        Attention.vibrate(vibeProfile);
+                    }
+                }
             }
         }
     }
@@ -95,9 +124,7 @@ module SessionManager {
             _scoreBSummaryField = null;
             _burstSummaryField = null;
 
-            // 2. Wyłączamy moduł GPS po zapisaniu sesji
             GPSManager.stopGPS();
-
             return success;
         }
 
@@ -118,7 +145,6 @@ module SessionManager {
             _burstSummaryField = null;
         }
 
-        // 3. Wyłączamy moduł GPS po odrzuceniu sesji
         GPSManager.stopGPS();
     }
 

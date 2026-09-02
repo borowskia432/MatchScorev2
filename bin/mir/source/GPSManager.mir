@@ -11,7 +11,7 @@ module GPSManager {
     }
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\GPSManager.mc"; @line = 7; @position = 8; @symbol_vardef = [isGpsActive,7,8,19]; @symbol_type<0> = [Boolean,7,23,30]; ]
     var isGpsActive as Boolean = false;
-    //! Wewnêtrzna klasa listenera, umo¿liwiaj¹ca utworzenie wskaŸnika Lang.Method
+    //! WewnÄ™trzna klasa listenera, umoÅ¼liwiajÄ…ca utworzenie wskaÅºnika Lang.Method
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\GPSManager.mc"; @line = 10; @symbol_classdef = [GPSListener,10,10,21]; ]
     class GPSListener {
         [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\GPSManager.mc"; @line = 10; ]
@@ -27,7 +27,7 @@ module GPSManager {
     }
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\GPSManager.mc"; @line = 16; @position = 8; @symbol_vardef = [_listener,16,8,17]; @symbol_type<0> = [GPSListener,16,21,32]; ]
     var _listener as GPSListener or Null = null;
-    //! Uruchamia odbiornik GPS w trybie ci¹g³ym
+    //! Uruchamia odbiornik GPS w trybie ciÄ…gÅ‚ym
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\GPSManager.mc"; @line = 19; @symbol_functiondef = [startGPS,19,13,21]; ]
     function startGPS() as Void {
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_GPSManager_mc_19_32_33_4_start:
@@ -89,7 +89,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_GPSManager_mc_24_37_31_12_s
         %tmp.24 = getm $.Toybox.System;
         symbol [ println %tmp.25 30 23 30 ];
         %tmp.25 = getv function %tmp.24 :println;
-        %tmp.26 = "GPSManager: Odbiornik GPS zosta³ w³¹czony.";
+        %tmp.26 = "GPSManager: Odbiornik GPS zostaÅ‚ wÅ‚Ä…czony.";
         invoke %tmp.24 %tmp.25(%tmp.26);
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_GPSManager_mc_24_37_31_12_stop:
         goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_GPSManager_mc_24_12_31_12_if_end;
@@ -99,7 +99,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_GPSManager_mc_20_26_32_8_st
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_GPSManager_mc_20_8_32_8_if_end:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_GPSManager_mc_19_32_33_4_stop:
     }
-    //! Wy³¹cza odbiornik GPS w celu oszczêdzania baterii
+    //! WyÅ‚Ä…cza odbiornik GPS w celu oszczÄ™dzania baterii
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\GPSManager.mc"; @line = 36; @symbol_functiondef = [stopGPS,36,13,20]; ]
     function stopGPS() as Void {
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_GPSManager_mc_36_31_43_4_start:
@@ -134,7 +134,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_GPSManager_mc_37_25_42_8_st
         %tmp.10 = getm $.Toybox.System;
         symbol [ println %tmp.11 41 19 26 ];
         %tmp.11 = getv function %tmp.10 :println;
-        %tmp.12 = "GPSManager: Odbiornik GPS zosta³ wy³¹czony.";
+        %tmp.12 = "GPSManager: Odbiornik GPS zostaÅ‚ wyÅ‚Ä…czony.";
         invoke %tmp.10 %tmp.11(%tmp.12);
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_GPSManager_mc_37_25_42_8_stop:
         goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_GPSManager_mc_37_8_42_8_if_end;

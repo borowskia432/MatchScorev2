@@ -23,7 +23,7 @@ module BurstManager {
     const BURST_RESET_THRESHOLD as Float = 3.06;
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 21; @position = 10; @symbol_constdef = [COOLDOWN_SECONDS,21,10,26]; @symbol_type<0> = [Number,21,30,36]; ]
     const COOLDOWN_SECONDS as Number = 4;
-    //! Resetuje licznik zrywÛw przed nowym meczem
+    //! Resetuje licznik zryw√≥w przed nowym meczem
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 24; @symbol_functiondef = [reset,24,13,18]; ]
     function reset() as Void {
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_24_29_28_4_start:
@@ -41,7 +41,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_24_29_28_4_
         putv self :_lastBurstTime %tmp.3;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_24_29_28_4_stop:
     }
-    //! Metoda wywo≥ywana cyklicznie (co 1 sekundÍ)
+    //! Metoda wywo≈Çywana cyklicznie (co 1 sekundƒô)
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 31; @symbol_functiondef = [update,31,13,19]; ]
     function update() as Void {
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_31_30_55_4_start:
@@ -158,11 +158,11 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_44_88_49_16
         %tmp.40 = getm $.Toybox.System;
         symbol [ println %tmp.41 48 27 34 ];
         %tmp.41 = getv function %tmp.40 :println;
-        %tmp.42 = "BurstManager: Wykryto zryw! £πcznie: ";
+        %tmp.42 = "BurstManager: Wykryto zryw! ≈ÅƒÖcznie: ";
         symbol [ burstCount %tmp.44 48 77 87 ];
         %tmp.44 = getv ? :burstCount;
         %tmp.45 = add %tmp.42 %tmp.44;
-        %tmp.46 = " (PrÍdkoúÊ: ";
+        %tmp.46 = " (Prƒôdko≈õƒá: ";
         %tmp.47 = add %tmp.45 %tmp.46;
         %tmp.48 = lgetv %speed.2;
         symbol [ speed %tmp.48 48 108 113 ];
@@ -201,7 +201,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_34_26_54_8_
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_34_8_54_8_if_end:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_31_30_55_4_stop:
     }
-    //! Opcjonalna moøliwoúÊ rÍcznego dodania zrywu (np. przyciskiem)
+    //! Opcjonalna mo≈ºliwo≈õƒá rƒôcznego dodania zrywu (np. przyciskiem)
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\BurstManager.mc"; @line = 58; @symbol_functiondef = [addManualBurst,58,13,27]; ]
     function addManualBurst() as Void {
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_58_38_61_4_start:
@@ -216,7 +216,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_BurstManager_mc_58_38_61_4_
         %tmp.5 = getm $.Toybox.System;
         symbol [ println %tmp.6 60 15 22 ];
         %tmp.6 = getv function %tmp.5 :println;
-        %tmp.7 = "BurstManager: RÍcznie dodano zryw. £πcznie: ";
+        %tmp.7 = "BurstManager: Rƒôcznie dodano zryw. ≈ÅƒÖcznie: ";
         symbol [ burstCount %tmp.9 60 72 82 ];
         %tmp.9 = getv ? :burstCount;
         %tmp.10 = add %tmp.7 %tmp.9;

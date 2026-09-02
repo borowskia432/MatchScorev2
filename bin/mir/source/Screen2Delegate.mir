@@ -304,7 +304,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_30_8_68_
         ret %tmp.86;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_27_60_71_4_stop:
     }
-    //! Callback pojedynczego klikniêcia UP (dodanie gola dla Dru¿yny A)
+    //! Callback pojedynczego klikniÄ™cia UP (dodanie gola dla DruÅ¼yny A)
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc"; @line = 74; @symbol_functiondef = [onKeyUpTimeout,74,13,27]; ]
     function onKeyUpTimeout() as Void {
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_74_38_78_4_start:
@@ -327,7 +327,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_74_38_78
         invoke %tmp.6 %tmp.7();
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_74_38_78_4_stop:
     }
-    //! Callback pojedynczego klikniêcia DOWN (dodanie gola dla Dru¿yny B)
+    //! Callback pojedynczego klikniÄ™cia DOWN (dodanie gola dla DruÅ¼yny B)
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc"; @line = 81; @symbol_functiondef = [onKeyDownTimeout,81,13,29]; ]
     function onKeyDownTimeout() as Void {
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_81_40_85_4_start:
@@ -395,163 +395,164 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_87_51_93
     }
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc"; @line = 95; @symbol_functiondef = [onBack,95,13,19]; @symbol_return<0> = [Boolean,95,25,32]; ]
     function onBack() as Boolean {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_95_33_99_4_start:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_95_33_100_4_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 96 8 ]
         %tmp.1 = self;
         symbol [ cancelPendingTimers %tmp.2 96 8 27 ];
         %tmp.2 = getv function %tmp.1 :cancelPendingTimers;
         invoke %tmp.1 %tmp.2();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 97 8 ]
-        symbol [ ExitMenu %tmp.4 97 8 16 ];
-        %tmp.4 = getv ? :ExitMenu;
-        symbol [ showMenu %tmp.5 97 17 25 ];
-        %tmp.5 = getv function %tmp.4 :showMenu;
-        invoke %tmp.4 %tmp.5();
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 98 8 ]
+        symbol [ ExitMenu %tmp.4 98 8 16 ];
+        %tmp.4 = getv ? :ExitMenu;
+        symbol [ showMenu %tmp.5 98 17 25 ];
+        %tmp.5 = getv function %tmp.4 :showMenu;
         %tmp.6 = true;
-        ret %tmp.6;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_95_33_99_4_stop:
+        invoke %tmp.4 %tmp.5(%tmp.6);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 99 8 ]
+        %tmp.7 = true;
+        ret %tmp.7;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_95_33_100_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc"; @line = 101; @symbol_functiondef = [onTap,101,13,18]; @symbol_param<0> = [clickEvent,101,19,29]; @symbol_param<0>_type<0> = [WatchUi,101,33,40]; @symbol_param<0>_type<1> = [ClickEvent,101,41,51]; @symbol_return<0> = [Boolean,101,56,63]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc"; @line = 102; @symbol_functiondef = [onTap,102,13,18]; @symbol_param<0> = [clickEvent,102,19,29]; @symbol_param<0>_type<0> = [WatchUi,102,33,40]; @symbol_param<0>_type<1> = [ClickEvent,102,41,51]; @symbol_return<0> = [Boolean,102,56,63]; ]
     function onTap(clickEvent as WatchUi.ClickEvent) as Boolean {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_101_64_113_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 102 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_101_64_113_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_101_64_113_4_stop" ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_102_64_114_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 103 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_102_64_114_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_102_64_114_4_stop" ]
         %coords.1 = local;
-        symbol [ coords %coords.1 102 12 18 ];
+        symbol [ coords %coords.1 103 12 18 ];
         %tmp.1 = lgetv %clickEvent;
-        symbol [ clickEvent %tmp.1 102 21 31 ];
-        symbol [ getCoordinates %tmp.2 102 32 46 ];
+        symbol [ clickEvent %tmp.1 103 21 31 ];
+        symbol [ getCoordinates %tmp.2 103 32 46 ];
         %tmp.2 = getv function %tmp.1 :getCoordinates;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %coords.1 %tmp.3;
-        symbol [ coords %coords.1 102 12 18 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 103 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_101_64_113_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_101_64_113_4_stop" ]
+        symbol [ coords %coords.1 103 12 18 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 104 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_102_64_114_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_102_64_114_4_stop" ]
         %screenWidth.2 = local;
-        symbol [ screenWidth %screenWidth.2 103 12 23 ];
-        symbol [ System %tmp.4 103 26 32 ];
+        symbol [ screenWidth %screenWidth.2 104 12 23 ];
+        symbol [ System %tmp.4 104 26 32 ];
         %tmp.4 = getm $.Toybox.System;
-        symbol [ getDeviceSettings %tmp.5 103 33 50 ];
+        symbol [ getDeviceSettings %tmp.5 104 33 50 ];
         %tmp.5 = getv function %tmp.4 :getDeviceSettings;
         %tmp.6 = invoke %tmp.4 %tmp.5();
-        symbol [ screenWidth %tmp.7 103 53 64 ];
+        symbol [ screenWidth %tmp.7 104 53 64 ];
         %tmp.7 = getv %tmp.6 :screenWidth;
         lputv %screenWidth.2 %tmp.7;
-        symbol [ screenWidth %screenWidth.2 103 12 23 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 105 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_105_8_109_8_if_stmt:
+        symbol [ screenWidth %screenWidth.2 104 12 23 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 106 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_106_8_110_8_if_stmt:
         %tmp.8 = lgetv %coords.1;
-        symbol [ coords %tmp.8 105 12 18 ];
+        symbol [ coords %tmp.8 106 12 18 ];
         %tmp.9 = 0;
         %tmp.10 = agetv %tmp.8 %tmp.9;
         %tmp.11 = lgetv %screenWidth.2;
-        symbol [ screenWidth %tmp.11 105 24 35 ];
+        symbol [ screenWidth %tmp.11 106 24 35 ];
         %tmp.12 = 2;
         %tmp.13 = div %tmp.11 %tmp.12;
         %tmp.14 = lt %tmp.10 %tmp.13;
-        bf %tmp.14 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_105_8_109_8_if_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_105_8_109_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_105_41_107_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 106 12 ]
-        symbol [ ScoreManager %tmp.16 106 12 24 ];
+        bf %tmp.14 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_106_8_110_8_if_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_106_8_110_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_106_41_108_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 107 12 ]
+        symbol [ ScoreManager %tmp.16 107 12 24 ];
         %tmp.16 = getv ? :ScoreManager;
-        symbol [ addScoreA %tmp.17 106 25 34 ];
+        symbol [ addScoreA %tmp.17 107 25 34 ];
         %tmp.17 = getv function %tmp.16 :addScoreA;
         %tmp.18 = 1;
         invoke %tmp.16 %tmp.17(%tmp.18);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_105_41_107_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_105_8_109_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_105_8_109_8_if_else_false:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_107_15_109_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 108 12 ]
-        symbol [ ScoreManager %tmp.20 108 12 24 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_106_41_108_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_106_8_110_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_106_8_110_8_if_else_false:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_108_15_110_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 109 12 ]
+        symbol [ ScoreManager %tmp.20 109 12 24 ];
         %tmp.20 = getv ? :ScoreManager;
-        symbol [ addScoreB %tmp.21 108 25 34 ];
+        symbol [ addScoreB %tmp.21 109 25 34 ];
         %tmp.21 = getv function %tmp.20 :addScoreB;
         %tmp.22 = 1;
         invoke %tmp.20 %tmp.21(%tmp.22);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_107_15_109_8_stop:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_105_8_109_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 111 8 ]
-        symbol [ WatchUi %tmp.23 111 8 15 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_108_15_110_8_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_106_8_110_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 112 8 ]
+        symbol [ WatchUi %tmp.23 112 8 15 ];
         %tmp.23 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.24 111 16 29 ];
+        symbol [ requestUpdate %tmp.24 112 16 29 ];
         %tmp.24 = getv function %tmp.23 :requestUpdate;
         invoke %tmp.23 %tmp.24();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 112 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 113 8 ]
         %tmp.25 = true;
         ret %tmp.25;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_101_64_113_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_102_64_114_4_stop:
     }
-    //! Czyszczenie stoperów przy wyjœciu z widoku
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc"; @line = 116; @symbol_functiondef = [cancelPendingTimers,116,21,40]; ]
+    //! Czyszczenie stoperÃ³w przy wyjÅ›ciu z widoku
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc"; @line = 117; @symbol_functiondef = [cancelPendingTimers,117,21,40]; ]
     private
     function cancelPendingTimers() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_116_51_127_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 117 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_116_51_127_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_116_51_127_4_stop" ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_117_51_128_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 118 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_117_51_128_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_117_51_128_4_stop" ]
         %tUp.1 = local;
-        symbol [ tUp %tUp.1 117 12 15 ];
-        symbol [ _upTimer %tmp.2 117 18 26 ];
+        symbol [ tUp %tUp.1 118 12 15 ];
+        symbol [ _upTimer %tmp.2 118 18 26 ];
         %tmp.2 = getv ? :_upTimer;
         lputv %tUp.1 %tmp.2;
-        symbol [ tUp %tUp.1 117 12 15 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 118 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_118_8_121_8_if_stmt:
+        symbol [ tUp %tUp.1 118 12 15 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 119 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_119_8_122_8_if_stmt:
         %tmp.3 = lgetv %tUp.1;
-        symbol [ tUp %tmp.3 118 12 15 ];
+        symbol [ tUp %tmp.3 119 12 15 ];
         %tmp.4 = null;
         %tmp.5 = ne %tmp.3 %tmp.4;
-        bf %tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_118_8_121_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_118_8_121_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_118_25_121_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 119 12 ]
+        bf %tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_119_8_122_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_119_8_122_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_119_25_122_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 120 12 ]
         %tmp.6 = lgetv %tUp.1;
-        symbol [ tUp %tmp.6 119 12 15 ];
+        symbol [ tUp %tmp.6 120 12 15 ];
         %tmp.7 = as %tmp.6 { (!Null) };
-        symbol [ stop %tmp.8 119 16 20 ];
+        symbol [ stop %tmp.8 120 16 20 ];
         %tmp.8 = getv function %tmp.7 :stop;
         invoke %tmp.7 %tmp.8();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 120 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 121 12 ]
         %tmp.9 = null;
-        symbol [ _upTimer ? 120 12 20 ];
+        symbol [ _upTimer ? 121 12 20 ];
         putv self :_upTimer %tmp.9;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_118_25_121_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_118_8_121_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_118_8_121_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 122 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_116_51_127_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_116_51_127_4_stop" ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_119_25_122_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_119_8_122_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_119_8_122_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 123 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_117_51_128_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_117_51_128_4_stop" ]
         %tDown.2 = local;
-        symbol [ tDown %tDown.2 122 12 17 ];
-        symbol [ _downTimer %tmp.11 122 20 30 ];
+        symbol [ tDown %tDown.2 123 12 17 ];
+        symbol [ _downTimer %tmp.11 123 20 30 ];
         %tmp.11 = getv ? :_downTimer;
         lputv %tDown.2 %tmp.11;
-        symbol [ tDown %tDown.2 122 12 17 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 123 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_123_8_126_8_if_stmt:
+        symbol [ tDown %tDown.2 123 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 124 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_124_8_127_8_if_stmt:
         %tmp.12 = lgetv %tDown.2;
-        symbol [ tDown %tmp.12 123 12 17 ];
+        symbol [ tDown %tmp.12 124 12 17 ];
         %tmp.13 = null;
         %tmp.14 = ne %tmp.12 %tmp.13;
-        bf %tmp.14 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_123_8_126_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_123_8_126_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_123_27_126_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 124 12 ]
+        bf %tmp.14 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_124_8_127_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_124_8_127_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_124_27_127_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 125 12 ]
         %tmp.15 = lgetv %tDown.2;
-        symbol [ tDown %tmp.15 124 12 17 ];
+        symbol [ tDown %tmp.15 125 12 17 ];
         %tmp.16 = as %tmp.15 { (!Null) };
-        symbol [ stop %tmp.17 124 18 22 ];
+        symbol [ stop %tmp.17 125 18 22 ];
         %tmp.17 = getv function %tmp.16 :stop;
         invoke %tmp.16 %tmp.17();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 125 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc" 126 12 ]
         %tmp.18 = null;
-        symbol [ _downTimer ? 125 12 22 ];
+        symbol [ _downTimer ? 126 12 22 ];
         putv self :_downTimer %tmp.18;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_123_27_126_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_123_8_126_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_123_8_126_8_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_116_51_127_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_124_27_127_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_124_8_127_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_124_8_127_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen2Delegate_mc_117_51_128_4_stop:
     }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen2Delegate.mc"; @line = 1; ]

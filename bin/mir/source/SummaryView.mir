@@ -1,0 +1,541 @@
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [WatchUi,1,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Graphics,2,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc"; @line = 5; @symbol_classdef = [SummaryView,5,6,17]; @symbol_extends<0> = [WatchUi,5,26,33]; @symbol_extends<1> = [View,5,34,38]; ]
+class SummaryView extends WatchUi.View {
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc"; @line = 7; @position = 16; @symbol_vardef = [_data,7,16,21]; @symbol_type<0> = [SummaryData,7,25,36]; ]
+    private
+    var _data as SummaryData;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; @symbol_param<0> = [data,9,24,28]; @symbol_param<0>_type<0> = [SummaryData,9,32,43]; ]
+    function initialize(data as SummaryData) as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_9_45_12_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 10 8 ]
+        symbol [ View %tmp.2 10 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 10 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 11 8 ]
+        %tmp.4 = lgetv %data;
+        symbol [ data %tmp.4 11 16 20 ];
+        symbol [ _data ? 11 8 13 ];
+        putv self :_data %tmp.4;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_9_45_12_4_stop:
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc"; @line = 14; @symbol_functiondef = [onUpdate,14,13,21]; @symbol_param<0> = [dc,14,22,24]; @symbol_param<0>_type<0> = [Graphics,14,28,36]; @symbol_param<0>_type<1> = [Dc,14,37,39]; ]
+    function onUpdate(dc as Graphics.Dc) as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 15 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 15 8 10 ];
+        symbol [ setColor %tmp.2 15 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 15 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 15 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 15 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 15 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 16 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 16 8 10 ];
+        symbol [ clear %tmp.8 16 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 18 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_stop" ]
+        %cx.1 = local;
+        symbol [ cx %cx.1 18 12 14 ];
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 18 17 19 ];
+        symbol [ getWidth %tmp.10 18 20 28 ];
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        %tmp.12 = 2;
+        %tmp.13 = div %tmp.11 %tmp.12;
+        lputv %cx.1 %tmp.13;
+        symbol [ cx %cx.1 18 12 14 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 19 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 19 12 18 ];
+        %tmp.14 = lgetv %dc;
+        symbol [ dc %tmp.14 19 21 23 ];
+        symbol [ getHeight %tmp.15 19 24 33 ];
+        %tmp.15 = getv function %tmp.14 :getHeight;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        lputv %height.2 %tmp.16;
+        symbol [ height %height.2 19 12 18 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 21 8 ]
+        %tmp.17 = lgetv %dc;
+        symbol [ dc %tmp.17 21 8 10 ];
+        symbol [ setAntiAlias %tmp.18 21 11 23 ];
+        %tmp.18 = getv function %tmp.17 :setAntiAlias;
+        %tmp.19 = true;
+        invoke %tmp.17 %tmp.18(%tmp.19);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 24 8 ]
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 24 8 10 ];
+        symbol [ setColor %tmp.21 24 11 19 ];
+        %tmp.21 = getv function %tmp.20 :setColor;
+        symbol [ Graphics %tmp.22 24 20 28 ];
+        %tmp.22 = getm $.Toybox.Graphics;
+        symbol [ COLOR_YELLOW %tmp.23 24 29 41 ];
+        %tmp.23 = getv %tmp.22 :COLOR_YELLOW;
+        symbol [ Graphics %tmp.24 24 43 51 ];
+        %tmp.24 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.25 24 52 69 ];
+        %tmp.25 = getv %tmp.24 :COLOR_TRANSPARENT;
+        invoke %tmp.20 %tmp.21(%tmp.23, %tmp.25);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 25 8 ]
+        %tmp.26 = lgetv %dc;
+        symbol [ dc %tmp.26 25 8 10 ];
+        symbol [ drawText %tmp.27 25 11 19 ];
+        %tmp.27 = getv function %tmp.26 :drawText;
+        %tmp.28 = lgetv %cx.1;
+        symbol [ cx %tmp.28 26 12 14 ];
+        %tmp.29 = 18;
+        symbol [ Graphics %tmp.30 28 12 20 ];
+        %tmp.30 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.31 28 21 31 ];
+        %tmp.31 = getv %tmp.30 :FONT_XTINY;
+        %tmp.32 = "PODSUMOWANIE";
+        symbol [ Graphics %tmp.33 30 12 20 ];
+        %tmp.33 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.34 30 21 40 ];
+        %tmp.34 = getv %tmp.33 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.35 30 43 51 ];
+        %tmp.35 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.36 30 52 72 ];
+        %tmp.36 = getv %tmp.35 :TEXT_JUSTIFY_VCENTER;
+        %tmp.37 = bitor %tmp.34 %tmp.36;
+        invoke %tmp.26 %tmp.27(%tmp.28, %tmp.29, %tmp.31, %tmp.32, %tmp.37);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 34 8 ]
+        %tmp.38 = lgetv %dc;
+        symbol [ dc %tmp.38 34 8 10 ];
+        symbol [ setColor %tmp.39 34 11 19 ];
+        %tmp.39 = getv function %tmp.38 :setColor;
+        symbol [ Graphics %tmp.40 34 20 28 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.41 34 29 42 ];
+        %tmp.41 = getv %tmp.40 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.42 34 44 52 ];
+        %tmp.42 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.43 34 53 70 ];
+        %tmp.43 = getv %tmp.42 :COLOR_TRANSPARENT;
+        invoke %tmp.38 %tmp.39(%tmp.41, %tmp.43);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 35 8 ]
+        %tmp.44 = lgetv %dc;
+        symbol [ dc %tmp.44 35 8 10 ];
+        symbol [ drawLine %tmp.45 35 11 19 ];
+        %tmp.45 = getv function %tmp.44 :drawLine;
+        %tmp.46 = lgetv %cx.1;
+        symbol [ cx %tmp.46 35 20 22 ];
+        %tmp.47 = 50;
+        %tmp.48 = sub %tmp.46 %tmp.47;
+        %tmp.49 = 30;
+        %tmp.50 = lgetv %cx.1;
+        symbol [ cx %tmp.50 35 33 35 ];
+        %tmp.51 = 50;
+        %tmp.52 = add %tmp.50 %tmp.51;
+        %tmp.53 = 30;
+        invoke %tmp.44 %tmp.45(%tmp.48, %tmp.49, %tmp.52, %tmp.53);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 37 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_stop" ]
+        %y.3 = local;
+        symbol [ y %y.3 37 12 13 ];
+        %tmp.54 = 48;
+        lputv %y.3 %tmp.54;
+        symbol [ y %y.3 37 12 13 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 40 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_40_8_51_8_if_stmt:
+        symbol [ _data %tmp.56 40 12 17 ];
+        %tmp.56 = getv ? :_data;
+        symbol [ hasScore %tmp.57 40 18 26 ];
+        %tmp.57 = getv %tmp.56 :hasScore;
+        bf %tmp.57 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_40_8_51_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_40_8_51_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_40_28_51_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 41 12 ]
+        %tmp.58 = lgetv %dc;
+        symbol [ dc %tmp.58 41 12 14 ];
+        symbol [ setColor %tmp.59 41 15 23 ];
+        %tmp.59 = getv function %tmp.58 :setColor;
+        symbol [ Graphics %tmp.60 41 24 32 ];
+        %tmp.60 = getm $.Toybox.Graphics;
+        symbol [ COLOR_GREEN %tmp.61 41 33 44 ];
+        %tmp.61 = getv %tmp.60 :COLOR_GREEN;
+        symbol [ Graphics %tmp.62 41 46 54 ];
+        %tmp.62 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.63 41 55 72 ];
+        %tmp.63 = getv %tmp.62 :COLOR_TRANSPARENT;
+        invoke %tmp.58 %tmp.59(%tmp.61, %tmp.63);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 42 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_40_28_51_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_40_28_51_8_stop" ]
+        %scoreText.4 = local;
+        symbol [ scoreText %scoreText.4 42 16 25 ];
+        %tmp.64 = "Mecz: ";
+        symbol [ _data %tmp.66 42 39 44 ];
+        %tmp.66 = getv ? :_data;
+        symbol [ scoreTeamA %tmp.67 42 45 55 ];
+        %tmp.67 = getv %tmp.66 :scoreTeamA;
+        %tmp.68 = add %tmp.64 %tmp.67;
+        %tmp.69 = " : ";
+        %tmp.70 = add %tmp.68 %tmp.69;
+        symbol [ _data %tmp.72 42 66 71 ];
+        %tmp.72 = getv ? :_data;
+        symbol [ scoreTeamB %tmp.73 42 72 82 ];
+        %tmp.73 = getv %tmp.72 :scoreTeamB;
+        %tmp.74 = add %tmp.70 %tmp.73;
+        lputv %scoreText.4 %tmp.74;
+        symbol [ scoreText %scoreText.4 42 16 25 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 43 12 ]
+        %tmp.75 = lgetv %dc;
+        symbol [ dc %tmp.75 43 12 14 ];
+        symbol [ drawText %tmp.76 43 15 23 ];
+        %tmp.76 = getv function %tmp.75 :drawText;
+        %tmp.77 = lgetv %cx.1;
+        symbol [ cx %tmp.77 44 16 18 ];
+        %tmp.78 = lgetv %y.3;
+        symbol [ y %tmp.78 45 16 17 ];
+        symbol [ Graphics %tmp.79 46 16 24 ];
+        %tmp.79 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.80 46 25 35 ];
+        %tmp.80 = getv %tmp.79 :FONT_SMALL;
+        %tmp.81 = lgetv %scoreText.4;
+        symbol [ scoreText %tmp.81 47 16 25 ];
+        symbol [ Graphics %tmp.82 48 16 24 ];
+        %tmp.82 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.83 48 25 44 ];
+        %tmp.83 = getv %tmp.82 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.84 48 47 55 ];
+        %tmp.84 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.85 48 56 76 ];
+        %tmp.85 = getv %tmp.84 :TEXT_JUSTIFY_VCENTER;
+        %tmp.86 = bitor %tmp.83 %tmp.85;
+        invoke %tmp.75 %tmp.76(%tmp.77, %tmp.78, %tmp.80, %tmp.81, %tmp.86);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 50 12 ]
+        %tmp.87 = lgetv %y.3;
+        symbol [ y %tmp.87 50 12 13 ];
+        %tmp.88 = 28;
+        %tmp.89 = add %tmp.87 %tmp.88;
+        lputv %y.3 %tmp.89;
+        symbol [ y %y.3 50 12 13 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_40_28_51_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_40_8_51_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_40_8_51_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 54 8 ]
+        %tmp.90 = lgetv %dc;
+        symbol [ dc %tmp.90 54 8 10 ];
+        symbol [ setColor %tmp.91 54 11 19 ];
+        %tmp.91 = getv function %tmp.90 :setColor;
+        symbol [ Graphics %tmp.92 54 20 28 ];
+        %tmp.92 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.93 54 29 40 ];
+        %tmp.93 = getv %tmp.92 :COLOR_WHITE;
+        symbol [ Graphics %tmp.94 54 42 50 ];
+        %tmp.94 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.95 54 51 68 ];
+        %tmp.95 = getv %tmp.94 :COLOR_TRANSPARENT;
+        invoke %tmp.90 %tmp.91(%tmp.93, %tmp.95);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 56 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_stop" ]
+        %distStr.5 = local;
+        symbol [ distStr %distStr.5 56 12 19 ];
+        %tmp.96 = "Dystans: ";
+        symbol [ _data %tmp.98 56 36 41 ];
+        %tmp.98 = getv ? :_data;
+        symbol [ distanceKm %tmp.99 56 42 52 ];
+        %tmp.99 = getv %tmp.98 :distanceKm;
+        symbol [ format %tmp.100 56 53 59 ];
+        %tmp.100 = getv function %tmp.99 :format;
+        %tmp.101 = "%.2f";
+        %tmp.102 = invoke %tmp.99 %tmp.100(%tmp.101);
+        %tmp.103 = add %tmp.96 %tmp.102;
+        %tmp.104 = " km";
+        %tmp.105 = add %tmp.103 %tmp.104;
+        lputv %distStr.5 %tmp.105;
+        symbol [ distStr %distStr.5 56 12 19 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 57 8 ]
+        %tmp.106 = lgetv %dc;
+        symbol [ dc %tmp.106 57 8 10 ];
+        symbol [ drawText %tmp.107 57 11 19 ];
+        %tmp.107 = getv function %tmp.106 :drawText;
+        %tmp.108 = lgetv %cx.1;
+        symbol [ cx %tmp.108 57 20 22 ];
+        %tmp.109 = lgetv %y.3;
+        symbol [ y %tmp.109 57 24 25 ];
+        symbol [ Graphics %tmp.110 57 27 35 ];
+        %tmp.110 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.111 57 36 46 ];
+        %tmp.111 = getv %tmp.110 :FONT_XTINY;
+        %tmp.112 = lgetv %distStr.5;
+        symbol [ distStr %tmp.112 57 48 55 ];
+        symbol [ Graphics %tmp.113 57 57 65 ];
+        %tmp.113 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.114 57 66 85 ];
+        %tmp.114 = getv %tmp.113 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.115 57 88 96 ];
+        %tmp.115 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.116 57 97 117 ];
+        %tmp.116 = getv %tmp.115 :TEXT_JUSTIFY_VCENTER;
+        %tmp.117 = bitor %tmp.114 %tmp.116;
+        invoke %tmp.106 %tmp.107(%tmp.108, %tmp.109, %tmp.111, %tmp.112, %tmp.117);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 58 8 ]
+        %tmp.118 = lgetv %y.3;
+        symbol [ y %tmp.118 58 8 9 ];
+        %tmp.119 = 22;
+        %tmp.120 = add %tmp.118 %tmp.119;
+        lputv %y.3 %tmp.120;
+        symbol [ y %y.3 58 8 9 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 60 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_stop" ]
+        %speedStr.6 = local;
+        symbol [ speedStr %speedStr.6 60 12 20 ];
+        %tmp.121 = "Vmax: ";
+        symbol [ _data %tmp.123 60 34 39 ];
+        %tmp.123 = getv ? :_data;
+        symbol [ maxSpeedKmH %tmp.124 60 40 51 ];
+        %tmp.124 = getv %tmp.123 :maxSpeedKmH;
+        symbol [ format %tmp.125 60 52 58 ];
+        %tmp.125 = getv function %tmp.124 :format;
+        %tmp.126 = "%.1f";
+        %tmp.127 = invoke %tmp.124 %tmp.125(%tmp.126);
+        %tmp.128 = add %tmp.121 %tmp.127;
+        %tmp.129 = " km/h";
+        %tmp.130 = add %tmp.128 %tmp.129;
+        lputv %speedStr.6 %tmp.130;
+        symbol [ speedStr %speedStr.6 60 12 20 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 61 8 ]
+        %tmp.131 = lgetv %dc;
+        symbol [ dc %tmp.131 61 8 10 ];
+        symbol [ drawText %tmp.132 61 11 19 ];
+        %tmp.132 = getv function %tmp.131 :drawText;
+        %tmp.133 = lgetv %cx.1;
+        symbol [ cx %tmp.133 61 20 22 ];
+        %tmp.134 = lgetv %y.3;
+        symbol [ y %tmp.134 61 24 25 ];
+        symbol [ Graphics %tmp.135 61 27 35 ];
+        %tmp.135 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.136 61 36 46 ];
+        %tmp.136 = getv %tmp.135 :FONT_XTINY;
+        %tmp.137 = lgetv %speedStr.6;
+        symbol [ speedStr %tmp.137 61 48 56 ];
+        symbol [ Graphics %tmp.138 61 58 66 ];
+        %tmp.138 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.139 61 67 86 ];
+        %tmp.139 = getv %tmp.138 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.140 61 89 97 ];
+        %tmp.140 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.141 61 98 118 ];
+        %tmp.141 = getv %tmp.140 :TEXT_JUSTIFY_VCENTER;
+        %tmp.142 = bitor %tmp.139 %tmp.141;
+        invoke %tmp.131 %tmp.132(%tmp.133, %tmp.134, %tmp.136, %tmp.137, %tmp.142);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 62 8 ]
+        %tmp.143 = lgetv %y.3;
+        symbol [ y %tmp.143 62 8 9 ];
+        %tmp.144 = 22;
+        %tmp.145 = add %tmp.143 %tmp.144;
+        lputv %y.3 %tmp.145;
+        symbol [ y %y.3 62 8 9 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 64 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_stop" ]
+        %minHrStr.7 = local;
+        symbol [ minHrStr %minHrStr.7 64 12 20 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_64_23_64_68_begin:
+        symbol [ _data %tmp.147 64 24 29 ];
+        %tmp.147 = getv ? :_data;
+        symbol [ minHr %tmp.148 64 30 35 ];
+        %tmp.148 = getv %tmp.147 :minHr;
+        %tmp.149 = 0;
+        %tmp.150 = gt %tmp.148 %tmp.149;
+        bf %tmp.150 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_64_23_64_68_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_64_23_64_68_true:
+        symbol [ _data %tmp.152 64 43 48 ];
+        %tmp.152 = getv ? :_data;
+        symbol [ minHr %tmp.153 64 49 54 ];
+        %tmp.153 = getv %tmp.152 :minHr;
+        symbol [ toString %tmp.154 64 55 63 ];
+        %tmp.154 = getv function %tmp.153 :toString;
+        %tmp.155 = invoke %tmp.153 %tmp.154();
+        push %tmp.155;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_64_23_64_68_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_64_23_64_68_else_false:
+        %tmp.156 = "--";
+        push %tmp.156;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_64_23_64_68_end:
+        %tmp.157 = phi [%tmp.150 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_64_23_64_68_begin] [%tmp.155 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_64_23_64_68_true] [%tmp.156 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_64_23_64_68_else_false] [%tmp.157 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_64_23_64_68_end];
+        lputv %minHrStr.7 %tmp.157;
+        symbol [ minHrStr %minHrStr.7 64 12 20 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 65 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_stop" ]
+        %maxHrStr.8 = local;
+        symbol [ maxHrStr %maxHrStr.8 65 12 20 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_65_23_65_68_begin:
+        symbol [ _data %tmp.159 65 24 29 ];
+        %tmp.159 = getv ? :_data;
+        symbol [ maxHr %tmp.160 65 30 35 ];
+        %tmp.160 = getv %tmp.159 :maxHr;
+        %tmp.161 = 0;
+        %tmp.162 = gt %tmp.160 %tmp.161;
+        bf %tmp.162 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_65_23_65_68_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_65_23_65_68_true:
+        symbol [ _data %tmp.164 65 43 48 ];
+        %tmp.164 = getv ? :_data;
+        symbol [ maxHr %tmp.165 65 49 54 ];
+        %tmp.165 = getv %tmp.164 :maxHr;
+        symbol [ toString %tmp.166 65 55 63 ];
+        %tmp.166 = getv function %tmp.165 :toString;
+        %tmp.167 = invoke %tmp.165 %tmp.166();
+        push %tmp.167;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_65_23_65_68_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_65_23_65_68_else_false:
+        %tmp.168 = "--";
+        push %tmp.168;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_65_23_65_68_end:
+        %tmp.169 = phi [%tmp.162 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_65_23_65_68_begin] [%tmp.167 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_65_23_65_68_true] [%tmp.168 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_65_23_65_68_else_false] [%tmp.169 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_65_23_65_68_end];
+        lputv %maxHrStr.8 %tmp.169;
+        symbol [ maxHrStr %maxHrStr.8 65 12 20 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 66 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_stop" ]
+        %hrStr.9 = local;
+        symbol [ hrStr %hrStr.9 66 12 17 ];
+        %tmp.170 = "HR Max/Min: ";
+        %tmp.171 = lgetv %maxHrStr.8;
+        symbol [ maxHrStr %tmp.171 66 37 45 ];
+        %tmp.172 = add %tmp.170 %tmp.171;
+        %tmp.173 = " / ";
+        %tmp.174 = add %tmp.172 %tmp.173;
+        %tmp.175 = lgetv %minHrStr.7;
+        symbol [ minHrStr %tmp.175 66 56 64 ];
+        %tmp.176 = add %tmp.174 %tmp.175;
+        lputv %hrStr.9 %tmp.176;
+        symbol [ hrStr %hrStr.9 66 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 67 8 ]
+        %tmp.177 = lgetv %dc;
+        symbol [ dc %tmp.177 67 8 10 ];
+        symbol [ drawText %tmp.178 67 11 19 ];
+        %tmp.178 = getv function %tmp.177 :drawText;
+        %tmp.179 = lgetv %cx.1;
+        symbol [ cx %tmp.179 67 20 22 ];
+        %tmp.180 = lgetv %y.3;
+        symbol [ y %tmp.180 67 24 25 ];
+        symbol [ Graphics %tmp.181 67 27 35 ];
+        %tmp.181 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.182 67 36 46 ];
+        %tmp.182 = getv %tmp.181 :FONT_XTINY;
+        %tmp.183 = lgetv %hrStr.9;
+        symbol [ hrStr %tmp.183 67 48 53 ];
+        symbol [ Graphics %tmp.184 67 55 63 ];
+        %tmp.184 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.185 67 64 83 ];
+        %tmp.185 = getv %tmp.184 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.186 67 86 94 ];
+        %tmp.186 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.187 67 95 115 ];
+        %tmp.187 = getv %tmp.186 :TEXT_JUSTIFY_VCENTER;
+        %tmp.188 = bitor %tmp.185 %tmp.187;
+        invoke %tmp.177 %tmp.178(%tmp.179, %tmp.180, %tmp.182, %tmp.183, %tmp.188);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 68 8 ]
+        %tmp.189 = lgetv %y.3;
+        symbol [ y %tmp.189 68 8 9 ];
+        %tmp.190 = 22;
+        %tmp.191 = add %tmp.189 %tmp.190;
+        lputv %y.3 %tmp.191;
+        symbol [ y %y.3 68 8 9 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 70 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_stop" ]
+        %sprintsStr.10 = local;
+        symbol [ sprintsStr %sprintsStr.10 70 12 22 ];
+        %tmp.192 = "Ilość zrywów: ";
+        symbol [ _data %tmp.194 70 44 49 ];
+        %tmp.194 = getv ? :_data;
+        symbol [ sprintsCount %tmp.195 70 50 62 ];
+        %tmp.195 = getv %tmp.194 :sprintsCount;
+        %tmp.196 = add %tmp.192 %tmp.195;
+        lputv %sprintsStr.10 %tmp.196;
+        symbol [ sprintsStr %sprintsStr.10 70 12 22 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 71 8 ]
+        %tmp.197 = lgetv %dc;
+        symbol [ dc %tmp.197 71 8 10 ];
+        symbol [ drawText %tmp.198 71 11 19 ];
+        %tmp.198 = getv function %tmp.197 :drawText;
+        %tmp.199 = lgetv %cx.1;
+        symbol [ cx %tmp.199 71 20 22 ];
+        %tmp.200 = lgetv %y.3;
+        symbol [ y %tmp.200 71 24 25 ];
+        symbol [ Graphics %tmp.201 71 27 35 ];
+        %tmp.201 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.202 71 36 46 ];
+        %tmp.202 = getv %tmp.201 :FONT_XTINY;
+        %tmp.203 = lgetv %sprintsStr.10;
+        symbol [ sprintsStr %tmp.203 71 48 58 ];
+        symbol [ Graphics %tmp.204 71 60 68 ];
+        %tmp.204 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.205 71 69 88 ];
+        %tmp.205 = getv %tmp.204 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.206 71 91 99 ];
+        %tmp.206 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.207 71 100 120 ];
+        %tmp.207 = getv %tmp.206 :TEXT_JUSTIFY_VCENTER;
+        %tmp.208 = bitor %tmp.205 %tmp.207;
+        invoke %tmp.197 %tmp.198(%tmp.199, %tmp.200, %tmp.202, %tmp.203, %tmp.208);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 74 8 ]
+        %tmp.209 = lgetv %dc;
+        symbol [ dc %tmp.209 74 8 10 ];
+        symbol [ setColor %tmp.210 74 11 19 ];
+        %tmp.210 = getv function %tmp.209 :setColor;
+        symbol [ Graphics %tmp.211 74 20 28 ];
+        %tmp.211 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.212 74 29 42 ];
+        %tmp.212 = getv %tmp.211 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.213 74 44 52 ];
+        %tmp.213 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.214 74 53 70 ];
+        %tmp.214 = getv %tmp.213 :COLOR_TRANSPARENT;
+        invoke %tmp.209 %tmp.210(%tmp.212, %tmp.214);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc" 75 8 ]
+        %tmp.215 = lgetv %dc;
+        symbol [ dc %tmp.215 75 8 10 ];
+        symbol [ drawText %tmp.216 75 11 19 ];
+        %tmp.216 = getv function %tmp.215 :drawText;
+        %tmp.217 = lgetv %cx.1;
+        symbol [ cx %tmp.217 76 12 14 ];
+        %tmp.218 = lgetv %height.2;
+        symbol [ height %tmp.218 77 12 18 ];
+        %tmp.219 = 20;
+        %tmp.220 = sub %tmp.218 %tmp.219;
+        symbol [ Graphics %tmp.221 78 12 20 ];
+        %tmp.221 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.222 78 21 31 ];
+        %tmp.222 = getv %tmp.221 :FONT_XTINY;
+        %tmp.223 = "[SELECT] Zamknij";
+        symbol [ Graphics %tmp.224 80 12 20 ];
+        %tmp.224 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.225 80 21 40 ];
+        %tmp.225 = getv %tmp.224 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.226 80 43 51 ];
+        %tmp.226 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.227 80 52 72 ];
+        %tmp.227 = getv %tmp.226 :TEXT_JUSTIFY_VCENTER;
+        %tmp.228 = bitor %tmp.225 %tmp.227;
+        invoke %tmp.215 %tmp.216(%tmp.217, %tmp.220, %tmp.222, %tmp.223, %tmp.228);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryView_mc_14_49_82_4_stop:
+    }
+}
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryView.mc"; @line = 1; ]
+<init> {
+}

@@ -94,7 +94,8 @@ class Screen2Delegate extends WatchUi.BehaviorDelegate {
 
     function onBack() as Boolean {
         cancelPendingTimers();
-        ExitMenu.showMenu();
+        // Przekazujemy true -> Wyjście z View2 (dołącza wynik meczu do podsumowania)
+        ExitMenu.showMenu(true);
         return true;
     }
 

@@ -182,7 +182,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_34_27_58_
         %tmp.92 = aputv %tmp.91 %tmp.88 %tmp.90;
         %tmp.94 = const :units;
         symbol [ units %tmp.94 53 70 75 const ];
-        %tmp.95 = "zrywÛw";
+        %tmp.95 = "zryw√≥w";
         %tmp.96 = dup %tmp.92;
         %tmp.97 = aputv %tmp.96 %tmp.94 %tmp.95;
         %tmp.98 = invoke %tmp.79 %tmp.80(%tmp.81, %tmp.83, %tmp.85, %tmp.97);
@@ -200,7 +200,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_34_27_58_
         %tmp.102 = getm $.Toybox.System;
         symbol [ println %tmp.103 57 23 30 ];
         %tmp.103 = getv function %tmp.102 :println;
-        %tmp.104 = "SessionManager: Sesja wystartowa≥a z obs≥ugπ GPS.";
+        %tmp.104 = "SessionManager: Sesja wystartowa≈Ça z obs≈ÇugƒÖ GPS.";
         invoke %tmp.102 %tmp.103(%tmp.104);
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_34_27_58_12_stop:
         goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SessionManager_mc_34_12_58_12_if_end;

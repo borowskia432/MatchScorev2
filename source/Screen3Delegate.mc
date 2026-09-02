@@ -1,4 +1,5 @@
 import Toybox.WatchUi;
+import Toybox.System;
 import Toybox.Lang;
 
 class Screen3Delegate extends WatchUi.BehaviorDelegate {
@@ -7,14 +8,12 @@ class Screen3Delegate extends WatchUi.BehaviorDelegate {
         BehaviorDelegate.initialize();
     }
 
+    // ... zachowaj istniejące metody w swoim pliku Screen3Delegate ...
+
     function onBack() as Boolean {
-        ExitMenu.showMenu();
+        // Przekazujemy parametr Boolean do showMenu()
+        // false = bez wyników bramkowych meczu, true = z wynikami meczu
+        ExitMenu.showMenu(false); 
         return true;
     }
-
-    function onSelect() as Boolean {
-    var settings = SettingsMenu.createMenu();
-    WatchUi.pushView(settings[0], settings[1], WatchUi.SLIDE_UP);
-    return true;
-}
 }

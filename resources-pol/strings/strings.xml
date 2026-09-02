@@ -13,7 +13,7 @@
     <string id="FootballRun">Piłka nożna / Bieganie</string>
     <string id="Football">Piłka nożna</string>
     <string id="Volleyball">Siatkówka</string>
-    
+    <string id="NewSet">Nowy set / Lap</string>
     <string id="SelectModeTitle">Wybierz tryb</string>
     <string id="ModeManual">Ręczne sety / Lapy</string>
     <string id="ModeAuto">Auto-Lap (1km)</string>

@@ -170,4 +170,11 @@ module SessionManager {
         var s = session;
         return (s != null) ? s.isRecording() : false;
     }
+    function addManualLap() as Void {
+        var s = session;
+        if (s != null && s.isRecording()) {
+            s.addLap();
+            System.println("SessionManager: Ręczny lap / nowy set został dodany.");
+        }
+    }
 }

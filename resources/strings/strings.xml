@@ -13,7 +13,7 @@
     <string id="FootballRun">Football / Run</string>
     <string id="Football">Football (Soccer)</string>
     <string id="Volleyball">Volleyball</string>
-    
+    <string id="NewSet">New Set / Lap</string>
     <string id="SelectModeTitle">Select Mode</string>
     <string id="ModeManual">Manual Laps / Sets</string>
     <string id="ModeAuto">Auto-Lap (1km)</string>

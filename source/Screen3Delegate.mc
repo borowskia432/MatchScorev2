@@ -29,7 +29,10 @@ class Screen3Delegate extends WatchUi.BehaviorDelegate {
             if (tUp != null) {
                 tUp.stop();
                 _upTimer = null;
-                ScoreManager.addScoreA(-1);
+                // Podwójne kliknięcie UP: odejmij punkt Drużynie A (min. 0)
+                if (AppConfig.volleyballScoreA > 0) {
+                    AppConfig.volleyballScoreA--;
+                }
                 WatchUi.requestUpdate();
             } else {
                 var timer = new Timer.Timer();
@@ -43,7 +46,10 @@ class Screen3Delegate extends WatchUi.BehaviorDelegate {
             if (tDown != null) {
                 tDown.stop();
                 _downTimer = null;
-                ScoreManager.addScoreB(-1);
+                // Podwójne kliknięcie DOWN: odejmij punkt Drużynie B (min. 0)
+                if (AppConfig.volleyballScoreB > 0) {
+                    AppConfig.volleyballScoreB--;
+                }
                 WatchUi.requestUpdate();
             } else {
                 var timer = new Timer.Timer();
@@ -61,13 +67,15 @@ class Screen3Delegate extends WatchUi.BehaviorDelegate {
 
     function onKeyUpTimeout() as Void {
         _upTimer = null;
-        ScoreManager.addScoreA(1);
+        // Pojedyncze kliknięcie UP: dodaj punkt Drużynie A w AppConfig
+        AppConfig.volleyballScoreA++;
         WatchUi.requestUpdate();
     }
 
     function onKeyDownTimeout() as Void {
         _downTimer = null;
-        ScoreManager.addScoreB(1);
+        // Pojedyncze kliknięcie DOWN: dodaj punkt Drużynie B w AppConfig
+        AppConfig.volleyballScoreB++;
         WatchUi.requestUpdate();
     }
 
@@ -89,9 +97,11 @@ class Screen3Delegate extends WatchUi.BehaviorDelegate {
         var screenWidth = System.getDeviceSettings().screenWidth;
 
         if (coords[0] < screenWidth / 2) {
-            ScoreManager.addScoreA(1);
+            // Kliknięcie lewej strony ekranu: dodaj punkt Drużynie A
+            AppConfig.volleyballScoreA++;
         } else {
-            ScoreManager.addScoreB(1);
+            // Kliknięcie prawej strony ekranu: dodaj punkt Drużynie B
+            AppConfig.volleyballScoreB++;
         }
 
         WatchUi.requestUpdate();

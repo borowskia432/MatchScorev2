@@ -1,0 +1,52 @@
+{
+  "datafields" : [ {
+    "id" : 1,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "ScoreALabel",
+    "unit-label-key" : "ScoreUnits",
+    "sort-order" : 1,
+    "precision" : 0,
+    "fill-color" : null
+  }, {
+    "id" : 2,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "ScoreBLabel",
+    "unit-label-key" : "ScoreUnits",
+    "sort-order" : 2,
+    "precision" : 0,
+    "fill-color" : null
+  }, {
+    "id" : 3,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "BurstLabel",
+    "unit-label-key" : "BurstUnits",
+    "sort-order" : 3,
+    "precision" : 0,
+    "fill-color" : null
+  } ],
+  "strings" : {
+    "pl-PL" : {
+      "ScoreALabel" : "Wynik Drużyny A",
+      "ScoreUnits" : "pkt",
+      "ScoreBLabel" : "Wynik Drużyny B",
+      "BurstLabel" : "Zrywy",
+      "BurstUnits" : "zrywów"
+    },
+    "default" : {
+      "ScoreALabel" : "Team A Score",
+      "ScoreUnits" : "pts",
+      "ScoreBLabel" : "Team B Score",
+      "BurstLabel" : "Bursts",
+      "BurstUnits" : "bursts"
+    }
+  }
+}

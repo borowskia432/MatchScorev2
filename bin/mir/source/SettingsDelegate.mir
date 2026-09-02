@@ -1,0 +1,46 @@
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SettingsDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [WatchUi,1,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SettingsDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SettingsDelegate.mc"; @line = 4; @symbol_classdef = [SettingsDelegate,4,6,22]; @symbol_extends<0> = [WatchUi,4,31,38]; @symbol_extends<1> = [BehaviorDelegate,4,39,55]; ]
+class SettingsDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SettingsDelegate.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SettingsDelegate.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SettingsDelegate.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
+    function initialize() as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsDelegate_mc_6_26_8_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SettingsDelegate.mc" 7 8 ]
+        symbol [ BehaviorDelegate %tmp.2 7 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 7 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsDelegate_mc_6_26_8_4_stop:
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SettingsDelegate.mc"; @line = 10; @symbol_functiondef = [onBack,10,13,19]; @symbol_return<0> = [Boolean,10,25,32]; ]
+    function onBack() as Boolean {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsDelegate_mc_10_33_13_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SettingsDelegate.mc" 11 8 ]
+        symbol [ WatchUi %tmp.1 11 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.2 11 16 23 ];
+        %tmp.2 = getv function %tmp.1 :popView;
+        symbol [ WatchUi %tmp.3 11 24 31 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.4 11 32 42 ];
+        %tmp.4 = getv %tmp.3 :SLIDE_DOWN;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SettingsDelegate.mc" 12 8 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SettingsDelegate_mc_10_33_13_4_stop:
+    }
+}
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SettingsDelegate.mc"; @line = 1; ]
+<init> {
+}

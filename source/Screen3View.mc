@@ -49,8 +49,8 @@ class Screen3View extends WatchUi.View {
         dc.drawText(cx - 65, 75, Graphics.FONT_SMALL, WatchUi.loadResource(Rez.Strings.TeamA) as String, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.drawText(cx + 65, 75, Graphics.FONT_SMALL, WatchUi.loadResource(Rez.Strings.TeamB) as String, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
-        // Wynik
-        var scoreString = ScoreManager.scoreA.toString() + " : " + ScoreManager.scoreB.toString();
+        // Wynik pobierany z AppConfig (zgodny z delegatem i nowym setem)
+        var scoreString = AppConfig.volleyballScoreA.toString() + " : " + AppConfig.volleyballScoreB.toString();
         dc.drawText(cx, 125, Graphics.FONT_NUMBER_HOT, scoreString, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         // Dane Aktywności

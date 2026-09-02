@@ -124,10 +124,9 @@ module SessionManager {
             if (fBurst != null) { fBurst.setData(burstCount); }
 
             // Zapisanie liczby wyskoków z JumpManager do pliku FIT przed zamknięciem sesji
-            var fJump = _jumpSummaryField;
+          var fJump = _jumpSummaryField;
             if (fJump != null) {
-                var jumps = (JumpManager has :jumpCount) ? JumpManager.jumpCount : 0;
-                fJump.setData(jumps);
+                fJump.setData(JumpManager.jumpCount);
             }
 
             if (s.isRecording()) {

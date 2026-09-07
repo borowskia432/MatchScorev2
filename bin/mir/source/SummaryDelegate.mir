@@ -54,30 +54,18 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_16_33_19
     private
     function saveAndExit() as Void {
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_30_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 23 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_30_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_30_4_stop" ]
-        %burstCount.1 = local;
-        symbol [ burstCount %burstCount.1 23 12 22 ];
-        symbol [ BurstManager %tmp.2 23 25 37 ];
-        %tmp.2 = getv ? :BurstManager;
-        symbol [ burstCount %tmp.3 23 38 48 ];
-        %tmp.3 = getv %tmp.2 :burstCount;
-        lputv %burstCount.1 %tmp.3;
-        symbol [ burstCount %burstCount.1 23 12 22 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 26 8 ]
-        symbol [ SessionManager %tmp.5 26 8 22 ];
-        %tmp.5 = getv ? :SessionManager;
-        symbol [ saveSession %tmp.6 26 23 34 ];
-        %tmp.6 = getv function %tmp.5 :saveSession;
-        %tmp.7 = lgetv %burstCount.1;
-        symbol [ burstCount %tmp.7 26 35 45 ];
-        invoke %tmp.5 %tmp.6(%tmp.7);
+        symbol [ SessionManager %tmp.2 26 8 22 ];
+        %tmp.2 = getv ? :SessionManager;
+        symbol [ saveSession %tmp.3 26 23 34 ];
+        %tmp.3 = getv function %tmp.2 :saveSession;
+        invoke %tmp.2 %tmp.3();
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 29 8 ]
-        symbol [ System %tmp.8 29 8 14 ];
-        %tmp.8 = getm $.Toybox.System;
-        symbol [ exit %tmp.9 29 15 19 ];
-        %tmp.9 = getv function %tmp.8 :exit;
-        invoke %tmp.8 %tmp.9();
+        symbol [ System %tmp.4 29 8 14 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ exit %tmp.5 29 15 19 ];
+        %tmp.5 = getv function %tmp.4 :exit;
+        invoke %tmp.4 %tmp.5();
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_30_4_stop:
     }
 }

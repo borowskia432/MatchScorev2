@@ -1,16 +1,51 @@
 import Toybox.Lang;
+import Toybox.System;
 
 module JumpManager {
-    // Licznik wyskoków
-    var jumpCount as Number = 0;
 
-    // Metoda do inkrementacji (możesz ją wywoływać po wykryciu wyskoku)
-    function addJump() as Void {
-        jumpCount++;
+    // =====================================================
+    // RESET
+    // =====================================================
+
+    function reset() as Void {
+
+        System.println("JumpManager: reset");
     }
 
-    // Resetowanie licznika (np. przy starcie nowej sesji)
-    function reset() as Void {
-        jumpCount = 0;
+
+    // =====================================================
+    // DODANIE WYSKOKU
+    //
+    // Ta funkcja jest wywoływana przez algorytm
+    // wykrywania wyskoku.
+    // =====================================================
+
+    function addJump() as Void {
+
+        SportsMetricsManager.addJump();
+
+        System.println(
+            "JumpManager: Wykryto wyskok! " +
+            "Łącznie: " +
+            SportsMetricsManager.getTotalJumps()
+        );
+    }
+
+
+    // =====================================================
+    // RĘCZNE DODANIE WYSKOKU
+    //
+    // Przydatne podczas testowania.
+    // =====================================================
+
+    function addManualJump() as Void {
+
+        SportsMetricsManager.addJump();
+
+        System.println(
+            "JumpManager: Ręcznie dodano wyskok. " +
+            "Łącznie: " +
+            SportsMetricsManager.getTotalJumps()
+        );
     }
 }

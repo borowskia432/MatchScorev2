@@ -14,7 +14,11 @@ module AppConfig {
     var volleyballScoreA as Number = 0;
     var volleyballScoreB as Number = 0;
 
-    // Skumulowany wynik CAŁEGO MECZU (suma ze wszystkich setów)
+    // Wygrane sety w siatkówce
+    var volleyballSetsA as Number = 0;
+    var volleyballSetsB as Number = 0;
+
+    // Skumulowany wynik CAŁEGO MECZU (suma ze wszystkich setów / statystyka opcjonalna)
     var matchScoreA as Number = 0;
     var matchScoreB as Number = 0;
 
@@ -44,6 +48,8 @@ module AppConfig {
     function resetMatch() as Void {
         volleyballScoreA = 0;
         volleyballScoreB = 0;
+        volleyballSetsA = 0;
+        volleyballSetsB = 0;
         matchScoreA = 0;
         matchScoreB = 0;
     }

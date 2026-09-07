@@ -1,0 +1,871 @@
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [WatchUi,1,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Graphics,2,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc"; @line = 5; @symbol_classdef = [VolleyballSummaryView,5,6,27]; @symbol_extends<0> = [WatchUi,5,36,43]; @symbol_extends<1> = [View,5,44,48]; ]
+class VolleyballSummaryView extends WatchUi.View {
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc"; @line = 7; @position = 16; @symbol_vardef = [_data,7,16,21]; @symbol_type<0> = [SummaryData,7,25,36]; ]
+    private
+    var _data as SummaryData;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; @symbol_param<0> = [data,9,24,28]; @symbol_param<0>_type<0> = [SummaryData,9,32,43]; ]
+    function initialize(data as SummaryData) as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_9_45_12_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 10 8 ]
+        symbol [ View %tmp.2 10 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 10 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 11 8 ]
+        %tmp.4 = lgetv %data;
+        symbol [ data %tmp.4 11 16 20 ];
+        symbol [ _data ? 11 8 13 ];
+        putv self :_data %tmp.4;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_9_45_12_4_stop:
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc"; @line = 14; @symbol_functiondef = [onUpdate,14,13,21]; @symbol_param<0> = [dc,14,22,24]; @symbol_param<0>_type<0> = [Graphics,14,28,36]; @symbol_param<0>_type<1> = [Dc,14,37,39]; ]
+    function onUpdate(dc as Graphics.Dc) as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 15 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 15 8 10 ];
+        symbol [ setColor %tmp.2 15 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 15 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 15 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 15 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 15 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 16 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 16 8 10 ];
+        symbol [ clear %tmp.8 16 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 18 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %cx.1 = local;
+        symbol [ cx %cx.1 18 12 14 ];
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 18 17 19 ];
+        symbol [ getWidth %tmp.10 18 20 28 ];
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        %tmp.12 = 2;
+        %tmp.13 = div %tmp.11 %tmp.12;
+        lputv %cx.1 %tmp.13;
+        symbol [ cx %cx.1 18 12 14 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 19 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 19 12 18 ];
+        %tmp.14 = lgetv %dc;
+        symbol [ dc %tmp.14 19 21 23 ];
+        symbol [ getHeight %tmp.15 19 24 33 ];
+        %tmp.15 = getv function %tmp.14 :getHeight;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        lputv %height.2 %tmp.16;
+        symbol [ height %height.2 19 12 18 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 21 8 ]
+        %tmp.17 = lgetv %dc;
+        symbol [ dc %tmp.17 21 8 10 ];
+        symbol [ setAntiAlias %tmp.18 21 11 23 ];
+        %tmp.18 = getv function %tmp.17 :setAntiAlias;
+        %tmp.19 = true;
+        invoke %tmp.17 %tmp.18(%tmp.19);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 26 8 ]
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 26 8 10 ];
+        symbol [ setColor %tmp.21 26 11 19 ];
+        %tmp.21 = getv function %tmp.20 :setColor;
+        symbol [ Graphics %tmp.22 26 20 28 ];
+        %tmp.22 = getm $.Toybox.Graphics;
+        symbol [ COLOR_YELLOW %tmp.23 26 29 41 ];
+        %tmp.23 = getv %tmp.22 :COLOR_YELLOW;
+        symbol [ Graphics %tmp.24 26 43 51 ];
+        %tmp.24 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.25 26 52 69 ];
+        %tmp.25 = getv %tmp.24 :COLOR_TRANSPARENT;
+        invoke %tmp.20 %tmp.21(%tmp.23, %tmp.25);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 27 8 ]
+        %tmp.26 = lgetv %dc;
+        symbol [ dc %tmp.26 27 8 10 ];
+        symbol [ drawText %tmp.27 27 11 19 ];
+        %tmp.27 = getv function %tmp.26 :drawText;
+        %tmp.28 = lgetv %cx.1;
+        symbol [ cx %tmp.28 28 12 14 ];
+        %tmp.29 = 12;
+        symbol [ Graphics %tmp.30 30 12 20 ];
+        %tmp.30 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.31 30 21 31 ];
+        %tmp.31 = getv %tmp.30 :FONT_XTINY;
+        symbol [ WatchUi %tmp.32 31 12 19 ];
+        %tmp.32 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.33 31 20 32 ];
+        %tmp.33 = getv function %tmp.32 :loadResource;
+        symbol [ Rez %tmp.35 31 33 36 ];
+        %tmp.35 = getv ? :Rez;
+        symbol [ Strings %tmp.36 31 37 44 ];
+        %tmp.36 = getv %tmp.35 :Strings;
+        symbol [ SummaryTitle %tmp.37 31 45 57 ];
+        %tmp.37 = getv %tmp.36 :SummaryTitle;
+        %tmp.38 = invoke %tmp.32 %tmp.33(%tmp.37);
+        %tmp.39 = as %tmp.38 String;
+        symbol [ String %tmp.39 31 62 68 ];
+        symbol [ Graphics %tmp.40 32 12 20 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.41 32 21 40 ];
+        %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.42 32 43 51 ];
+        %tmp.42 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.43 32 52 72 ];
+        %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_VCENTER;
+        %tmp.44 = bitor %tmp.41 %tmp.43;
+        invoke %tmp.26 %tmp.27(%tmp.28, %tmp.29, %tmp.31, %tmp.39, %tmp.44);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 35 8 ]
+        %tmp.45 = lgetv %dc;
+        symbol [ dc %tmp.45 35 8 10 ];
+        symbol [ setColor %tmp.46 35 11 19 ];
+        %tmp.46 = getv function %tmp.45 :setColor;
+        symbol [ Graphics %tmp.47 35 20 28 ];
+        %tmp.47 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.48 35 29 42 ];
+        %tmp.48 = getv %tmp.47 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.49 35 44 52 ];
+        %tmp.49 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.50 35 53 70 ];
+        %tmp.50 = getv %tmp.49 :COLOR_TRANSPARENT;
+        invoke %tmp.45 %tmp.46(%tmp.48, %tmp.50);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 36 8 ]
+        %tmp.51 = lgetv %dc;
+        symbol [ dc %tmp.51 36 8 10 ];
+        symbol [ drawLine %tmp.52 36 11 19 ];
+        %tmp.52 = getv function %tmp.51 :drawLine;
+        %tmp.53 = lgetv %cx.1;
+        symbol [ cx %tmp.53 36 20 22 ];
+        %tmp.54 = 50;
+        %tmp.55 = sub %tmp.53 %tmp.54;
+        %tmp.56 = 24;
+        %tmp.57 = lgetv %cx.1;
+        symbol [ cx %tmp.57 36 33 35 ];
+        %tmp.58 = 50;
+        %tmp.59 = add %tmp.57 %tmp.58;
+        %tmp.60 = 24;
+        invoke %tmp.51 %tmp.52(%tmp.55, %tmp.56, %tmp.59, %tmp.60);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 38 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %y.3 = local;
+        symbol [ y %y.3 38 12 13 ];
+        %tmp.61 = 38;
+        lputv %y.3 %tmp.61;
+        symbol [ y %y.3 38 12 13 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 43 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_43_8_57_8_if_stmt:
+        symbol [ _data %tmp.63 43 12 17 ];
+        %tmp.63 = getv ? :_data;
+        symbol [ hasScore %tmp.64 43 18 26 ];
+        %tmp.64 = getv %tmp.63 :hasScore;
+        bf %tmp.64 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_43_8_57_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_43_8_57_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_43_28_57_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 45 12 ]
+        %tmp.65 = lgetv %dc;
+        symbol [ dc %tmp.65 45 12 14 ];
+        symbol [ setColor %tmp.66 45 15 23 ];
+        %tmp.66 = getv function %tmp.65 :setColor;
+        symbol [ Graphics %tmp.67 45 24 32 ];
+        %tmp.67 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLUE %tmp.68 45 33 43 ];
+        %tmp.68 = getv %tmp.67 :COLOR_BLUE;
+        symbol [ Graphics %tmp.69 45 45 53 ];
+        %tmp.69 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.70 45 54 71 ];
+        %tmp.70 = getv %tmp.69 :COLOR_TRANSPARENT;
+        invoke %tmp.65 %tmp.66(%tmp.68, %tmp.70);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 46 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_43_28_57_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_43_28_57_8_stop" ]
+        %setsText.4 = local;
+        symbol [ setsText %setsText.4 46 16 24 ];
+        symbol [ Lang %tmp.71 46 27 31 ];
+        %tmp.71 = getm $.Toybox.Lang;
+        symbol [ format %tmp.72 46 32 38 ];
+        %tmp.72 = getv function %tmp.71 :format;
+        %tmp.73 = "Sety: $1$ : $2$";
+        %tmp.74 = newa 2;
+        symbol [ _data %tmp.76 46 59 64 ];
+        %tmp.76 = getv ? :_data;
+        symbol [ setsTeamA %tmp.77 46 65 74 ];
+        %tmp.77 = getv %tmp.76 :setsTeamA;
+        %tmp.78 = dup %tmp.74;
+        %tmp.79 = aputv %tmp.78 0 %tmp.77;
+        symbol [ _data %tmp.81 46 76 81 ];
+        %tmp.81 = getv ? :_data;
+        symbol [ setsTeamB %tmp.82 46 82 91 ];
+        %tmp.82 = getv %tmp.81 :setsTeamB;
+        %tmp.83 = dup %tmp.79;
+        %tmp.84 = aputv %tmp.83 1 %tmp.82;
+        %tmp.85 = invoke %tmp.71 %tmp.72(%tmp.73, %tmp.84);
+        lputv %setsText.4 %tmp.85;
+        symbol [ setsText %setsText.4 46 16 24 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 47 12 ]
+        %tmp.86 = lgetv %dc;
+        symbol [ dc %tmp.86 47 12 14 ];
+        symbol [ drawText %tmp.87 47 15 23 ];
+        %tmp.87 = getv function %tmp.86 :drawText;
+        %tmp.88 = lgetv %cx.1;
+        symbol [ cx %tmp.88 48 16 18 ];
+        %tmp.89 = lgetv %y.3;
+        symbol [ y %tmp.89 49 16 17 ];
+        symbol [ Graphics %tmp.90 50 16 24 ];
+        %tmp.90 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.91 50 25 35 ];
+        %tmp.91 = getv %tmp.90 :FONT_SMALL;
+        %tmp.92 = lgetv %setsText.4;
+        symbol [ setsText %tmp.92 51 16 24 ];
+        symbol [ Graphics %tmp.93 52 16 24 ];
+        %tmp.93 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.94 52 25 44 ];
+        %tmp.94 = getv %tmp.93 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.95 52 47 55 ];
+        %tmp.95 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.96 52 56 76 ];
+        %tmp.96 = getv %tmp.95 :TEXT_JUSTIFY_VCENTER;
+        %tmp.97 = bitor %tmp.94 %tmp.96;
+        invoke %tmp.86 %tmp.87(%tmp.88, %tmp.89, %tmp.91, %tmp.92, %tmp.97);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 54 12 ]
+        %tmp.98 = lgetv %y.3;
+        symbol [ y %tmp.98 54 12 13 ];
+        %tmp.99 = 20;
+        %tmp.100 = add %tmp.98 %tmp.99;
+        lputv %y.3 %tmp.100;
+        symbol [ y %y.3 54 12 13 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_43_28_57_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_43_8_57_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_43_8_57_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 62 8 ]
+        %tmp.101 = lgetv %dc;
+        symbol [ dc %tmp.101 62 8 10 ];
+        symbol [ setColor %tmp.102 62 11 19 ];
+        %tmp.102 = getv function %tmp.101 :setColor;
+        symbol [ Graphics %tmp.103 62 20 28 ];
+        %tmp.103 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.104 62 29 40 ];
+        %tmp.104 = getv %tmp.103 :COLOR_WHITE;
+        symbol [ Graphics %tmp.105 62 42 50 ];
+        %tmp.105 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.106 62 51 68 ];
+        %tmp.106 = getv %tmp.105 :COLOR_TRANSPARENT;
+        invoke %tmp.101 %tmp.102(%tmp.104, %tmp.106);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 64 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %distLabel.5 = local;
+        symbol [ distLabel %distLabel.5 64 12 21 ];
+        symbol [ WatchUi %tmp.107 64 24 31 ];
+        %tmp.107 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.108 64 32 44 ];
+        %tmp.108 = getv function %tmp.107 :loadResource;
+        symbol [ Rez %tmp.110 64 45 48 ];
+        %tmp.110 = getv ? :Rez;
+        symbol [ Strings %tmp.111 64 49 56 ];
+        %tmp.111 = getv %tmp.110 :Strings;
+        symbol [ DistanceLabel %tmp.112 64 57 70 ];
+        %tmp.112 = getv %tmp.111 :DistanceLabel;
+        %tmp.113 = invoke %tmp.107 %tmp.108(%tmp.112);
+        %tmp.114 = as %tmp.113 String;
+        symbol [ String %tmp.114 64 75 81 ];
+        lputv %distLabel.5 %tmp.114;
+        symbol [ distLabel %distLabel.5 64 12 21 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 65 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %distStr.6 = local;
+        symbol [ distStr %distStr.6 65 12 19 ];
+        symbol [ Lang %tmp.115 65 22 26 ];
+        %tmp.115 = getm $.Toybox.Lang;
+        symbol [ format %tmp.116 65 27 33 ];
+        %tmp.116 = getv function %tmp.115 :format;
+        %tmp.117 = "$1$ $2$ km";
+        %tmp.118 = newa 2;
+        %tmp.119 = lgetv %distLabel.5;
+        symbol [ distLabel %tmp.119 65 49 58 ];
+        %tmp.120 = dup %tmp.118;
+        %tmp.121 = aputv %tmp.120 0 %tmp.119;
+        symbol [ _data %tmp.123 65 60 65 ];
+        %tmp.123 = getv ? :_data;
+        symbol [ distanceKm %tmp.124 65 66 76 ];
+        %tmp.124 = getv %tmp.123 :distanceKm;
+        symbol [ format %tmp.125 65 77 83 ];
+        %tmp.125 = getv function %tmp.124 :format;
+        %tmp.126 = "%.2f";
+        %tmp.127 = invoke %tmp.124 %tmp.125(%tmp.126);
+        %tmp.128 = dup %tmp.121;
+        %tmp.129 = aputv %tmp.128 1 %tmp.127;
+        %tmp.130 = invoke %tmp.115 %tmp.116(%tmp.117, %tmp.129);
+        lputv %distStr.6 %tmp.130;
+        symbol [ distStr %distStr.6 65 12 19 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 66 8 ]
+        %tmp.131 = lgetv %dc;
+        symbol [ dc %tmp.131 66 8 10 ];
+        symbol [ drawText %tmp.132 66 11 19 ];
+        %tmp.132 = getv function %tmp.131 :drawText;
+        %tmp.133 = lgetv %cx.1;
+        symbol [ cx %tmp.133 66 20 22 ];
+        %tmp.134 = lgetv %y.3;
+        symbol [ y %tmp.134 66 24 25 ];
+        symbol [ Graphics %tmp.135 66 27 35 ];
+        %tmp.135 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.136 66 36 46 ];
+        %tmp.136 = getv %tmp.135 :FONT_XTINY;
+        %tmp.137 = lgetv %distStr.6;
+        symbol [ distStr %tmp.137 66 48 55 ];
+        symbol [ Graphics %tmp.138 66 57 65 ];
+        %tmp.138 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.139 66 66 85 ];
+        %tmp.139 = getv %tmp.138 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.140 66 88 96 ];
+        %tmp.140 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.141 66 97 117 ];
+        %tmp.141 = getv %tmp.140 :TEXT_JUSTIFY_VCENTER;
+        %tmp.142 = bitor %tmp.139 %tmp.141;
+        invoke %tmp.131 %tmp.132(%tmp.133, %tmp.134, %tmp.136, %tmp.137, %tmp.142);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 67 8 ]
+        %tmp.143 = lgetv %y.3;
+        symbol [ y %tmp.143 67 8 9 ];
+        %tmp.144 = 20;
+        %tmp.145 = add %tmp.143 %tmp.144;
+        lputv %y.3 %tmp.145;
+        symbol [ y %y.3 67 8 9 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 69 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %speedLabel.7 = local;
+        symbol [ speedLabel %speedLabel.7 69 12 22 ];
+        symbol [ WatchUi %tmp.146 69 25 32 ];
+        %tmp.146 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.147 69 33 45 ];
+        %tmp.147 = getv function %tmp.146 :loadResource;
+        symbol [ Rez %tmp.149 69 46 49 ];
+        %tmp.149 = getv ? :Rez;
+        symbol [ Strings %tmp.150 69 50 57 ];
+        %tmp.150 = getv %tmp.149 :Strings;
+        symbol [ MaxSpeedLabel %tmp.151 69 58 71 ];
+        %tmp.151 = getv %tmp.150 :MaxSpeedLabel;
+        %tmp.152 = invoke %tmp.146 %tmp.147(%tmp.151);
+        %tmp.153 = as %tmp.152 String;
+        symbol [ String %tmp.153 69 76 82 ];
+        lputv %speedLabel.7 %tmp.153;
+        symbol [ speedLabel %speedLabel.7 69 12 22 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 70 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %speedStr.8 = local;
+        symbol [ speedStr %speedStr.8 70 12 20 ];
+        symbol [ Lang %tmp.154 70 23 27 ];
+        %tmp.154 = getm $.Toybox.Lang;
+        symbol [ format %tmp.155 70 28 34 ];
+        %tmp.155 = getv function %tmp.154 :format;
+        %tmp.156 = "$1$ $2$ km/h";
+        %tmp.157 = newa 2;
+        %tmp.158 = lgetv %speedLabel.7;
+        symbol [ speedLabel %tmp.158 70 52 62 ];
+        %tmp.159 = dup %tmp.157;
+        %tmp.160 = aputv %tmp.159 0 %tmp.158;
+        symbol [ _data %tmp.162 70 64 69 ];
+        %tmp.162 = getv ? :_data;
+        symbol [ maxSpeedKmH %tmp.163 70 70 81 ];
+        %tmp.163 = getv %tmp.162 :maxSpeedKmH;
+        symbol [ format %tmp.164 70 82 88 ];
+        %tmp.164 = getv function %tmp.163 :format;
+        %tmp.165 = "%.1f";
+        %tmp.166 = invoke %tmp.163 %tmp.164(%tmp.165);
+        %tmp.167 = dup %tmp.160;
+        %tmp.168 = aputv %tmp.167 1 %tmp.166;
+        %tmp.169 = invoke %tmp.154 %tmp.155(%tmp.156, %tmp.168);
+        lputv %speedStr.8 %tmp.169;
+        symbol [ speedStr %speedStr.8 70 12 20 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 71 8 ]
+        %tmp.170 = lgetv %dc;
+        symbol [ dc %tmp.170 71 8 10 ];
+        symbol [ drawText %tmp.171 71 11 19 ];
+        %tmp.171 = getv function %tmp.170 :drawText;
+        %tmp.172 = lgetv %cx.1;
+        symbol [ cx %tmp.172 71 20 22 ];
+        %tmp.173 = lgetv %y.3;
+        symbol [ y %tmp.173 71 24 25 ];
+        symbol [ Graphics %tmp.174 71 27 35 ];
+        %tmp.174 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.175 71 36 46 ];
+        %tmp.175 = getv %tmp.174 :FONT_XTINY;
+        %tmp.176 = lgetv %speedStr.8;
+        symbol [ speedStr %tmp.176 71 48 56 ];
+        symbol [ Graphics %tmp.177 71 58 66 ];
+        %tmp.177 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.178 71 67 86 ];
+        %tmp.178 = getv %tmp.177 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.179 71 89 97 ];
+        %tmp.179 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.180 71 98 118 ];
+        %tmp.180 = getv %tmp.179 :TEXT_JUSTIFY_VCENTER;
+        %tmp.181 = bitor %tmp.178 %tmp.180;
+        invoke %tmp.170 %tmp.171(%tmp.172, %tmp.173, %tmp.175, %tmp.176, %tmp.181);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 72 8 ]
+        %tmp.182 = lgetv %y.3;
+        symbol [ y %tmp.182 72 8 9 ];
+        %tmp.183 = 20;
+        %tmp.184 = add %tmp.182 %tmp.183;
+        lputv %y.3 %tmp.184;
+        symbol [ y %y.3 72 8 9 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 74 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %minHrStr.9 = local;
+        symbol [ minHrStr %minHrStr.9 74 12 20 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_74_23_74_68_begin:
+        symbol [ _data %tmp.186 74 24 29 ];
+        %tmp.186 = getv ? :_data;
+        symbol [ minHr %tmp.187 74 30 35 ];
+        %tmp.187 = getv %tmp.186 :minHr;
+        %tmp.188 = 0;
+        %tmp.189 = gt %tmp.187 %tmp.188;
+        bf %tmp.189 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_74_23_74_68_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_74_23_74_68_true:
+        symbol [ _data %tmp.191 74 43 48 ];
+        %tmp.191 = getv ? :_data;
+        symbol [ minHr %tmp.192 74 49 54 ];
+        %tmp.192 = getv %tmp.191 :minHr;
+        symbol [ toString %tmp.193 74 55 63 ];
+        %tmp.193 = getv function %tmp.192 :toString;
+        %tmp.194 = invoke %tmp.192 %tmp.193();
+        push %tmp.194;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_74_23_74_68_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_74_23_74_68_else_false:
+        %tmp.195 = "--";
+        push %tmp.195;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_74_23_74_68_end:
+        %tmp.196 = phi [%tmp.189 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_74_23_74_68_begin] [%tmp.194 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_74_23_74_68_true] [%tmp.195 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_74_23_74_68_else_false] [%tmp.196 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_74_23_74_68_end];
+        lputv %minHrStr.9 %tmp.196;
+        symbol [ minHrStr %minHrStr.9 74 12 20 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 75 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %maxHrStr.10 = local;
+        symbol [ maxHrStr %maxHrStr.10 75 12 20 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_75_23_75_68_begin:
+        symbol [ _data %tmp.198 75 24 29 ];
+        %tmp.198 = getv ? :_data;
+        symbol [ maxHr %tmp.199 75 30 35 ];
+        %tmp.199 = getv %tmp.198 :maxHr;
+        %tmp.200 = 0;
+        %tmp.201 = gt %tmp.199 %tmp.200;
+        bf %tmp.201 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_75_23_75_68_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_75_23_75_68_true:
+        symbol [ _data %tmp.203 75 43 48 ];
+        %tmp.203 = getv ? :_data;
+        symbol [ maxHr %tmp.204 75 49 54 ];
+        %tmp.204 = getv %tmp.203 :maxHr;
+        symbol [ toString %tmp.205 75 55 63 ];
+        %tmp.205 = getv function %tmp.204 :toString;
+        %tmp.206 = invoke %tmp.204 %tmp.205();
+        push %tmp.206;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_75_23_75_68_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_75_23_75_68_else_false:
+        %tmp.207 = "--";
+        push %tmp.207;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_75_23_75_68_end:
+        %tmp.208 = phi [%tmp.201 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_75_23_75_68_begin] [%tmp.206 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_75_23_75_68_true] [%tmp.207 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_75_23_75_68_else_false] [%tmp.208 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_75_23_75_68_end];
+        lputv %maxHrStr.10 %tmp.208;
+        symbol [ maxHrStr %maxHrStr.10 75 12 20 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 76 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %hrLabel.11 = local;
+        symbol [ hrLabel %hrLabel.11 76 12 19 ];
+        symbol [ WatchUi %tmp.209 76 22 29 ];
+        %tmp.209 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.210 76 30 42 ];
+        %tmp.210 = getv function %tmp.209 :loadResource;
+        symbol [ Rez %tmp.212 76 43 46 ];
+        %tmp.212 = getv ? :Rez;
+        symbol [ Strings %tmp.213 76 47 54 ];
+        %tmp.213 = getv %tmp.212 :Strings;
+        symbol [ HrLabel %tmp.214 76 55 62 ];
+        %tmp.214 = getv %tmp.213 :HrLabel;
+        %tmp.215 = invoke %tmp.209 %tmp.210(%tmp.214);
+        %tmp.216 = as %tmp.215 String;
+        symbol [ String %tmp.216 76 67 73 ];
+        lputv %hrLabel.11 %tmp.216;
+        symbol [ hrLabel %hrLabel.11 76 12 19 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 77 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %hrStr.12 = local;
+        symbol [ hrStr %hrStr.12 77 12 17 ];
+        symbol [ Lang %tmp.217 77 20 24 ];
+        %tmp.217 = getm $.Toybox.Lang;
+        symbol [ format %tmp.218 77 25 31 ];
+        %tmp.218 = getv function %tmp.217 :format;
+        %tmp.219 = "$1$ $2$ / $3$";
+        %tmp.220 = newa 3;
+        %tmp.221 = lgetv %hrLabel.11;
+        symbol [ hrLabel %tmp.221 77 50 57 ];
+        %tmp.222 = dup %tmp.220;
+        %tmp.223 = aputv %tmp.222 0 %tmp.221;
+        %tmp.224 = lgetv %maxHrStr.10;
+        symbol [ maxHrStr %tmp.224 77 59 67 ];
+        %tmp.225 = dup %tmp.223;
+        %tmp.226 = aputv %tmp.225 1 %tmp.224;
+        %tmp.227 = lgetv %minHrStr.9;
+        symbol [ minHrStr %tmp.227 77 69 77 ];
+        %tmp.228 = dup %tmp.226;
+        %tmp.229 = aputv %tmp.228 2 %tmp.227;
+        %tmp.230 = invoke %tmp.217 %tmp.218(%tmp.219, %tmp.229);
+        lputv %hrStr.12 %tmp.230;
+        symbol [ hrStr %hrStr.12 77 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 78 8 ]
+        %tmp.231 = lgetv %dc;
+        symbol [ dc %tmp.231 78 8 10 ];
+        symbol [ drawText %tmp.232 78 11 19 ];
+        %tmp.232 = getv function %tmp.231 :drawText;
+        %tmp.233 = lgetv %cx.1;
+        symbol [ cx %tmp.233 78 20 22 ];
+        %tmp.234 = lgetv %y.3;
+        symbol [ y %tmp.234 78 24 25 ];
+        symbol [ Graphics %tmp.235 78 27 35 ];
+        %tmp.235 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.236 78 36 46 ];
+        %tmp.236 = getv %tmp.235 :FONT_XTINY;
+        %tmp.237 = lgetv %hrStr.12;
+        symbol [ hrStr %tmp.237 78 48 53 ];
+        symbol [ Graphics %tmp.238 78 55 63 ];
+        %tmp.238 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.239 78 64 83 ];
+        %tmp.239 = getv %tmp.238 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.240 78 86 94 ];
+        %tmp.240 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.241 78 95 115 ];
+        %tmp.241 = getv %tmp.240 :TEXT_JUSTIFY_VCENTER;
+        %tmp.242 = bitor %tmp.239 %tmp.241;
+        invoke %tmp.231 %tmp.232(%tmp.233, %tmp.234, %tmp.236, %tmp.237, %tmp.242);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 79 8 ]
+        %tmp.243 = lgetv %y.3;
+        symbol [ y %tmp.243 79 8 9 ];
+        %tmp.244 = 20;
+        %tmp.245 = add %tmp.243 %tmp.244;
+        lputv %y.3 %tmp.245;
+        symbol [ y %y.3 79 8 9 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 81 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %sprintsLabel.13 = local;
+        symbol [ sprintsLabel %sprintsLabel.13 81 12 24 ];
+        symbol [ WatchUi %tmp.246 81 27 34 ];
+        %tmp.246 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.247 81 35 47 ];
+        %tmp.247 = getv function %tmp.246 :loadResource;
+        symbol [ Rez %tmp.249 81 48 51 ];
+        %tmp.249 = getv ? :Rez;
+        symbol [ Strings %tmp.250 81 52 59 ];
+        %tmp.250 = getv %tmp.249 :Strings;
+        symbol [ LabelSummarySprints %tmp.251 81 60 79 ];
+        %tmp.251 = getv %tmp.250 :LabelSummarySprints;
+        %tmp.252 = invoke %tmp.246 %tmp.247(%tmp.251);
+        %tmp.253 = as %tmp.252 String;
+        symbol [ String %tmp.253 81 84 90 ];
+        lputv %sprintsLabel.13 %tmp.253;
+        symbol [ sprintsLabel %sprintsLabel.13 81 12 24 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 82 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %sprintsStr.14 = local;
+        symbol [ sprintsStr %sprintsStr.14 82 12 22 ];
+        symbol [ Lang %tmp.254 82 25 29 ];
+        %tmp.254 = getm $.Toybox.Lang;
+        symbol [ format %tmp.255 82 30 36 ];
+        %tmp.255 = getv function %tmp.254 :format;
+        %tmp.256 = "$1$: $2$";
+        %tmp.257 = newa 2;
+        %tmp.258 = lgetv %sprintsLabel.13;
+        symbol [ sprintsLabel %tmp.258 82 50 62 ];
+        %tmp.259 = dup %tmp.257;
+        %tmp.260 = aputv %tmp.259 0 %tmp.258;
+        symbol [ _data %tmp.262 82 64 69 ];
+        %tmp.262 = getv ? :_data;
+        symbol [ sprintsCount %tmp.263 82 70 82 ];
+        %tmp.263 = getv %tmp.262 :sprintsCount;
+        %tmp.264 = dup %tmp.260;
+        %tmp.265 = aputv %tmp.264 1 %tmp.263;
+        %tmp.266 = invoke %tmp.254 %tmp.255(%tmp.256, %tmp.265);
+        lputv %sprintsStr.14 %tmp.266;
+        symbol [ sprintsStr %sprintsStr.14 82 12 22 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 83 8 ]
+        %tmp.267 = lgetv %dc;
+        symbol [ dc %tmp.267 83 8 10 ];
+        symbol [ drawText %tmp.268 83 11 19 ];
+        %tmp.268 = getv function %tmp.267 :drawText;
+        %tmp.269 = lgetv %cx.1;
+        symbol [ cx %tmp.269 83 20 22 ];
+        %tmp.270 = lgetv %y.3;
+        symbol [ y %tmp.270 83 24 25 ];
+        symbol [ Graphics %tmp.271 83 27 35 ];
+        %tmp.271 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.272 83 36 46 ];
+        %tmp.272 = getv %tmp.271 :FONT_XTINY;
+        %tmp.273 = lgetv %sprintsStr.14;
+        symbol [ sprintsStr %tmp.273 83 48 58 ];
+        symbol [ Graphics %tmp.274 83 60 68 ];
+        %tmp.274 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.275 83 69 88 ];
+        %tmp.275 = getv %tmp.274 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.276 83 91 99 ];
+        %tmp.276 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.277 83 100 120 ];
+        %tmp.277 = getv %tmp.276 :TEXT_JUSTIFY_VCENTER;
+        %tmp.278 = bitor %tmp.275 %tmp.277;
+        invoke %tmp.267 %tmp.268(%tmp.269, %tmp.270, %tmp.272, %tmp.273, %tmp.278);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 84 8 ]
+        %tmp.279 = lgetv %y.3;
+        symbol [ y %tmp.279 84 8 9 ];
+        %tmp.280 = 20;
+        %tmp.281 = add %tmp.279 %tmp.280;
+        lputv %y.3 %tmp.281;
+        symbol [ y %y.3 84 8 9 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 86 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %jumpsCount.15 = local;
+        symbol [ jumpsCount %jumpsCount.15 86 12 22 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_25_86_102_begin:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_26_86_78_begin:
+        symbol [ _data %tmp.283 86 27 32 ];
+        %tmp.283 = getv ? :_data;
+        %tmp.285 = const :jumpsCount;
+        symbol [ jumpsCount %tmp.285 86 38 48 const ];
+        %tmp.286 = canhazplz %tmp.283 %tmp.285;
+        bf %tmp.286 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_25_86_102_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_53_86_78_true:
+        symbol [ _data %tmp.288 86 54 59 ];
+        %tmp.288 = getv ? :_data;
+        %tmp.289 = as %tmp.288 { (interface { var jumpsCount; }) };
+        symbol [ jumpsCount %tmp.290 86 60 70 ];
+        %tmp.290 = getv %tmp.289 :jumpsCount;
+        %tmp.291 = null;
+        %tmp.292 = ne %tmp.290 %tmp.291;
+        push %tmp.292;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_53_86_78_end:
+        %tmp.293 = phi [%tmp.286 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_26_86_78_begin] [%tmp.292 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_53_86_78_true] [%tmp.293 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_53_86_78_end];
+        bf %tmp.293 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_25_86_102_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_25_86_102_true:
+        symbol [ _data %tmp.295 86 83 88 ];
+        %tmp.295 = getv ? :_data;
+        %tmp.296 = as %tmp.295 { (interface { var jumpsCount; }) };
+        symbol [ jumpsCount %tmp.297 86 89 99 ];
+        %tmp.297 = getv %tmp.296 :jumpsCount;
+        push %tmp.297;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_25_86_102_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_25_86_102_else_false:
+        %tmp.298 = 0;
+        push %tmp.298;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_25_86_102_end:
+        %tmp.299 = phi [%tmp.293 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_25_86_102_begin] [%tmp.297 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_25_86_102_true] [%tmp.298 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_25_86_102_else_false] [%tmp.299 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_86_25_86_102_end];
+        lputv %jumpsCount.15 %tmp.299;
+        symbol [ jumpsCount %jumpsCount.15 86 12 22 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 87 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %jumpsLabel.16 = local;
+        symbol [ jumpsLabel %jumpsLabel.16 87 12 22 ];
+        symbol [ WatchUi %tmp.300 87 25 32 ];
+        %tmp.300 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.301 87 33 45 ];
+        %tmp.301 = getv function %tmp.300 :loadResource;
+        symbol [ Rez %tmp.303 87 46 49 ];
+        %tmp.303 = getv ? :Rez;
+        symbol [ Strings %tmp.304 87 50 57 ];
+        %tmp.304 = getv %tmp.303 :Strings;
+        symbol [ LabelSummaryJumps %tmp.305 87 58 75 ];
+        %tmp.305 = getv %tmp.304 :LabelSummaryJumps;
+        %tmp.306 = invoke %tmp.300 %tmp.301(%tmp.305);
+        %tmp.307 = as %tmp.306 String;
+        symbol [ String %tmp.307 87 80 86 ];
+        lputv %jumpsLabel.16 %tmp.307;
+        symbol [ jumpsLabel %jumpsLabel.16 87 12 22 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 88 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %jumpsStr.17 = local;
+        symbol [ jumpsStr %jumpsStr.17 88 12 20 ];
+        symbol [ Lang %tmp.308 88 23 27 ];
+        %tmp.308 = getm $.Toybox.Lang;
+        symbol [ format %tmp.309 88 28 34 ];
+        %tmp.309 = getv function %tmp.308 :format;
+        %tmp.310 = "$1$: $2$";
+        %tmp.311 = newa 2;
+        %tmp.312 = lgetv %jumpsLabel.16;
+        symbol [ jumpsLabel %tmp.312 88 48 58 ];
+        %tmp.313 = dup %tmp.311;
+        %tmp.314 = aputv %tmp.313 0 %tmp.312;
+        %tmp.315 = lgetv %jumpsCount.15;
+        symbol [ jumpsCount %tmp.315 88 60 70 ];
+        %tmp.316 = dup %tmp.314;
+        %tmp.317 = aputv %tmp.316 1 %tmp.315;
+        %tmp.318 = invoke %tmp.308 %tmp.309(%tmp.310, %tmp.317);
+        lputv %jumpsStr.17 %tmp.318;
+        symbol [ jumpsStr %jumpsStr.17 88 12 20 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 89 8 ]
+        %tmp.319 = lgetv %dc;
+        symbol [ dc %tmp.319 89 8 10 ];
+        symbol [ drawText %tmp.320 89 11 19 ];
+        %tmp.320 = getv function %tmp.319 :drawText;
+        %tmp.321 = lgetv %cx.1;
+        symbol [ cx %tmp.321 89 20 22 ];
+        %tmp.322 = lgetv %y.3;
+        symbol [ y %tmp.322 89 24 25 ];
+        symbol [ Graphics %tmp.323 89 27 35 ];
+        %tmp.323 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.324 89 36 46 ];
+        %tmp.324 = getv %tmp.323 :FONT_XTINY;
+        %tmp.325 = lgetv %jumpsStr.17;
+        symbol [ jumpsStr %tmp.325 89 48 56 ];
+        symbol [ Graphics %tmp.326 89 58 66 ];
+        %tmp.326 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.327 89 67 86 ];
+        %tmp.327 = getv %tmp.326 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.328 89 89 97 ];
+        %tmp.328 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.329 89 98 118 ];
+        %tmp.329 = getv %tmp.328 :TEXT_JUSTIFY_VCENTER;
+        %tmp.330 = bitor %tmp.327 %tmp.329;
+        invoke %tmp.319 %tmp.320(%tmp.321, %tmp.322, %tmp.324, %tmp.325, %tmp.330);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 90 8 ]
+        %tmp.331 = lgetv %y.3;
+        symbol [ y %tmp.331 90 8 9 ];
+        %tmp.332 = 20;
+        %tmp.333 = add %tmp.331 %tmp.332;
+        lputv %y.3 %tmp.333;
+        symbol [ y %y.3 90 8 9 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 95 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %calLabel.18 = local;
+        symbol [ calLabel %calLabel.18 95 12 20 ];
+        symbol [ WatchUi %tmp.334 95 23 30 ];
+        %tmp.334 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.335 95 31 43 ];
+        %tmp.335 = getv function %tmp.334 :loadResource;
+        symbol [ Rez %tmp.337 95 44 47 ];
+        %tmp.337 = getv ? :Rez;
+        symbol [ Strings %tmp.338 95 48 55 ];
+        %tmp.338 = getv %tmp.337 :Strings;
+        symbol [ CaloriesLabel %tmp.339 95 56 69 ];
+        %tmp.339 = getv %tmp.338 :CaloriesLabel;
+        %tmp.340 = invoke %tmp.334 %tmp.335(%tmp.339);
+        %tmp.341 = as %tmp.340 String;
+        symbol [ String %tmp.341 95 74 80 ];
+        lputv %calLabel.18 %tmp.341;
+        symbol [ calLabel %calLabel.18 95 12 20 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 96 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop" ]
+        %calStr.19 = local;
+        symbol [ calStr %calStr.19 96 12 18 ];
+        symbol [ Lang %tmp.342 96 21 25 ];
+        %tmp.342 = getm $.Toybox.Lang;
+        symbol [ format %tmp.343 96 26 32 ];
+        %tmp.343 = getv function %tmp.342 :format;
+        %tmp.344 = "$1$ $2$ kcal";
+        %tmp.345 = newa 2;
+        %tmp.346 = lgetv %calLabel.18;
+        symbol [ calLabel %tmp.346 96 50 58 ];
+        %tmp.347 = dup %tmp.345;
+        %tmp.348 = aputv %tmp.347 0 %tmp.346;
+        symbol [ _data %tmp.350 96 60 65 ];
+        %tmp.350 = getv ? :_data;
+        symbol [ calories %tmp.351 96 66 74 ];
+        %tmp.351 = getv %tmp.350 :calories;
+        %tmp.352 = dup %tmp.348;
+        %tmp.353 = aputv %tmp.352 1 %tmp.351;
+        %tmp.354 = invoke %tmp.342 %tmp.343(%tmp.344, %tmp.353);
+        lputv %calStr.19 %tmp.354;
+        symbol [ calStr %calStr.19 96 12 18 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 97 8 ]
+        %tmp.355 = lgetv %dc;
+        symbol [ dc %tmp.355 97 8 10 ];
+        symbol [ drawText %tmp.356 97 11 19 ];
+        %tmp.356 = getv function %tmp.355 :drawText;
+        %tmp.357 = lgetv %cx.1;
+        symbol [ cx %tmp.357 97 20 22 ];
+        %tmp.358 = lgetv %y.3;
+        symbol [ y %tmp.358 97 24 25 ];
+        symbol [ Graphics %tmp.359 97 27 35 ];
+        %tmp.359 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.360 97 36 46 ];
+        %tmp.360 = getv %tmp.359 :FONT_XTINY;
+        %tmp.361 = lgetv %calStr.19;
+        symbol [ calStr %tmp.361 97 48 54 ];
+        symbol [ Graphics %tmp.362 97 56 64 ];
+        %tmp.362 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.363 97 65 84 ];
+        %tmp.363 = getv %tmp.362 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.364 97 87 95 ];
+        %tmp.364 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.365 97 96 116 ];
+        %tmp.365 = getv %tmp.364 :TEXT_JUSTIFY_VCENTER;
+        %tmp.366 = bitor %tmp.363 %tmp.365;
+        invoke %tmp.355 %tmp.356(%tmp.357, %tmp.358, %tmp.360, %tmp.361, %tmp.366);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 102 8 ]
+        %tmp.367 = lgetv %dc;
+        symbol [ dc %tmp.367 102 8 10 ];
+        symbol [ setColor %tmp.368 102 11 19 ];
+        %tmp.368 = getv function %tmp.367 :setColor;
+        symbol [ Graphics %tmp.369 102 20 28 ];
+        %tmp.369 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.370 102 29 42 ];
+        %tmp.370 = getv %tmp.369 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.371 102 44 52 ];
+        %tmp.371 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.372 102 53 70 ];
+        %tmp.372 = getv %tmp.371 :COLOR_TRANSPARENT;
+        invoke %tmp.367 %tmp.368(%tmp.370, %tmp.372);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc" 103 8 ]
+        %tmp.373 = lgetv %dc;
+        symbol [ dc %tmp.373 103 8 10 ];
+        symbol [ drawText %tmp.374 103 11 19 ];
+        %tmp.374 = getv function %tmp.373 :drawText;
+        %tmp.375 = lgetv %cx.1;
+        symbol [ cx %tmp.375 104 12 14 ];
+        %tmp.376 = lgetv %height.2;
+        symbol [ height %tmp.376 105 12 18 ];
+        %tmp.377 = 18;
+        %tmp.378 = sub %tmp.376 %tmp.377;
+        symbol [ Graphics %tmp.379 106 12 20 ];
+        %tmp.379 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.380 106 21 31 ];
+        %tmp.380 = getv %tmp.379 :FONT_XTINY;
+        symbol [ WatchUi %tmp.381 107 12 19 ];
+        %tmp.381 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.382 107 20 32 ];
+        %tmp.382 = getv function %tmp.381 :loadResource;
+        symbol [ Rez %tmp.384 107 33 36 ];
+        %tmp.384 = getv ? :Rez;
+        symbol [ Strings %tmp.385 107 37 44 ];
+        %tmp.385 = getv %tmp.384 :Strings;
+        symbol [ CloseHint %tmp.386 107 45 54 ];
+        %tmp.386 = getv %tmp.385 :CloseHint;
+        %tmp.387 = invoke %tmp.381 %tmp.382(%tmp.386);
+        %tmp.388 = as %tmp.387 String;
+        symbol [ String %tmp.388 107 59 65 ];
+        symbol [ Graphics %tmp.389 108 12 20 ];
+        %tmp.389 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.390 108 21 40 ];
+        %tmp.390 = getv %tmp.389 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.391 108 43 51 ];
+        %tmp.391 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.392 108 52 72 ];
+        %tmp.392 = getv %tmp.391 :TEXT_JUSTIFY_VCENTER;
+        %tmp.393 = bitor %tmp.390 %tmp.392;
+        invoke %tmp.373 %tmp.374(%tmp.375, %tmp.378, %tmp.380, %tmp.388, %tmp.393);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSummaryView_mc_14_49_110_4_stop:
+    }
+}
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSummaryView.mc"; @line = 1; ]
+<init> {
+}

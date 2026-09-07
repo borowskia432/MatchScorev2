@@ -1,31 +1,75 @@
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
 import Toybox.Lang;
-[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 3; @symbol_moduledef = [JumpManager,3,7,18]; ]
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
+import Toybox.System;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 4; @symbol_moduledef = [JumpManager,4,7,18]; ]
 module JumpManager {
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 3; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 4; ]
     <init> {
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 5; @position = 8; @symbol_vardef = [jumpCount,5,8,17]; @symbol_type<0> = [Number,5,21,27]; ]
-    var jumpCount as Number = 0;
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 8; @symbol_functiondef = [addJump,8,13,20]; ]
-    function addJump() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_8_31_10_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 9 8 ]
-        symbol [ jumpCount %tmp.3 9 8 17 ];
-        %tmp.3 = getv ? :jumpCount;
-        %tmp.4 = add %tmp.3 1;
-        symbol [ jumpCount ? 9 8 17 ];
-        putv self :jumpCount dup %tmp.4;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_8_31_10_4_stop:
-    }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 13; @symbol_functiondef = [reset,13,13,18]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 10; @symbol_functiondef = [reset,10,13,18]; ]
     function reset() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_13_29_15_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 14 8 ]
-        %tmp.1 = 0;
-        symbol [ jumpCount ? 14 8 17 ];
-        putv self :jumpCount %tmp.1;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_13_29_15_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_10_29_13_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 12 8 ]
+        symbol [ System %tmp.1 12 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 12 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "JumpManager: reset";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_10_29_13_4_stop:
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 23; @symbol_functiondef = [addJump,23,13,20]; ]
+    function addJump() as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_23_31_32_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 25 8 ]
+        symbol [ SportsMetricsManager %tmp.2 25 8 28 ];
+        %tmp.2 = getv ? :SportsMetricsManager;
+        symbol [ addJump %tmp.3 25 29 36 ];
+        %tmp.3 = getv function %tmp.2 :addJump;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 27 8 ]
+        symbol [ System %tmp.4 27 8 14 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ println %tmp.5 27 15 22 ];
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.6 = "JumpManager: Wykryto wyskok! ";
+        %tmp.7 = "Łącznie: ";
+        %tmp.8 = add %tmp.6 %tmp.7;
+        symbol [ SportsMetricsManager %tmp.10 30 12 32 ];
+        %tmp.10 = getv ? :SportsMetricsManager;
+        symbol [ getTotalJumps %tmp.11 30 33 46 ];
+        %tmp.11 = getv function %tmp.10 :getTotalJumps;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        %tmp.13 = add %tmp.8 %tmp.12;
+        invoke %tmp.4 %tmp.5(%tmp.13);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_23_31_32_4_stop:
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 41; @symbol_functiondef = [addManualJump,41,13,26]; ]
+    function addManualJump() as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_41_37_50_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 43 8 ]
+        symbol [ SportsMetricsManager %tmp.2 43 8 28 ];
+        %tmp.2 = getv ? :SportsMetricsManager;
+        symbol [ addJump %tmp.3 43 29 36 ];
+        %tmp.3 = getv function %tmp.2 :addJump;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 45 8 ]
+        symbol [ System %tmp.4 45 8 14 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ println %tmp.5 45 15 22 ];
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.6 = "JumpManager: Ręcznie dodano wyskok. ";
+        %tmp.7 = "Łącznie: ";
+        %tmp.8 = add %tmp.6 %tmp.7;
+        symbol [ SportsMetricsManager %tmp.10 48 12 32 ];
+        %tmp.10 = getv ? :SportsMetricsManager;
+        symbol [ getTotalJumps %tmp.11 48 33 46 ];
+        %tmp.11 = getv function %tmp.10 :getTotalJumps;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        %tmp.13 = add %tmp.8 %tmp.12;
+        invoke %tmp.4 %tmp.5(%tmp.13);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_41_37_50_4_stop:
     }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 1; ]

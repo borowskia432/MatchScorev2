@@ -21,6 +21,8 @@ class Screen3Delegate extends WatchUi.BehaviorDelegate {
         return openSettingsMenu();
     }
 
+    // USUNIĘTO: onNextPage(), które kradło wciśnięcie przycisku DOWN.
+
     function onKey(keyEvent as WatchUi.KeyEvent) as Boolean {
         var key = keyEvent.getKey();
 
@@ -67,16 +69,37 @@ class Screen3Delegate extends WatchUi.BehaviorDelegate {
 
     function onKeyUpTimeout() as Void {
         _upTimer = null;
-        // Pojedyncze kliknięcie UP: dodaj punkt Drużynie A w AppConfig
         AppConfig.volleyballScoreA++;
         WatchUi.requestUpdate();
     }
 
     function onKeyDownTimeout() as Void {
         _downTimer = null;
-        // Pojedyncze kliknięcie DOWN: dodaj punkt Drużynie B w AppConfig
         AppConfig.volleyballScoreB++;
         WatchUi.requestUpdate();
+    }
+
+    // Funkcja wywołująca nowy set / lap 
+    // Zostawiona jako publiczna, wywołuj ją w logice Twojego VolleyballSettingsMenu po kliknięciu "Nowy set"
+    public function triggerNewSetLap() as Void {
+        // Sprawdzamy kto wygrał set i aktualizujemy wygrane sety
+        if (AppConfig.volleyballScoreA > AppConfig.volleyballScoreB) {
+            AppConfig.volleyballSetsA++;
+        } else if (AppConfig.volleyballScoreB > AppConfig.volleyballScoreA) {
+            AppConfig.volleyballSetsB++;
+        }
+
+        // Dodanie manualnego lapa w sesji Garmin (FIT file lap)
+        if (SessionManager has :addManualLap) {
+            SessionManager.addManualLap();
+        }
+
+        // Reset punktów bieżącego seta
+        AppConfig.volleyballScoreA = 0;
+        AppConfig.volleyballScoreB = 0;
+        
+        WatchUi.requestUpdate();
+        System.println(">>> Nowy set / Lap zarejestrowany. Stan setów: " + AppConfig.volleyballSetsA + "-" + AppConfig.volleyballSetsB);
     }
 
     private function openSettingsMenu() as Boolean {
@@ -96,11 +119,10 @@ class Screen3Delegate extends WatchUi.BehaviorDelegate {
         var coords = clickEvent.getCoordinates();
         var screenWidth = System.getDeviceSettings().screenWidth;
 
+        // Ekran dotykowy - lewa strona dla drużyny A, prawa dla drużyny B
         if (coords[0] < screenWidth / 2) {
-            // Kliknięcie lewej strony ekranu: dodaj punkt Drużynie A
             AppConfig.volleyballScoreA++;
         } else {
-            // Kliknięcie prawej strony ekranu: dodaj punkt Drużynie B
             AppConfig.volleyballScoreB++;
         }
 

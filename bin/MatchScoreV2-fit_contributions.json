@@ -87,6 +87,28 @@
     "sort-order" : 14,
     "precision" : 0,
     "fill-color" : null
+  }, {
+    "id" : 5,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "SetsALabel",
+    "unit-label-key" : "SetsUnits",
+    "sort-order" : 5,
+    "precision" : 0,
+    "fill-color" : null
+  }, {
+    "id" : 6,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "SetsBLabel",
+    "unit-label-key" : "SetsUnits",
+    "sort-order" : 6,
+    "precision" : 0,
+    "fill-color" : null
   } ],
   "strings" : {
     "pl-PL" : {
@@ -96,7 +118,10 @@
       "BurstLabel" : "Zrywy",
       "BurstUnits" : "zrywów",
       "JumpLabel" : "Wyskoki",
-      "JumpUnits" : "wyskoki"
+      "JumpUnits" : "wyskoki",
+      "SetsALabel" : "Sety (A)",
+      "SetsUnits" : "sety",
+      "SetsBLabel" : "Sety (B)"
     },
     "default" : {
       "ScoreALabel" : "Team A Score",
@@ -105,7 +130,10 @@
       "BurstLabel" : "Bursts",
       "BurstUnits" : "bursts",
       "JumpLabel" : "Jumps",
-      "JumpUnits" : "Jumps"
+      "JumpUnits" : "Jumps",
+      "SetsALabel" : "Sety (A)",
+      "SetsUnits" : "sety",
+      "SetsBLabel" : "Sety (B)"
     }
   }
 }

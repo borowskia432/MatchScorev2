@@ -39,6 +39,15 @@ class SummaryData {
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDate.mc"; @line = 15; @position = 15; @symbol_vardef = [scoreTeamB,15,15,25]; @symbol_type<0> = [Number,15,29,35]; ]
     public
     var scoreTeamB as Number = 0;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDate.mc"; @line = 18; @position = 15; @symbol_vardef = [isVolleyball,18,15,27]; @symbol_type<0> = [Boolean,18,31,38]; ]
+    public
+    var isVolleyball as Boolean = false;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDate.mc"; @line = 19; @position = 15; @symbol_vardef = [setsTeamA,19,15,24]; @symbol_type<0> = [Number,19,28,34]; ]
+    public
+    var setsTeamA as Number = 0;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDate.mc"; @line = 20; @position = 15; @symbol_vardef = [setsTeamB,20,15,24]; @symbol_type<0> = [Number,20,28,34]; ]
+    public
+    var setsTeamB as Number = 0;
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDate.mc"; @line = 1; ]
 <init> {

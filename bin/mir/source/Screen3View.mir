@@ -35,16 +35,16 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_12_26_14_4_s
     }
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc"; @line = 16; @symbol_functiondef = [onShow,16,13,19]; ]
     function onShow() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_16_30_21_4_start:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_16_30_22_4_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 17 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_8_20_8_if_stmt:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_8_21_8_if_stmt:
         symbol [ _refreshTimer %tmp.2 17 12 25 ];
         %tmp.2 = getv ? :_refreshTimer;
         %tmp.3 = null;
         %tmp.4 = eq %tmp.2 %tmp.3;
-        bf %tmp.4 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_8_20_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_8_20_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_35_20_8_start:
+        bf %tmp.4 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_8_21_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_8_21_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_35_21_8_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 18 12 ]
         symbol [ Timer %tmp.7 18 32 37 ];
         %tmp.7 = getm $.Toybox.Timer;
@@ -53,763 +53,813 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_35_20_8_s
         %tmp.5 = newc %tmp.8 ();
         symbol [ _refreshTimer ? 18 12 25 ];
         putv self :_refreshTimer %tmp.5;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 19 12 ]
-        symbol [ _refreshTimer %tmp.10 19 12 25 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 20 12 ]
+        symbol [ _refreshTimer %tmp.10 20 12 25 ];
         %tmp.10 = getv ? :_refreshTimer;
-        symbol [ start %tmp.11 19 26 31 ];
+        symbol [ start %tmp.11 20 26 31 ];
         %tmp.11 = getv function %tmp.10 :start;
-        symbol [ Lang %tmp.14 19 36 40 ];
-        %tmp.14 = getm $.Toybox.Lang;
-        symbol [ Method %tmp.15 19 41 47 ];
-        %tmp.15 = getv function ? %tmp.14 :Method;
-        %tmp.16 = self;
-        symbol [ self %tmp.16 19 48 52 ];
-        %tmp.18 = const :onRefresh;
-        symbol [ onRefresh %tmp.18 19 55 64 const ];
-        %tmp.12 = newc %tmp.15 (%tmp.16, %tmp.18);
-        %tmp.19 = 1000;
-        %tmp.20 = true;
-        invoke %tmp.10 %tmp.11(%tmp.12, %tmp.19, %tmp.20);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_35_20_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_8_20_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_8_20_8_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_16_30_21_4_stop:
+        %tmp.12 = self;
+        symbol [ method %tmp.13 20 32 38 ];
+        %tmp.13 = getv function %tmp.12 :method;
+        %tmp.15 = const :onRefresh;
+        symbol [ onRefresh %tmp.15 20 40 49 const ];
+        %tmp.16 = invoke %tmp.12 %tmp.13(%tmp.15);
+        %tmp.17 = 1000;
+        %tmp.18 = true;
+        invoke %tmp.10 %tmp.11(%tmp.16, %tmp.17, %tmp.18);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_35_21_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_8_21_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_17_8_21_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_16_30_22_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc"; @line = 23; @symbol_functiondef = [onHide,23,13,19]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc"; @line = 24; @symbol_functiondef = [onHide,24,13,19]; ]
     function onHide() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_23_30_28_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 24 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_24_8_27_8_if_stmt:
-        symbol [ _refreshTimer %tmp.2 24 12 25 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_24_30_29_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 25 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_25_8_28_8_if_stmt:
+        symbol [ _refreshTimer %tmp.2 25 12 25 ];
         %tmp.2 = getv ? :_refreshTimer;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_24_8_27_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_24_8_27_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_24_35_27_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 25 12 ]
-        symbol [ _refreshTimer %tmp.6 25 12 25 ];
+        bf %tmp.4 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_25_8_28_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_25_8_28_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_25_35_28_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 26 12 ]
+        symbol [ _refreshTimer %tmp.6 26 12 25 ];
         %tmp.6 = getv ? :_refreshTimer;
         %tmp.7 = as %tmp.6 { (!Null) };
-        symbol [ stop %tmp.8 25 26 30 ];
+        symbol [ stop %tmp.8 26 26 30 ];
         %tmp.8 = getv function %tmp.7 :stop;
         invoke %tmp.7 %tmp.8();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 26 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 27 12 ]
         %tmp.9 = null;
-        symbol [ _refreshTimer ? 26 12 25 ];
+        symbol [ _refreshTimer ? 27 12 25 ];
         putv self :_refreshTimer %tmp.9;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_24_35_27_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_24_8_27_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_24_8_27_8_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_23_30_28_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_25_35_28_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_25_8_28_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_25_8_28_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_24_30_29_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc"; @line = 30; @symbol_functiondef = [onRefresh,30,13,22]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc"; @line = 31; @symbol_functiondef = [onRefresh,31,12,21]; ]
     function onRefresh() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_30_33_32_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 31 8 ]
-        symbol [ WatchUi %tmp.1 31 8 15 ];
-        %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.2 31 16 29 ];
-        %tmp.2 = getv function %tmp.1 :requestUpdate;
-        invoke %tmp.1 %tmp.2();
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_30_33_32_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_31_32_34_0_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 32 4 ]
+        symbol [ BurstManager %tmp.2 32 4 16 ];
+        %tmp.2 = getv ? :BurstManager;
+        symbol [ update %tmp.3 32 17 23 ];
+        %tmp.3 = getv function %tmp.2 :update;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 33 4 ]
+        symbol [ WatchUi %tmp.4 33 4 11 ];
+        %tmp.4 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.5 33 12 25 ];
+        %tmp.5 = getv function %tmp.4 :requestUpdate;
+        invoke %tmp.4 %tmp.5();
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_31_32_34_0_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc"; @line = 34; @symbol_functiondef = [onUpdate,34,13,21]; @symbol_param<0> = [dc,34,22,24]; @symbol_param<0>_type<0> = [Graphics,34,28,36]; @symbol_param<0>_type<1> = [Dc,34,37,39]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc"; @line = 36; @symbol_functiondef = [onUpdate,36,13,21]; @symbol_param<0> = [dc,36,22,24]; @symbol_param<0>_type<0> = [Graphics,36,28,36]; @symbol_param<0>_type<1> = [Dc,36,37,39]; ]
     function onUpdate(dc as Graphics.Dc) as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 35 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 37 8 ]
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 35 8 10 ];
-        symbol [ setColor %tmp.2 35 11 19 ];
+        symbol [ dc %tmp.1 37 8 10 ];
+        symbol [ setColor %tmp.2 37 11 19 ];
         %tmp.2 = getv function %tmp.1 :setColor;
-        symbol [ AppConfig %tmp.4 35 20 29 ];
+        symbol [ AppConfig %tmp.4 37 20 29 ];
         %tmp.4 = getv ? :AppConfig;
-        symbol [ getBackgroundColor %tmp.5 35 30 48 ];
+        symbol [ getBackgroundColor %tmp.5 37 30 48 ];
         %tmp.5 = getv function %tmp.4 :getBackgroundColor;
         %tmp.6 = invoke %tmp.4 %tmp.5();
-        symbol [ AppConfig %tmp.8 35 52 61 ];
+        symbol [ AppConfig %tmp.8 37 52 61 ];
         %tmp.8 = getv ? :AppConfig;
-        symbol [ getBackgroundColor %tmp.9 35 62 80 ];
+        symbol [ getBackgroundColor %tmp.9 37 62 80 ];
         %tmp.9 = getv function %tmp.8 :getBackgroundColor;
         %tmp.10 = invoke %tmp.8 %tmp.9();
         invoke %tmp.1 %tmp.2(%tmp.6, %tmp.10);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 36 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 38 8 ]
         %tmp.11 = lgetv %dc;
-        symbol [ dc %tmp.11 36 8 10 ];
-        symbol [ clear %tmp.12 36 11 16 ];
+        symbol [ dc %tmp.11 38 8 10 ];
+        symbol [ clear %tmp.12 38 11 16 ];
         %tmp.12 = getv function %tmp.11 :clear;
         invoke %tmp.11 %tmp.12();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 37 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 39 8 ]
         %tmp.13 = lgetv %dc;
-        symbol [ dc %tmp.13 37 8 10 ];
-        symbol [ setAntiAlias %tmp.14 37 11 23 ];
+        symbol [ dc %tmp.13 39 8 10 ];
+        symbol [ setAntiAlias %tmp.14 39 11 23 ];
         %tmp.14 = getv function %tmp.13 :setAntiAlias;
         %tmp.15 = true;
         invoke %tmp.13 %tmp.14(%tmp.15);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 39 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 41 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
         %width.1 = local;
-        symbol [ width %width.1 39 12 17 ];
+        symbol [ width %width.1 41 12 17 ];
         %tmp.16 = lgetv %dc;
-        symbol [ dc %tmp.16 39 20 22 ];
-        symbol [ getWidth %tmp.17 39 23 31 ];
+        symbol [ dc %tmp.16 41 20 22 ];
+        symbol [ getWidth %tmp.17 41 23 31 ];
         %tmp.17 = getv function %tmp.16 :getWidth;
         %tmp.18 = invoke %tmp.16 %tmp.17();
         lputv %width.1 %tmp.18;
-        symbol [ width %width.1 39 12 17 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 40 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
+        symbol [ width %width.1 41 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 42 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
         %height.2 = local;
-        symbol [ height %height.2 40 12 18 ];
+        symbol [ height %height.2 42 12 18 ];
         %tmp.19 = lgetv %dc;
-        symbol [ dc %tmp.19 40 21 23 ];
-        symbol [ getHeight %tmp.20 40 24 33 ];
+        symbol [ dc %tmp.19 42 21 23 ];
+        symbol [ getHeight %tmp.20 42 24 33 ];
         %tmp.20 = getv function %tmp.19 :getHeight;
         %tmp.21 = invoke %tmp.19 %tmp.20();
         lputv %height.2 %tmp.21;
-        symbol [ height %height.2 40 12 18 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 41 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
+        symbol [ height %height.2 42 12 18 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 43 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
         %cx.3 = local;
-        symbol [ cx %cx.3 41 12 14 ];
+        symbol [ cx %cx.3 43 12 14 ];
         %tmp.22 = lgetv %width.1;
-        symbol [ width %tmp.22 41 17 22 ];
+        symbol [ width %tmp.22 43 17 22 ];
         %tmp.23 = 2;
         %tmp.24 = div %tmp.22 %tmp.23;
         lputv %cx.3 %tmp.24;
-        symbol [ cx %cx.3 41 12 14 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 44 8 ]
-        symbol [ HrArcRenderer %tmp.26 44 8 21 ];
+        symbol [ cx %cx.3 43 12 14 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 46 8 ]
+        symbol [ HrArcRenderer %tmp.26 46 8 21 ];
         %tmp.26 = getv ? :HrArcRenderer;
-        symbol [ draw %tmp.27 44 22 26 ];
+        symbol [ draw %tmp.27 46 22 26 ];
         %tmp.27 = getv function %tmp.26 :draw;
         %tmp.28 = lgetv %dc;
-        symbol [ dc %tmp.28 44 27 29 ];
+        symbol [ dc %tmp.28 46 27 29 ];
         %tmp.29 = lgetv %cx.3;
-        symbol [ cx %tmp.29 44 31 33 ];
+        symbol [ cx %tmp.29 46 31 33 ];
         %tmp.30 = lgetv %height.2;
-        symbol [ height %tmp.30 44 35 41 ];
+        symbol [ height %tmp.30 46 35 41 ];
         %tmp.31 = 2;
         %tmp.32 = div %tmp.30 %tmp.31;
         %tmp.33 = lgetv %width.1;
-        symbol [ width %tmp.33 44 47 52 ];
+        symbol [ width %tmp.33 46 47 52 ];
         invoke %tmp.26 %tmp.27(%tmp.28, %tmp.29, %tmp.32, %tmp.33);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 46 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 48 8 ]
         %tmp.34 = lgetv %dc;
-        symbol [ dc %tmp.34 46 8 10 ];
-        symbol [ setColor %tmp.35 46 11 19 ];
+        symbol [ dc %tmp.34 48 8 10 ];
+        symbol [ setColor %tmp.35 48 11 19 ];
         %tmp.35 = getv function %tmp.34 :setColor;
-        symbol [ AppConfig %tmp.37 46 20 29 ];
+        symbol [ AppConfig %tmp.37 48 20 29 ];
         %tmp.37 = getv ? :AppConfig;
-        symbol [ getTextColor %tmp.38 46 30 42 ];
+        symbol [ getTextColor %tmp.38 48 30 42 ];
         %tmp.38 = getv function %tmp.37 :getTextColor;
         %tmp.39 = invoke %tmp.37 %tmp.38();
-        symbol [ Graphics %tmp.40 46 46 54 ];
+        symbol [ Graphics %tmp.40 48 46 54 ];
         %tmp.40 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.41 46 55 72 ];
+        symbol [ COLOR_TRANSPARENT %tmp.41 48 55 72 ];
         %tmp.41 = getv %tmp.40 :COLOR_TRANSPARENT;
         invoke %tmp.34 %tmp.35(%tmp.39, %tmp.41);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 49 8 ]
-        %tmp.42 = lgetv %dc;
-        symbol [ dc %tmp.42 49 8 10 ];
-        symbol [ drawText %tmp.43 49 11 19 ];
-        %tmp.43 = getv function %tmp.42 :drawText;
-        %tmp.44 = lgetv %cx.3;
-        symbol [ cx %tmp.44 49 20 22 ];
-        %tmp.45 = 65;
-        %tmp.46 = sub %tmp.44 %tmp.45;
-        %tmp.47 = 75;
-        symbol [ Graphics %tmp.48 49 33 41 ];
-        %tmp.48 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.49 49 42 52 ];
-        %tmp.49 = getv %tmp.48 :FONT_SMALL;
-        symbol [ WatchUi %tmp.50 49 54 61 ];
-        %tmp.50 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.51 49 62 74 ];
-        %tmp.51 = getv function %tmp.50 :loadResource;
-        symbol [ Rez %tmp.53 49 75 78 ];
-        %tmp.53 = getv ? :Rez;
-        symbol [ Strings %tmp.54 49 79 86 ];
-        %tmp.54 = getv %tmp.53 :Strings;
-        symbol [ TeamA %tmp.55 49 87 92 ];
-        %tmp.55 = getv %tmp.54 :TeamA;
-        %tmp.56 = invoke %tmp.50 %tmp.51(%tmp.55);
-        %tmp.57 = as %tmp.56 String;
-        symbol [ String %tmp.57 49 97 103 ];
-        symbol [ Graphics %tmp.58 49 105 113 ];
-        %tmp.58 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.59 49 114 133 ];
-        %tmp.59 = getv %tmp.58 :TEXT_JUSTIFY_CENTER;
-        symbol [ Graphics %tmp.60 49 136 144 ];
-        %tmp.60 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.61 49 145 165 ];
-        %tmp.61 = getv %tmp.60 :TEXT_JUSTIFY_VCENTER;
-        %tmp.62 = bitor %tmp.59 %tmp.61;
-        invoke %tmp.42 %tmp.43(%tmp.46, %tmp.47, %tmp.49, %tmp.57, %tmp.62);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 50 8 ]
-        %tmp.63 = lgetv %dc;
-        symbol [ dc %tmp.63 50 8 10 ];
-        symbol [ drawText %tmp.64 50 11 19 ];
-        %tmp.64 = getv function %tmp.63 :drawText;
-        %tmp.65 = lgetv %cx.3;
-        symbol [ cx %tmp.65 50 20 22 ];
-        %tmp.66 = 65;
-        %tmp.67 = add %tmp.65 %tmp.66;
-        %tmp.68 = 75;
-        symbol [ Graphics %tmp.69 50 33 41 ];
-        %tmp.69 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.70 50 42 52 ];
-        %tmp.70 = getv %tmp.69 :FONT_SMALL;
-        symbol [ WatchUi %tmp.71 50 54 61 ];
-        %tmp.71 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.72 50 62 74 ];
-        %tmp.72 = getv function %tmp.71 :loadResource;
-        symbol [ Rez %tmp.74 50 75 78 ];
-        %tmp.74 = getv ? :Rez;
-        symbol [ Strings %tmp.75 50 79 86 ];
-        %tmp.75 = getv %tmp.74 :Strings;
-        symbol [ TeamB %tmp.76 50 87 92 ];
-        %tmp.76 = getv %tmp.75 :TeamB;
-        %tmp.77 = invoke %tmp.71 %tmp.72(%tmp.76);
-        %tmp.78 = as %tmp.77 String;
-        symbol [ String %tmp.78 50 97 103 ];
-        symbol [ Graphics %tmp.79 50 105 113 ];
-        %tmp.79 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.80 50 114 133 ];
-        %tmp.80 = getv %tmp.79 :TEXT_JUSTIFY_CENTER;
-        symbol [ Graphics %tmp.81 50 136 144 ];
-        %tmp.81 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.82 50 145 165 ];
-        %tmp.82 = getv %tmp.81 :TEXT_JUSTIFY_VCENTER;
-        %tmp.83 = bitor %tmp.80 %tmp.82;
-        invoke %tmp.63 %tmp.64(%tmp.67, %tmp.68, %tmp.70, %tmp.78, %tmp.83);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 51 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %setsLabel.4 = local;
+        symbol [ setsLabel %setsLabel.4 51 12 21 ];
+        symbol [ WatchUi %tmp.42 51 24 31 ];
+        %tmp.42 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.43 51 32 44 ];
+        %tmp.43 = getv function %tmp.42 :loadResource;
+        symbol [ Rez %tmp.45 51 45 48 ];
+        %tmp.45 = getv ? :Rez;
+        symbol [ Strings %tmp.46 51 49 56 ];
+        %tmp.46 = getv %tmp.45 :Strings;
+        symbol [ SetsLabel %tmp.47 51 57 66 ];
+        %tmp.47 = getv %tmp.46 :SetsLabel;
+        %tmp.48 = invoke %tmp.42 %tmp.43(%tmp.47);
+        %tmp.49 = as %tmp.48 String;
+        symbol [ String %tmp.49 51 71 77 ];
+        lputv %setsLabel.4 %tmp.49;
+        symbol [ setsLabel %setsLabel.4 51 12 21 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 52 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %setsString.5 = local;
+        symbol [ setsString %setsString.5 52 12 22 ];
+        %tmp.50 = lgetv %setsLabel.4;
+        symbol [ setsLabel %tmp.50 52 25 34 ];
+        %tmp.51 = ": ";
+        %tmp.52 = add %tmp.50 %tmp.51;
+        symbol [ AppConfig %tmp.54 52 44 53 ];
+        %tmp.54 = getv ? :AppConfig;
+        symbol [ volleyballSetsA %tmp.55 52 54 69 ];
+        %tmp.55 = getv %tmp.54 :volleyballSetsA;
+        symbol [ toString %tmp.56 52 70 78 ];
+        %tmp.56 = getv function %tmp.55 :toString;
+        %tmp.57 = invoke %tmp.55 %tmp.56();
+        %tmp.58 = add %tmp.52 %tmp.57;
+        %tmp.59 = " - ";
+        %tmp.60 = add %tmp.58 %tmp.59;
+        symbol [ AppConfig %tmp.62 52 91 100 ];
+        %tmp.62 = getv ? :AppConfig;
+        symbol [ volleyballSetsB %tmp.63 52 101 116 ];
+        %tmp.63 = getv %tmp.62 :volleyballSetsB;
+        symbol [ toString %tmp.64 52 117 125 ];
+        %tmp.64 = getv function %tmp.63 :toString;
+        %tmp.65 = invoke %tmp.63 %tmp.64();
+        %tmp.66 = add %tmp.60 %tmp.65;
+        lputv %setsString.5 %tmp.66;
+        symbol [ setsString %setsString.5 52 12 22 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 53 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %scoreString.4 = local;
-        symbol [ scoreString %scoreString.4 53 12 23 ];
-        symbol [ AppConfig %tmp.85 53 26 35 ];
-        %tmp.85 = getv ? :AppConfig;
-        symbol [ volleyballScoreA %tmp.86 53 36 52 ];
-        %tmp.86 = getv %tmp.85 :volleyballScoreA;
-        symbol [ toString %tmp.87 53 53 61 ];
-        %tmp.87 = getv function %tmp.86 :toString;
-        %tmp.88 = invoke %tmp.86 %tmp.87();
-        %tmp.89 = " : ";
-        %tmp.90 = add %tmp.88 %tmp.89;
-        symbol [ AppConfig %tmp.92 53 74 83 ];
-        %tmp.92 = getv ? :AppConfig;
-        symbol [ volleyballScoreB %tmp.93 53 84 100 ];
-        %tmp.93 = getv %tmp.92 :volleyballScoreB;
-        symbol [ toString %tmp.94 53 101 109 ];
-        %tmp.94 = getv function %tmp.93 :toString;
-        %tmp.95 = invoke %tmp.93 %tmp.94();
-        %tmp.96 = add %tmp.90 %tmp.95;
-        lputv %scoreString.4 %tmp.96;
-        symbol [ scoreString %scoreString.4 53 12 23 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 54 8 ]
-        %tmp.97 = lgetv %dc;
-        symbol [ dc %tmp.97 54 8 10 ];
-        symbol [ drawText %tmp.98 54 11 19 ];
-        %tmp.98 = getv function %tmp.97 :drawText;
-        %tmp.99 = lgetv %cx.3;
-        symbol [ cx %tmp.99 54 20 22 ];
-        %tmp.100 = 125;
-        symbol [ Graphics %tmp.101 54 29 37 ];
-        %tmp.101 = getm $.Toybox.Graphics;
-        symbol [ FONT_NUMBER_HOT %tmp.102 54 38 53 ];
-        %tmp.102 = getv %tmp.101 :FONT_NUMBER_HOT;
-        %tmp.103 = lgetv %scoreString.4;
-        symbol [ scoreString %tmp.103 54 55 66 ];
-        symbol [ Graphics %tmp.104 54 68 76 ];
-        %tmp.104 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.105 54 77 96 ];
-        %tmp.105 = getv %tmp.104 :TEXT_JUSTIFY_CENTER;
-        symbol [ Graphics %tmp.106 54 99 107 ];
-        %tmp.106 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.107 54 108 128 ];
-        %tmp.107 = getv %tmp.106 :TEXT_JUSTIFY_VCENTER;
-        %tmp.108 = bitor %tmp.105 %tmp.107;
-        invoke %tmp.97 %tmp.98(%tmp.99, %tmp.100, %tmp.102, %tmp.103, %tmp.108);
+        %tmp.67 = lgetv %dc;
+        symbol [ dc %tmp.67 53 8 10 ];
+        symbol [ drawText %tmp.68 53 11 19 ];
+        %tmp.68 = getv function %tmp.67 :drawText;
+        %tmp.69 = lgetv %cx.3;
+        symbol [ cx %tmp.69 53 20 22 ];
+        %tmp.70 = 45;
+        symbol [ Graphics %tmp.71 53 28 36 ];
+        %tmp.71 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.72 53 37 47 ];
+        %tmp.72 = getv %tmp.71 :FONT_XTINY;
+        %tmp.73 = lgetv %setsString.5;
+        symbol [ setsString %tmp.73 53 49 59 ];
+        symbol [ Graphics %tmp.74 53 61 69 ];
+        %tmp.74 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.75 53 70 89 ];
+        %tmp.75 = getv %tmp.74 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.76 53 92 100 ];
+        %tmp.76 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.77 53 101 121 ];
+        %tmp.77 = getv %tmp.76 :TEXT_JUSTIFY_VCENTER;
+        %tmp.78 = bitor %tmp.75 %tmp.77;
+        invoke %tmp.67 %tmp.68(%tmp.69, %tmp.70, %tmp.72, %tmp.73, %tmp.78);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 56 8 ]
+        %tmp.79 = lgetv %dc;
+        symbol [ dc %tmp.79 56 8 10 ];
+        symbol [ drawText %tmp.80 56 11 19 ];
+        %tmp.80 = getv function %tmp.79 :drawText;
+        %tmp.81 = lgetv %cx.3;
+        symbol [ cx %tmp.81 56 20 22 ];
+        %tmp.82 = 65;
+        %tmp.83 = sub %tmp.81 %tmp.82;
+        %tmp.84 = 80;
+        symbol [ Graphics %tmp.85 56 33 41 ];
+        %tmp.85 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.86 56 42 52 ];
+        %tmp.86 = getv %tmp.85 :FONT_SMALL;
+        symbol [ WatchUi %tmp.87 56 54 61 ];
+        %tmp.87 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.88 56 62 74 ];
+        %tmp.88 = getv function %tmp.87 :loadResource;
+        symbol [ Rez %tmp.90 56 75 78 ];
+        %tmp.90 = getv ? :Rez;
+        symbol [ Strings %tmp.91 56 79 86 ];
+        %tmp.91 = getv %tmp.90 :Strings;
+        symbol [ TeamA %tmp.92 56 87 92 ];
+        %tmp.92 = getv %tmp.91 :TeamA;
+        %tmp.93 = invoke %tmp.87 %tmp.88(%tmp.92);
+        %tmp.94 = as %tmp.93 String;
+        symbol [ String %tmp.94 56 97 103 ];
+        symbol [ Graphics %tmp.95 56 105 113 ];
+        %tmp.95 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.96 56 114 133 ];
+        %tmp.96 = getv %tmp.95 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.97 56 136 144 ];
+        %tmp.97 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.98 56 145 165 ];
+        %tmp.98 = getv %tmp.97 :TEXT_JUSTIFY_VCENTER;
+        %tmp.99 = bitor %tmp.96 %tmp.98;
+        invoke %tmp.79 %tmp.80(%tmp.83, %tmp.84, %tmp.86, %tmp.94, %tmp.99);
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 57 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %info.5 = local;
-        symbol [ info %info.5 57 12 16 ];
-        symbol [ Activity %tmp.109 57 19 27 ];
-        %tmp.109 = getm $.Toybox.Activity;
-        symbol [ getActivityInfo %tmp.110 57 28 43 ];
-        %tmp.110 = getv function %tmp.109 :getActivityInfo;
-        %tmp.111 = invoke %tmp.109 %tmp.110();
-        lputv %info.5 %tmp.111;
-        symbol [ info %info.5 57 12 16 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 58 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %maxSpeedMps.6 = local;
-        symbol [ maxSpeedMps %maxSpeedMps.6 58 12 23 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_26_58_84_begin:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_27_58_60_begin:
-        %tmp.112 = lgetv %info.5;
-        symbol [ info %tmp.112 58 27 31 ];
-        %tmp.113 = null;
-        %tmp.114 = ne %tmp.112 %tmp.113;
-        bf %tmp.114 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_26_58_84_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_43_58_60_true:
-        %tmp.115 = lgetv %info.5;
-        symbol [ info %tmp.115 58 43 47 ];
-        %tmp.116 = as %tmp.115 { (!Null) };
-        symbol [ maxSpeed %tmp.117 58 48 56 ];
-        %tmp.117 = getv %tmp.116 :maxSpeed;
-        %tmp.118 = null;
-        %tmp.119 = ne %tmp.117 %tmp.118;
-        push %tmp.119;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_43_58_60_end:
-        %tmp.120 = phi [%tmp.114 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_27_58_60_begin] [%tmp.119 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_43_58_60_true] [%tmp.120 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_43_58_60_end];
-        bf %tmp.120 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_26_58_84_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_26_58_84_true:
-        %tmp.121 = lgetv %info.5;
-        symbol [ info %tmp.121 58 68 72 ];
-        %tmp.122 = as %tmp.121 { (!Null) };
-        symbol [ maxSpeed %tmp.123 58 73 81 ];
-        %tmp.123 = getv %tmp.122 :maxSpeed;
-        push %tmp.123;
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_26_58_84_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_26_58_84_else_false:
-        %tmp.124 = 0.0;
-        push %tmp.124;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_26_58_84_end:
-        %tmp.125 = phi [%tmp.120 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_26_58_84_begin] [%tmp.123 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_26_58_84_true] [%tmp.124 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_26_58_84_else_false] [%tmp.125 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_58_26_58_84_end];
-        lputv %maxSpeedMps.6 %tmp.125;
-        symbol [ maxSpeedMps %maxSpeedMps.6 58 12 23 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 59 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %currentSpeedMps.7 = local;
-        symbol [ currentSpeedMps %currentSpeedMps.7 59 12 27 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_30_59_96_begin:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_31_59_68_begin:
-        %tmp.126 = lgetv %info.5;
-        symbol [ info %tmp.126 59 31 35 ];
-        %tmp.127 = null;
-        %tmp.128 = ne %tmp.126 %tmp.127;
-        bf %tmp.128 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_30_59_96_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_47_59_68_true:
-        %tmp.129 = lgetv %info.5;
-        symbol [ info %tmp.129 59 47 51 ];
-        %tmp.130 = as %tmp.129 { (!Null) };
-        symbol [ currentSpeed %tmp.131 59 52 64 ];
-        %tmp.131 = getv %tmp.130 :currentSpeed;
-        %tmp.132 = null;
-        %tmp.133 = ne %tmp.131 %tmp.132;
-        push %tmp.133;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_47_59_68_end:
-        %tmp.134 = phi [%tmp.128 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_31_59_68_begin] [%tmp.133 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_47_59_68_true] [%tmp.134 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_47_59_68_end];
-        bf %tmp.134 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_30_59_96_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_30_59_96_true:
-        %tmp.135 = lgetv %info.5;
-        symbol [ info %tmp.135 59 76 80 ];
-        %tmp.136 = as %tmp.135 { (!Null) };
-        symbol [ currentSpeed %tmp.137 59 81 93 ];
-        %tmp.137 = getv %tmp.136 :currentSpeed;
-        push %tmp.137;
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_30_59_96_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_30_59_96_else_false:
-        %tmp.138 = 0.0;
-        push %tmp.138;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_30_59_96_end:
-        %tmp.139 = phi [%tmp.134 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_30_59_96_begin] [%tmp.137 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_30_59_96_true] [%tmp.138 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_30_59_96_else_false] [%tmp.139 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_59_30_59_96_end];
-        lputv %currentSpeedMps.7 %tmp.139;
-        symbol [ currentSpeedMps %currentSpeedMps.7 59 12 27 ];
+        %tmp.100 = lgetv %dc;
+        symbol [ dc %tmp.100 57 8 10 ];
+        symbol [ drawText %tmp.101 57 11 19 ];
+        %tmp.101 = getv function %tmp.100 :drawText;
+        %tmp.102 = lgetv %cx.3;
+        symbol [ cx %tmp.102 57 20 22 ];
+        %tmp.103 = 65;
+        %tmp.104 = add %tmp.102 %tmp.103;
+        %tmp.105 = 80;
+        symbol [ Graphics %tmp.106 57 33 41 ];
+        %tmp.106 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.107 57 42 52 ];
+        %tmp.107 = getv %tmp.106 :FONT_SMALL;
+        symbol [ WatchUi %tmp.108 57 54 61 ];
+        %tmp.108 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.109 57 62 74 ];
+        %tmp.109 = getv function %tmp.108 :loadResource;
+        symbol [ Rez %tmp.111 57 75 78 ];
+        %tmp.111 = getv ? :Rez;
+        symbol [ Strings %tmp.112 57 79 86 ];
+        %tmp.112 = getv %tmp.111 :Strings;
+        symbol [ TeamB %tmp.113 57 87 92 ];
+        %tmp.113 = getv %tmp.112 :TeamB;
+        %tmp.114 = invoke %tmp.108 %tmp.109(%tmp.113);
+        %tmp.115 = as %tmp.114 String;
+        symbol [ String %tmp.115 57 97 103 ];
+        symbol [ Graphics %tmp.116 57 105 113 ];
+        %tmp.116 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.117 57 114 133 ];
+        %tmp.117 = getv %tmp.116 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.118 57 136 144 ];
+        %tmp.118 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.119 57 145 165 ];
+        %tmp.119 = getv %tmp.118 :TEXT_JUSTIFY_VCENTER;
+        %tmp.120 = bitor %tmp.117 %tmp.119;
+        invoke %tmp.100 %tmp.101(%tmp.104, %tmp.105, %tmp.107, %tmp.115, %tmp.120);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 60 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %scoreString.6 = local;
+        symbol [ scoreString %scoreString.6 60 12 23 ];
+        symbol [ AppConfig %tmp.122 60 26 35 ];
+        %tmp.122 = getv ? :AppConfig;
+        symbol [ volleyballScoreA %tmp.123 60 36 52 ];
+        %tmp.123 = getv %tmp.122 :volleyballScoreA;
+        symbol [ toString %tmp.124 60 53 61 ];
+        %tmp.124 = getv function %tmp.123 :toString;
+        %tmp.125 = invoke %tmp.123 %tmp.124();
+        %tmp.126 = " : ";
+        %tmp.127 = add %tmp.125 %tmp.126;
+        symbol [ AppConfig %tmp.129 60 74 83 ];
+        %tmp.129 = getv ? :AppConfig;
+        symbol [ volleyballScoreB %tmp.130 60 84 100 ];
+        %tmp.130 = getv %tmp.129 :volleyballScoreB;
+        symbol [ toString %tmp.131 60 101 109 ];
+        %tmp.131 = getv function %tmp.130 :toString;
+        %tmp.132 = invoke %tmp.130 %tmp.131();
+        %tmp.133 = add %tmp.127 %tmp.132;
+        lputv %scoreString.6 %tmp.133;
+        symbol [ scoreString %scoreString.6 60 12 23 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 61 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %vmaxKmH.8 = local;
-        symbol [ vmaxKmH %vmaxKmH.8 61 12 19 ];
-        %tmp.140 = lgetv %maxSpeedMps.6;
-        symbol [ maxSpeedMps %tmp.140 61 22 33 ];
-        %tmp.141 = 3.6;
-        %tmp.142 = mul %tmp.140 %tmp.141;
-        lputv %vmaxKmH.8 %tmp.142;
-        symbol [ vmaxKmH %vmaxKmH.8 61 12 19 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 62 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %metersPerMin.9 = local;
-        symbol [ metersPerMin %metersPerMin.9 62 12 24 ];
-        %tmp.143 = lgetv %currentSpeedMps.7;
-        symbol [ currentSpeedMps %tmp.143 62 27 42 ];
-        %tmp.144 = 60.0;
-        %tmp.145 = mul %tmp.143 %tmp.144;
-        lputv %metersPerMin.9 %tmp.145;
-        symbol [ metersPerMin %metersPerMin.9 62 12 24 ];
+        %tmp.134 = lgetv %dc;
+        symbol [ dc %tmp.134 61 8 10 ];
+        symbol [ drawText %tmp.135 61 11 19 ];
+        %tmp.135 = getv function %tmp.134 :drawText;
+        %tmp.136 = lgetv %cx.3;
+        symbol [ cx %tmp.136 61 20 22 ];
+        %tmp.137 = 125;
+        symbol [ Graphics %tmp.138 61 29 37 ];
+        %tmp.138 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_HOT %tmp.139 61 38 53 ];
+        %tmp.139 = getv %tmp.138 :FONT_NUMBER_HOT;
+        %tmp.140 = lgetv %scoreString.6;
+        symbol [ scoreString %tmp.140 61 55 66 ];
+        symbol [ Graphics %tmp.141 61 68 76 ];
+        %tmp.141 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.142 61 77 96 ];
+        %tmp.142 = getv %tmp.141 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.143 61 99 107 ];
+        %tmp.143 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.144 61 108 128 ];
+        %tmp.144 = getv %tmp.143 :TEXT_JUSTIFY_VCENTER;
+        %tmp.145 = bitor %tmp.142 %tmp.144;
+        invoke %tmp.134 %tmp.135(%tmp.136, %tmp.137, %tmp.139, %tmp.140, %tmp.145);
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 64 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %speedMetricsText.10 = local;
-        symbol [ speedMetricsText %speedMetricsText.10 64 12 28 ];
-        %tmp.146 = "Vmax: ";
-        %tmp.147 = lgetv %vmaxKmH.8;
-        symbol [ vmaxKmH %tmp.147 64 42 49 ];
-        symbol [ format %tmp.148 64 50 56 ];
-        %tmp.148 = getv function %tmp.147 :format;
-        %tmp.149 = "%.1f";
-        %tmp.150 = invoke %tmp.147 %tmp.148(%tmp.149);
-        %tmp.151 = add %tmp.146 %tmp.150;
-        %tmp.152 = " km/h | ";
-        %tmp.153 = add %tmp.151 %tmp.152;
-        %tmp.154 = lgetv %metersPerMin.9;
-        symbol [ metersPerMin %tmp.154 64 80 92 ];
-        symbol [ format %tmp.155 64 93 99 ];
-        %tmp.155 = getv function %tmp.154 :format;
-        %tmp.156 = "%.0f";
-        %tmp.157 = invoke %tmp.154 %tmp.155(%tmp.156);
-        %tmp.158 = add %tmp.153 %tmp.157;
-        %tmp.159 = " M/min";
-        %tmp.160 = add %tmp.158 %tmp.159;
-        lputv %speedMetricsText.10 %tmp.160;
-        symbol [ speedMetricsText %speedMetricsText.10 64 12 28 ];
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %info.7 = local;
+        symbol [ info %info.7 64 12 16 ];
+        symbol [ Activity %tmp.146 64 19 27 ];
+        %tmp.146 = getm $.Toybox.Activity;
+        symbol [ getActivityInfo %tmp.147 64 28 43 ];
+        %tmp.147 = getv function %tmp.146 :getActivityInfo;
+        %tmp.148 = invoke %tmp.146 %tmp.147();
+        lputv %info.7 %tmp.148;
+        symbol [ info %info.7 64 12 16 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 65 8 ]
-        %tmp.161 = lgetv %dc;
-        symbol [ dc %tmp.161 65 8 10 ];
-        symbol [ drawText %tmp.162 65 11 19 ];
-        %tmp.162 = getv function %tmp.161 :drawText;
-        %tmp.163 = lgetv %cx.3;
-        symbol [ cx %tmp.163 65 20 22 ];
-        %tmp.164 = 165;
-        symbol [ Graphics %tmp.165 65 29 37 ];
-        %tmp.165 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.166 65 38 48 ];
-        %tmp.166 = getv %tmp.165 :FONT_XTINY;
-        %tmp.167 = lgetv %speedMetricsText.10;
-        symbol [ speedMetricsText %tmp.167 65 50 66 ];
-        symbol [ Graphics %tmp.168 65 68 76 ];
-        %tmp.168 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.169 65 77 96 ];
-        %tmp.169 = getv %tmp.168 :TEXT_JUSTIFY_CENTER;
-        symbol [ Graphics %tmp.170 65 99 107 ];
-        %tmp.170 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.171 65 108 128 ];
-        %tmp.171 = getv %tmp.170 :TEXT_JUSTIFY_VCENTER;
-        %tmp.172 = bitor %tmp.169 %tmp.171;
-        invoke %tmp.161 %tmp.162(%tmp.163, %tmp.164, %tmp.166, %tmp.167, %tmp.172);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 67 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %hrVal.11 = local;
-        symbol [ hrVal %hrVal.11 67 12 17 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_20_67_105_begin:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_21_67_62_begin:
-        %tmp.173 = lgetv %info.5;
-        symbol [ info %tmp.173 67 21 25 ];
-        %tmp.174 = null;
-        %tmp.175 = ne %tmp.173 %tmp.174;
-        bf %tmp.175 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_20_67_105_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_37_67_62_true:
-        %tmp.176 = lgetv %info.5;
-        symbol [ info %tmp.176 67 37 41 ];
-        %tmp.177 = as %tmp.176 { (!Null) };
-        symbol [ currentHeartRate %tmp.178 67 42 58 ];
-        %tmp.178 = getv %tmp.177 :currentHeartRate;
-        %tmp.179 = null;
-        %tmp.180 = ne %tmp.178 %tmp.179;
-        push %tmp.180;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_37_67_62_end:
-        %tmp.181 = phi [%tmp.175 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_21_67_62_begin] [%tmp.180 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_37_67_62_true] [%tmp.181 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_37_67_62_end];
-        bf %tmp.181 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_20_67_105_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_20_67_105_true:
-        %tmp.182 = lgetv %info.5;
-        symbol [ info %tmp.182 67 70 74 ];
-        %tmp.183 = as %tmp.182 { (!Null) };
-        symbol [ currentHeartRate %tmp.184 67 75 91 ];
-        %tmp.184 = getv %tmp.183 :currentHeartRate;
-        symbol [ toString %tmp.185 67 92 100 ];
-        %tmp.185 = getv function %tmp.184 :toString;
-        %tmp.186 = invoke %tmp.184 %tmp.185();
-        push %tmp.186;
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_20_67_105_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_20_67_105_else_false:
-        %tmp.187 = "--";
-        push %tmp.187;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_20_67_105_end:
-        %tmp.188 = phi [%tmp.181 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_20_67_105_begin] [%tmp.186 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_20_67_105_true] [%tmp.187 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_20_67_105_else_false] [%tmp.188 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_67_20_67_105_end];
-        lputv %hrVal.11 %tmp.188;
-        symbol [ hrVal %hrVal.11 67 12 17 ];
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %maxSpeedMps.8 = local;
+        symbol [ maxSpeedMps %maxSpeedMps.8 65 12 23 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_26_65_93_begin:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_27_65_60_begin:
+        %tmp.149 = lgetv %info.7;
+        symbol [ info %tmp.149 65 27 31 ];
+        %tmp.150 = null;
+        %tmp.151 = ne %tmp.149 %tmp.150;
+        bf %tmp.151 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_26_65_93_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_43_65_60_true:
+        %tmp.152 = lgetv %info.7;
+        symbol [ info %tmp.152 65 43 47 ];
+        %tmp.153 = as %tmp.152 { (!Null) };
+        symbol [ maxSpeed %tmp.154 65 48 56 ];
+        %tmp.154 = getv %tmp.153 :maxSpeed;
+        %tmp.155 = null;
+        %tmp.156 = ne %tmp.154 %tmp.155;
+        push %tmp.156;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_43_65_60_end:
+        %tmp.157 = phi [%tmp.151 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_27_65_60_begin] [%tmp.156 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_43_65_60_true] [%tmp.157 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_43_65_60_end];
+        bf %tmp.157 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_26_65_93_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_26_65_93_true:
+        %tmp.158 = lgetv %info.7;
+        symbol [ info %tmp.158 65 68 72 ];
+        %tmp.159 = as %tmp.158 { (!Null) };
+        symbol [ maxSpeed %tmp.160 65 73 81 ];
+        %tmp.160 = getv %tmp.159 :maxSpeed;
+        %tmp.161 = as %tmp.160 Float;
+        symbol [ Float %tmp.161 65 85 90 ];
+        push %tmp.161;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_26_65_93_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_26_65_93_else_false:
+        %tmp.162 = 0.0f;
+        push %tmp.162;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_26_65_93_end:
+        %tmp.163 = phi [%tmp.157 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_26_65_93_begin] [%tmp.161 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_26_65_93_true] [%tmp.162 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_26_65_93_else_false] [%tmp.163 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_65_26_65_93_end];
+        lputv %maxSpeedMps.8 %tmp.163;
+        symbol [ maxSpeedMps %maxSpeedMps.8 65 12 23 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 66 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %currentSpeedMps.9 = local;
+        symbol [ currentSpeedMps %currentSpeedMps.9 66 12 27 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_30_66_105_begin:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_31_66_68_begin:
+        %tmp.164 = lgetv %info.7;
+        symbol [ info %tmp.164 66 31 35 ];
+        %tmp.165 = null;
+        %tmp.166 = ne %tmp.164 %tmp.165;
+        bf %tmp.166 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_30_66_105_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_47_66_68_true:
+        %tmp.167 = lgetv %info.7;
+        symbol [ info %tmp.167 66 47 51 ];
+        %tmp.168 = as %tmp.167 { (!Null) };
+        symbol [ currentSpeed %tmp.169 66 52 64 ];
+        %tmp.169 = getv %tmp.168 :currentSpeed;
+        %tmp.170 = null;
+        %tmp.171 = ne %tmp.169 %tmp.170;
+        push %tmp.171;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_47_66_68_end:
+        %tmp.172 = phi [%tmp.166 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_31_66_68_begin] [%tmp.171 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_47_66_68_true] [%tmp.172 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_47_66_68_end];
+        bf %tmp.172 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_30_66_105_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_30_66_105_true:
+        %tmp.173 = lgetv %info.7;
+        symbol [ info %tmp.173 66 76 80 ];
+        %tmp.174 = as %tmp.173 { (!Null) };
+        symbol [ currentSpeed %tmp.175 66 81 93 ];
+        %tmp.175 = getv %tmp.174 :currentSpeed;
+        %tmp.176 = as %tmp.175 Float;
+        symbol [ Float %tmp.176 66 97 102 ];
+        push %tmp.176;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_30_66_105_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_30_66_105_else_false:
+        %tmp.177 = 0.0f;
+        push %tmp.177;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_30_66_105_end:
+        %tmp.178 = phi [%tmp.172 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_30_66_105_begin] [%tmp.176 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_30_66_105_true] [%tmp.177 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_30_66_105_else_false] [%tmp.178 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_66_30_66_105_end];
+        lputv %currentSpeedMps.9 %tmp.178;
+        symbol [ currentSpeedMps %currentSpeedMps.9 66 12 27 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 68 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %distVal.12 = local;
-        symbol [ distVal %distVal.12 68 12 19 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_22_68_103_begin:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_23_68_63_begin:
-        %tmp.189 = lgetv %info.5;
-        symbol [ info %tmp.189 68 23 27 ];
-        %tmp.190 = null;
-        %tmp.191 = ne %tmp.189 %tmp.190;
-        bf %tmp.191 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_22_68_103_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_39_68_63_true:
-        %tmp.192 = lgetv %info.5;
-        symbol [ info %tmp.192 68 39 43 ];
-        %tmp.193 = as %tmp.192 { (!Null) };
-        symbol [ elapsedDistance %tmp.194 68 44 59 ];
-        %tmp.194 = getv %tmp.193 :elapsedDistance;
-        %tmp.195 = null;
-        %tmp.196 = ne %tmp.194 %tmp.195;
-        push %tmp.196;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_39_68_63_end:
-        %tmp.197 = phi [%tmp.191 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_23_68_63_begin] [%tmp.196 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_39_68_63_true] [%tmp.197 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_39_68_63_end];
-        bf %tmp.197 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_22_68_103_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_22_68_103_true:
-        %tmp.198 = lgetv %info.5;
-        symbol [ info %tmp.198 68 71 75 ];
-        %tmp.199 = as %tmp.198 { (!Null) };
-        symbol [ elapsedDistance %tmp.200 68 76 91 ];
-        %tmp.200 = getv %tmp.199 :elapsedDistance;
-        %tmp.201 = 1000.0;
-        %tmp.202 = div %tmp.200 %tmp.201;
-        push %tmp.202;
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_22_68_103_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_22_68_103_else_false:
-        %tmp.203 = 0.00;
-        push %tmp.203;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_22_68_103_end:
-        %tmp.204 = phi [%tmp.197 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_22_68_103_begin] [%tmp.202 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_22_68_103_true] [%tmp.203 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_22_68_103_else_false] [%tmp.204 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_68_22_68_103_end];
-        lputv %distVal.12 %tmp.204;
-        symbol [ distVal %distVal.12 68 12 19 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 70 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %hrDistText.13 = local;
-        symbol [ hrDistText %hrDistText.13 70 12 22 ];
-        %tmp.205 = "HR: ";
-        %tmp.206 = lgetv %hrVal.11;
-        symbol [ hrVal %tmp.206 70 34 39 ];
-        %tmp.207 = add %tmp.205 %tmp.206;
-        %tmp.208 = " | ";
-        %tmp.209 = add %tmp.207 %tmp.208;
-        %tmp.210 = lgetv %distVal.12;
-        symbol [ distVal %tmp.210 70 50 57 ];
-        symbol [ format %tmp.211 70 58 64 ];
-        %tmp.211 = getv function %tmp.210 :format;
-        %tmp.212 = "%.2f";
-        %tmp.213 = invoke %tmp.210 %tmp.211(%tmp.212);
-        %tmp.214 = add %tmp.209 %tmp.213;
-        %tmp.215 = " km";
-        %tmp.216 = add %tmp.214 %tmp.215;
-        lputv %hrDistText.13 %tmp.216;
-        symbol [ hrDistText %hrDistText.13 70 12 22 ];
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %vmaxKmH.10 = local;
+        symbol [ vmaxKmH %vmaxKmH.10 68 12 19 ];
+        %tmp.179 = lgetv %maxSpeedMps.8;
+        symbol [ maxSpeedMps %tmp.179 68 22 33 ];
+        %tmp.180 = 3.6;
+        %tmp.181 = mul %tmp.179 %tmp.180;
+        lputv %vmaxKmH.10 %tmp.181;
+        symbol [ vmaxKmH %vmaxKmH.10 68 12 19 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 69 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %metersPerMin.11 = local;
+        symbol [ metersPerMin %metersPerMin.11 69 12 24 ];
+        %tmp.182 = lgetv %currentSpeedMps.9;
+        symbol [ currentSpeedMps %tmp.182 69 27 42 ];
+        %tmp.183 = 60.0;
+        %tmp.184 = mul %tmp.182 %tmp.183;
+        lputv %metersPerMin.11 %tmp.184;
+        symbol [ metersPerMin %metersPerMin.11 69 12 24 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 71 8 ]
-        %tmp.217 = lgetv %dc;
-        symbol [ dc %tmp.217 71 8 10 ];
-        symbol [ drawText %tmp.218 71 11 19 ];
-        %tmp.218 = getv function %tmp.217 :drawText;
-        %tmp.219 = lgetv %cx.3;
-        symbol [ cx %tmp.219 71 20 22 ];
-        %tmp.220 = 185;
-        symbol [ Graphics %tmp.221 71 29 37 ];
-        %tmp.221 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.222 71 38 48 ];
-        %tmp.222 = getv %tmp.221 :FONT_XTINY;
-        %tmp.223 = lgetv %hrDistText.13;
-        symbol [ hrDistText %tmp.223 71 50 60 ];
-        symbol [ Graphics %tmp.224 71 62 70 ];
-        %tmp.224 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.225 71 71 90 ];
-        %tmp.225 = getv %tmp.224 :TEXT_JUSTIFY_CENTER;
-        symbol [ Graphics %tmp.226 71 93 101 ];
-        %tmp.226 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.227 71 102 122 ];
-        %tmp.227 = getv %tmp.226 :TEXT_JUSTIFY_VCENTER;
-        %tmp.228 = bitor %tmp.225 %tmp.227;
-        invoke %tmp.217 %tmp.218(%tmp.219, %tmp.220, %tmp.222, %tmp.223, %tmp.228);
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %speedMetricsText.12 = local;
+        symbol [ speedMetricsText %speedMetricsText.12 71 12 28 ];
+        %tmp.185 = "Vmax: ";
+        %tmp.186 = lgetv %vmaxKmH.10;
+        symbol [ vmaxKmH %tmp.186 71 42 49 ];
+        symbol [ format %tmp.187 71 50 56 ];
+        %tmp.187 = getv function %tmp.186 :format;
+        %tmp.188 = "%.1f";
+        %tmp.189 = invoke %tmp.186 %tmp.187(%tmp.188);
+        %tmp.190 = add %tmp.185 %tmp.189;
+        %tmp.191 = " km/h | ";
+        %tmp.192 = add %tmp.190 %tmp.191;
+        %tmp.193 = lgetv %metersPerMin.11;
+        symbol [ metersPerMin %tmp.193 71 80 92 ];
+        symbol [ format %tmp.194 71 93 99 ];
+        %tmp.194 = getv function %tmp.193 :format;
+        %tmp.195 = "%.0f";
+        %tmp.196 = invoke %tmp.193 %tmp.194(%tmp.195);
+        %tmp.197 = add %tmp.192 %tmp.196;
+        %tmp.198 = " m/min";
+        %tmp.199 = add %tmp.197 %tmp.198;
+        lputv %speedMetricsText.12 %tmp.199;
+        symbol [ speedMetricsText %speedMetricsText.12 71 12 28 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 72 8 ]
+        %tmp.200 = lgetv %dc;
+        symbol [ dc %tmp.200 72 8 10 ];
+        symbol [ drawText %tmp.201 72 11 19 ];
+        %tmp.201 = getv function %tmp.200 :drawText;
+        %tmp.202 = lgetv %cx.3;
+        symbol [ cx %tmp.202 72 20 22 ];
+        %tmp.203 = 165;
+        symbol [ Graphics %tmp.204 72 29 37 ];
+        %tmp.204 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.205 72 38 48 ];
+        %tmp.205 = getv %tmp.204 :FONT_XTINY;
+        %tmp.206 = lgetv %speedMetricsText.12;
+        symbol [ speedMetricsText %tmp.206 72 50 66 ];
+        symbol [ Graphics %tmp.207 72 68 76 ];
+        %tmp.207 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.208 72 77 96 ];
+        %tmp.208 = getv %tmp.207 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.209 72 99 107 ];
+        %tmp.209 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.210 72 108 128 ];
+        %tmp.210 = getv %tmp.209 :TEXT_JUSTIFY_VCENTER;
+        %tmp.211 = bitor %tmp.208 %tmp.210;
+        invoke %tmp.200 %tmp.201(%tmp.202, %tmp.203, %tmp.205, %tmp.206, %tmp.211);
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 74 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %bursts.14 = local;
-        symbol [ bursts %bursts.14 74 12 18 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_21_74_80_begin:
-        symbol [ BurstManager %tmp.230 74 22 34 ];
-        %tmp.230 = getv ? :BurstManager;
-        %tmp.232 = const :burstCount;
-        symbol [ burstCount %tmp.232 74 40 50 const ];
-        %tmp.233 = canhazplz %tmp.230 %tmp.232;
-        bf %tmp.233 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_21_74_80_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_21_74_80_true:
-        symbol [ BurstManager %tmp.235 74 54 66 ];
-        %tmp.235 = getv ? :BurstManager;
-        %tmp.236 = as %tmp.235 { (interface { var burstCount; }) };
-        symbol [ burstCount %tmp.237 74 67 77 ];
-        %tmp.237 = getv %tmp.236 :burstCount;
-        push %tmp.237;
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_21_74_80_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_21_74_80_else_false:
-        %tmp.238 = 0;
-        push %tmp.238;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_21_74_80_end:
-        %tmp.239 = phi [%tmp.233 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_21_74_80_begin] [%tmp.237 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_21_74_80_true] [%tmp.238 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_21_74_80_else_false] [%tmp.239 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_21_74_80_end];
-        lputv %bursts.14 %tmp.239;
-        symbol [ bursts %bursts.14 74 12 18 ];
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %hrVal.13 = local;
+        symbol [ hrVal %hrVal.13 74 12 17 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_20_74_105_begin:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_21_74_62_begin:
+        %tmp.212 = lgetv %info.7;
+        symbol [ info %tmp.212 74 21 25 ];
+        %tmp.213 = null;
+        %tmp.214 = ne %tmp.212 %tmp.213;
+        bf %tmp.214 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_20_74_105_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_37_74_62_true:
+        %tmp.215 = lgetv %info.7;
+        symbol [ info %tmp.215 74 37 41 ];
+        %tmp.216 = as %tmp.215 { (!Null) };
+        symbol [ currentHeartRate %tmp.217 74 42 58 ];
+        %tmp.217 = getv %tmp.216 :currentHeartRate;
+        %tmp.218 = null;
+        %tmp.219 = ne %tmp.217 %tmp.218;
+        push %tmp.219;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_37_74_62_end:
+        %tmp.220 = phi [%tmp.214 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_21_74_62_begin] [%tmp.219 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_37_74_62_true] [%tmp.220 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_37_74_62_end];
+        bf %tmp.220 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_20_74_105_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_20_74_105_true:
+        %tmp.221 = lgetv %info.7;
+        symbol [ info %tmp.221 74 70 74 ];
+        %tmp.222 = as %tmp.221 { (!Null) };
+        symbol [ currentHeartRate %tmp.223 74 75 91 ];
+        %tmp.223 = getv %tmp.222 :currentHeartRate;
+        symbol [ toString %tmp.224 74 92 100 ];
+        %tmp.224 = getv function %tmp.223 :toString;
+        %tmp.225 = invoke %tmp.223 %tmp.224();
+        push %tmp.225;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_20_74_105_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_20_74_105_else_false:
+        %tmp.226 = "--";
+        push %tmp.226;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_20_74_105_end:
+        %tmp.227 = phi [%tmp.220 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_20_74_105_begin] [%tmp.225 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_20_74_105_true] [%tmp.226 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_20_74_105_else_false] [%tmp.227 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_74_20_74_105_end];
+        lputv %hrVal.13 %tmp.227;
+        symbol [ hrVal %hrVal.13 74 12 17 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 75 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %jumps.15 = local;
-        symbol [ jumps %jumps.15 75 12 17 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_20_75_75_begin:
-        symbol [ JumpManager %tmp.241 75 21 32 ];
-        %tmp.241 = getv ? :JumpManager;
-        %tmp.243 = const :jumpCount;
-        symbol [ jumpCount %tmp.243 75 38 47 const ];
-        %tmp.244 = canhazplz %tmp.241 %tmp.243;
-        bf %tmp.244 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_20_75_75_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_20_75_75_true:
-        symbol [ JumpManager %tmp.246 75 51 62 ];
-        %tmp.246 = getv ? :JumpManager;
-        %tmp.247 = as %tmp.246 { (interface { var jumpCount; }) };
-        symbol [ jumpCount %tmp.248 75 63 72 ];
-        %tmp.248 = getv %tmp.247 :jumpCount;
-        push %tmp.248;
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_20_75_75_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_20_75_75_else_false:
-        %tmp.249 = 0;
-        push %tmp.249;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_20_75_75_end:
-        %tmp.250 = phi [%tmp.244 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_20_75_75_begin] [%tmp.248 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_20_75_75_true] [%tmp.249 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_20_75_75_else_false] [%tmp.250 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_20_75_75_end];
-        lputv %jumps.15 %tmp.250;
-        symbol [ jumps %jumps.15 75 12 17 ];
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %distVal.14 = local;
+        symbol [ distVal %distVal.14 75 12 19 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_22_75_114_begin:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_23_75_63_begin:
+        %tmp.228 = lgetv %info.7;
+        symbol [ info %tmp.228 75 23 27 ];
+        %tmp.229 = null;
+        %tmp.230 = ne %tmp.228 %tmp.229;
+        bf %tmp.230 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_22_75_114_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_39_75_63_true:
+        %tmp.231 = lgetv %info.7;
+        symbol [ info %tmp.231 75 39 43 ];
+        %tmp.232 = as %tmp.231 { (!Null) };
+        symbol [ elapsedDistance %tmp.233 75 44 59 ];
+        %tmp.233 = getv %tmp.232 :elapsedDistance;
+        %tmp.234 = null;
+        %tmp.235 = ne %tmp.233 %tmp.234;
+        push %tmp.235;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_39_75_63_end:
+        %tmp.236 = phi [%tmp.230 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_23_75_63_begin] [%tmp.235 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_39_75_63_true] [%tmp.236 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_39_75_63_end];
+        bf %tmp.236 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_22_75_114_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_22_75_114_true:
+        %tmp.237 = lgetv %info.7;
+        symbol [ info %tmp.237 75 72 76 ];
+        %tmp.238 = as %tmp.237 { (!Null) };
+        symbol [ elapsedDistance %tmp.239 75 77 92 ];
+        %tmp.239 = getv %tmp.238 :elapsedDistance;
+        %tmp.240 = as %tmp.239 Float;
+        symbol [ Float %tmp.240 75 96 101 ];
+        %tmp.241 = 1000.0;
+        %tmp.242 = div %tmp.240 %tmp.241;
+        push %tmp.242;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_22_75_114_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_22_75_114_else_false:
+        %tmp.243 = 0.00;
+        push %tmp.243;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_22_75_114_end:
+        %tmp.244 = phi [%tmp.236 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_22_75_114_begin] [%tmp.242 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_22_75_114_true] [%tmp.243 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_22_75_114_else_false] [%tmp.244 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_75_22_75_114_end];
+        lputv %distVal.14 %tmp.244;
+        symbol [ distVal %distVal.14 75 12 19 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 77 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %labelBursts.16 = local;
-        symbol [ labelBursts %labelBursts.16 77 12 23 ];
-        symbol [ WatchUi %tmp.251 77 26 33 ];
-        %tmp.251 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.252 77 34 46 ];
-        %tmp.252 = getv function %tmp.251 :loadResource;
-        symbol [ Rez %tmp.254 77 47 50 ];
-        %tmp.254 = getv ? :Rez;
-        symbol [ Strings %tmp.255 77 51 58 ];
-        %tmp.255 = getv %tmp.254 :Strings;
-        symbol [ LabelBursts %tmp.256 77 59 70 ];
-        %tmp.256 = getv %tmp.255 :LabelBursts;
-        %tmp.257 = invoke %tmp.251 %tmp.252(%tmp.256);
-        %tmp.258 = as %tmp.257 String;
-        symbol [ String %tmp.258 77 75 81 ];
-        lputv %labelBursts.16 %tmp.258;
-        symbol [ labelBursts %labelBursts.16 77 12 23 ];
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %hrDistText.15 = local;
+        symbol [ hrDistText %hrDistText.15 77 12 22 ];
+        %tmp.245 = "HR: ";
+        %tmp.246 = lgetv %hrVal.13;
+        symbol [ hrVal %tmp.246 77 34 39 ];
+        %tmp.247 = add %tmp.245 %tmp.246;
+        %tmp.248 = " | ";
+        %tmp.249 = add %tmp.247 %tmp.248;
+        %tmp.250 = lgetv %distVal.14;
+        symbol [ distVal %tmp.250 77 50 57 ];
+        symbol [ format %tmp.251 77 58 64 ];
+        %tmp.251 = getv function %tmp.250 :format;
+        %tmp.252 = "%.2f";
+        %tmp.253 = invoke %tmp.250 %tmp.251(%tmp.252);
+        %tmp.254 = add %tmp.249 %tmp.253;
+        %tmp.255 = " km";
+        %tmp.256 = add %tmp.254 %tmp.255;
+        lputv %hrDistText.15 %tmp.256;
+        symbol [ hrDistText %hrDistText.15 77 12 22 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 78 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %labelJumps.17 = local;
-        symbol [ labelJumps %labelJumps.17 78 12 22 ];
-        symbol [ WatchUi %tmp.259 78 25 32 ];
-        %tmp.259 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.260 78 33 45 ];
-        %tmp.260 = getv function %tmp.259 :loadResource;
-        symbol [ Rez %tmp.262 78 46 49 ];
-        %tmp.262 = getv ? :Rez;
-        symbol [ Strings %tmp.263 78 50 57 ];
-        %tmp.263 = getv %tmp.262 :Strings;
-        symbol [ LabelJumps %tmp.264 78 58 68 ];
-        %tmp.264 = getv %tmp.263 :LabelJumps;
-        %tmp.265 = invoke %tmp.259 %tmp.260(%tmp.264);
-        %tmp.266 = as %tmp.265 String;
-        symbol [ String %tmp.266 78 73 79 ];
-        lputv %labelJumps.17 %tmp.266;
-        symbol [ labelJumps %labelJumps.17 78 12 22 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 80 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %volleyballStatsText.18 = local;
-        symbol [ volleyballStatsText %volleyballStatsText.18 80 12 31 ];
-        %tmp.267 = lgetv %labelBursts.16;
-        symbol [ labelBursts %tmp.267 80 34 45 ];
-        %tmp.268 = ": ";
-        %tmp.269 = add %tmp.267 %tmp.268;
-        %tmp.270 = lgetv %bursts.14;
-        symbol [ bursts %tmp.270 80 55 61 ];
-        %tmp.271 = add %tmp.269 %tmp.270;
-        %tmp.272 = " | ";
-        %tmp.273 = add %tmp.271 %tmp.272;
-        %tmp.274 = lgetv %labelJumps.17;
-        symbol [ labelJumps %tmp.274 80 72 82 ];
-        %tmp.275 = add %tmp.273 %tmp.274;
-        %tmp.276 = ": ";
-        %tmp.277 = add %tmp.275 %tmp.276;
-        %tmp.278 = lgetv %jumps.15;
-        symbol [ jumps %tmp.278 80 92 97 ];
-        %tmp.279 = add %tmp.277 %tmp.278;
-        lputv %volleyballStatsText.18 %tmp.279;
-        symbol [ volleyballStatsText %volleyballStatsText.18 80 12 31 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 81 8 ]
-        %tmp.280 = lgetv %dc;
-        symbol [ dc %tmp.280 81 8 10 ];
-        symbol [ drawText %tmp.281 81 11 19 ];
-        %tmp.281 = getv function %tmp.280 :drawText;
-        %tmp.282 = lgetv %cx.3;
-        symbol [ cx %tmp.282 81 20 22 ];
-        %tmp.283 = 205;
-        symbol [ Graphics %tmp.284 81 29 37 ];
-        %tmp.284 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.285 81 38 48 ];
-        %tmp.285 = getv %tmp.284 :FONT_XTINY;
-        %tmp.286 = lgetv %volleyballStatsText.18;
-        symbol [ volleyballStatsText %tmp.286 81 50 69 ];
-        symbol [ Graphics %tmp.287 81 71 79 ];
-        %tmp.287 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.288 81 80 99 ];
-        %tmp.288 = getv %tmp.287 :TEXT_JUSTIFY_CENTER;
-        symbol [ Graphics %tmp.289 81 102 110 ];
-        %tmp.289 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.290 81 111 131 ];
-        %tmp.290 = getv %tmp.289 :TEXT_JUSTIFY_VCENTER;
-        %tmp.291 = bitor %tmp.288 %tmp.290;
-        invoke %tmp.280 %tmp.281(%tmp.282, %tmp.283, %tmp.285, %tmp.286, %tmp.291);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 84 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %sysTime.19 = local;
-        symbol [ sysTime %sysTime.19 84 12 19 ];
-        symbol [ System %tmp.292 84 22 28 ];
-        %tmp.292 = getm $.Toybox.System;
-        symbol [ getClockTime %tmp.293 84 29 41 ];
-        %tmp.293 = getv function %tmp.292 :getClockTime;
-        %tmp.294 = invoke %tmp.292 %tmp.293();
-        lputv %sysTime.19 %tmp.294;
-        symbol [ sysTime %sysTime.19 84 12 19 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 85 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop" ]
-        %timeString.20 = local;
-        symbol [ timeString %timeString.20 85 12 22 ];
-        %tmp.295 = lgetv %sysTime.19;
-        symbol [ sysTime %tmp.295 85 25 32 ];
-        symbol [ hour %tmp.296 85 33 37 ];
-        %tmp.296 = getv %tmp.295 :hour;
-        symbol [ format %tmp.297 85 38 44 ];
-        %tmp.297 = getv function %tmp.296 :format;
-        %tmp.298 = "%02d";
-        %tmp.299 = invoke %tmp.296 %tmp.297(%tmp.298);
-        %tmp.300 = ":";
+        %tmp.257 = lgetv %dc;
+        symbol [ dc %tmp.257 78 8 10 ];
+        symbol [ drawText %tmp.258 78 11 19 ];
+        %tmp.258 = getv function %tmp.257 :drawText;
+        %tmp.259 = lgetv %cx.3;
+        symbol [ cx %tmp.259 78 20 22 ];
+        %tmp.260 = 185;
+        symbol [ Graphics %tmp.261 78 29 37 ];
+        %tmp.261 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.262 78 38 48 ];
+        %tmp.262 = getv %tmp.261 :FONT_XTINY;
+        %tmp.263 = lgetv %hrDistText.15;
+        symbol [ hrDistText %tmp.263 78 50 60 ];
+        symbol [ Graphics %tmp.264 78 62 70 ];
+        %tmp.264 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.265 78 71 90 ];
+        %tmp.265 = getv %tmp.264 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.266 78 93 101 ];
+        %tmp.266 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.267 78 102 122 ];
+        %tmp.267 = getv %tmp.266 :TEXT_JUSTIFY_VCENTER;
+        %tmp.268 = bitor %tmp.265 %tmp.267;
+        invoke %tmp.257 %tmp.258(%tmp.259, %tmp.260, %tmp.262, %tmp.263, %tmp.268);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 81 4 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %bursts.16 = local;
+        symbol [ bursts %bursts.16 81 8 14 ];
+        symbol [ SportsMetricsManager %tmp.270 81 17 37 ];
+        %tmp.270 = getv ? :SportsMetricsManager;
+        symbol [ getTotalBursts %tmp.271 81 38 52 ];
+        %tmp.271 = getv function %tmp.270 :getTotalBursts;
+        %tmp.272 = invoke %tmp.270 %tmp.271();
+        lputv %bursts.16 %tmp.272;
+        symbol [ bursts %bursts.16 81 8 14 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 82 0 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %jumps.17 = local;
+        symbol [ jumps %jumps.17 82 4 9 ];
+        symbol [ SportsMetricsManager %tmp.274 82 12 32 ];
+        %tmp.274 = getv ? :SportsMetricsManager;
+        symbol [ getTotalJumps %tmp.275 82 33 46 ];
+        %tmp.275 = getv function %tmp.274 :getTotalJumps;
+        %tmp.276 = invoke %tmp.274 %tmp.275();
+        lputv %jumps.17 %tmp.276;
+        symbol [ jumps %jumps.17 82 4 9 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 84 0 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %labelBursts.18 = local;
+        symbol [ labelBursts %labelBursts.18 84 4 15 ];
+        symbol [ WatchUi %tmp.277 84 18 25 ];
+        %tmp.277 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.278 84 26 38 ];
+        %tmp.278 = getv function %tmp.277 :loadResource;
+        symbol [ Rez %tmp.280 84 39 42 ];
+        %tmp.280 = getv ? :Rez;
+        symbol [ Strings %tmp.281 84 43 50 ];
+        %tmp.281 = getv %tmp.280 :Strings;
+        symbol [ LabelBursts %tmp.282 84 51 62 ];
+        %tmp.282 = getv %tmp.281 :LabelBursts;
+        %tmp.283 = invoke %tmp.277 %tmp.278(%tmp.282);
+        %tmp.284 = as %tmp.283 String;
+        symbol [ String %tmp.284 84 67 73 ];
+        lputv %labelBursts.18 %tmp.284;
+        symbol [ labelBursts %labelBursts.18 84 4 15 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 85 0 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %labelJumps.19 = local;
+        symbol [ labelJumps %labelJumps.19 85 4 14 ];
+        symbol [ WatchUi %tmp.285 85 17 24 ];
+        %tmp.285 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.286 85 25 37 ];
+        %tmp.286 = getv function %tmp.285 :loadResource;
+        symbol [ Rez %tmp.288 85 38 41 ];
+        %tmp.288 = getv ? :Rez;
+        symbol [ Strings %tmp.289 85 42 49 ];
+        %tmp.289 = getv %tmp.288 :Strings;
+        symbol [ LabelJumps %tmp.290 85 50 60 ];
+        %tmp.290 = getv %tmp.289 :LabelJumps;
+        %tmp.291 = invoke %tmp.285 %tmp.286(%tmp.290);
+        %tmp.292 = as %tmp.291 String;
+        symbol [ String %tmp.292 85 65 71 ];
+        lputv %labelJumps.19 %tmp.292;
+        symbol [ labelJumps %labelJumps.19 85 4 14 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 87 0 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %volleyballStatsText.20 = local;
+        symbol [ volleyballStatsText %volleyballStatsText.20 87 4 23 ];
+        %tmp.293 = lgetv %labelBursts.18;
+        symbol [ labelBursts %tmp.293 88 4 15 ];
+        %tmp.294 = ": ";
+        %tmp.295 = add %tmp.293 %tmp.294;
+        %tmp.296 = lgetv %bursts.16;
+        symbol [ bursts %tmp.296 88 25 31 ];
+        %tmp.297 = add %tmp.295 %tmp.296;
+        %tmp.298 = " | ";
+        %tmp.299 = add %tmp.297 %tmp.298;
+        %tmp.300 = lgetv %labelJumps.19;
+        symbol [ labelJumps %tmp.300 90 4 14 ];
         %tmp.301 = add %tmp.299 %tmp.300;
-        %tmp.302 = lgetv %sysTime.19;
-        symbol [ sysTime %tmp.302 85 61 68 ];
-        symbol [ min %tmp.303 85 69 72 ];
-        %tmp.303 = getv %tmp.302 :min;
-        symbol [ format %tmp.304 85 73 79 ];
-        %tmp.304 = getv function %tmp.303 :format;
-        %tmp.305 = "%02d";
-        %tmp.306 = invoke %tmp.303 %tmp.304(%tmp.305);
-        %tmp.307 = add %tmp.301 %tmp.306;
-        lputv %timeString.20 %tmp.307;
-        symbol [ timeString %timeString.20 85 12 22 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 86 8 ]
-        %tmp.308 = lgetv %dc;
-        symbol [ dc %tmp.308 86 8 10 ];
-        symbol [ drawText %tmp.309 86 11 19 ];
-        %tmp.309 = getv function %tmp.308 :drawText;
-        %tmp.310 = lgetv %cx.3;
-        symbol [ cx %tmp.310 86 20 22 ];
-        %tmp.311 = 230;
-        symbol [ Graphics %tmp.312 86 29 37 ];
-        %tmp.312 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.313 86 38 48 ];
-        %tmp.313 = getv %tmp.312 :FONT_SMALL;
-        %tmp.314 = lgetv %timeString.20;
-        symbol [ timeString %tmp.314 86 50 60 ];
-        symbol [ Graphics %tmp.315 86 62 70 ];
+        %tmp.302 = ": ";
+        %tmp.303 = add %tmp.301 %tmp.302;
+        %tmp.304 = lgetv %jumps.17;
+        symbol [ jumps %tmp.304 90 24 29 ];
+        %tmp.305 = add %tmp.303 %tmp.304;
+        lputv %volleyballStatsText.20 %tmp.305;
+        symbol [ volleyballStatsText %volleyballStatsText.20 87 4 23 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 92 0 ]
+        %tmp.306 = lgetv %dc;
+        symbol [ dc %tmp.306 92 0 2 ];
+        symbol [ drawText %tmp.307 92 3 11 ];
+        %tmp.307 = getv function %tmp.306 :drawText;
+        %tmp.308 = lgetv %cx.3;
+        symbol [ cx %tmp.308 93 4 6 ];
+        %tmp.309 = 205;
+        symbol [ Graphics %tmp.310 95 4 12 ];
+        %tmp.310 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.311 95 13 23 ];
+        %tmp.311 = getv %tmp.310 :FONT_XTINY;
+        %tmp.312 = lgetv %volleyballStatsText.20;
+        symbol [ volleyballStatsText %tmp.312 96 4 23 ];
+        symbol [ Graphics %tmp.313 97 4 12 ];
+        %tmp.313 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.314 97 13 32 ];
+        %tmp.314 = getv %tmp.313 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.315 97 35 43 ];
         %tmp.315 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.316 86 71 90 ];
-        %tmp.316 = getv %tmp.315 :TEXT_JUSTIFY_CENTER;
-        symbol [ Graphics %tmp.317 86 93 101 ];
-        %tmp.317 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.318 86 102 122 ];
-        %tmp.318 = getv %tmp.317 :TEXT_JUSTIFY_VCENTER;
-        %tmp.319 = bitor %tmp.316 %tmp.318;
-        invoke %tmp.308 %tmp.309(%tmp.310, %tmp.311, %tmp.313, %tmp.314, %tmp.319);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_34_49_87_4_stop:
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.316 97 44 64 ];
+        %tmp.316 = getv %tmp.315 :TEXT_JUSTIFY_VCENTER;
+        %tmp.317 = bitor %tmp.314 %tmp.316;
+        invoke %tmp.306 %tmp.307(%tmp.308, %tmp.309, %tmp.311, %tmp.312, %tmp.317);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 101 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %sysTime.21 = local;
+        symbol [ sysTime %sysTime.21 101 12 19 ];
+        symbol [ System %tmp.318 101 22 28 ];
+        %tmp.318 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.319 101 29 41 ];
+        %tmp.319 = getv function %tmp.318 :getClockTime;
+        %tmp.320 = invoke %tmp.318 %tmp.319();
+        lputv %sysTime.21 %tmp.320;
+        symbol [ sysTime %sysTime.21 101 12 19 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 102 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop" ]
+        %timeString.22 = local;
+        symbol [ timeString %timeString.22 102 12 22 ];
+        %tmp.321 = lgetv %sysTime.21;
+        symbol [ sysTime %tmp.321 102 25 32 ];
+        symbol [ hour %tmp.322 102 33 37 ];
+        %tmp.322 = getv %tmp.321 :hour;
+        symbol [ format %tmp.323 102 38 44 ];
+        %tmp.323 = getv function %tmp.322 :format;
+        %tmp.324 = "%02d";
+        %tmp.325 = invoke %tmp.322 %tmp.323(%tmp.324);
+        %tmp.326 = ":";
+        %tmp.327 = add %tmp.325 %tmp.326;
+        %tmp.328 = lgetv %sysTime.21;
+        symbol [ sysTime %tmp.328 102 61 68 ];
+        symbol [ min %tmp.329 102 69 72 ];
+        %tmp.329 = getv %tmp.328 :min;
+        symbol [ format %tmp.330 102 73 79 ];
+        %tmp.330 = getv function %tmp.329 :format;
+        %tmp.331 = "%02d";
+        %tmp.332 = invoke %tmp.329 %tmp.330(%tmp.331);
+        %tmp.333 = add %tmp.327 %tmp.332;
+        lputv %timeString.22 %tmp.333;
+        symbol [ timeString %timeString.22 102 12 22 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc" 103 8 ]
+        %tmp.334 = lgetv %dc;
+        symbol [ dc %tmp.334 103 8 10 ];
+        symbol [ drawText %tmp.335 103 11 19 ];
+        %tmp.335 = getv function %tmp.334 :drawText;
+        %tmp.336 = lgetv %cx.3;
+        symbol [ cx %tmp.336 103 20 22 ];
+        %tmp.337 = 230;
+        symbol [ Graphics %tmp.338 103 29 37 ];
+        %tmp.338 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.339 103 38 48 ];
+        %tmp.339 = getv %tmp.338 :FONT_SMALL;
+        %tmp.340 = lgetv %timeString.22;
+        symbol [ timeString %tmp.340 103 50 60 ];
+        symbol [ Graphics %tmp.341 103 62 70 ];
+        %tmp.341 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.342 103 71 90 ];
+        %tmp.342 = getv %tmp.341 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.343 103 93 101 ];
+        %tmp.343 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.344 103 102 122 ];
+        %tmp.344 = getv %tmp.343 :TEXT_JUSTIFY_VCENTER;
+        %tmp.345 = bitor %tmp.342 %tmp.344;
+        invoke %tmp.334 %tmp.335(%tmp.336, %tmp.337, %tmp.339, %tmp.340, %tmp.345);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_Screen3View_mc_36_49_104_4_stop:
     }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\Screen3View.mc"; @line = 1; ]

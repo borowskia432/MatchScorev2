@@ -80,28 +80,51 @@ class ExitMenuDelegate extends WatchUi.Menu2InputDelegate {
                     summaryData.maxHr = info.maxHeartRate;
                 }
                 if (info.currentHeartRate != null) {
-                    summaryData.minHr = info.currentHeartRate; // Lub przypisz wartość z własnej logiki
+                    summaryData.minHr = info.currentHeartRate; 
+                }
+                if (info.calories != null) {
+                    summaryData.calories = info.calories;
                 }
             }
 
-            // Pobranie zrywów z Twojego menedżera
-            summaryData.sprintsCount = BurstManager.burstCount;
-
-            // 3. Konfiguracja wyników meczu
-            if (_isFromView2) {
+            // Pobranie statystyk ruchowych
+           summaryData.sprintsCount = SportsMetricsManager.getTotalBursts();
+summaryData.jumpsCount = SportsMetricsManager.getTotalJumps();
+            // 3. Konfiguracja wyników zależnie od wybranego sportu
+            if (AppConfig.selectedSportEnum == Activity.SPORT_VOLLEYBALL) {
+                // Konfiguracja dla siatkówki
+                summaryData.isVolleyball = true;
                 summaryData.hasScore = true;
-                summaryData.scoreTeamA = ScoreManager.scoreA;
-                summaryData.scoreTeamB = ScoreManager.scoreB;
+                summaryData.scoreTeamA = AppConfig.matchScoreA; 
+                summaryData.scoreTeamB = AppConfig.matchScoreB;
+                summaryData.setsTeamA = AppConfig.volleyballSetsA;
+                summaryData.setsTeamB = AppConfig.volleyballSetsB;
             } else {
-                summaryData.hasScore = false;
+                // Konfiguracja dla piłki nożnej
+                summaryData.isVolleyball = false;
+                if (_isFromView2) {
+                    summaryData.hasScore = true;
+                    summaryData.scoreTeamA = ScoreManager.scoreA;
+                    summaryData.scoreTeamB = ScoreManager.scoreB;
+                } else {
+                    summaryData.hasScore = false;
+                }
             }
 
-            // 4. Przejście do widoku podsumowania
-            WatchUi.switchToView(
-                new SummaryView(summaryData),
-                new SummaryDelegate(),
-                WatchUi.SLIDE_LEFT
-            );
+            // 4. Przejście do odpowiedniego widoku podsumowania
+            if (summaryData.isVolleyball) {
+                WatchUi.switchToView(
+                    new VolleyballSummaryView(summaryData),
+                    new SummaryDelegate(),
+                    WatchUi.SLIDE_LEFT
+                );
+            } else {
+                WatchUi.switchToView(
+                    new SummaryView(summaryData),
+                    new SummaryDelegate(),
+                    WatchUi.SLIDE_LEFT
+                );
+            }
         }
         else if (id.equals("discard")) {
             if (TimerManager.isRunning) {

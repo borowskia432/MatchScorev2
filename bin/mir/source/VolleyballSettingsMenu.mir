@@ -156,9 +156,9 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_3
     }
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc"; @line = 39; @symbol_functiondef = [onSelect,39,13,21]; @symbol_param<0> = [item,39,22,26]; @symbol_param<0>_type<0> = [WatchUi,39,30,37]; @symbol_param<0>_type<1> = [MenuItem,39,38,46]; ]
     function onSelect(item as WatchUi.MenuItem) as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_39_56_56_4_start:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_39_56_66_4_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 40 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_39_56_56_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_39_56_56_4_stop" ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_39_56_66_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_39_56_66_4_stop" ]
         %id.1 = local;
         symbol [ id %id.1 40 12 14 ];
         %tmp.1 = lgetv %item;
@@ -171,73 +171,142 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_3
         lputv %id.1 %tmp.4;
         symbol [ id %id.1 40 12 14 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 42 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_8_55_8_if_stmt:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_8_65_8_if_stmt:
         %tmp.5 = lgetv %id.1;
         symbol [ id %tmp.5 42 12 14 ];
         symbol [ equals %tmp.6 42 15 21 ];
         %tmp.6 = getv function %tmp.5 :equals;
         %tmp.7 = "new_set";
         %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
-        bf %tmp.8 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_8_55_8_if_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_8_55_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_34_52_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 44 12 ]
-        symbol [ SessionManager %tmp.10 44 12 26 ];
-        %tmp.10 = getv ? :SessionManager;
-        symbol [ addManualLap %tmp.11 44 27 39 ];
-        %tmp.11 = getv function %tmp.10 :addManualLap;
-        invoke %tmp.10 %tmp.11();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 47 12 ]
-        symbol [ AppConfig %tmp.13 47 12 21 ];
+        bf %tmp.8 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_8_65_8_if_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_8_65_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_34_62_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 45 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_45_12_49_12_if_stmt:
+        symbol [ AppConfig %tmp.10 45 16 25 ];
+        %tmp.10 = getv ? :AppConfig;
+        symbol [ volleyballScoreA %tmp.11 45 26 42 ];
+        %tmp.11 = getv %tmp.10 :volleyballScoreA;
+        symbol [ AppConfig %tmp.13 45 45 54 ];
         %tmp.13 = getv ? :AppConfig;
-        symbol [ resetVolleyballScores %tmp.14 47 22 43 ];
-        %tmp.14 = getv function %tmp.13 :resetVolleyballScores;
-        invoke %tmp.13 %tmp.14();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 50 12 ]
-        symbol [ WatchUi %tmp.15 50 12 19 ];
-        %tmp.15 = getm $.Toybox.WatchUi;
-        symbol [ popView %tmp.16 50 20 27 ];
-        %tmp.16 = getv function %tmp.15 :popView;
-        symbol [ WatchUi %tmp.17 50 28 35 ];
-        %tmp.17 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_IMMEDIATE %tmp.18 50 36 51 ];
-        %tmp.18 = getv %tmp.17 :SLIDE_IMMEDIATE;
-        invoke %tmp.15 %tmp.16(%tmp.18);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_34_52_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_8_55_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_8_55_8_if_false:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 52 15 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_52_15_55_8_if_stmt:
-        %tmp.19 = lgetv %id.1;
-        symbol [ id %tmp.19 52 19 21 ];
-        symbol [ equals %tmp.20 52 22 28 ];
-        %tmp.20 = getv function %tmp.19 :equals;
-        %tmp.21 = "toggle_color";
-        %tmp.22 = invoke %tmp.19 %tmp.20(%tmp.21);
-        bf %tmp.22 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_52_15_55_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_52_15_55_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_52_46_55_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 53 12 ]
-        symbol [ AppConfig %tmp.24 53 12 21 ];
-        %tmp.24 = getv ? :AppConfig;
-        symbol [ toggleBackgroundColor %tmp.25 53 22 43 ];
-        %tmp.25 = getv function %tmp.24 :toggleBackgroundColor;
-        invoke %tmp.24 %tmp.25();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 54 12 ]
-        symbol [ WatchUi %tmp.26 54 12 19 ];
-        %tmp.26 = getm $.Toybox.WatchUi;
-        symbol [ popView %tmp.27 54 20 27 ];
-        %tmp.27 = getv function %tmp.26 :popView;
-        symbol [ WatchUi %tmp.28 54 28 35 ];
-        %tmp.28 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_IMMEDIATE %tmp.29 54 36 51 ];
-        %tmp.29 = getv %tmp.28 :SLIDE_IMMEDIATE;
-        invoke %tmp.26 %tmp.27(%tmp.29);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_52_46_55_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_52_15_55_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_52_15_55_8_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_8_55_8_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_39_56_56_4_stop:
+        symbol [ volleyballScoreB %tmp.14 45 55 71 ];
+        %tmp.14 = getv %tmp.13 :volleyballScoreB;
+        %tmp.15 = gt %tmp.11 %tmp.14;
+        bf %tmp.15 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_45_12_49_12_if_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_45_12_49_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_45_73_47_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 46 16 ]
+        symbol [ AppConfig %tmp.16 46 16 25 ];
+        %tmp.16 = getv self :AppConfig;
+        symbol [ AppConfig %tmp.19 46 16 25 ];
+        %tmp.19 = getv ? :AppConfig;
+        symbol [ volleyballSetsA %tmp.20 46 26 41 ];
+        %tmp.20 = getv %tmp.19 :volleyballSetsA;
+        %tmp.21 = add %tmp.20 1;
+        symbol [ volleyballSetsA ? 46 26 41 ];
+        putv %tmp.16 :volleyballSetsA dup %tmp.21;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_45_73_47_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_45_12_49_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_45_12_49_12_if_false:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 47 19 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_47_19_49_12_if_stmt:
+        symbol [ AppConfig %tmp.23 47 23 32 ];
+        %tmp.23 = getv ? :AppConfig;
+        symbol [ volleyballScoreB %tmp.24 47 33 49 ];
+        %tmp.24 = getv %tmp.23 :volleyballScoreB;
+        symbol [ AppConfig %tmp.26 47 52 61 ];
+        %tmp.26 = getv ? :AppConfig;
+        symbol [ volleyballScoreA %tmp.27 47 62 78 ];
+        %tmp.27 = getv %tmp.26 :volleyballScoreA;
+        %tmp.28 = gt %tmp.24 %tmp.27;
+        bf %tmp.28 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_47_19_49_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_47_19_49_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_47_80_49_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 48 16 ]
+        symbol [ AppConfig %tmp.29 48 16 25 ];
+        %tmp.29 = getv self :AppConfig;
+        symbol [ AppConfig %tmp.32 48 16 25 ];
+        %tmp.32 = getv ? :AppConfig;
+        symbol [ volleyballSetsB %tmp.33 48 26 41 ];
+        %tmp.33 = getv %tmp.32 :volleyballSetsB;
+        %tmp.34 = add %tmp.33 1;
+        symbol [ volleyballSetsB ? 48 26 41 ];
+        putv %tmp.29 :volleyballSetsB dup %tmp.34;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_47_80_49_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_47_19_49_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_47_19_49_12_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_45_12_49_12_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 52 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_52_12_54_12_if_stmt:
+        symbol [ SessionManager %tmp.36 52 16 30 ];
+        %tmp.36 = getv ? :SessionManager;
+        %tmp.38 = const :addManualLap;
+        symbol [ addManualLap %tmp.38 52 36 48 const ];
+        %tmp.39 = canhazplz %tmp.36 %tmp.38;
+        bf %tmp.39 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_52_12_54_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_52_12_54_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_52_50_54_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 53 16 ]
+        symbol [ SessionManager %tmp.41 53 16 30 ];
+        %tmp.41 = getv ? :SessionManager;
+        %tmp.42 = as %tmp.41 { (interface { var addManualLap; }) };
+        symbol [ addManualLap %tmp.43 53 31 43 ];
+        %tmp.43 = getv function %tmp.42 :addManualLap;
+        invoke %tmp.42 %tmp.43();
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_52_50_54_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_52_12_54_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_52_12_54_12_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 57 12 ]
+        symbol [ AppConfig %tmp.45 57 12 21 ];
+        %tmp.45 = getv ? :AppConfig;
+        symbol [ resetVolleyballScores %tmp.46 57 22 43 ];
+        %tmp.46 = getv function %tmp.45 :resetVolleyballScores;
+        invoke %tmp.45 %tmp.46();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 60 12 ]
+        symbol [ WatchUi %tmp.47 60 12 19 ];
+        %tmp.47 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.48 60 20 27 ];
+        %tmp.48 = getv function %tmp.47 :popView;
+        symbol [ WatchUi %tmp.49 60 28 35 ];
+        %tmp.49 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.50 60 36 51 ];
+        %tmp.50 = getv %tmp.49 :SLIDE_IMMEDIATE;
+        invoke %tmp.47 %tmp.48(%tmp.50);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_34_62_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_8_65_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_8_65_8_if_false:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 62 15 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_62_15_65_8_if_stmt:
+        %tmp.51 = lgetv %id.1;
+        symbol [ id %tmp.51 62 19 21 ];
+        symbol [ equals %tmp.52 62 22 28 ];
+        %tmp.52 = getv function %tmp.51 :equals;
+        %tmp.53 = "toggle_color";
+        %tmp.54 = invoke %tmp.51 %tmp.52(%tmp.53);
+        bf %tmp.54 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_62_15_65_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_62_15_65_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_62_46_65_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 63 12 ]
+        symbol [ AppConfig %tmp.56 63 12 21 ];
+        %tmp.56 = getv ? :AppConfig;
+        symbol [ toggleBackgroundColor %tmp.57 63 22 43 ];
+        %tmp.57 = getv function %tmp.56 :toggleBackgroundColor;
+        invoke %tmp.56 %tmp.57();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc" 64 12 ]
+        symbol [ WatchUi %tmp.58 64 12 19 ];
+        %tmp.58 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.59 64 20 27 ];
+        %tmp.59 = getv function %tmp.58 :popView;
+        symbol [ WatchUi %tmp.60 64 28 35 ];
+        %tmp.60 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.61 64 36 51 ];
+        %tmp.61 = getv %tmp.60 :SLIDE_IMMEDIATE;
+        invoke %tmp.58 %tmp.59(%tmp.61);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_62_46_65_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_62_15_65_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_62_15_65_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_42_8_65_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_VolleyballSettingsMenu_mc_39_56_66_4_stop:
     }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\VolleyballSettingsMenu.mc"; @line = 1; ]

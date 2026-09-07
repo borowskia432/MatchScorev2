@@ -80,6 +80,21 @@
             precision="0"
             dataLabel="@Strings.JumpLabel"
             unitLabel="@Strings.JumpUnits" />
+<fitField id="5"
+            displayInChart="false"
+            displayInActivitySummary="true"
+            sortOrder="5"
+            precision="0"
+            dataLabel="@Strings.SetsALabel"
+            unitLabel="@Strings.SetsUnits" />
 
+        <!-- Wynik w Setach Drużyna B (ID 6) -->
+        <fitField id="6"
+            displayInChart="false"
+            displayInActivitySummary="true"
+            sortOrder="6"
+            precision="0"
+            dataLabel="@Strings.SetsBLabel"
+            unitLabel="@Strings.SetsUnits" />
     </fitContributions>
 </resources>

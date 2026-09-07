@@ -19,13 +19,13 @@ class SummaryDelegate extends WatchUi.BehaviorDelegate {
     }
 
     private function saveAndExit() as Void {
-     
-        var burstCount = BurstManager.burstCount;
 
-        // Zapis sesji FIT do pamięci zegarka
-        SessionManager.saveSession(burstCount);
+        // Zapis sesji FIT do pamięci zegarka.
+        // SessionManager pobiera końcowe statystyki
+        // bezpośrednio z SportsMetricsManager.
+        SessionManager.saveSession();
 
-        // Wyjście z aplikacji (zamyka proces)
+        // Wyjście z aplikacji
         System.exit();
     }
 }

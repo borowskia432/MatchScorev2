@@ -9,8 +9,13 @@ class SummaryData {
     public var jumpsCount as Number = 0; // Dodane pole na wyskoki
     public var calories as Number = 0;
 
-    // Pola dla View2
+    // Pola dla wyniku meczu
     public var hasScore as Boolean = false;
     public var scoreTeamA as Number = 0;
     public var scoreTeamB as Number = 0;
+
+    // NOWE POLA DLA SIATKÓWKI:
+    public var isVolleyball as Boolean = false;
+    public var setsTeamA as Number = 0;
+    public var setsTeamB as Number = 0;
 }

@@ -28,20 +28,29 @@ class MainMenuDelegate extends WatchUi.Menu2InputDelegate {
     function onSelect(item as WatchUi.MenuItem) as Void {
         var id = item.getId() as String;
 
-        // 1. Zapisujemy wybrany sport w AppConfig do późniejszego wykorzystania
+        // 1. Konfiguracja sportu i trybu lapa bezpośrednio przy wyborze z menu
         if (id.equals("fb_run")) {
             AppConfig.selectedSportName = "Football Run";
             AppConfig.selectedSportEnum = Activity.SPORT_RUNNING;
+            AppConfig.isAutoLapEnabled = true; // Bieg z auto-lapem
         } else if (id.equals("fb")) {
             AppConfig.selectedSportName = "Football";
             AppConfig.selectedSportEnum = Activity.SPORT_SOCCER;
+            AppConfig.isAutoLapEnabled = true; // Piłka nożna z auto-lapem
         } else if (id.equals("vb")) {
             AppConfig.selectedSportName = "Volleyball";
             AppConfig.selectedSportEnum = Activity.SPORT_VOLLEYBALL;
+            AppConfig.isAutoLapEnabled = false; // Siatkówka z manualnym lapem (nowy set)
         }
 
-        // 2. Przechodzimy do menu wyboru trybu okrążeń zamiast od razu startować sesję
-        var modeMenuData = ModeSelectMenu.createMenu();
-        WatchUi.pushView(modeMenuData[0], modeMenuData[1], WatchUi.SLIDE_LEFT);
+        // 2. Uruchomienie sesji treningowej Garmin
+        SessionManager.startSession(AppConfig.selectedSportName, AppConfig.selectedSportEnum);
+
+        // 3. Przejście do odpowiedniego ekranu widoku (Siatkówka -> Screen3, Inne -> Screen2)
+        if (id.equals("vb")) {
+            WatchUi.switchToView(new Screen3View(), new Screen3Delegate(), WatchUi.SLIDE_IMMEDIATE);
+        } else {
+            WatchUi.switchToView(new Screen2View(), new Screen2Delegate(), WatchUi.SLIDE_IMMEDIATE);
+        }
     }
 }

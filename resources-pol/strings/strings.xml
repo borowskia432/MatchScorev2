@@ -41,7 +41,10 @@
 <string id="SelectModeTitle">Wybierz tryb</string>
 <string id="ModeVolleyball">Siatkówka (Ręczne sety)</string>
 <string id="ModeTraining">Trening (Auto-Lap 1km)</string>
-    
+    <string id="SetsLabel">Sety</string>
+    <string id="SetsALabel">Sety (A)</string>
+    <string id="SetsBLabel">Sety (B)</string>
+    <string id="SetsUnits">sety</string>
     <!-- Wyniki i Statystyki bieżące -->
     <string id="ScoreALabel">Wynik Drużyny A</string>
     <string id="ScoreBLabel">Wynik Drużyny B</string>

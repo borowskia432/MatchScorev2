@@ -28,8 +28,9 @@ class Screen2View extends WatchUi.View {
     }
 
     function onRefresh() as Void {
-        WatchUi.requestUpdate();
-    }
+    BurstManager.update();
+    WatchUi.requestUpdate();
+}
 
     function onUpdate(dc as Graphics.Dc) as Void {
         dc.setColor(AppConfig.getBackgroundColor(), AppConfig.getBackgroundColor());

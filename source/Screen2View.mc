@@ -28,9 +28,10 @@ class Screen2View extends WatchUi.View {
     }
 
     function onRefresh() as Void {
-    BurstManager.update();
-    WatchUi.requestUpdate();
-}
+        BurstManager.update();
+        JumpManager.update();
+        WatchUi.requestUpdate();
+    }
 
     function onUpdate(dc as Graphics.Dc) as Void {
         dc.setColor(AppConfig.getBackgroundColor(), AppConfig.getBackgroundColor());
@@ -82,12 +83,12 @@ class Screen2View extends WatchUi.View {
         dc.drawText(cx, 202, Graphics.FONT_SMALL, hrDistText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         // Statystyki siatkarskie – z uwzględnieniem tłumaczeń
-        var bursts = (BurstManager has :burstCount) ? BurstManager.burstCount : 0;
-        var jumps = (JumpManager has :jumpCount) ? JumpManager.jumpCount : 0;
-        
+        var bursts = SportsMetricsManager.getTotalBursts();
+        var jumps = SportsMetricsManager.getTotalJumps();
+
         var labelBursts = WatchUi.loadResource(Rez.Strings.LabelBursts) as String;
         var labelJumps = WatchUi.loadResource(Rez.Strings.LabelJumps) as String;
-        
+
         var volleyballStatsText = labelBursts + ": " + bursts + " | " + labelJumps + ": " + jumps;
         dc.drawText(cx, 230, Graphics.FONT_XTINY, volleyballStatsText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 

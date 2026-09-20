@@ -359,7 +359,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_71_33_74_12
         %tmp.34 = getm $.Toybox.System;
         symbol [ println %tmp.35 73 23 30 ];
         %tmp.35 = getv function %tmp.34 :println;
-        %tmp.36 = ">>> DRUÅ»YNA A WYGRYWA SET! Stan setÃ³w: ";
+        %tmp.36 = ">>> DRU¯YNA A WYGRYWA SET! Stan setów: ";
         symbol [ setsA %tmp.38 73 75 80 ];
         %tmp.38 = getv ? :setsA;
         %tmp.39 = add %tmp.36 %tmp.38;
@@ -385,7 +385,7 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ScoreManager_mc_74_19_77_12
         %tmp.48 = getm $.Toybox.System;
         symbol [ println %tmp.49 76 23 30 ];
         %tmp.49 = getv function %tmp.48 :println;
-        %tmp.50 = ">>> DRUÅ»YNA B WYGRYWA SET! Stan setÃ³w: ";
+        %tmp.50 = ">>> DRU¯YNA B WYGRYWA SET! Stan setów: ";
         symbol [ setsA %tmp.52 76 75 80 ];
         %tmp.52 = getv ? :setsA;
         %tmp.53 = add %tmp.50 %tmp.52;

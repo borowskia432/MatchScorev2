@@ -40,23 +40,7 @@ class VolleyballSettingsMenuDelegate extends WatchUi.Menu2InputDelegate {
         var id = item.getId() as String;
 
         if (id.equals("new_set")) {
-            
-            // 1. Zaliczenie wygranego seta dla odpowiedniej drużyny
-            if (AppConfig.volleyballScoreA > AppConfig.volleyballScoreB) {
-                AppConfig.volleyballSetsA++;
-            } else if (AppConfig.volleyballScoreB > AppConfig.volleyballScoreA) {
-                AppConfig.volleyballSetsB++;
-            }
-
-            // 2. Dodanie fizycznego lapa / nowego seta do pliku FIT
-            if (SessionManager has :addManualLap) {
-                SessionManager.addManualLap();
-            }
-            
-            // 3. Resetowanie punktów seta w globalnym stanie aplikacji
-            AppConfig.resetVolleyballScores();
-            
-            // 4. Zamknięcie menu i powrót do ekranu meczu
+            SessionManager.finalizeCurrentSet();
             WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
 
         } else if (id.equals("toggle_color")) {

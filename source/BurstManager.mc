@@ -42,17 +42,21 @@ module BurstManager {
     // =====================================================
 
     function update() as Void {
-
-        var info = Activity.getActivityInfo();
-
-        if (info == null) {
-            return;
+        if (SessionManager has :isSessionActive) {
+            if (!SessionManager.isSessionActive()) {
+                _isBursting = false;
+                return;
+            }
         }
 
-        var speed = info.currentSpeed;
+        var info = Activity.getActivityInfo();
+        var speed = 0.0;
 
-        if (speed == null) {
-            speed = 0.0;
+        if (info != null) {
+            speed = info.currentSpeed;
+            if (speed == null) {
+                speed = 0.0;
+            }
         }
 
         var currentTime = Time.now().value();

@@ -4,11 +4,11 @@ import Toybox.Lang;
 
 module SettingsMenu {
 
-   function createMenu() as [ Views, InputDelegates ] {
+    function createMenu() as [ Views, InputDelegates ] {
         var titleStr = WatchUi.loadResource(Rez.Strings.SettingsTitle) as String;
         var menu = new WatchUi.Menu2({ :title => titleStr });
 
-        // 1. Uruchom / Zatrzymaj stoper (poprawiony operator 'has')
+        // 1. Uruchom / Zatrzymaj stoper
         var isRunning = (TimerManager has :isRunning) ? TimerManager.isRunning : false;
         var timerTitleRes = isRunning ? Rez.Strings.StopTimer : Rez.Strings.StartTimer;
         var timerTitle = WatchUi.loadResource(timerTitleRes) as String;
@@ -22,7 +22,17 @@ module SettingsMenu {
             )
         );
 
-        // 2. Wybór czasu stopera
+        // 2. Restartuj stoper (NOWA OPCJA)
+        menu.addItem(
+            new WatchUi.MenuItem(
+                "Restartuj stoper", // Możesz też przenieść to do stringów XML
+                null,
+                "reset_timer",
+                null
+            )
+        );
+
+        // 3. Wybór czasu stopera
         var currentFormatted = TimerManager.getFormattedTime();
         var durationLabelStr = WatchUi.loadResource(Rez.Strings.TimerDurationLabel) as String;
         menu.addItem(
@@ -34,7 +44,7 @@ module SettingsMenu {
             )
         );
 
-        // 3. Włączenie / Wyłączenie dźwięku
+        // 4. Włączenie / Wyłączenie dźwięku
         var soundEnabled = TimerManager.isSoundEnabled;
         var soundStatusRes = soundEnabled ? Rez.Strings.StatusOn : Rez.Strings.StatusOff;
         var soundStatus = WatchUi.loadResource(soundStatusRes) as String;
@@ -49,7 +59,7 @@ module SettingsMenu {
             )
         );
 
-        // 4. Kolor ekranu
+        // 5. Kolor ekranu
         var colorLabelStr = WatchUi.loadResource(Rez.Strings.ScreenColor) as String;
         menu.addItem(
             new WatchUi.MenuItem(
@@ -75,6 +85,11 @@ class SettingsMenuDelegate extends WatchUi.Menu2InputDelegate {
 
         if (id.equals("toggle_timer")) {
             TimerManager.toggleTimer();
+            WatchUi.popView(WatchUi.SLIDE_DOWN);
+            WatchUi.requestUpdate();
+        }
+        else if (id.equals("reset_timer")) {
+            TimerManager.resetTimer();
             WatchUi.popView(WatchUi.SLIDE_DOWN);
             WatchUi.requestUpdate();
         }

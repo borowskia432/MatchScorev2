@@ -26,6 +26,8 @@ module SessionManager {
     var _lapJumpField as FitContributor.Field or Null = null;
 
     var _nextLapDistanceMeters as Float = 1000.0;
+    var _lastLapScoreA as Number = 0;
+    var _lastLapScoreB as Number = 0;
 
     // Unikalne ID dla pól FIT (Session)
     const FIT_SCORE_A_SUM_ID = 1;
@@ -40,6 +42,10 @@ module SessionManager {
     const FIT_LAP_SCORE_B_ID = 12;
     const FIT_LAP_BURST_ID = 13;
     const FIT_LAP_JUMP_ID = 14;
+
+    function isSessionActive() as Boolean {
+        return (session != null) && session.isRecording();
+    }
 
     function startSession(sessionName as String, sport as Activity.Sport) as Void {
         if (session == null) {
@@ -159,40 +165,39 @@ JumpManager.reset();
     }
 
     // Wywoływane przy kliknięciu "Nowy set" z menu
+    function finalizeCurrentSet() as Void {
+        if (AppConfig.volleyballScoreA > AppConfig.volleyballScoreB) {
+            AppConfig.volleyballSetsA++;
+        } else if (AppConfig.volleyballScoreB > AppConfig.volleyballScoreA) {
+            AppConfig.volleyballSetsB++;
+        }
+
+        addManualLap();
+    }
+
     function addManualLap() as Void {
         var s = session;
         if (s != null && s.isRecording()) {
-            
-           var currentScoreA = AppConfig.volleyballScoreA;
-var currentScoreB = AppConfig.volleyballScoreB;
+            var currentScoreA = AppConfig.volleyballScoreA;
+            var currentScoreB = AppConfig.volleyballScoreB;
+            var currentBursts = SportsMetricsManager.getSetBursts();
+            var currentJumps = SportsMetricsManager.getSetJumps();
 
-var currentBursts = SportsMetricsManager.getSetBursts();
-var currentJumps = SportsMetricsManager.getSetJumps();
+            _lastLapScoreA = currentScoreA;
+            _lastLapScoreB = currentScoreB;
 
-            System.println("SessionManager [LAP DEBUG]: Zapisywanie seta -> Wynik A: " + currentScoreA + 
-                           ", Wynik B: " + currentScoreB + 
-                           ", Zrywy: " + currentBursts + 
-                           ", Wyskoki: " + currentJumps);
-
-            // 1. Zapisz dane obecnego seta do pól lapa FIT
             if (_lapScoreAField != null) { _lapScoreAField.setData(currentScoreA); }
             if (_lapScoreBField != null) { _lapScoreBField.setData(currentScoreB); }
             if (_lapBurstField != null)  { _lapBurstField.setData(currentBursts); }
             if (_lapJumpField != null)   { _lapJumpField.setData(currentJumps); }
 
-            // 2. Dodaj punkty seta do skumulowanego wyniku meczu
             AppConfig.matchScoreA += currentScoreA;
             AppConfig.matchScoreB += currentScoreB;
 
-            // 3. Dodaj fizyczny lap w pliku FIT (zamyka obecny set)
             s.addLap();
-            System.println("SessionManager: Wywołano s.addLap() - set zamknięty.");
-
-            // 4. Wyzeruj liczniki dla kolejnego seta
             AppConfig.resetVolleyballScores();
-SportsMetricsManager.resetSet();
-          
-        } 
+            SportsMetricsManager.resetSet();
+        }
     }
 
     function saveSession() as Boolean {
@@ -205,6 +210,11 @@ SportsMetricsManager.resetSet();
                 var currentScoreB = AppConfig.volleyballScoreB;
                 var currentBursts = SportsMetricsManager.getSetBursts();
                 var currentJumps  = SportsMetricsManager.getSetJumps();
+
+                if (currentScoreA == 0 && currentScoreB == 0 && (_lastLapScoreA > 0 || _lastLapScoreB > 0)) {
+                    currentScoreA = _lastLapScoreA;
+                    currentScoreB = _lastLapScoreB;
+                }
 
                 // Sprawdzamy czy ostatni set zdobył jakieś punkty. Jeśli tak, wliczamy go do setów wygranych
                 if (currentScoreA > 0 || currentScoreB > 0) {

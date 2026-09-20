@@ -82,24 +82,8 @@ class Screen3Delegate extends WatchUi.BehaviorDelegate {
     // Funkcja wywołująca nowy set / lap 
     // Zostawiona jako publiczna, wywołuj ją w logice Twojego VolleyballSettingsMenu po kliknięciu "Nowy set"
     public function triggerNewSetLap() as Void {
-        // Sprawdzamy kto wygrał set i aktualizujemy wygrane sety
-        if (AppConfig.volleyballScoreA > AppConfig.volleyballScoreB) {
-            AppConfig.volleyballSetsA++;
-        } else if (AppConfig.volleyballScoreB > AppConfig.volleyballScoreA) {
-            AppConfig.volleyballSetsB++;
-        }
-
-        // Dodanie manualnego lapa w sesji Garmin (FIT file lap)
-        if (SessionManager has :addManualLap) {
-            SessionManager.addManualLap();
-        }
-
-        // Reset punktów bieżącego seta
-        AppConfig.volleyballScoreA = 0;
-        AppConfig.volleyballScoreB = 0;
-        
+        SessionManager.finalizeCurrentSet();
         WatchUi.requestUpdate();
-        System.println(">>> Nowy set / Lap zarejestrowany. Stan setów: " + AppConfig.volleyballSetsA + "-" + AppConfig.volleyballSetsB);
     }
 
     private function openSettingsMenu() as Boolean {

@@ -22,6 +22,7 @@ module SessionManager {
     // Pola przypisane do konkretnego lapa / seta (rozpiska na każdy set)
     var _lapScoreAField as FitContributor.Field or Null = null;
     var _lapScoreBField as FitContributor.Field or Null = null;
+    var _lapSetResultField as FitContributor.Field or Null = null;
     var _lapBurstField as FitContributor.Field or Null = null;
     var _lapJumpField as FitContributor.Field or Null = null;
 
@@ -40,8 +41,13 @@ module SessionManager {
     // Unikalne ID dla pól FIT (Lap / Set)
     const FIT_LAP_SCORE_A_ID = 11;
     const FIT_LAP_SCORE_B_ID = 12;
-    const FIT_LAP_BURST_ID = 13;
-    const FIT_LAP_JUMP_ID = 14;
+    const FIT_LAP_SET_RESULT_ID = 13;
+    const FIT_LAP_BURST_ID = 14;
+    const FIT_LAP_JUMP_ID = 15;
+
+    function formatSetResultLabel(setNumber as Number, scoreA as Number, scoreB as Number) as String {
+        return "Set " + setNumber.toString() + " A" + scoreA.toString() + ":" + scoreB.toString() + "B";
+    }
 
     function isSessionActive() as Boolean {
         return (session != null) && session.isRecording();
@@ -110,6 +116,11 @@ JumpManager.reset();
                     { :mesgType => FitContributor.MESG_TYPE_LAP, :units => "pkt" }
                 );
 
+                _lapSetResultField = s.createField(
+                    "set_result_label", FIT_LAP_SET_RESULT_ID, FitContributor.DATA_TYPE_STRING,
+                    { :mesgType => FitContributor.MESG_TYPE_LAP, :units => "set" }
+                );
+
                 _lapBurstField = s.createField(
                     "set_bursts", FIT_LAP_BURST_ID, FitContributor.DATA_TYPE_UINT16,
                     { :mesgType => FitContributor.MESG_TYPE_LAP, :units => "zrywów" }
@@ -164,12 +175,13 @@ JumpManager.reset();
         }
     }
 
-    function writeLapSnapshot(scoreA as Number, scoreB as Number, bursts as Number, jumps as Number) as Void {
+    function writeLapSnapshot(scoreA as Number, scoreB as Number, bursts as Number, jumps as Number, setNumber as Number) as Void {
         _lastLapScoreA = scoreA;
         _lastLapScoreB = scoreB;
 
         if (_lapScoreAField != null) { _lapScoreAField.setData(scoreA); }
         if (_lapScoreBField != null) { _lapScoreBField.setData(scoreB); }
+        if (_lapSetResultField != null) { _lapSetResultField.setData(formatSetResultLabel(setNumber, scoreA, scoreB)); }
         if (_lapBurstField != null)  { _lapBurstField.setData(bursts); }
         if (_lapJumpField != null)   { _lapJumpField.setData(jumps); }
     }
@@ -195,8 +207,13 @@ JumpManager.reset();
             var currentScoreB = AppConfig.volleyballScoreB;
             var currentBursts = SportsMetricsManager.getSetBursts();
             var currentJumps = SportsMetricsManager.getSetJumps();
+            var setNumber = AppConfig.volleyballSetsA + AppConfig.volleyballSetsB;
 
-            writeLapSnapshot(currentScoreA, currentScoreB, currentBursts, currentJumps);
+            if (setNumber <= 0) {
+                setNumber = 1;
+            }
+
+            writeLapSnapshot(currentScoreA, currentScoreB, currentBursts, currentJumps, setNumber);
             AppConfig.matchScoreA += currentScoreA;
             AppConfig.matchScoreB += currentScoreB;
 
@@ -216,13 +233,14 @@ JumpManager.reset();
                 var currentScoreB = AppConfig.volleyballScoreB;
                 var currentBursts = SportsMetricsManager.getSetBursts();
                 var currentJumps  = SportsMetricsManager.getSetJumps();
+                var setNumber = AppConfig.volleyballSetsA + AppConfig.volleyballSetsB + 1;
 
                 if (currentScoreA == 0 && currentScoreB == 0 && (_lastLapScoreA > 0 || _lastLapScoreB > 0)) {
                     currentScoreA = _lastLapScoreA;
                     currentScoreB = _lastLapScoreB;
                 }
 
-                writeLapSnapshot(currentScoreA, currentScoreB, currentBursts, currentJumps);
+                writeLapSnapshot(currentScoreA, currentScoreB, currentBursts, currentJumps, setNumber);
 
                 // Nie zwiększamy liczby setów tutaj, bo to już zostało policzone w finalizeCurrentSet().
                 // Wartości session summary zapisujemy jako bieżące, już zatwierdzone stany.
@@ -265,6 +283,7 @@ if (_jumpSummaryField != null) {
             _jumpSummaryField = null;
             _lapScoreAField = null;
             _lapScoreBField = null;
+            _lapSetResultField = null;
             _lapBurstField = null;
             _lapJumpField = null;
 
@@ -293,6 +312,7 @@ if (_jumpSummaryField != null) {
             _jumpSummaryField = null;
             _lapScoreAField = null;
             _lapScoreBField = null;
+            _lapSetResultField = null;
             _lapBurstField = null;
             _lapJumpField = null;
         }

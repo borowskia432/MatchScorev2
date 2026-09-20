@@ -164,11 +164,24 @@ JumpManager.reset();
         }
     }
 
+    function writeLapSnapshot(scoreA as Number, scoreB as Number, bursts as Number, jumps as Number) as Void {
+        _lastLapScoreA = scoreA;
+        _lastLapScoreB = scoreB;
+
+        if (_lapScoreAField != null) { _lapScoreAField.setData(scoreA); }
+        if (_lapScoreBField != null) { _lapScoreBField.setData(scoreB); }
+        if (_lapBurstField != null)  { _lapBurstField.setData(bursts); }
+        if (_lapJumpField != null)   { _lapJumpField.setData(jumps); }
+    }
+
     // Wywoływane przy kliknięciu "Nowy set" z menu
     function finalizeCurrentSet() as Void {
-        if (AppConfig.volleyballScoreA > AppConfig.volleyballScoreB) {
+        var currentScoreA = AppConfig.volleyballScoreA;
+        var currentScoreB = AppConfig.volleyballScoreB;
+
+        if (currentScoreA > currentScoreB) {
             AppConfig.volleyballSetsA++;
-        } else if (AppConfig.volleyballScoreB > AppConfig.volleyballScoreA) {
+        } else if (currentScoreB > currentScoreA) {
             AppConfig.volleyballSetsB++;
         }
 
@@ -183,14 +196,7 @@ JumpManager.reset();
             var currentBursts = SportsMetricsManager.getSetBursts();
             var currentJumps = SportsMetricsManager.getSetJumps();
 
-            _lastLapScoreA = currentScoreA;
-            _lastLapScoreB = currentScoreB;
-
-            if (_lapScoreAField != null) { _lapScoreAField.setData(currentScoreA); }
-            if (_lapScoreBField != null) { _lapScoreBField.setData(currentScoreB); }
-            if (_lapBurstField != null)  { _lapBurstField.setData(currentBursts); }
-            if (_lapJumpField != null)   { _lapJumpField.setData(currentJumps); }
-
+            writeLapSnapshot(currentScoreA, currentScoreB, currentBursts, currentJumps);
             AppConfig.matchScoreA += currentScoreA;
             AppConfig.matchScoreB += currentScoreB;
 
@@ -216,32 +222,20 @@ JumpManager.reset();
                     currentScoreB = _lastLapScoreB;
                 }
 
-                // Sprawdzamy czy ostatni set zdobył jakieś punkty. Jeśli tak, wliczamy go do setów wygranych
-                if (currentScoreA > 0 || currentScoreB > 0) {
-                    if (currentScoreA > currentScoreB) {
-                        AppConfig.volleyballSetsA++;
-                    } else if (currentScoreB > currentScoreA) {
-                        AppConfig.volleyballSetsB++;
-                    }
-                }
+                writeLapSnapshot(currentScoreA, currentScoreB, currentBursts, currentJumps);
 
-                if (_lapScoreAField != null) { _lapScoreAField.setData(currentScoreA); }
-                if (_lapScoreBField != null) { _lapScoreBField.setData(currentScoreB); }
-                if (_lapBurstField != null)  { _lapBurstField.setData(currentBursts); }
-                if (_lapJumpField != null)   { _lapJumpField.setData(currentJumps); }
-
-                // Dodaj punkty ostatniego seta do sumarycznych punktów meczu
+                // Nie zwiększamy liczby setów tutaj, bo to już zostało policzone w finalizeCurrentSet().
+                // Wartości session summary zapisujemy jako bieżące, już zatwierdzone stany.
                 AppConfig.matchScoreA += currentScoreA;
                 AppConfig.matchScoreB += currentScoreB;
 
-                // Zamknij ostatni lap (set) w pliku FIT
                 s.addLap();
             }
 
             // 2. Zapisz skumulowane dane całego meczu w polach sesji FIT (PUNKTY I SETY)
             if (_scoreASummaryField != null) { _scoreASummaryField.setData(AppConfig.matchScoreA); }
             if (_scoreBSummaryField != null) { _scoreBSummaryField.setData(AppConfig.matchScoreB); }
-            
+
             if (_setsASummaryField != null) { _setsASummaryField.setData(AppConfig.volleyballSetsA); }
             if (_setsBSummaryField != null) { _setsBSummaryField.setData(AppConfig.volleyballSetsB); }
 

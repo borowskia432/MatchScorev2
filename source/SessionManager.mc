@@ -24,6 +24,7 @@ module SessionManager {
     var _footballScoreBField as FitContributor.Field or Null = null;
     var _burstSummaryField as FitContributor.Field or Null = null;
     var _jumpSummaryField as FitContributor.Field or Null = null;
+    var _jumpChartField as FitContributor.Field or Null = null;
     
     // NOWE: Pola podsumowania wyniku w setach
     var _setsASummaryField as FitContributor.Field or Null = null;
@@ -48,6 +49,7 @@ module SessionManager {
     const FIT_JUMP_SUM_ID = 14;
     const FIT_FOOTBALL_SCORE_A_ID = 15;
     const FIT_FOOTBALL_SCORE_B_ID = 16;
+    const FIT_JUMP_CHART_ID = 17;
 
     function isSessionActive() as Boolean {
         return (session != null) && session.isRecording();
@@ -114,6 +116,11 @@ module SessionManager {
                     { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "wyskoki" }
                 );
 
+                _jumpChartField = s.createField(
+                    "jump_count_total", FIT_JUMP_CHART_ID, FitContributor.DATA_TYPE_UINT16,
+                    { :mesgType => FitContributor.MESG_TYPE_RECORD, :units => "wyskoki" }
+                );
+
                 s.start();
                 JumpManager.start();
                 System.println("SessionManager: Sesja wystartowała z polami FIT dla setów.");
@@ -142,6 +149,12 @@ module SessionManager {
                     }
                 }
             }
+        }
+    }
+
+    function recordJumpCount(jumpCount as Number) as Void {
+        if (_jumpChartField != null) {
+            _jumpChartField.setData(jumpCount);
         }
     }
 
@@ -260,6 +273,7 @@ if (_jumpSummaryField != null) {
             _setsBSummaryField = null;
             _burstSummaryField = null;
             _jumpSummaryField = null;
+            _jumpChartField = null;
 
             GPSManager.stopGPS();
             return success;
@@ -295,6 +309,7 @@ if (_jumpSummaryField != null) {
             _setsBSummaryField = null;
             _burstSummaryField = null;
             _jumpSummaryField = null;
+            _jumpChartField = null;
         }
 
         GPSManager.stopGPS();

@@ -73,6 +73,7 @@
     <string id="LabelSummaryJumps">Jumps count</string>
     <string id="JumpLabel">Jumps</string>
     <string id="JumpUnits">Jumps</string>
+    <string id="JumpChartLabel">Total jumps</string>
     <!-- Wykres różnicy punktowej -->
     <string id="ScoreMarginChartLabel">Score Difference (A - B)</string>
     <string id="ScoreMarginDataLabel">Margin</string>

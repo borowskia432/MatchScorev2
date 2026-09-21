@@ -1,93 +1,72 @@
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [WatchUi,1,14,21]; ]
 import Toybox.WatchUi;
-[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
+import Toybox.System;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
 import Toybox.Lang;
-[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 4; @symbol_classdef = [SummaryDelegate,4,6,21]; @symbol_extends<0> = [WatchUi,4,30,37]; @symbol_extends<1> = [BehaviorDelegate,4,38,54]; ]
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 5; @symbol_classdef = [SummaryDelegate,5,6,21]; @symbol_extends<0> = [WatchUi,5,30,37]; @symbol_extends<1> = [BehaviorDelegate,5,38,54]; ]
 class SummaryDelegate extends WatchUi.BehaviorDelegate {
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 4; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 5; ]
     <init> {
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 4; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 5; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 7; @symbol_functiondef = [initialize,7,13,23]; ]
     function initialize() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_6_26_8_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 7 8 ]
-        symbol [ BehaviorDelegate %tmp.2 7 8 24 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_7_26_9_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 8 8 ]
+        symbol [ BehaviorDelegate %tmp.2 8 8 24 ];
         %tmp.2 = getv ? :BehaviorDelegate;
-        symbol [ initialize %tmp.3 7 25 35 ];
+        symbol [ initialize %tmp.3 8 25 35 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_6_26_8_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_7_26_9_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 10; @symbol_functiondef = [onSelect,10,13,21]; @symbol_return<0> = [Boolean,10,27,34]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 11; @symbol_functiondef = [onSelect,11,13,21]; @symbol_return<0> = [Boolean,11,27,34]; ]
     function onSelect() as Boolean {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_10_35_13_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 11 8 ]
-        %tmp.1 = self;
-        symbol [ saveAndExit %tmp.2 11 8 19 ];
-        %tmp.2 = getv function %tmp.1 :saveAndExit;
-        invoke %tmp.1 %tmp.2();
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_11_35_14_4_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 12 8 ]
-        %tmp.3 = true;
-        ret %tmp.3;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_10_35_13_4_stop:
-    }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 15; @symbol_functiondef = [onBack,15,13,19]; @symbol_return<0> = [Boolean,15,25,32]; ]
-    function onBack() as Boolean {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_15_33_18_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 16 8 ]
         %tmp.1 = self;
-        symbol [ saveAndExit %tmp.2 16 8 19 ];
+        symbol [ saveAndExit %tmp.2 12 8 19 ];
         %tmp.2 = getv function %tmp.1 :saveAndExit;
         invoke %tmp.1 %tmp.2();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 17 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 13 8 ]
         %tmp.3 = true;
         ret %tmp.3;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_15_33_18_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_11_35_14_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 20; @symbol_functiondef = [saveAndExit,20,21,32]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 16; @symbol_functiondef = [onBack,16,13,19]; @symbol_return<0> = [Boolean,16,25,32]; ]
+    function onBack() as Boolean {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_16_33_19_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 17 8 ]
+        %tmp.1 = self;
+        symbol [ saveAndExit %tmp.2 17 8 19 ];
+        %tmp.2 = getv function %tmp.1 :saveAndExit;
+        invoke %tmp.1 %tmp.2();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 18 8 ]
+        %tmp.3 = true;
+        ret %tmp.3;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_16_33_19_4_stop:
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 21; @symbol_functiondef = [saveAndExit,21,21,32]; ]
     private
     function saveAndExit() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_20_43_34_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 25 8 ]
-        symbol [ SessionManager %tmp.2 25 8 22 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_30_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 26 8 ]
+        symbol [ SessionManager %tmp.2 26 8 22 ];
         %tmp.2 = getv ? :SessionManager;
-        symbol [ saveSession %tmp.3 25 23 34 ];
+        symbol [ saveSession %tmp.3 26 23 34 ];
         %tmp.3 = getv function %tmp.2 :saveSession;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 28 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_20_43_34_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_20_43_34_4_stop" ]
-        %menuPair.1 = local;
-        symbol [ menuPair %menuPair.1 28 12 20 ];
-        symbol [ MainMenu %tmp.5 28 23 31 ];
-        %tmp.5 = getv ? :MainMenu;
-        symbol [ createMenu %tmp.6 28 32 42 ];
-        %tmp.6 = getv function %tmp.5 :createMenu;
-        %tmp.7 = invoke %tmp.5 %tmp.6();
-        lputv %menuPair.1 %tmp.7;
-        symbol [ menuPair %menuPair.1 28 12 20 ];
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc" 29 8 ]
-        symbol [ WatchUi %tmp.8 29 8 15 ];
-        %tmp.8 = getm $.Toybox.WatchUi;
-        symbol [ switchToView %tmp.9 29 16 28 ];
-        %tmp.9 = getv function %tmp.8 :switchToView;
-        %tmp.10 = lgetv %menuPair.1;
-        symbol [ menuPair %tmp.10 30 12 20 ];
-        %tmp.11 = 0;
-        %tmp.12 = agetv %tmp.10 %tmp.11;
-        %tmp.13 = lgetv %menuPair.1;
-        symbol [ menuPair %tmp.13 31 12 20 ];
-        %tmp.14 = 1;
-        %tmp.15 = agetv %tmp.13 %tmp.14;
-        symbol [ WatchUi %tmp.16 32 12 19 ];
-        %tmp.16 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_IMMEDIATE %tmp.17 32 20 35 ];
-        %tmp.17 = getv %tmp.16 :SLIDE_IMMEDIATE;
-        invoke %tmp.8 %tmp.9(%tmp.12, %tmp.15, %tmp.17);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_20_43_34_4_stop:
+        symbol [ System %tmp.4 29 8 14 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ exit %tmp.5 29 15 19 ];
+        %tmp.5 = getv function %tmp.4 :exit;
+        invoke %tmp.4 %tmp.5();
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_SummaryDelegate_mc_21_43_30_4_stop:
     }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\SummaryDelegate.mc"; @line = 1; ]

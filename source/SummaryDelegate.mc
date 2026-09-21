@@ -1,4 +1,5 @@
 import Toybox.WatchUi;
+import Toybox.System;
 import Toybox.Lang;
 
 class SummaryDelegate extends WatchUi.BehaviorDelegate {
@@ -24,12 +25,7 @@ class SummaryDelegate extends WatchUi.BehaviorDelegate {
         // bezpośrednio z SportsMetricsManager.
         SessionManager.saveSession();
 
-        // Po zapisie wracamy do menu aplikacji zamiast otwierać ekran systemowy zegarka.
-        var menuPair = MainMenu.createMenu();
-        WatchUi.switchToView(
-            menuPair[0],
-            menuPair[1],
-            WatchUi.SLIDE_IMMEDIATE
-        );
+        // Po zapisie zamykamy aplikacje i wracamy do ekranu zegarka.
+        System.exit();
     }
 }

@@ -115,6 +115,7 @@ module JumpManager {
     // =====================================================
     function addJump() as Void {
         SportsMetricsManager.addJump();
+        SessionManager.recordJumpCount(SportsMetricsManager.getTotalJumps());
 
         System.println(
             "JumpManager: Wykryto wyskok! " +
@@ -129,6 +130,7 @@ module JumpManager {
     // =====================================================
     function addManualJump() as Void {
         SportsMetricsManager.addJump();
+        SessionManager.recordJumpCount(SportsMetricsManager.getTotalJumps());
 
         System.println(
             "JumpManager: Ręcznie dodano wyskok. " +

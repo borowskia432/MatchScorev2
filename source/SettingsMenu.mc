@@ -25,7 +25,7 @@ module SettingsMenu {
         // 2. Restartuj stoper (NOWA OPCJA)
         menu.addItem(
             new WatchUi.MenuItem(
-                "Restartuj stoper", // Możesz też przenieść to do stringów XML
+                WatchUi.loadResource(Rez.Strings.RestartTimer) as String,
                 null,
                 "reset_timer",
                 null
@@ -116,10 +116,10 @@ class SettingsMenuDelegate extends WatchUi.Menu2InputDelegate {
         var subTitleStr = WatchUi.loadResource(Rez.Strings.TimerDurationLabel) as String;
         var subMenu = new WatchUi.Menu2({ :title => subTitleStr });
 
-        subMenu.addItem(new WatchUi.MenuItem("30 s", null, "dur_30", null));
-        subMenu.addItem(new WatchUi.MenuItem("5 min", null, "dur_300", null));
-        subMenu.addItem(new WatchUi.MenuItem("10 min", null, "dur_600", null));
-        subMenu.addItem(new WatchUi.MenuItem("15 min", null, "dur_900", null));
+        subMenu.addItem(new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.Duration30) as String, null, "dur_30", null));
+        subMenu.addItem(new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.Duration5Min) as String, null, "dur_300", null));
+        subMenu.addItem(new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.Duration10Min) as String, null, "dur_600", null));
+        subMenu.addItem(new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.Duration15Min) as String, null, "dur_900", null));
 
         WatchUi.pushView(subMenu, new DurationMenuDelegate(), WatchUi.SLIDE_UP);
     }

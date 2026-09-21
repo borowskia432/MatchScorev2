@@ -11,6 +11,11 @@ class Screen1View extends WatchUi.View {
     private var _statusPauseStr as String = "";
     private var _labelBursts as String = "";
     private var _labelJumps as String = "";
+    private var _maxSpeedLabel as String = "";
+    private var _heartRateLabel as String = "";
+    private var _speedUnit as String = "";
+    private var _metersPerMinuteUnit as String = "";
+    private var _distanceUnit as String = "";
 
     function initialize() {
         View.initialize();
@@ -19,6 +24,11 @@ class Screen1View extends WatchUi.View {
         _statusPauseStr    = WatchUi.loadResource(Rez.Strings.StatusPause) as String;
         _labelBursts       = WatchUi.loadResource(Rez.Strings.LabelBursts) as String;
         _labelJumps        = WatchUi.loadResource(Rez.Strings.LabelJumps) as String;
+        _maxSpeedLabel     = WatchUi.loadResource(Rez.Strings.MaxSpeedLabel) as String;
+        _heartRateLabel    = WatchUi.loadResource(Rez.Strings.HeartRateLabel) as String;
+        _speedUnit         = WatchUi.loadResource(Rez.Strings.SpeedUnit) as String;
+        _metersPerMinuteUnit = WatchUi.loadResource(Rez.Strings.MetersPerMinuteUnit) as String;
+        _distanceUnit      = WatchUi.loadResource(Rez.Strings.DistanceUnit) as String;
     }
 
     function onShow() as Void {
@@ -40,9 +50,10 @@ class Screen1View extends WatchUi.View {
         var width = dc.getWidth();
         var height = dc.getHeight();
         var cx = width / 2;
+        var screenSize = width < height ? width : height;
 
         // Pasek HR
-        HrArcRenderer.draw(dc, cx, height / 2, width);
+        HrArcRenderer.draw(dc, cx, height / 2, screenSize);
 
         // Kolor tekstu
         dc.setColor(AppConfig.getTextColor(), Graphics.COLOR_TRANSPARENT);
@@ -76,9 +87,12 @@ class Screen1View extends WatchUi.View {
         var vmaxKmH = maxSpeedMps * 3.6;
         var metersPerMin = currentSpeedMps * 60.0;
 
-        var speedMetricsText = Lang.format("Vmax: $1$ km/h | $2$ M/min", [
+        var speedMetricsText = Lang.format("$1$ $2$ $3$ | $4$ $5$", [
+            _maxSpeedLabel,
             vmaxKmH.format("%.1f"), 
-            metersPerMin.format("%.0f")
+            _speedUnit,
+            metersPerMin.format("%.0f"),
+            _metersPerMinuteUnit
         ]);
 
         dc.drawText(
@@ -93,9 +107,11 @@ class Screen1View extends WatchUi.View {
         var hrVal = (info != null && info.currentHeartRate != null) ? info.currentHeartRate.toString() : "--";
         var distVal = (info != null && info.elapsedDistance != null) ? (info.elapsedDistance / 1000.0) : 0.00;
 
-        var hrDistText = Lang.format("HR: $1$ | $2$ km", [
+        var hrDistText = Lang.format("$1$ $2$ | $3$ $4$", [
+            _heartRateLabel,
             hrVal, 
-            distVal.format("%.2f")
+            distVal.format("%.2f"),
+            _distanceUnit
         ]);
 
         dc.drawText(

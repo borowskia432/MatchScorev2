@@ -1,14 +1,8 @@
 <resources>
     <!-- Ogólne / Aplikacja -->
     <string id="AppName">MatchScore V2</string>
-    <string id="MainMenuTitle">Select Session</string>
-    
-    <!-- Menu główne - Sesje -->
-    <string id="FootballRun">Football - Running</string>
-    <string id="Football">Football</string>
-    <string id="Volleyball">Volleyball</string>
-    
-    <!-- Ekrany i Statusy -->
+
+    <!-- Menu główne i tryby -->
     <string id="MainMenuTitle">Select Sport</string>
     <string id="FootballRun">Football / Run</string>
     <string id="Football">Football (Soccer)</string>
@@ -27,6 +21,13 @@
     <string id="SettingsTitle">SETTINGS</string>
     <string id="StartTimer">Start Timer</string>
     <string id="StopTimer">Stop Timer</string>
+    <string id="RestartTimer">Reset Timer</string>
+    <string id="JumpCalibration">Calibrate Jump Sensor</string>
+    <string id="JumpCalibrationTitle">Jump Calibration</string>
+    <string id="JumpCalibrationInstruction">Keep your wrist still and down</string>
+    <string id="JumpCalibrationProgress">Calibrating: $1$ s</string>
+    <string id="JumpCalibrationDone">Calibration complete</string>
+    <string id="JumpCalibrationReady">Press BACK to return</string>
     <string id="ScreenColor">Screen Color</string>
     <string id="ColorBlack">Black</string>
     <string id="ColorWhite">White</string>
@@ -38,10 +39,19 @@
 <string id="StatusOn">Enabled</string>
 <string id="StatusOff">Disabled</string>
 <string id="SoundLabel">Sound on change</string>
-<string id="SelectModeTitle">Select Mode</string>
-<string id="ModeVolleyball">Volleyball (Manual Laps/Sets)</string>
-<string id="ModeTraining">Training (Auto-Lap 1km)</string>
+    <string id="ModeVolleyball">Volleyball (Manual Laps/Sets)</string>
+    <string id="ModeTraining">Training (Auto-Lap 1km)</string>
     <string id="SetsLabel">Sets</string>
+    <string id="Duration30">30 sec</string>
+    <string id="Duration5Min">5 min</string>
+    <string id="Duration10Min">10 min</string>
+    <string id="Duration15Min">15 min</string>
+    <string id="MaxSpeedLabel">Vmax:</string>
+    <string id="HeartRateLabel">HR:</string>
+    <string id="SpeedUnit">km/h</string>
+    <string id="MetersPerMinuteUnit">m/min</string>
+    <string id="DistanceUnit">km</string>
+    <string id="CaloriesUnit">kcal</string>
     <!-- Wyniki i Statystyki bieżące -->
     <string id="ScoreALabel">Team A Score</string>
     <string id="ScoreBLabel">Team B Score</string>
@@ -74,6 +84,7 @@
     <string id="JumpLabel">Jumps</string>
     <string id="JumpUnits">Jumps</string>
     <string id="JumpChartLabel">Total jumps</string>
+    <string id="JumpChartTitle">Jumps over time</string>
     <!-- Wykres różnicy punktowej -->
     <string id="ScoreMarginChartLabel">Score Difference (A - B)</string>
     <string id="ScoreMarginDataLabel">Margin</string>
@@ -82,7 +93,6 @@
     <string id="SummaryTitle">SUMMARY</string>
     <string id="SummaryMatchLabel">Match:</string>
     <string id="DistanceLabel">Distance:</string>
-    <string id="MaxSpeedLabel">Vmax:</string>
     <string id="HrLabel">HR Max/Min:</string>
     <string id="CaloriesLabel">Calories:</string>
     <string id="CloseHint">[SELECT] Close</string>

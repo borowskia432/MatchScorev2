@@ -122,7 +122,9 @@ module SessionManager {
                 );
 
                 s.start();
-                JumpManager.start();
+                if (sport == Activity.SPORT_VOLLEYBALL) {
+                    JumpManager.start();
+                }
                 System.println("SessionManager: Sesja wystartowała z polami FIT dla setów.");
             }
         }

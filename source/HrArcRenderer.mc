@@ -14,6 +14,9 @@ class HrArcRenderer {
         width as Number
     ) as Void {
         var baseRadius = (width / 2) - 6;
+        if (baseRadius < 1) {
+            return;
+        }
 
         // Rysowanie stref tętna (Łuki)
         drawZoneArcs(dc, cx, cy, baseRadius);

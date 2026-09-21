@@ -16,6 +16,6 @@
         <fitField id="14" displayInChart="false" displayInActivitySummary="true" sortOrder="14" precision="0" dataLabel="@Strings.JumpLabel" unitLabel="@Strings.JumpUnits" />
         <fitField id="15" displayInChart="false" displayInActivitySummary="true" sortOrder="15" precision="0" dataLabel="@Strings.FootballScoreALabel" unitLabel="@Strings.GoalUnits" />
         <fitField id="16" displayInChart="false" displayInActivitySummary="true" sortOrder="16" precision="0" dataLabel="@Strings.FootballScoreBLabel" unitLabel="@Strings.GoalUnits" />
-        <fitField id="17" displayInChart="true" displayInActivitySummary="false" sortOrder="17" precision="0" dataLabel="@Strings.JumpChartLabel" unitLabel="@Strings.JumpUnits" />
+        <fitField id="17" displayInChart="true" displayInActivitySummary="false" sortOrder="17" precision="0" chartTitle="@Strings.JumpLabel" dataLabel="@Strings.JumpChartLabel" unitLabel="@Strings.JumpUnits" fillColor="#00FF00" />
     </fitContributions>
 </resources>

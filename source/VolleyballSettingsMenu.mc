@@ -9,6 +9,7 @@ module VolleyballSettingsMenu {
 
         var newSetStr = WatchUi.loadResource(Rez.Strings.NewSet) as String;
         var colorLabelStr = WatchUi.loadResource(Rez.Strings.ScreenColor) as String;
+        var calibrationStr = WatchUi.loadResource(Rez.Strings.JumpCalibration) as String;
 
         // Pozycja 1: Ręczne dodanie nowego seta / okrążenia
         menu.addItem(new WatchUi.MenuItem(
@@ -23,6 +24,13 @@ module VolleyballSettingsMenu {
             colorLabelStr,
             null,
             "toggle_color",
+            null
+        ));
+
+        menu.addItem(new WatchUi.MenuItem(
+            calibrationStr,
+            null,
+            "calibrate_jumps",
             null
         ));
 
@@ -46,6 +54,8 @@ class VolleyballSettingsMenuDelegate extends WatchUi.Menu2InputDelegate {
         } else if (id.equals("toggle_color")) {
             AppConfig.toggleBackgroundColor();
             WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
+        } else if (id.equals("calibrate_jumps")) {
+            WatchUi.pushView(new JumpCalibrationView(), new JumpCalibrationDelegate(), WatchUi.SLIDE_UP);
         }
     }
 }

@@ -12,6 +12,11 @@ class Screen3View extends WatchUi.View {
     private var _teamBLabel as String = "";
     private var _labelBursts as String = "";
     private var _labelJumps as String = "";
+    private var _maxSpeedLabel as String = "";
+    private var _heartRateLabel as String = "";
+    private var _speedUnit as String = "";
+    private var _metersPerMinuteUnit as String = "";
+    private var _distanceUnit as String = "";
     function initialize() {
         View.initialize();
         
@@ -20,6 +25,11 @@ class Screen3View extends WatchUi.View {
         _teamBLabel = WatchUi.loadResource(Rez.Strings.TeamB) as String;
         _labelBursts = WatchUi.loadResource(Rez.Strings.LabelBursts) as String;
         _labelJumps = WatchUi.loadResource(Rez.Strings.LabelJumps) as String;
+        _maxSpeedLabel = WatchUi.loadResource(Rez.Strings.MaxSpeedLabel) as String;
+        _heartRateLabel = WatchUi.loadResource(Rez.Strings.HeartRateLabel) as String;
+        _speedUnit = WatchUi.loadResource(Rez.Strings.SpeedUnit) as String;
+        _metersPerMinuteUnit = WatchUi.loadResource(Rez.Strings.MetersPerMinuteUnit) as String;
+        _distanceUnit = WatchUi.loadResource(Rez.Strings.DistanceUnit) as String;
     }
 
     function onShow() as Void {
@@ -41,20 +51,22 @@ class Screen3View extends WatchUi.View {
         var width = dc.getWidth();
         var height = dc.getHeight();
         var cx = width / 2;
+        var screenSize = width < height ? width : height;
+        var horizontalScale = screenSize / 280.0;
 
         // Pasek HR
-        HrArcRenderer.draw(dc, cx, height / 2, width);
+        HrArcRenderer.draw(dc, cx, height / 2, screenSize);
 
         // 1. Stan setów
         var setsString = _setsLabel + ": " + AppConfig.volleyballSetsA.toString() + " - " + AppConfig.volleyballSetsB.toString();
-        dc.drawText(cx, 45, Graphics.FONT_XTINY, setsString, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(cx, height * 0.161, Graphics.FONT_XTINY, setsString, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
  // 2. Etykiety Drużyn
-        dc.drawText(cx - 65, 80, Graphics.FONT_SMALL, _teamALabel, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(cx + 65, 80, Graphics.FONT_SMALL, _teamBLabel, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(cx - (65 * horizontalScale), height * 0.286, Graphics.FONT_SMALL, _teamALabel, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(cx + (65 * horizontalScale), height * 0.286, Graphics.FONT_SMALL, _teamBLabel, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         // 3. Wyniki
         var scoreString = AppConfig.volleyballScoreA.toString() + " : " + AppConfig.volleyballScoreB.toString();
-        dc.drawText(cx, 130, Graphics.FONT_NUMBER_HOT, scoreString, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(cx, height * 0.464, Graphics.FONT_NUMBER_HOT, scoreString, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         // Dane aktywności
         var info = Activity.getActivityInfo();
@@ -65,9 +77,12 @@ class Screen3View extends WatchUi.View {
         var vmaxKmH = maxSpeedMps * 3.6;
         var metersPerMin = currentSpeedMps * 60.0;
 
-        var speedMetricsText = Lang.format("Vmax: $1$ km/h | $2$ M/min", [
+        var speedMetricsText = Lang.format("$1$ $2$ $3$ | $4$ $5$", [
+            _maxSpeedLabel,
             vmaxKmH.format("%.1f"), 
-            metersPerMin.format("%.0f")
+            _speedUnit,
+            metersPerMin.format("%.0f"),
+            _metersPerMinuteUnit
         ]);
 
         dc.drawText(
@@ -82,9 +97,11 @@ class Screen3View extends WatchUi.View {
         var hrVal = (info != null && info.currentHeartRate != null) ? info.currentHeartRate.toString() : "--";
         var distVal = (info != null && info.elapsedDistance != null) ? (info.elapsedDistance / 1000.0) : 0.00;
 
-        var hrDistText = Lang.format("HR: $1$ | $2$ km", [
+        var hrDistText = Lang.format("$1$ $2$ | $3$ $4$", [
+            _heartRateLabel,
             hrVal, 
-            distVal.format("%.2f")
+            distVal.format("%.2f"),
+            _distanceUnit
         ]);
 
         dc.drawText(

@@ -1,305 +1,630 @@
-[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Activity,1,14,22]; ]
-import Toybox.Activity;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Math,1,14,18]; ]
+import Toybox.Math;
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
 import Toybox.Lang;
-[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Sensor,3,14,20]; ]
+import Toybox.Sensor;
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [System,4,14,20]; ]
 import Toybox.System;
-[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Time,4,14,18]; ]
-import Toybox.Time;
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 6; @symbol_moduledef = [JumpManager,6,7,18]; ]
 module JumpManager {
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 6; ]
     <init> {
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 8; @position = 8; @symbol_vardef = [_isJumping,8,8,18]; @symbol_type<0> = [Boolean,8,22,29]; ]
-    var _isJumping as Boolean = false;
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 9; @position = 8; @symbol_vardef = [_lastJumpTime,9,8,21]; @symbol_type<0> = [Number,9,25,31]; ]
-    var _lastJumpTime as Number = 0;
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 10; @position = 8; @symbol_vardef = [_lastSpeed,10,8,18]; @symbol_type<0> = [Float,10,22,27]; ]
-    var _lastSpeed as Float = 0.0;
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 12; @position = 10; @symbol_constdef = [JUMP_SPEED_THRESHOLD,12,10,30]; @symbol_type<0> = [Float,12,34,39]; ]
-    const JUMP_SPEED_THRESHOLD as Float = 3.2;
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 13; @position = 10; @symbol_constdef = [JUMP_RESET_THRESHOLD,13,10,30]; @symbol_type<0> = [Float,13,34,39]; ]
-    const JUMP_RESET_THRESHOLD as Float = 2.6;
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 14; @position = 10; @symbol_constdef = [JUMP_COOLDOWN_SECONDS,14,10,31]; @symbol_type<0> = [Number,14,35,41]; ]
-    const JUMP_COOLDOWN_SECONDS as Number = 2;
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 19; @symbol_functiondef = [reset,19,13,18]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 8; @position = 8; @symbol_vardef = [_isListening,8,8,20]; @symbol_type<0> = [Boolean,8,24,31]; ]
+    var _isListening as Boolean = false;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 9; @position = 8; @symbol_vardef = [_phase,9,8,14]; @symbol_type<0> = [Number,9,18,24]; ]
+    var _phase as Number = 0;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 10; @position = 8; @symbol_vardef = [_phaseSamples,10,8,21]; @symbol_type<0> = [Number,10,25,31]; ]
+    var _phaseSamples as Number = 0;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 11; @position = 8; @symbol_vardef = [_cooldownSamples,11,8,24]; @symbol_type<0> = [Number,11,28,34]; ]
+    var _cooldownSamples as Number = 0;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 14; @position = 10; @symbol_constdef = [TAKEOFF_THRESHOLD_G,14,10,29]; @symbol_type<0> = [Float,14,33,38]; ]
+    const TAKEOFF_THRESHOLD_G as Float = 1.35;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 15; @position = 10; @symbol_constdef = [AIRBORNE_THRESHOLD_G,15,10,30]; @symbol_type<0> = [Float,15,34,39]; ]
+    const AIRBORNE_THRESHOLD_G as Float = 0.65;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 16; @position = 10; @symbol_constdef = [LANDING_THRESHOLD_G,16,10,29]; @symbol_type<0> = [Float,16,33,38]; ]
+    const LANDING_THRESHOLD_G as Float = 1.30;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 17; @position = 10; @symbol_constdef = [MAX_PHASE_SAMPLES,17,10,27]; @symbol_type<0> = [Number,17,31,37]; ]
+    const MAX_PHASE_SAMPLES as Number = 20;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 18; @position = 10; @symbol_constdef = [COOLDOWN_SAMPLES,18,10,26]; @symbol_type<0> = [Number,18,30,36]; ]
+    const COOLDOWN_SAMPLES as Number = 50;
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 23; @symbol_functiondef = [reset,23,13,18]; ]
     function reset() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_19_29_24_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 20 8 ]
-        %tmp.1 = false;
-        symbol [ _isJumping ? 20 8 18 ];
-        putv self :_isJumping %tmp.1;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 21 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_23_29_28_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 24 8 ]
+        %tmp.1 = 0;
+        symbol [ _phase ? 24 8 14 ];
+        putv self :_phase %tmp.1;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 25 8 ]
         %tmp.2 = 0;
-        symbol [ _lastJumpTime ? 21 8 21 ];
-        putv self :_lastJumpTime %tmp.2;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 22 8 ]
-        %tmp.3 = 0.0;
-        symbol [ _lastSpeed ? 22 8 18 ];
-        putv self :_lastSpeed %tmp.3;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 23 8 ]
-        symbol [ System %tmp.4 23 8 14 ];
+        symbol [ _phaseSamples ? 25 8 21 ];
+        putv self :_phaseSamples %tmp.2;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 26 8 ]
+        %tmp.3 = 0;
+        symbol [ _cooldownSamples ? 26 8 24 ];
+        putv self :_cooldownSamples %tmp.3;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 27 8 ]
+        symbol [ System %tmp.4 27 8 14 ];
         %tmp.4 = getm $.Toybox.System;
-        symbol [ println %tmp.5 23 15 22 ];
+        symbol [ println %tmp.5 27 15 22 ];
         %tmp.5 = getv function %tmp.4 :println;
         %tmp.6 = "JumpManager: reset";
         invoke %tmp.4 %tmp.5(%tmp.6);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_19_29_24_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_23_29_28_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 32; @symbol_functiondef = [update,32,13,19]; ]
-    function update() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_32_30_60_4_start:
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 30; @symbol_functiondef = [start,30,13,18]; ]
+    function start() as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_30_29_53_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 31 8 ]
+        %tmp.1 = self;
+        symbol [ reset %tmp.2 31 8 13 ];
+        %tmp.2 = getv function %tmp.1 :reset;
+        invoke %tmp.1 %tmp.2();
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 33 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_33_8_39_8_if_stmt:
-        symbol [ SessionManager %tmp.2 33 12 26 ];
-        %tmp.2 = getv ? :SessionManager;
-        %tmp.4 = const :isSessionActive;
-        symbol [ isSessionActive %tmp.4 33 32 47 const ];
-        %tmp.5 = canhazplz %tmp.2 %tmp.4;
-        bf %tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_33_8_39_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_33_8_39_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_33_49_39_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 34 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_34_12_38_12_if_stmt:
-        symbol [ SessionManager %tmp.7 34 17 31 ];
-        %tmp.7 = getv ? :SessionManager;
-        %tmp.8 = as %tmp.7 { (interface { var isSessionActive; }) };
-        symbol [ isSessionActive %tmp.9 34 32 47 ];
-        %tmp.9 = getv function %tmp.8 :isSessionActive;
-        %tmp.10 = invoke %tmp.8 %tmp.9();
-        %tmp.11 = not %tmp.10;
-        bf %tmp.11 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_34_12_38_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_34_12_38_12_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_34_51_38_12_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 35 16 ]
-        %tmp.12 = false;
-        symbol [ _isJumping ? 35 16 26 ];
-        putv self :_isJumping %tmp.12;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 36 16 ]
-        %tmp.13 = 0.0;
-        symbol [ _lastSpeed ? 36 16 26 ];
-        putv self :_lastSpeed %tmp.13;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 37 16 ]
-        ret ?;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_34_51_38_12_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_34_12_38_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_34_12_38_12_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_33_49_39_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_33_8_39_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_33_8_39_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 41 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_32_30_60_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_32_30_60_4_stop" ]
-        %info.1 = local;
-        symbol [ info %info.1 41 12 16 ];
-        symbol [ Activity %tmp.14 41 19 27 ];
-        %tmp.14 = getm $.Toybox.Activity;
-        symbol [ getActivityInfo %tmp.15 41 28 43 ];
-        %tmp.15 = getv function %tmp.14 :getActivityInfo;
-        %tmp.16 = invoke %tmp.14 %tmp.15();
-        lputv %info.1 %tmp.16;
-        symbol [ info %info.1 41 12 16 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 42 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_32_30_60_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_32_30_60_4_stop" ]
-        %speed.2 = local;
-        symbol [ speed %speed.2 42 12 17 ];
-        %tmp.17 = 0.0;
-        lputv %speed.2 %tmp.17;
-        symbol [ speed %speed.2 42 12 17 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 44 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_44_8_46_8_if_stmt:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_44_12_44_49_begin:
-        %tmp.18 = lgetv %info.1;
-        symbol [ info %tmp.18 44 12 16 ];
-        %tmp.19 = null;
-        %tmp.20 = ne %tmp.18 %tmp.19;
-        bf %tmp.20 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_44_8_46_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_44_28_44_49_true:
-        %tmp.21 = lgetv %info.1;
-        symbol [ info %tmp.21 44 28 32 ];
-        %tmp.22 = as %tmp.21 { (!Null) };
-        symbol [ currentSpeed %tmp.23 44 33 45 ];
-        %tmp.23 = getv %tmp.22 :currentSpeed;
-        %tmp.24 = null;
-        %tmp.25 = ne %tmp.23 %tmp.24;
-        push %tmp.25;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_44_28_44_49_end:
-        %tmp.26 = phi [%tmp.20 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_44_12_44_49_begin] [%tmp.25 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_44_28_44_49_true] [%tmp.26 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_44_28_44_49_end];
-        bf %tmp.26 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_44_8_46_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_44_8_46_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_44_55_46_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 45 12 ]
-        %tmp.27 = lgetv %info.1;
-        symbol [ info %tmp.27 45 20 24 ];
-        %tmp.28 = as %tmp.27 { (!Null) };
-        symbol [ currentSpeed %tmp.29 45 25 37 ];
-        %tmp.29 = getv %tmp.28 :currentSpeed;
-        lputv %speed.2 %tmp.29;
-        symbol [ speed %speed.2 45 12 17 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_44_55_46_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_44_8_46_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_44_8_46_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 48 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_32_30_60_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_32_30_60_4_stop" ]
-        %currentTime.3 = local;
-        symbol [ currentTime %currentTime.3 48 12 23 ];
-        symbol [ Time %tmp.30 48 26 30 ];
-        %tmp.30 = getm $.Toybox.Time;
-        symbol [ now %tmp.31 48 31 34 ];
-        %tmp.31 = getv function %tmp.30 :now;
-        %tmp.32 = invoke %tmp.30 %tmp.31();
-        symbol [ value %tmp.33 48 37 42 ];
-        %tmp.33 = getv function %tmp.32 :value;
-        %tmp.34 = invoke %tmp.32 %tmp.33();
-        lputv %currentTime.3 %tmp.34;
-        symbol [ currentTime %currentTime.3 48 12 23 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 49 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_32_30_60_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_32_30_60_4_stop" ]
-        %crossedThreshold.4 = local;
-        symbol [ crossedThreshold %crossedThreshold.4 49 12 28 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_49_31_49_100_begin:
-        %tmp.35 = lgetv %speed.2;
-        symbol [ speed %tmp.35 49 32 37 ];
-        symbol [ JUMP_SPEED_THRESHOLD %tmp.37 49 41 61 ];
-        %tmp.37 = getv ? :JUMP_SPEED_THRESHOLD;
-        %tmp.38 = gte %tmp.35 %tmp.37;
-        %tmp.39 = dup %tmp.38;
-        bf %tmp.39 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_49_66_49_100_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_49_66_49_100_true:
-        symbol [ _lastSpeed %tmp.41 49 67 77 ];
-        %tmp.41 = getv ? :_lastSpeed;
-        symbol [ JUMP_SPEED_THRESHOLD %tmp.43 49 80 100 ];
-        %tmp.43 = getv ? :JUMP_SPEED_THRESHOLD;
-        %tmp.44 = lt %tmp.41 %tmp.43;
-        %tmp.45 = and %tmp.38 %tmp.44;
-        push %tmp.45;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_49_66_49_100_end:
-        %tmp.46 = phi [%tmp.39 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_49_31_49_100_begin] [%tmp.45 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_49_66_49_100_true] [%tmp.46 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_49_66_49_100_end];
-        lputv %crossedThreshold.4 %tmp.46;
-        symbol [ crossedThreshold %crossedThreshold.4 49 12 28 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 51 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_8_57_8_if_stmt:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_12_51_80_begin:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_12_51_33_begin:
-        %tmp.47 = lgetv %crossedThreshold.4;
-        symbol [ crossedThreshold %tmp.47 51 12 28 ];
-        bf %tmp.47 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_8_57_8_if_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_32_51_33_true:
-        symbol [ _isJumping %tmp.49 51 33 43 ];
-        %tmp.49 = getv ? :_isJumping;
-        %tmp.50 = not %tmp.49;
-        push %tmp.50;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_32_51_33_end:
-        %tmp.51 = phi [%tmp.47 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_12_51_33_begin] [%tmp.50 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_32_51_33_true] [%tmp.51 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_32_51_33_end];
-        bf %tmp.51 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_8_57_8_if_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_47_51_80_true:
-        %tmp.52 = lgetv %currentTime.3;
-        symbol [ currentTime %tmp.52 51 48 59 ];
-        symbol [ _lastJumpTime %tmp.54 51 62 75 ];
-        %tmp.54 = getv ? :_lastJumpTime;
-        %tmp.55 = sub %tmp.52 %tmp.54;
-        symbol [ JUMP_COOLDOWN_SECONDS %tmp.57 51 80 101 ];
-        %tmp.57 = getv ? :JUMP_COOLDOWN_SECONDS;
-        %tmp.58 = gte %tmp.55 %tmp.57;
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_30_29_53_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_30_29_53_4_stop" ]
+        %options.1 = local;
+        symbol [ options %options.1 33 12 19 ];
+        %tmp.3 = newd 2;
+        %tmp.5 = const :period;
+        symbol [ period %tmp.5 34 13 19 const ];
+        %tmp.6 = 1;
+        %tmp.7 = dup %tmp.3;
+        %tmp.8 = aputv %tmp.7 %tmp.5 %tmp.6;
+        %tmp.10 = const :accelerometer;
+        symbol [ accelerometer %tmp.10 35 13 26 const ];
+        %tmp.11 = newd 6;
+        %tmp.13 = const :enabled;
+        symbol [ enabled %tmp.13 36 17 24 const ];
+        %tmp.14 = true;
+        %tmp.15 = dup %tmp.11;
+        %tmp.16 = aputv %tmp.15 %tmp.13 %tmp.14;
+        %tmp.18 = const :sampleRate;
+        symbol [ sampleRate %tmp.18 37 17 27 const ];
+        %tmp.19 = 25;
+        %tmp.20 = dup %tmp.16;
+        %tmp.21 = aputv %tmp.20 %tmp.18 %tmp.19;
+        %tmp.23 = const :includePower;
+        symbol [ includePower %tmp.23 38 17 29 const ];
+        %tmp.24 = false;
+        %tmp.25 = dup %tmp.21;
+        %tmp.26 = aputv %tmp.25 %tmp.23 %tmp.24;
+        %tmp.28 = const :includePitch;
+        symbol [ includePitch %tmp.28 39 17 29 const ];
+        %tmp.29 = false;
+        %tmp.30 = dup %tmp.26;
+        %tmp.31 = aputv %tmp.30 %tmp.28 %tmp.29;
+        %tmp.33 = const :includeRoll;
+        symbol [ includeRoll %tmp.33 40 17 28 const ];
+        %tmp.34 = false;
+        %tmp.35 = dup %tmp.31;
+        %tmp.36 = aputv %tmp.35 %tmp.33 %tmp.34;
+        %tmp.38 = const :includeTimestamps;
+        symbol [ includeTimestamps %tmp.38 41 17 34 const ];
+        %tmp.39 = false;
+        %tmp.40 = dup %tmp.36;
+        %tmp.41 = aputv %tmp.40 %tmp.38 %tmp.39;
+        %tmp.42 = dup %tmp.8;
+        %tmp.43 = aputv %tmp.42 %tmp.10 %tmp.41;
+        lputv %options.1 %tmp.43;
+        symbol [ options %options.1 33 12 19 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 45 8 ]
+        try @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_beginTry @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_endTry @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_catch @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_finally;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_beginTry:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_12_49_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 46 12 ]
+        symbol [ Sensor %tmp.44 46 12 18 ];
+        %tmp.44 = getm $.Toybox.Sensor;
+        symbol [ registerSensorDataListener %tmp.45 46 19 45 ];
+        %tmp.45 = getv function %tmp.44 :registerSensorDataListener;
+        symbol [ Lang %tmp.48 46 50 54 ];
+        %tmp.48 = getm $.Toybox.Lang;
+        symbol [ Method %tmp.49 46 55 61 ];
+        %tmp.49 = getv function ? %tmp.48 :Method;
+        %tmp.50 = self;
+        symbol [ self %tmp.50 46 62 66 ];
+        %tmp.52 = const :onSensorData;
+        symbol [ onSensorData %tmp.52 46 69 81 const ];
+        %tmp.46 = newc %tmp.49 (%tmp.50, %tmp.52);
+        %tmp.53 = lgetv %options.1;
+        symbol [ options %tmp.53 46 84 91 ];
+        invoke %tmp.44 %tmp.45(%tmp.46, %tmp.53);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 47 12 ]
+        %tmp.54 = true;
+        symbol [ _isListening ? 47 12 24 ];
+        putv self :_isListening %tmp.54;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 48 12 ]
+        symbol [ System %tmp.55 48 12 18 ];
+        %tmp.55 = getm $.Toybox.System;
+        symbol [ println %tmp.56 48 19 26 ];
+        %tmp.56 = getv function %tmp.55 :println;
+        %tmp.57 = "JumpManager: akcelerometr uruchomiony";
+        invoke %tmp.55 %tmp.56(%tmp.57);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_12_49_8_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_endTry:
+        jsr @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_finally;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_catch:
+        %tmp.58 = exception;
         push %tmp.58;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_47_51_80_end:
-        %tmp.59 = phi [%tmp.51 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_12_51_80_begin] [%tmp.58 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_47_51_80_true] [%tmp.59 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_47_51_80_end];
-        bf %tmp.59 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_8_57_8_if_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_8_57_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_103_55_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 52 12 ]
-        %tmp.60 = true;
-        symbol [ _isJumping ? 52 12 22 ];
-        putv self :_isJumping %tmp.60;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 53 12 ]
-        %tmp.61 = lgetv %currentTime.3;
-        symbol [ currentTime %tmp.61 53 28 39 ];
-        symbol [ _lastJumpTime ? 53 12 25 ];
-        putv self :_lastJumpTime %tmp.61;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 54 12 ]
-        %tmp.62 = self;
-        symbol [ addJump %tmp.63 54 12 19 ];
-        %tmp.63 = getv function %tmp.62 :addJump;
-        invoke %tmp.62 %tmp.63();
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_103_55_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_8_57_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_8_57_8_if_false:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 55 15 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_55_15_57_8_if_stmt:
-        %tmp.64 = lgetv %speed.2;
-        symbol [ speed %tmp.64 55 19 24 ];
-        symbol [ JUMP_RESET_THRESHOLD %tmp.66 55 27 47 ];
-        %tmp.66 = getv ? :JUMP_RESET_THRESHOLD;
-        %tmp.67 = lt %tmp.64 %tmp.66;
-        bf %tmp.67 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_55_15_57_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_55_15_57_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_55_49_57_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 56 12 ]
-        %tmp.68 = false;
-        symbol [ _isJumping ? 56 12 22 ];
-        putv self :_isJumping %tmp.68;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_55_49_57_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_55_15_57_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_55_15_57_8_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_51_8_57_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 59 8 ]
-        %tmp.69 = lgetv %speed.2;
-        symbol [ speed %tmp.69 59 21 26 ];
-        symbol [ _lastSpeed ? 59 8 18 ];
-        putv self :_lastSpeed %tmp.69;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_32_30_60_4_stop:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 49 10 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_catch" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_49_10_52_8_end" ]
+        %e.2 = local;
+        symbol [ e %e.2 49 17 18 ];
+        %tmp.59 = dup %tmp.58;
+        lputv %e.2 %tmp.59;
+        symbol [ e %e.2 49 17 18 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_49_20_52_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 50 12 ]
+        %tmp.60 = false;
+        symbol [ _isListening ? 50 12 24 ];
+        putv self :_isListening %tmp.60;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 51 12 ]
+        symbol [ System %tmp.61 51 12 18 ];
+        %tmp.61 = getm $.Toybox.System;
+        symbol [ println %tmp.62 51 19 26 ];
+        %tmp.62 = getv function %tmp.61 :println;
+        %tmp.63 = "JumpManager: blad akcelerometru ";
+        %tmp.64 = lgetv %e.2;
+        symbol [ e %tmp.64 51 64 65 ];
+        symbol [ getErrorMessage %tmp.65 51 66 81 ];
+        %tmp.65 = getv function %tmp.64 :getErrorMessage;
+        %tmp.66 = invoke %tmp.64 %tmp.65();
+        %tmp.67 = add %tmp.63 %tmp.66;
+        invoke %tmp.61 %tmp.62(%tmp.67);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_49_20_52_8_stop:
+        jsr @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_finally;
+        pop;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_49_10_52_8_end:
+        try @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_catch @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_49_10_52_8_end @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_49_10_52_8_end @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_finally;
+        jsr @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_finally;
+        throw %tmp.58;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_finally:
+        jsrret;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_45_8_52_8_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_30_29_53_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 67; @symbol_functiondef = [addJump,67,13,20]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 55; @symbol_functiondef = [stop,55,13,17]; ]
+    function stop() as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_55_28_61_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 56 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_56_8_59_8_if_stmt:
+        symbol [ _isListening %tmp.2 56 12 24 ];
+        %tmp.2 = getv ? :_isListening;
+        bf %tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_56_8_59_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_56_8_59_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_56_26_59_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 57 12 ]
+        symbol [ Sensor %tmp.3 57 12 18 ];
+        %tmp.3 = getm $.Toybox.Sensor;
+        symbol [ unregisterSensorDataListener %tmp.4 57 19 47 ];
+        %tmp.4 = getv function %tmp.3 :unregisterSensorDataListener;
+        invoke %tmp.3 %tmp.4();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 58 12 ]
+        %tmp.5 = false;
+        symbol [ _isListening ? 58 12 24 ];
+        putv self :_isListening %tmp.5;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_56_26_59_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_56_8_59_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_56_8_59_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 60 8 ]
+        %tmp.6 = self;
+        symbol [ reset %tmp.7 60 8 13 ];
+        %tmp.7 = getv function %tmp.6 :reset;
+        invoke %tmp.6 %tmp.7();
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_55_28_61_4_stop:
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 63; @symbol_functiondef = [onSensorData,63,13,25]; @symbol_param<0> = [sensorData,63,26,36]; @symbol_param<0>_type<0> = [Sensor,63,40,46]; @symbol_param<0>_type<1> = [SensorData,63,47,57]; ]
+    function onSensorData(sensorData as Sensor.SensorData) as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_63_67_77_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 64 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_63_67_77_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_63_67_77_4_stop" ]
+        %accelData.1 = local;
+        symbol [ accelData %accelData.1 64 12 21 ];
+        %tmp.1 = lgetv %sensorData;
+        symbol [ sensorData %tmp.1 64 24 34 ];
+        symbol [ accelerometerData %tmp.2 64 35 52 ];
+        %tmp.2 = getv %tmp.1 :accelerometerData;
+        lputv %accelData.1 %tmp.2;
+        symbol [ accelData %accelData.1 64 12 21 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 65 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_8_67_8_if_stmt:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_12_65_94_begin:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_12_65_71_begin:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_12_65_48_begin:
+        %tmp.3 = lgetv %accelData.1;
+        symbol [ accelData %tmp.3 65 12 21 ];
+        %tmp.4 = null;
+        %tmp.5 = eq %tmp.3 %tmp.4;
+        bt %tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_8_67_8_if_true;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_33_65_48_false:
+        %tmp.6 = lgetv %accelData.1;
+        symbol [ accelData %tmp.6 65 33 42 ];
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ x %tmp.8 65 43 44 ];
+        %tmp.8 = getv %tmp.7 :x;
+        %tmp.9 = null;
+        %tmp.10 = eq %tmp.8 %tmp.9;
+        push %tmp.10;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_33_65_48_end:
+        %tmp.11 = phi [%tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_12_65_48_begin] [%tmp.10 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_33_65_48_false] [%tmp.11 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_33_65_48_end];
+        bt %tmp.11 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_8_67_8_if_true;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_56_65_71_false:
+        %tmp.12 = lgetv %accelData.1;
+        symbol [ accelData %tmp.12 65 56 65 ];
+        %tmp.13 = as %tmp.12 { (!Null) };
+        symbol [ y %tmp.14 65 66 67 ];
+        %tmp.14 = getv %tmp.13 :y;
+        %tmp.15 = null;
+        %tmp.16 = eq %tmp.14 %tmp.15;
+        push %tmp.16;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_56_65_71_end:
+        %tmp.17 = phi [%tmp.11 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_12_65_71_begin] [%tmp.16 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_56_65_71_false] [%tmp.17 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_56_65_71_end];
+        bt %tmp.17 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_8_67_8_if_true;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_79_65_94_false:
+        %tmp.18 = lgetv %accelData.1;
+        symbol [ accelData %tmp.18 65 79 88 ];
+        %tmp.19 = as %tmp.18 { (!Null) };
+        symbol [ z %tmp.20 65 89 90 ];
+        %tmp.20 = getv %tmp.19 :z;
+        %tmp.21 = null;
+        %tmp.22 = eq %tmp.20 %tmp.21;
+        push %tmp.22;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_79_65_94_end:
+        %tmp.23 = phi [%tmp.17 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_12_65_94_begin] [%tmp.22 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_79_65_94_false] [%tmp.23 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_79_65_94_end];
+        bf %tmp.23 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_8_67_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_8_67_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_100_67_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 66 12 ]
+        ret ?;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_100_67_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_8_67_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_65_8_67_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 69 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_63_67_77_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_63_67_77_4_stop" ]
+        %sampleCount.2 = local;
+        symbol [ sampleCount %sampleCount.2 69 12 23 ];
+        %tmp.24 = lgetv %accelData.1;
+        symbol [ accelData %tmp.24 69 26 35 ];
+        symbol [ x %tmp.25 69 36 37 ];
+        %tmp.25 = getv %tmp.24 :x;
+        symbol [ size %tmp.26 69 38 42 ];
+        %tmp.26 = getv function %tmp.25 :size;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        lputv %sampleCount.2 %tmp.27;
+        symbol [ sampleCount %sampleCount.2 69 12 23 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 70 8 ]
+        for @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_8_76_8_for_test @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_8_76_8_for_incr @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_8_76_8_for_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_8_76_8_for_init:
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_8_76_8_for_begin" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_8_76_8_for_end" ]
+        %i.3 = local;
+        symbol [ i %i.3 70 17 18 ];
+        %tmp.28 = 0;
+        lputv %i.3 %tmp.28;
+        symbol [ i %i.3 70 17 18 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_8_76_8_for_test:
+        %tmp.29 = lgetv %i.3;
+        symbol [ i %tmp.29 70 24 25 ];
+        %tmp.30 = lgetv %sampleCount.2;
+        symbol [ sampleCount %tmp.30 70 28 39 ];
+        %tmp.31 = lt %tmp.29 %tmp.30;
+        bf %tmp.31 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_8_76_8_for_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_8_76_8_for_begin:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_46_76_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 71 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_46_76_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_46_76_8_stop" ]
+        %x.4 = local;
+        symbol [ x %x.4 71 16 17 ];
+        %tmp.32 = lgetv %accelData.1;
+        symbol [ accelData %tmp.32 71 20 29 ];
+        symbol [ x %tmp.33 71 30 31 ];
+        %tmp.33 = getv %tmp.32 :x;
+        %tmp.34 = lgetv %i.3;
+        symbol [ i %tmp.34 71 32 33 ];
+        %tmp.35 = agetv %tmp.33 %tmp.34;
+        lputv %x.4 %tmp.35;
+        symbol [ x %x.4 71 16 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 72 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_46_76_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_46_76_8_stop" ]
+        %y.5 = local;
+        symbol [ y %y.5 72 16 17 ];
+        %tmp.36 = lgetv %accelData.1;
+        symbol [ accelData %tmp.36 72 20 29 ];
+        symbol [ y %tmp.37 72 30 31 ];
+        %tmp.37 = getv %tmp.36 :y;
+        %tmp.38 = lgetv %i.3;
+        symbol [ i %tmp.38 72 32 33 ];
+        %tmp.39 = agetv %tmp.37 %tmp.38;
+        lputv %y.5 %tmp.39;
+        symbol [ y %y.5 72 16 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 73 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_46_76_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_46_76_8_stop" ]
+        %z.6 = local;
+        symbol [ z %z.6 73 16 17 ];
+        %tmp.40 = lgetv %accelData.1;
+        symbol [ accelData %tmp.40 73 20 29 ];
+        symbol [ z %tmp.41 73 30 31 ];
+        %tmp.41 = getv %tmp.40 :z;
+        %tmp.42 = lgetv %i.3;
+        symbol [ i %tmp.42 73 32 33 ];
+        %tmp.43 = agetv %tmp.41 %tmp.42;
+        lputv %z.6 %tmp.43;
+        symbol [ z %z.6 73 16 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 74 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_46_76_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_46_76_8_stop" ]
+        %magnitudeG.7 = local;
+        symbol [ magnitudeG %magnitudeG.7 74 16 26 ];
+        symbol [ Math %tmp.44 74 29 33 ];
+        %tmp.44 = getm $.Toybox.Math;
+        symbol [ sqrt %tmp.45 74 34 38 ];
+        %tmp.45 = getv function %tmp.44 :sqrt;
+        %tmp.46 = lgetv %x.4;
+        symbol [ x %tmp.46 74 40 41 ];
+        %tmp.47 = lgetv %x.4;
+        symbol [ x %tmp.47 74 44 45 ];
+        %tmp.48 = mul %tmp.46 %tmp.47;
+        %tmp.49 = lgetv %y.5;
+        symbol [ y %tmp.49 74 48 49 ];
+        %tmp.50 = lgetv %y.5;
+        symbol [ y %tmp.50 74 52 53 ];
+        %tmp.51 = mul %tmp.49 %tmp.50;
+        %tmp.52 = add %tmp.48 %tmp.51;
+        %tmp.53 = lgetv %z.6;
+        symbol [ z %tmp.53 74 56 57 ];
+        %tmp.54 = lgetv %z.6;
+        symbol [ z %tmp.54 74 60 61 ];
+        %tmp.55 = mul %tmp.53 %tmp.54;
+        %tmp.56 = add %tmp.52 %tmp.55;
+        %tmp.57 = invoke %tmp.44 %tmp.45(%tmp.56);
+        %tmp.58 = 1000.0;
+        %tmp.59 = div %tmp.57 %tmp.58;
+        lputv %magnitudeG.7 %tmp.59;
+        symbol [ magnitudeG %magnitudeG.7 74 16 26 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 75 12 ]
+        %tmp.60 = self;
+        symbol [ processSample %tmp.61 75 12 25 ];
+        %tmp.61 = getv function %tmp.60 :processSample;
+        %tmp.62 = lgetv %magnitudeG.7;
+        symbol [ magnitudeG %tmp.62 75 26 36 ];
+        invoke %tmp.60 %tmp.61(%tmp.62);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_46_76_8_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_8_76_8_for_incr:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 70 ]
+        %tmp.65 = lgetv %i.3;
+        symbol [ i %tmp.65 70 41 42 ];
+        %tmp.66 = add %tmp.65 1;
+        lputv %i.3 %tmp.66;
+        symbol [ i %i.3 70 41 42 ];
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_8_76_8_for_test;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_70_8_76_8_for_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_63_67_77_4_stop:
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 79; @symbol_functiondef = [processSample,79,13,26]; @symbol_param<0> = [magnitudeG,79,27,37]; @symbol_param<0>_type<0> = [Float,79,41,46]; ]
+    function processSample(magnitudeG as Float) as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_79_56_109_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 80 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_80_8_83_8_if_stmt:
+        symbol [ _cooldownSamples %tmp.2 80 12 28 ];
+        %tmp.2 = getv ? :_cooldownSamples;
+        %tmp.3 = 0;
+        %tmp.4 = gt %tmp.2 %tmp.3;
+        bf %tmp.4 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_80_8_83_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_80_8_83_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_80_34_83_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 81 12 ]
+        symbol [ _cooldownSamples %tmp.7 81 12 28 ];
+        %tmp.7 = getv ? :_cooldownSamples;
+        %tmp.8 = sub %tmp.7 1;
+        symbol [ _cooldownSamples ? 81 12 28 ];
+        putv self :_cooldownSamples dup %tmp.8;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 82 12 ]
+        ret ?;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_80_34_83_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_80_8_83_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_80_8_83_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 85 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_85_8_108_8_if_stmt:
+        symbol [ _phase %tmp.10 85 12 18 ];
+        %tmp.10 = getv ? :_phase;
+        %tmp.11 = 0;
+        %tmp.12 = eq %tmp.10 %tmp.11;
+        bf %tmp.12 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_85_8_108_8_if_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_85_8_108_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_85_25_90_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 86 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_86_12_89_12_if_stmt:
+        %tmp.13 = lgetv %magnitudeG;
+        symbol [ magnitudeG %tmp.13 86 16 26 ];
+        symbol [ TAKEOFF_THRESHOLD_G %tmp.15 86 30 49 ];
+        %tmp.15 = getv ? :TAKEOFF_THRESHOLD_G;
+        %tmp.16 = gte %tmp.13 %tmp.15;
+        bf %tmp.16 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_86_12_89_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_86_12_89_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_86_51_89_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 87 16 ]
+        %tmp.17 = 1;
+        symbol [ _phase ? 87 16 22 ];
+        putv self :_phase %tmp.17;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 88 16 ]
+        %tmp.18 = 0;
+        symbol [ _phaseSamples ? 88 16 29 ];
+        putv self :_phaseSamples %tmp.18;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_86_51_89_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_86_12_89_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_86_12_89_12_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_85_25_90_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_85_8_108_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_85_8_108_8_if_false:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 90 15 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_90_15_108_8_if_stmt:
+        symbol [ _phase %tmp.20 90 19 25 ];
+        %tmp.20 = getv ? :_phase;
+        %tmp.21 = 1;
+        %tmp.22 = eq %tmp.20 %tmp.21;
+        bf %tmp.22 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_90_15_108_8_if_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_90_15_108_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_90_32_98_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 91 12 ]
+        symbol [ _phaseSamples %tmp.25 91 12 25 ];
+        %tmp.25 = getv ? :_phaseSamples;
+        %tmp.26 = add %tmp.25 1;
+        symbol [ _phaseSamples ? 91 12 25 ];
+        putv self :_phaseSamples dup %tmp.26;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 92 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_92_12_97_12_if_stmt:
+        %tmp.27 = lgetv %magnitudeG;
+        symbol [ magnitudeG %tmp.27 92 16 26 ];
+        symbol [ AIRBORNE_THRESHOLD_G %tmp.29 92 30 50 ];
+        %tmp.29 = getv ? :AIRBORNE_THRESHOLD_G;
+        %tmp.30 = lte %tmp.27 %tmp.29;
+        bf %tmp.30 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_92_12_97_12_if_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_92_12_97_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_92_52_95_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 93 16 ]
+        %tmp.31 = 2;
+        symbol [ _phase ? 93 16 22 ];
+        putv self :_phase %tmp.31;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 94 16 ]
+        %tmp.32 = 0;
+        symbol [ _phaseSamples ? 94 16 29 ];
+        putv self :_phaseSamples %tmp.32;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_92_52_95_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_92_12_97_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_92_12_97_12_if_false:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 95 19 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_95_19_97_12_if_stmt:
+        symbol [ _phaseSamples %tmp.34 95 23 36 ];
+        %tmp.34 = getv ? :_phaseSamples;
+        symbol [ MAX_PHASE_SAMPLES %tmp.36 95 39 56 ];
+        %tmp.36 = getv ? :MAX_PHASE_SAMPLES;
+        %tmp.37 = gt %tmp.34 %tmp.36;
+        bf %tmp.37 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_95_19_97_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_95_19_97_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_95_58_97_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 96 16 ]
+        %tmp.38 = 0;
+        symbol [ _phase ? 96 16 22 ];
+        putv self :_phase %tmp.38;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_95_58_97_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_95_19_97_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_95_19_97_12_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_92_12_97_12_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_90_32_98_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_90_15_108_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_90_15_108_8_if_else_false:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_98_15_108_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 99 12 ]
+        symbol [ _phaseSamples %tmp.41 99 12 25 ];
+        %tmp.41 = getv ? :_phaseSamples;
+        %tmp.42 = add %tmp.41 1;
+        symbol [ _phaseSamples ? 99 12 25 ];
+        putv self :_phaseSamples dup %tmp.42;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 100 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_100_12_107_12_if_stmt:
+        %tmp.43 = lgetv %magnitudeG;
+        symbol [ magnitudeG %tmp.43 100 16 26 ];
+        symbol [ LANDING_THRESHOLD_G %tmp.45 100 30 49 ];
+        %tmp.45 = getv ? :LANDING_THRESHOLD_G;
+        %tmp.46 = gte %tmp.43 %tmp.45;
+        bf %tmp.46 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_100_12_107_12_if_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_100_12_107_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_100_51_105_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 101 16 ]
+        %tmp.47 = self;
+        symbol [ addJump %tmp.48 101 16 23 ];
+        %tmp.48 = getv function %tmp.47 :addJump;
+        invoke %tmp.47 %tmp.48();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 102 16 ]
+        %tmp.49 = 0;
+        symbol [ _phase ? 102 16 22 ];
+        putv self :_phase %tmp.49;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 103 16 ]
+        %tmp.50 = 0;
+        symbol [ _phaseSamples ? 103 16 29 ];
+        putv self :_phaseSamples %tmp.50;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 104 16 ]
+        symbol [ COOLDOWN_SAMPLES %tmp.52 104 35 51 ];
+        %tmp.52 = getv ? :COOLDOWN_SAMPLES;
+        symbol [ _cooldownSamples ? 104 16 32 ];
+        putv self :_cooldownSamples %tmp.52;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_100_51_105_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_100_12_107_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_100_12_107_12_if_false:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 105 19 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_105_19_107_12_if_stmt:
+        symbol [ _phaseSamples %tmp.54 105 23 36 ];
+        %tmp.54 = getv ? :_phaseSamples;
+        symbol [ MAX_PHASE_SAMPLES %tmp.56 105 39 56 ];
+        %tmp.56 = getv ? :MAX_PHASE_SAMPLES;
+        %tmp.57 = gt %tmp.54 %tmp.56;
+        bf %tmp.57 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_105_19_107_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_105_19_107_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_105_58_107_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 106 16 ]
+        %tmp.58 = 0;
+        symbol [ _phase ? 106 16 22 ];
+        putv self :_phase %tmp.58;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_105_58_107_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_105_19_107_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_105_19_107_12_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_100_12_107_12_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_98_15_108_8_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_90_15_108_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_85_8_108_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_79_56_109_4_stop:
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 116; @symbol_functiondef = [addJump,116,13,20]; ]
     function addJump() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_67_31_74_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 68 8 ]
-        symbol [ SportsMetricsManager %tmp.2 68 8 28 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_116_31_123_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 117 8 ]
+        symbol [ SportsMetricsManager %tmp.2 117 8 28 ];
         %tmp.2 = getv ? :SportsMetricsManager;
-        symbol [ addJump %tmp.3 68 29 36 ];
+        symbol [ addJump %tmp.3 117 29 36 ];
         %tmp.3 = getv function %tmp.2 :addJump;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 70 8 ]
-        symbol [ System %tmp.4 70 8 14 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 119 8 ]
+        symbol [ System %tmp.4 119 8 14 ];
         %tmp.4 = getm $.Toybox.System;
-        symbol [ println %tmp.5 70 15 22 ];
+        symbol [ println %tmp.5 119 15 22 ];
         %tmp.5 = getv function %tmp.4 :println;
         %tmp.6 = "JumpManager: Wykryto wyskok! ";
         %tmp.7 = "£¹cznie: ";
         %tmp.8 = add %tmp.6 %tmp.7;
-        symbol [ SportsMetricsManager %tmp.10 72 26 46 ];
+        symbol [ SportsMetricsManager %tmp.10 121 26 46 ];
         %tmp.10 = getv ? :SportsMetricsManager;
-        symbol [ getTotalJumps %tmp.11 72 47 60 ];
+        symbol [ getTotalJumps %tmp.11 121 47 60 ];
         %tmp.11 = getv function %tmp.10 :getTotalJumps;
         %tmp.12 = invoke %tmp.10 %tmp.11();
         %tmp.13 = add %tmp.8 %tmp.12;
         invoke %tmp.4 %tmp.5(%tmp.13);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_67_31_74_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_116_31_123_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 81; @symbol_functiondef = [addManualJump,81,13,26]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 130; @symbol_functiondef = [addManualJump,130,13,26]; ]
     function addManualJump() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_81_37_88_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 82 8 ]
-        symbol [ SportsMetricsManager %tmp.2 82 8 28 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_130_37_137_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 131 8 ]
+        symbol [ SportsMetricsManager %tmp.2 131 8 28 ];
         %tmp.2 = getv ? :SportsMetricsManager;
-        symbol [ addJump %tmp.3 82 29 36 ];
+        symbol [ addJump %tmp.3 131 29 36 ];
         %tmp.3 = getv function %tmp.2 :addJump;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 84 8 ]
-        symbol [ System %tmp.4 84 8 14 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc" 133 8 ]
+        symbol [ System %tmp.4 133 8 14 ];
         %tmp.4 = getm $.Toybox.System;
-        symbol [ println %tmp.5 84 15 22 ];
+        symbol [ println %tmp.5 133 15 22 ];
         %tmp.5 = getv function %tmp.4 :println;
         %tmp.6 = "JumpManager: Rêcznie dodano wyskok. ";
         %tmp.7 = "£¹cznie: ";
         %tmp.8 = add %tmp.6 %tmp.7;
-        symbol [ SportsMetricsManager %tmp.10 86 26 46 ];
+        symbol [ SportsMetricsManager %tmp.10 135 26 46 ];
         %tmp.10 = getv ? :SportsMetricsManager;
-        symbol [ getTotalJumps %tmp.11 86 47 60 ];
+        symbol [ getTotalJumps %tmp.11 135 47 60 ];
         %tmp.11 = getv function %tmp.10 :getTotalJumps;
         %tmp.12 = invoke %tmp.10 %tmp.11();
         %tmp.13 = add %tmp.8 %tmp.12;
         invoke %tmp.4 %tmp.5(%tmp.13);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_81_37_88_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpManager_mc_130_37_137_4_stop:
     }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpManager.mc"; @line = 1; ]

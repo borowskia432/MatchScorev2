@@ -91,16 +91,18 @@ module SessionManager {
                     _footballScoreBField = s.createField("football_score_b", FIT_FOOTBALL_SCORE_B_ID, FitContributor.DATA_TYPE_UINT16, { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "bramki" });
                 }
 
-                // --- POLA PODSUMOWANIA SESJI ---
-                _setsASummaryField = s.createField(
-                    "sets_a_final", FIT_SETS_A_SUM_ID, FitContributor.DATA_TYPE_UINT8,
-                    { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "sety" }
-                );
+                if (sport == Activity.SPORT_VOLLEYBALL) {
+                    // Wynik setow jest zapisywany tylko dla siatkowki.
+                    _setsASummaryField = s.createField(
+                        "sets_a_final", FIT_SETS_A_SUM_ID, FitContributor.DATA_TYPE_UINT8,
+                        { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "sety" }
+                    );
 
-                _setsBSummaryField = s.createField(
-                    "sets_b_final", FIT_SETS_B_SUM_ID, FitContributor.DATA_TYPE_UINT8,
-                    { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "sety" }
-                );
+                    _setsBSummaryField = s.createField(
+                        "sets_b_final", FIT_SETS_B_SUM_ID, FitContributor.DATA_TYPE_UINT8,
+                        { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "sety" }
+                    );
+                }
 
                 _burstSummaryField = s.createField(
                     "burst_count_final", FIT_BURST_SUM_ID, FitContributor.DATA_TYPE_UINT16,
@@ -113,6 +115,7 @@ module SessionManager {
                 );
 
                 s.start();
+                JumpManager.start();
                 System.println("SessionManager: Sesja wystartowała z polami FIT dla setów.");
             }
         }
@@ -200,6 +203,7 @@ module SessionManager {
     function saveSession() as Boolean {
         var s = session;
         if (s != null) {
+            JumpManager.stop();
             
             // Zapisz niezatwierdzony, aktualnie wyświetlany set jako kolejny set sesji.
             if (s.isRecording() && (AppConfig.volleyballScoreA > 0 || AppConfig.volleyballScoreB > 0)) {
@@ -268,6 +272,7 @@ if (_jumpSummaryField != null) {
     function discardSession() as Void {
         var s = session;
         if (s != null) {
+            JumpManager.stop();
             if (s.isRecording()) {
                 s.stop();
             }

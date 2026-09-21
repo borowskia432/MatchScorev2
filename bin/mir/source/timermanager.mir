@@ -230,263 +230,257 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_73_35_79_4_
     }
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc"; @line = 82; @symbol_functiondef = [onTick,82,13,19]; ]
     function onTick() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_82_30_109_4_start:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_82_30_108_4_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 85 8 ]
         symbol [ BurstManager %tmp.2 85 8 20 ];
         %tmp.2 = getv ? :BurstManager;
         symbol [ update %tmp.3 85 21 27 ];
         %tmp.3 = getv function %tmp.2 :update;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 86 8 ]
-        symbol [ JumpManager %tmp.5 86 8 19 ];
-        %tmp.5 = getv ? :JumpManager;
-        symbol [ update %tmp.6 86 20 26 ];
-        %tmp.6 = getv function %tmp.5 :update;
-        invoke %tmp.5 %tmp.6();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 89 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_8_105_8_if_stmt:
-        symbol [ isRunning %tmp.8 89 12 21 ];
-        %tmp.8 = getv ? :isRunning;
-        bf %tmp.8 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_8_105_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_8_105_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_23_105_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 90 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_90_12_104_12_if_stmt:
-        symbol [ _restSeconds %tmp.10 90 16 28 ];
-        %tmp.10 = getv ? :_restSeconds;
-        %tmp.11 = 0;
-        %tmp.12 = gt %tmp.10 %tmp.11;
-        bf %tmp.12 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_90_12_104_12_if_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_90_12_104_12_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_90_34_95_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 88 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_88_8_104_8_if_stmt:
+        symbol [ isRunning %tmp.5 88 12 21 ];
+        %tmp.5 = getv ? :isRunning;
+        bf %tmp.5 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_88_8_104_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_88_8_104_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_88_23_104_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 89 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_12_103_12_if_stmt:
+        symbol [ _restSeconds %tmp.7 89 16 28 ];
+        %tmp.7 = getv ? :_restSeconds;
+        %tmp.8 = 0;
+        %tmp.9 = gt %tmp.7 %tmp.8;
+        bf %tmp.9 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_12_103_12_if_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_12_103_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_34_94_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 90 16 ]
+        symbol [ _restSeconds %tmp.12 90 16 28 ];
+        %tmp.12 = getv ? :_restSeconds;
+        %tmp.13 = sub %tmp.12 1;
+        symbol [ _restSeconds ? 90 16 28 ];
+        putv self :_restSeconds dup %tmp.13;
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 91 16 ]
-        symbol [ _restSeconds %tmp.15 91 16 28 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_91_16_93_16_if_stmt:
+        symbol [ _restSeconds %tmp.15 91 20 32 ];
         %tmp.15 = getv ? :_restSeconds;
-        %tmp.16 = sub %tmp.15 1;
-        symbol [ _restSeconds ? 91 16 28 ];
-        putv self :_restSeconds dup %tmp.16;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 92 16 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_92_16_94_16_if_stmt:
-        symbol [ _restSeconds %tmp.18 92 20 32 ];
-        %tmp.18 = getv ? :_restSeconds;
-        %tmp.19 = 0;
-        %tmp.20 = eq %tmp.18 %tmp.19;
-        bf %tmp.20 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_92_16_94_16_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_92_16_94_16_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_92_39_94_16_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 93 20 ]
-        symbol [ defaultDurationSeconds %tmp.22 93 39 61 ];
-        %tmp.22 = getv ? :defaultDurationSeconds;
-        symbol [ secondsRemaining ? 93 20 36 ];
-        putv self :secondsRemaining %tmp.22;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_92_39_94_16_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_92_16_94_16_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_92_16_94_16_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_90_34_95_12_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_90_12_104_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_90_12_104_12_if_false:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 95 19 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_95_19_104_12_if_stmt:
-        symbol [ secondsRemaining %tmp.24 95 23 39 ];
-        %tmp.24 = getv ? :secondsRemaining;
-        %tmp.25 = 0;
-        %tmp.26 = gt %tmp.24 %tmp.25;
-        bf %tmp.26 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_95_19_104_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_95_19_104_12_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_95_45_104_12_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 96 16 ]
-        symbol [ secondsRemaining %tmp.29 96 16 32 ];
+        %tmp.16 = 0;
+        %tmp.17 = eq %tmp.15 %tmp.16;
+        bf %tmp.17 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_91_16_93_16_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_91_16_93_16_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_91_39_93_16_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 92 20 ]
+        symbol [ defaultDurationSeconds %tmp.19 92 39 61 ];
+        %tmp.19 = getv ? :defaultDurationSeconds;
+        symbol [ secondsRemaining ? 92 20 36 ];
+        putv self :secondsRemaining %tmp.19;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_91_39_93_16_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_91_16_93_16_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_91_16_93_16_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_34_94_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_12_103_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_12_103_12_if_false:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 94 19 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_94_19_103_12_if_stmt:
+        symbol [ secondsRemaining %tmp.21 94 23 39 ];
+        %tmp.21 = getv ? :secondsRemaining;
+        %tmp.22 = 0;
+        %tmp.23 = gt %tmp.21 %tmp.22;
+        bf %tmp.23 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_94_19_103_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_94_19_103_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_94_45_103_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 95 16 ]
+        symbol [ secondsRemaining %tmp.26 95 16 32 ];
+        %tmp.26 = getv ? :secondsRemaining;
+        %tmp.27 = sub %tmp.26 1;
+        symbol [ secondsRemaining ? 95 16 32 ];
+        putv self :secondsRemaining dup %tmp.27;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 97 16 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_97_16_102_16_if_stmt:
+        symbol [ secondsRemaining %tmp.29 97 20 36 ];
         %tmp.29 = getv ? :secondsRemaining;
-        %tmp.30 = sub %tmp.29 1;
-        symbol [ secondsRemaining ? 96 16 32 ];
-        putv self :secondsRemaining dup %tmp.30;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 98 16 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_98_16_103_16_if_stmt:
-        symbol [ secondsRemaining %tmp.32 98 20 36 ];
-        %tmp.32 = getv ? :secondsRemaining;
-        %tmp.33 = 10;
-        %tmp.34 = eq %tmp.32 %tmp.33;
-        bf %tmp.34 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_98_16_103_16_if_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_98_16_103_16_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_98_44_100_16_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 99 20 ]
-        %tmp.35 = self;
-        symbol [ notify10SecondsRemaining %tmp.36 99 20 44 ];
-        %tmp.36 = getv function %tmp.35 :notify10SecondsRemaining;
-        invoke %tmp.35 %tmp.36();
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_98_44_100_16_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_98_16_103_16_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_98_16_103_16_if_false:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 100 23 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_100_23_103_16_if_stmt:
-        symbol [ secondsRemaining %tmp.38 100 27 43 ];
-        %tmp.38 = getv ? :secondsRemaining;
-        %tmp.39 = 0;
-        %tmp.40 = eq %tmp.38 %tmp.39;
-        bf %tmp.40 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_100_23_103_16_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_100_23_103_16_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_100_50_103_16_start:
+        %tmp.30 = 10;
+        %tmp.31 = eq %tmp.29 %tmp.30;
+        bf %tmp.31 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_97_16_102_16_if_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_97_16_102_16_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_97_44_99_16_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 98 20 ]
+        %tmp.32 = self;
+        symbol [ notify10SecondsRemaining %tmp.33 98 20 44 ];
+        %tmp.33 = getv function %tmp.32 :notify10SecondsRemaining;
+        invoke %tmp.32 %tmp.33();
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_97_44_99_16_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_97_16_102_16_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_97_16_102_16_if_false:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 99 23 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_99_23_102_16_if_stmt:
+        symbol [ secondsRemaining %tmp.35 99 27 43 ];
+        %tmp.35 = getv ? :secondsRemaining;
+        %tmp.36 = 0;
+        %tmp.37 = eq %tmp.35 %tmp.36;
+        bf %tmp.37 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_99_23_102_16_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_99_23_102_16_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_99_50_102_16_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 100 20 ]
+        %tmp.38 = self;
+        symbol [ notifyTimeUp %tmp.39 100 20 32 ];
+        %tmp.39 = getv function %tmp.38 :notifyTimeUp;
+        invoke %tmp.38 %tmp.39();
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 101 20 ]
-        %tmp.41 = self;
-        symbol [ notifyTimeUp %tmp.42 101 20 32 ];
-        %tmp.42 = getv function %tmp.41 :notifyTimeUp;
+        %tmp.40 = 5;
+        symbol [ _restSeconds ? 101 20 32 ];
+        putv self :_restSeconds %tmp.40;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_99_50_102_16_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_99_23_102_16_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_99_23_102_16_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_97_16_102_16_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_94_45_103_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_94_19_103_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_94_19_103_12_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_12_103_12_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_88_23_104_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_88_8_104_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_88_8_104_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 107 8 ]
+        symbol [ WatchUi %tmp.41 107 8 15 ];
+        %tmp.41 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.42 107 16 29 ];
+        %tmp.42 = getv function %tmp.41 :requestUpdate;
         invoke %tmp.41 %tmp.42();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 102 20 ]
-        %tmp.43 = 5;
-        symbol [ _restSeconds ? 102 20 32 ];
-        putv self :_restSeconds %tmp.43;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_100_50_103_16_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_100_23_103_16_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_100_23_103_16_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_98_16_103_16_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_95_45_104_12_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_95_19_104_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_95_19_104_12_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_90_12_104_12_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_23_105_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_8_105_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_89_8_105_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 108 8 ]
-        symbol [ WatchUi %tmp.44 108 8 15 ];
-        %tmp.44 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.45 108 16 29 ];
-        %tmp.45 = getv function %tmp.44 :requestUpdate;
-        invoke %tmp.44 %tmp.45();
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_82_30_109_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_82_30_108_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc"; @line = 111; @symbol_functiondef = [getFormattedTime,111,13,29]; @symbol_return<0> = [String,111,35,41]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc"; @line = 110; @symbol_functiondef = [getFormattedTime,110,13,29]; @symbol_return<0> = [String,110,35,41]; ]
     function getFormattedTime() as String {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_111_42_115_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 112 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_111_42_115_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_111_42_115_4_stop" ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_110_42_114_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 111 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_110_42_114_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_110_42_114_4_stop" ]
         %min.1 = local;
-        symbol [ min %min.1 112 12 15 ];
-        symbol [ secondsRemaining %tmp.2 112 18 34 ];
+        symbol [ min %min.1 111 12 15 ];
+        symbol [ secondsRemaining %tmp.2 111 18 34 ];
         %tmp.2 = getv ? :secondsRemaining;
         %tmp.3 = 60;
         %tmp.4 = div %tmp.2 %tmp.3;
         lputv %min.1 %tmp.4;
-        symbol [ min %min.1 112 12 15 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 113 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_111_42_115_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_111_42_115_4_stop" ]
+        symbol [ min %min.1 111 12 15 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 112 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_110_42_114_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_110_42_114_4_stop" ]
         %sec.2 = local;
-        symbol [ sec %sec.2 113 12 15 ];
-        symbol [ secondsRemaining %tmp.6 113 18 34 ];
+        symbol [ sec %sec.2 112 12 15 ];
+        symbol [ secondsRemaining %tmp.6 112 18 34 ];
         %tmp.6 = getv ? :secondsRemaining;
         %tmp.7 = 60;
         %tmp.8 = mod %tmp.6 %tmp.7;
         lputv %sec.2 %tmp.8;
-        symbol [ sec %sec.2 113 12 15 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 114 8 ]
+        symbol [ sec %sec.2 112 12 15 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 113 8 ]
         %tmp.9 = lgetv %min.1;
-        symbol [ min %tmp.9 114 15 18 ];
-        symbol [ format %tmp.10 114 19 25 ];
+        symbol [ min %tmp.9 113 15 18 ];
+        symbol [ format %tmp.10 113 19 25 ];
         %tmp.10 = getv function %tmp.9 :format;
         %tmp.11 = "%02d";
         %tmp.12 = invoke %tmp.9 %tmp.10(%tmp.11);
         %tmp.13 = ":";
         %tmp.14 = add %tmp.12 %tmp.13;
         %tmp.15 = lgetv %sec.2;
-        symbol [ sec %tmp.15 114 42 45 ];
-        symbol [ format %tmp.16 114 46 52 ];
+        symbol [ sec %tmp.15 113 42 45 ];
+        symbol [ format %tmp.16 113 46 52 ];
         %tmp.16 = getv function %tmp.15 :format;
         %tmp.17 = "%02d";
         %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
         %tmp.19 = add %tmp.14 %tmp.18;
         ret %tmp.19;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_111_42_115_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_110_42_114_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc"; @line = 121; @symbol_functiondef = [notify10SecondsRemaining,121,13,37]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc"; @line = 120; @symbol_functiondef = [notify10SecondsRemaining,120,13,37]; ]
     function notify10SecondsRemaining() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_48_136_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 122 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_122_8_124_8_if_stmt:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_122_12_122_54_begin:
-        symbol [ isSoundEnabled %tmp.2 122 12 26 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_120_48_135_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 121 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_8_123_8_if_stmt:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_12_121_54_begin:
+        symbol [ isSoundEnabled %tmp.2 121 12 26 ];
         %tmp.2 = getv ? :isSoundEnabled;
-        bf %tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_122_8_124_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_122_30_122_54_true:
-        symbol [ Attention %tmp.3 122 31 40 ];
+        bf %tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_8_123_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_30_121_54_true:
+        symbol [ Attention %tmp.3 121 31 40 ];
         %tmp.3 = getm $.Toybox.Attention;
         %tmp.5 = const :playTone;
-        symbol [ playTone %tmp.5 122 46 54 const ];
+        symbol [ playTone %tmp.5 121 46 54 const ];
         %tmp.6 = canhazplz %tmp.3 %tmp.5;
         push %tmp.6;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_122_30_122_54_end:
-        %tmp.7 = phi [%tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_122_12_122_54_begin] [%tmp.6 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_122_30_122_54_true] [%tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_122_30_122_54_end];
-        bf %tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_122_8_124_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_122_8_124_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_122_57_124_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 123 12 ]
-        symbol [ Attention %tmp.8 123 12 21 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_30_121_54_end:
+        %tmp.7 = phi [%tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_12_121_54_begin] [%tmp.6 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_30_121_54_true] [%tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_30_121_54_end];
+        bf %tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_8_123_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_8_123_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_57_123_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 122 12 ]
+        symbol [ Attention %tmp.8 122 12 21 ];
         %tmp.8 = getm $.Toybox.Attention;
-        symbol [ playTone %tmp.9 123 22 30 ];
+        symbol [ playTone %tmp.9 122 22 30 ];
         %tmp.9 = getv function %tmp.8 :playTone;
-        symbol [ Attention %tmp.10 123 31 40 ];
+        symbol [ Attention %tmp.10 122 31 40 ];
         %tmp.10 = getm $.Toybox.Attention;
-        symbol [ TONE_ALERT_LO %tmp.11 123 41 54 ];
+        symbol [ TONE_ALERT_LO %tmp.11 122 41 54 ];
         %tmp.11 = getv %tmp.10 :TONE_ALERT_LO;
         invoke %tmp.8 %tmp.9(%tmp.11);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_122_57_124_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_122_8_124_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_122_8_124_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 126 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_126_8_135_8_if_stmt:
-        symbol [ Attention %tmp.12 126 12 21 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_57_123_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_8_123_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_8_123_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 125 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_125_8_134_8_if_stmt:
+        symbol [ Attention %tmp.12 125 12 21 ];
         %tmp.12 = getm $.Toybox.Attention;
         %tmp.14 = const :vibrate;
-        symbol [ vibrate %tmp.14 126 27 34 const ];
+        symbol [ vibrate %tmp.14 125 27 34 const ];
         %tmp.15 = canhazplz %tmp.12 %tmp.14;
-        bf %tmp.15 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_126_8_135_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_126_8_135_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_126_36_135_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 127 12 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_126_36_135_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_126_36_135_8_stop" ]
+        bf %tmp.15 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_125_8_134_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_125_8_134_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_125_36_134_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 126 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_125_36_134_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_125_36_134_8_stop" ]
         %vibeData.1 = local;
-        symbol [ vibeData %vibeData.1 127 16 24 ];
+        symbol [ vibeData %vibeData.1 126 16 24 ];
         %tmp.16 = newa 5 Array<Attention.VibeProfile>;
-        symbol [ Array %tmp.16 133 17 22 ];
-        symbol [ Attention %tmp.16 133 23 32 ];
-        symbol [ VibeProfile %tmp.16 133 33 44 ];
-        symbol [ Attention %tmp.19 128 20 29 ];
+        symbol [ Array %tmp.16 132 17 22 ];
+        symbol [ Attention %tmp.16 132 23 32 ];
+        symbol [ VibeProfile %tmp.16 132 33 44 ];
+        symbol [ Attention %tmp.19 127 20 29 ];
         %tmp.19 = getm $.Toybox.Attention;
-        symbol [ VibeProfile %tmp.20 128 30 41 ];
+        symbol [ VibeProfile %tmp.20 127 30 41 ];
         %tmp.20 = getv function ? %tmp.19 :VibeProfile;
         %tmp.21 = 100;
         %tmp.22 = 150;
         %tmp.17 = newc %tmp.20 (%tmp.21, %tmp.22);
         %tmp.23 = dup %tmp.16;
         %tmp.24 = aputv %tmp.23 0 %tmp.17;
-        symbol [ Attention %tmp.27 129 20 29 ];
+        symbol [ Attention %tmp.27 128 20 29 ];
         %tmp.27 = getm $.Toybox.Attention;
-        symbol [ VibeProfile %tmp.28 129 30 41 ];
+        symbol [ VibeProfile %tmp.28 128 30 41 ];
         %tmp.28 = getv function ? %tmp.27 :VibeProfile;
         %tmp.29 = 0;
         %tmp.30 = 100;
         %tmp.25 = newc %tmp.28 (%tmp.29, %tmp.30);
         %tmp.31 = dup %tmp.24;
         %tmp.32 = aputv %tmp.31 1 %tmp.25;
-        symbol [ Attention %tmp.35 130 20 29 ];
+        symbol [ Attention %tmp.35 129 20 29 ];
         %tmp.35 = getm $.Toybox.Attention;
-        symbol [ VibeProfile %tmp.36 130 30 41 ];
+        symbol [ VibeProfile %tmp.36 129 30 41 ];
         %tmp.36 = getv function ? %tmp.35 :VibeProfile;
         %tmp.37 = 100;
         %tmp.38 = 150;
         %tmp.33 = newc %tmp.36 (%tmp.37, %tmp.38);
         %tmp.39 = dup %tmp.32;
         %tmp.40 = aputv %tmp.39 2 %tmp.33;
-        symbol [ Attention %tmp.43 131 20 29 ];
+        symbol [ Attention %tmp.43 130 20 29 ];
         %tmp.43 = getm $.Toybox.Attention;
-        symbol [ VibeProfile %tmp.44 131 30 41 ];
+        symbol [ VibeProfile %tmp.44 130 30 41 ];
         %tmp.44 = getv function ? %tmp.43 :VibeProfile;
         %tmp.45 = 0;
         %tmp.46 = 100;
         %tmp.41 = newc %tmp.44 (%tmp.45, %tmp.46);
         %tmp.47 = dup %tmp.40;
         %tmp.48 = aputv %tmp.47 3 %tmp.41;
-        symbol [ Attention %tmp.51 132 20 29 ];
+        symbol [ Attention %tmp.51 131 20 29 ];
         %tmp.51 = getm $.Toybox.Attention;
-        symbol [ VibeProfile %tmp.52 132 30 41 ];
+        symbol [ VibeProfile %tmp.52 131 30 41 ];
         %tmp.52 = getv function ? %tmp.51 :VibeProfile;
         %tmp.53 = 100;
         %tmp.54 = 150;
@@ -494,142 +488,189 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_126_36_135_
         %tmp.55 = dup %tmp.48;
         %tmp.56 = aputv %tmp.55 4 %tmp.49;
         lputv %vibeData.1 %tmp.56;
-        symbol [ vibeData %vibeData.1 127 16 24 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 134 12 ]
-        symbol [ Attention %tmp.57 134 12 21 ];
+        symbol [ vibeData %vibeData.1 126 16 24 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 133 12 ]
+        symbol [ Attention %tmp.57 133 12 21 ];
         %tmp.57 = getm $.Toybox.Attention;
-        symbol [ vibrate %tmp.58 134 22 29 ];
+        symbol [ vibrate %tmp.58 133 22 29 ];
         %tmp.58 = getv function %tmp.57 :vibrate;
         %tmp.59 = lgetv %vibeData.1;
-        symbol [ vibeData %tmp.59 134 30 38 ];
+        symbol [ vibeData %tmp.59 133 30 38 ];
         invoke %tmp.57 %tmp.58(%tmp.59);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_126_36_135_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_126_8_135_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_126_8_135_8_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_121_48_136_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_125_36_134_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_125_8_134_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_125_8_134_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_120_48_135_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc"; @line = 138; @symbol_functiondef = [notifyTimeUp,138,13,25]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc"; @line = 137; @symbol_functiondef = [notifyTimeUp,137,13,25]; ]
     function notifyTimeUp() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_36_152_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 139 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_139_8_141_8_if_stmt:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_139_12_139_54_begin:
-        symbol [ isSoundEnabled %tmp.2 139 12 26 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_137_36_156_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 138 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_8_142_8_if_stmt:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_12_138_54_begin:
+        symbol [ isSoundEnabled %tmp.2 138 12 26 ];
         %tmp.2 = getv ? :isSoundEnabled;
-        bf %tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_139_8_141_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_139_30_139_54_true:
-        symbol [ Attention %tmp.3 139 31 40 ];
+        bf %tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_8_142_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_30_138_54_true:
+        symbol [ Attention %tmp.3 138 31 40 ];
         %tmp.3 = getm $.Toybox.Attention;
         %tmp.5 = const :playTone;
-        symbol [ playTone %tmp.5 139 46 54 const ];
+        symbol [ playTone %tmp.5 138 46 54 const ];
         %tmp.6 = canhazplz %tmp.3 %tmp.5;
         push %tmp.6;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_139_30_139_54_end:
-        %tmp.7 = phi [%tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_139_12_139_54_begin] [%tmp.6 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_139_30_139_54_true] [%tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_139_30_139_54_end];
-        bf %tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_139_8_141_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_139_8_141_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_139_57_141_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 140 12 ]
-        symbol [ Attention %tmp.8 140 12 21 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_30_138_54_end:
+        %tmp.7 = phi [%tmp.2 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_12_138_54_begin] [%tmp.6 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_30_138_54_true] [%tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_30_138_54_end];
+        bf %tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_8_142_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_8_142_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_57_142_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 139 12 ]
+        symbol [ Attention %tmp.8 139 12 21 ];
         %tmp.8 = getm $.Toybox.Attention;
-        symbol [ playTone %tmp.9 140 22 30 ];
+        symbol [ playTone %tmp.9 139 22 30 ];
         %tmp.9 = getv function %tmp.8 :playTone;
-        symbol [ Attention %tmp.10 140 31 40 ];
+        symbol [ Attention %tmp.10 139 31 40 ];
         %tmp.10 = getm $.Toybox.Attention;
-        symbol [ TONE_TIME_ALERT %tmp.11 140 41 56 ];
+        symbol [ TONE_TIME_ALERT %tmp.11 139 41 56 ];
         %tmp.11 = getv %tmp.10 :TONE_TIME_ALERT;
         invoke %tmp.8 %tmp.9(%tmp.11);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_139_57_141_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_139_8_141_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_139_8_141_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 143 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_143_8_151_8_if_stmt:
-        symbol [ Attention %tmp.12 143 12 21 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 140 12 ]
+        symbol [ Attention %tmp.12 140 12 21 ];
         %tmp.12 = getm $.Toybox.Attention;
-        %tmp.14 = const :vibrate;
-        symbol [ vibrate %tmp.14 143 27 34 const ];
-        %tmp.15 = canhazplz %tmp.12 %tmp.14;
-        bf %tmp.15 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_143_8_151_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_143_8_151_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_143_36_151_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 144 12 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_143_36_151_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_143_36_151_8_stop" ]
+        symbol [ playTone %tmp.13 140 22 30 ];
+        %tmp.13 = getv function %tmp.12 :playTone;
+        symbol [ Attention %tmp.14 140 31 40 ];
+        %tmp.14 = getm $.Toybox.Attention;
+        symbol [ TONE_TIME_ALERT %tmp.15 140 41 56 ];
+        %tmp.15 = getv %tmp.14 :TONE_TIME_ALERT;
+        invoke %tmp.12 %tmp.13(%tmp.15);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 141 12 ]
+        symbol [ Attention %tmp.16 141 12 21 ];
+        %tmp.16 = getm $.Toybox.Attention;
+        symbol [ playTone %tmp.17 141 22 30 ];
+        %tmp.17 = getv function %tmp.16 :playTone;
+        symbol [ Attention %tmp.18 141 31 40 ];
+        %tmp.18 = getm $.Toybox.Attention;
+        symbol [ TONE_TIME_ALERT %tmp.19 141 41 56 ];
+        %tmp.19 = getv %tmp.18 :TONE_TIME_ALERT;
+        invoke %tmp.16 %tmp.17(%tmp.19);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_57_142_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_8_142_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_8_142_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 144 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_144_8_155_8_if_stmt:
+        symbol [ Attention %tmp.20 144 12 21 ];
+        %tmp.20 = getm $.Toybox.Attention;
+        %tmp.22 = const :vibrate;
+        symbol [ vibrate %tmp.22 144 27 34 const ];
+        %tmp.23 = canhazplz %tmp.20 %tmp.22;
+        bf %tmp.23 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_144_8_155_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_144_8_155_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_144_36_155_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 145 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_144_36_155_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_144_36_155_8_stop" ]
         %vibeData.1 = local;
-        symbol [ vibeData %vibeData.1 144 16 24 ];
-        %tmp.16 = newa 3 Array<Attention.VibeProfile>;
-        symbol [ Array %tmp.16 148 17 22 ];
-        symbol [ Attention %tmp.16 148 23 32 ];
-        symbol [ VibeProfile %tmp.16 148 33 44 ];
-        symbol [ Attention %tmp.19 145 20 29 ];
-        %tmp.19 = getm $.Toybox.Attention;
-        symbol [ VibeProfile %tmp.20 145 30 41 ];
-        %tmp.20 = getv function ? %tmp.19 :VibeProfile;
-        %tmp.21 = 100;
-        %tmp.22 = 700;
-        %tmp.17 = newc %tmp.20 (%tmp.21, %tmp.22);
-        %tmp.23 = dup %tmp.16;
-        %tmp.24 = aputv %tmp.23 0 %tmp.17;
+        symbol [ vibeData %vibeData.1 145 16 24 ];
+        %tmp.24 = newa 6 Array<Attention.VibeProfile>;
+        symbol [ Array %tmp.24 152 17 22 ];
+        symbol [ Attention %tmp.24 152 23 32 ];
+        symbol [ VibeProfile %tmp.24 152 33 44 ];
         symbol [ Attention %tmp.27 146 20 29 ];
         %tmp.27 = getm $.Toybox.Attention;
         symbol [ VibeProfile %tmp.28 146 30 41 ];
         %tmp.28 = getv function ? %tmp.27 :VibeProfile;
-        %tmp.29 = 0;
-        %tmp.30 = 200;
+        %tmp.29 = 100;
+        %tmp.30 = 700;
         %tmp.25 = newc %tmp.28 (%tmp.29, %tmp.30);
         %tmp.31 = dup %tmp.24;
-        %tmp.32 = aputv %tmp.31 1 %tmp.25;
+        %tmp.32 = aputv %tmp.31 0 %tmp.25;
         symbol [ Attention %tmp.35 147 20 29 ];
         %tmp.35 = getm $.Toybox.Attention;
         symbol [ VibeProfile %tmp.36 147 30 41 ];
         %tmp.36 = getv function ? %tmp.35 :VibeProfile;
-        %tmp.37 = 100;
-        %tmp.38 = 700;
+        %tmp.37 = 0;
+        %tmp.38 = 200;
         %tmp.33 = newc %tmp.36 (%tmp.37, %tmp.38);
         %tmp.39 = dup %tmp.32;
-        %tmp.40 = aputv %tmp.39 2 %tmp.33;
-        lputv %vibeData.1 %tmp.40;
-        symbol [ vibeData %vibeData.1 144 16 24 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 149 12 ]
-        symbol [ Attention %tmp.41 149 12 21 ];
-        %tmp.41 = getm $.Toybox.Attention;
-        symbol [ vibrate %tmp.42 149 22 29 ];
-        %tmp.42 = getv function %tmp.41 :vibrate;
-        %tmp.43 = lgetv %vibeData.1;
-        symbol [ vibeData %tmp.43 149 30 38 ];
-        invoke %tmp.41 %tmp.42(%tmp.43);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_143_36_151_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_143_8_151_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_143_8_151_8_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_138_36_152_4_stop:
+        %tmp.40 = aputv %tmp.39 1 %tmp.33;
+        symbol [ Attention %tmp.43 148 20 29 ];
+        %tmp.43 = getm $.Toybox.Attention;
+        symbol [ VibeProfile %tmp.44 148 30 41 ];
+        %tmp.44 = getv function ? %tmp.43 :VibeProfile;
+        %tmp.45 = 100;
+        %tmp.46 = 700;
+        %tmp.41 = newc %tmp.44 (%tmp.45, %tmp.46);
+        %tmp.47 = dup %tmp.40;
+        %tmp.48 = aputv %tmp.47 2 %tmp.41;
+        symbol [ Attention %tmp.51 149 20 29 ];
+        %tmp.51 = getm $.Toybox.Attention;
+        symbol [ VibeProfile %tmp.52 149 30 41 ];
+        %tmp.52 = getv function ? %tmp.51 :VibeProfile;
+        %tmp.53 = 0;
+        %tmp.54 = 200;
+        %tmp.49 = newc %tmp.52 (%tmp.53, %tmp.54);
+        %tmp.55 = dup %tmp.48;
+        %tmp.56 = aputv %tmp.55 3 %tmp.49;
+        symbol [ Attention %tmp.59 150 20 29 ];
+        %tmp.59 = getm $.Toybox.Attention;
+        symbol [ VibeProfile %tmp.60 150 30 41 ];
+        %tmp.60 = getv function ? %tmp.59 :VibeProfile;
+        %tmp.61 = 100;
+        %tmp.62 = 700;
+        %tmp.57 = newc %tmp.60 (%tmp.61, %tmp.62);
+        %tmp.63 = dup %tmp.56;
+        %tmp.64 = aputv %tmp.63 4 %tmp.57;
+        symbol [ Attention %tmp.67 151 20 29 ];
+        %tmp.67 = getm $.Toybox.Attention;
+        symbol [ VibeProfile %tmp.68 151 30 41 ];
+        %tmp.68 = getv function ? %tmp.67 :VibeProfile;
+        %tmp.69 = 0;
+        %tmp.70 = 200;
+        %tmp.65 = newc %tmp.68 (%tmp.69, %tmp.70);
+        %tmp.71 = dup %tmp.64;
+        %tmp.72 = aputv %tmp.71 5 %tmp.65;
+        lputv %vibeData.1 %tmp.72;
+        symbol [ vibeData %vibeData.1 145 16 24 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 153 12 ]
+        symbol [ Attention %tmp.73 153 12 21 ];
+        %tmp.73 = getm $.Toybox.Attention;
+        symbol [ vibrate %tmp.74 153 22 29 ];
+        %tmp.74 = getv function %tmp.73 :vibrate;
+        %tmp.75 = lgetv %vibeData.1;
+        symbol [ vibeData %tmp.75 153 30 38 ];
+        invoke %tmp.73 %tmp.74(%tmp.75);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_144_36_155_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_144_8_155_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_144_8_155_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_137_36_156_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc"; @line = 154; @symbol_functiondef = [resetTimer,154,13,23]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc"; @line = 158; @symbol_functiondef = [resetTimer,158,13,23]; ]
     function resetTimer() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_154_34_160_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 155 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_158_34_164_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 159 8 ]
         %tmp.1 = false;
-        symbol [ isRunning ? 155 8 17 ];
+        symbol [ isRunning ? 159 8 17 ];
         putv self :isRunning %tmp.1;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 156 8 ]
-        symbol [ defaultDurationSeconds %tmp.3 156 27 49 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 160 8 ]
+        symbol [ defaultDurationSeconds %tmp.3 160 27 49 ];
         %tmp.3 = getv ? :defaultDurationSeconds;
-        symbol [ secondsRemaining ? 156 8 24 ];
+        symbol [ secondsRemaining ? 160 8 24 ];
         putv self :secondsRemaining %tmp.3;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 157 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 161 8 ]
         %tmp.4 = 0;
-        symbol [ _restSeconds ? 157 8 20 ];
+        symbol [ _restSeconds ? 161 8 20 ];
         putv self :_restSeconds %tmp.4;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 158 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 162 8 ]
         %tmp.5 = self;
-        symbol [ stopBackgroundTick %tmp.6 158 8 26 ];
+        symbol [ stopBackgroundTick %tmp.6 162 8 26 ];
         %tmp.6 = getv function %tmp.5 :stopBackgroundTick;
         invoke %tmp.5 %tmp.6();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 159 8 ]
-        symbol [ WatchUi %tmp.7 159 8 15 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc" 163 8 ]
+        symbol [ WatchUi %tmp.7 163 8 15 ];
         %tmp.7 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.8 159 16 29 ];
+        symbol [ requestUpdate %tmp.8 163 16 29 ];
         %tmp.8 = getv function %tmp.7 :requestUpdate;
         invoke %tmp.7 %tmp.8();
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_154_34_160_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_timermanager_mc_158_34_164_4_stop:
     }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\timermanager.mc"; @line = 1; ]

@@ -1,62 +1,111 @@
-import Toybox.Activity;
+import Toybox.Math;
 import Toybox.Lang;
+import Toybox.Sensor;
 import Toybox.System;
-import Toybox.Time;
 
 module JumpManager {
 
-    var _isJumping as Boolean = false;
-    var _lastJumpTime as Number = 0;
-    var _lastSpeed as Float = 0.0;
+    var _isListening as Boolean = false;
+    var _phase as Number = 0;
+    var _phaseSamples as Number = 0;
+    var _cooldownSamples as Number = 0;
 
-    const JUMP_SPEED_THRESHOLD as Float = 3.2;
-    const JUMP_RESET_THRESHOLD as Float = 2.6;
-    const JUMP_COOLDOWN_SECONDS as Number = 2;
+    // Dane akcelerometru sa milli-G; prog jest podany w G.
+    const TAKEOFF_THRESHOLD_G as Float = 1.35;
+    const AIRBORNE_THRESHOLD_G as Float = 0.65;
+    const LANDING_THRESHOLD_G as Float = 1.30;
+    const MAX_PHASE_SAMPLES as Number = 20;
+    const COOLDOWN_SAMPLES as Number = 50;
 
     // =====================================================
     // RESET
     // =====================================================
     function reset() as Void {
-        _isJumping = false;
-        _lastJumpTime = 0;
-        _lastSpeed = 0.0;
+        _phase = 0;
+        _phaseSamples = 0;
+        _cooldownSamples = 0;
         System.println("JumpManager: reset");
     }
 
-    // =====================================================
-    // AKTUALIZACJA
-    // Wykrywanie skoku na podstawie chwilowej prędkości.
-    // Debounce: skok liczymy tylko po przejściu z wartości niższej
-    // pod próg i po chwilowym pauzie między zliczeniami.
-    // =====================================================
-    function update() as Void {
-        if (SessionManager has :isSessionActive) {
-            if (!SessionManager.isSessionActive()) {
-                _isJumping = false;
-                _lastSpeed = 0.0;
-                return;
+    function start() as Void {
+        reset();
+
+        var options = {
+            :period => 1,
+            :accelerometer => {
+                :enabled => true,
+                :sampleRate => 25,
+                :includePower => false,
+                :includePitch => false,
+                :includeRoll => false,
+                :includeTimestamps => false
+            }
+        };
+
+        try {
+            Sensor.registerSensorDataListener(new Lang.Method(self, :onSensorData), options);
+            _isListening = true;
+            System.println("JumpManager: akcelerometr uruchomiony");
+        } catch (e) {
+            _isListening = false;
+            System.println("JumpManager: blad akcelerometru " + e.getErrorMessage());
+        }
+    }
+
+    function stop() as Void {
+        if (_isListening) {
+            Sensor.unregisterSensorDataListener();
+            _isListening = false;
+        }
+        reset();
+    }
+
+    function onSensorData(sensorData as Sensor.SensorData) as Void {
+        var accelData = sensorData.accelerometerData;
+        if (accelData == null || accelData.x == null || accelData.y == null || accelData.z == null) {
+            return;
+        }
+
+        var sampleCount = accelData.x.size();
+        for (var i = 0; i < sampleCount; i++) {
+            var x = accelData.x[i];
+            var y = accelData.y[i];
+            var z = accelData.z[i];
+            var magnitudeG = Math.sqrt((x * x + y * y + z * z)) / 1000.0;
+            processSample(magnitudeG);
+        }
+    }
+
+    function processSample(magnitudeG as Float) as Void {
+        if (_cooldownSamples > 0) {
+            _cooldownSamples--;
+            return;
+        }
+
+        if (_phase == 0) {
+            if (magnitudeG >= TAKEOFF_THRESHOLD_G) {
+                _phase = 1;
+                _phaseSamples = 0;
+            }
+        } else if (_phase == 1) {
+            _phaseSamples++;
+            if (magnitudeG <= AIRBORNE_THRESHOLD_G) {
+                _phase = 2;
+                _phaseSamples = 0;
+            } else if (_phaseSamples > MAX_PHASE_SAMPLES) {
+                _phase = 0;
+            }
+        } else {
+            _phaseSamples++;
+            if (magnitudeG >= LANDING_THRESHOLD_G) {
+                addJump();
+                _phase = 0;
+                _phaseSamples = 0;
+                _cooldownSamples = COOLDOWN_SAMPLES;
+            } else if (_phaseSamples > MAX_PHASE_SAMPLES) {
+                _phase = 0;
             }
         }
-
-        var info = Activity.getActivityInfo();
-        var speed = 0.0;
-
-        if (info != null && info.currentSpeed != null) {
-            speed = info.currentSpeed;
-        }
-
-        var currentTime = Time.now().value();
-        var crossedThreshold = (speed >= JUMP_SPEED_THRESHOLD) && (_lastSpeed < JUMP_SPEED_THRESHOLD);
-
-        if (crossedThreshold && !_isJumping && (currentTime - _lastJumpTime) >= JUMP_COOLDOWN_SECONDS) {
-            _isJumping = true;
-            _lastJumpTime = currentTime;
-            addJump();
-        } else if (speed < JUMP_RESET_THRESHOLD) {
-            _isJumping = false;
-        }
-
-        _lastSpeed = speed;
     }
 
     // =====================================================

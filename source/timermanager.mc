@@ -83,7 +83,6 @@ module TimerManager {
         // Sensor/metryka sesji działa niezależnie od stopera na zegarku.
         // Stoper nie jest źródłem liczenia wyskoków ani zrywów.
         BurstManager.update();
-        JumpManager.update();
 
         // 1. Logika odliczania stopera (działa tylko gdy isRunning == true)
         if (isRunning) {
@@ -138,13 +137,18 @@ module TimerManager {
     function notifyTimeUp() as Void {
         if (isSoundEnabled && (Attention has :playTone)) {
             Attention.playTone(Attention.TONE_TIME_ALERT);
+            Attention.playTone(Attention.TONE_TIME_ALERT);
+            Attention.playTone(Attention.TONE_TIME_ALERT);
         }
 
         if (Attention has :vibrate) {
             var vibeData = [
                 new Attention.VibeProfile(100, 700),
                 new Attention.VibeProfile(0, 200),
-                new Attention.VibeProfile(100, 700)
+                new Attention.VibeProfile(100, 700),
+                new Attention.VibeProfile(0, 200),
+                new Attention.VibeProfile(100, 700),
+                new Attention.VibeProfile(0, 200),
             ] as Array<Attention.VibeProfile>;
             Attention.vibrate(vibeData);
         

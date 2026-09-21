@@ -18,10 +18,6 @@ class HrArcRenderer {
             return;
         }
 
-        // Rysowanie stref tętna (Łuki)
-        drawZoneArcs(dc, cx, cy, baseRadius);
-
-        // Wyznaczanie aktualnego tętna i wskaźnika (wskazówki)
         var hrLimits = getHeartRateLimits();
         var minHr = hrLimits[0];
         var maxHr = hrLimits[1];
@@ -31,6 +27,9 @@ class HrArcRenderer {
         if (info != null && info.currentHeartRate != null) {
             currentHr = info.currentHeartRate;
         }
+
+        // Ten sam układ pięciu stref jest używany na każdym ekranie.
+        drawZoneArcs(dc, cx, cy, baseRadius, getActiveZone(currentHr, hrLimits));
 
         var angle = 140.0;
         if (currentHr > 0) {
@@ -57,7 +56,13 @@ class HrArcRenderer {
         dc.drawLine(x1.toNumber(), y1.toNumber(), x2.toNumber(), y2.toNumber());
     }
 
-    private static function drawZoneArcs(dc as Graphics.Dc, cx as Number, cy as Number, baseRadius as Number) as Void {
+    private static function drawZoneArcs(
+        dc as Graphics.Dc,
+        cx as Number,
+        cy as Number,
+        baseRadius as Number,
+        activeZone as Number
+    ) as Void {
         var colors = [
             Graphics.COLOR_BLUE,
             Graphics.COLOR_GREEN,
@@ -77,31 +82,60 @@ class HrArcRenderer {
         for (var i = 0; i < colors.size(); i++) {
             dc.setColor(colors[i], Graphics.COLOR_TRANSPARENT);
             var range = ranges[i];
-            for (var rOffset = -3; rOffset <= 2; rOffset++) {
+            var innerOffset = (i == activeZone) ? -5 : -2;
+            var outerOffset = (i == activeZone) ? 4 : 1;
+            for (var rOffset = innerOffset; rOffset <= outerOffset; rOffset++) {
                 dc.drawArc(cx, cy, baseRadius + rOffset, Graphics.ARC_CLOCKWISE, range[0], range[1]);
             }
         }
     }
 
+    private static function getActiveZone(currentHr as Number, hrLimits as Array<Number>) as Number {
+        if (currentHr <= 0) {
+            return -1;
+        }
+
+        var minHr = hrLimits[0];
+        var maxHr = hrLimits[1];
+        if (currentHr <= minHr) {
+            return 0;
+        }
+        if (currentHr >= maxHr) {
+            return 4;
+        }
+
+        var ratio = (currentHr - minHr).toFloat() / (maxHr - minHr).toFloat();
+        var zone = (ratio * 5.0).toNumber();
+        return zone > 4 ? 4 : zone;
+    }
+
     private static function getHeartRateLimits() as Array<Number> {
-        var minHr = 100;
-        var maxHr = 190;
+        var minHr = 100.0;
+        var maxHr = 190.0;
+        var hasValidProfileZones = false;
 
         if (UserProfile has :getHeartRateZones) {
             var zones = UserProfile.getHeartRateZones(UserProfile.HR_ZONE_SPORT_GENERIC);
             if (zones != null && zones.size() >= 6) {
-                minHr = zones[0];
-                maxHr = zones[5];
+                minHr = zones[0].toFloat();
+                maxHr = zones[5].toFloat();
+                hasValidProfileZones = minHr > 0 && maxHr > minHr;
             }
-        } else {
+        }
+
+        if (!hasValidProfileZones) {
             var profile = UserProfile.getProfile();
             var age = 30;
             if (profile != null && profile.birthYear != null) {
                 var currentYear = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT).year;
                 age = currentYear - profile.birthYear;
             }
-            maxHr = 220 - age;
-            minHr = (maxHr * 0.5).toNumber();
+
+            if (age < 13 || age > 100) {
+                age = 30;
+            }
+            maxHr = (208 - (0.7 * age)).toFloat();
+            minHr = (maxHr * 0.5).toFloat();
         }
 
         if (minHr >= maxHr) {

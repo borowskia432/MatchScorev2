@@ -22,9 +22,9 @@ class HrArcRenderer {
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc"; @line = 10; @symbol_functiondef = [draw,10,27,31]; @symbol_param<0> = [dc,11,8,10]; @symbol_param<0>_type<0> = [Graphics,11,14,22]; @symbol_param<0>_type<1> = [Dc,11,23,25]; @symbol_param<1> = [cx,12,8,10]; @symbol_param<1>_type<0> = [Number,12,14,20]; @symbol_param<2> = [cy,13,8,10]; @symbol_param<2>_type<0> = [Number,13,14,20]; @symbol_param<3> = [width,14,8,13]; @symbol_param<3>_type<0> = [Number,14,17,23]; ]
     public static
     function draw(dc as Graphics.Dc, cx as Number, cy as Number, width as Number) as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 16 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop" ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop" ]
         %baseRadius.1 = local;
         symbol [ baseRadius %baseRadius.1 16 12 22 ];
         %tmp.1 = lgetv %width;
@@ -49,386 +49,394 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_17_28_19_8
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_17_28_19_8_stop:
         goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_17_8_19_8_if_end;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_17_8_19_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 22 8 ]
-        %tmp.9 = self;
-        symbol [ drawZoneArcs %tmp.10 22 8 20 ];
-        %tmp.10 = getv function %tmp.9 :drawZoneArcs;
-        %tmp.11 = lgetv %dc;
-        symbol [ dc %tmp.11 22 21 23 ];
-        %tmp.12 = lgetv %cx;
-        symbol [ cx %tmp.12 22 25 27 ];
-        %tmp.13 = lgetv %cy;
-        symbol [ cy %tmp.13 22 29 31 ];
-        %tmp.14 = lgetv %baseRadius.1;
-        symbol [ baseRadius %tmp.14 22 33 43 ];
-        invoke %tmp.9 %tmp.10(%tmp.11, %tmp.12, %tmp.13, %tmp.14);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 25 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop" ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 21 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop" ]
         %hrLimits.2 = local;
-        symbol [ hrLimits %hrLimits.2 25 12 20 ];
-        %tmp.15 = self;
-        symbol [ getHeartRateLimits %tmp.16 25 23 41 ];
-        %tmp.16 = getv function %tmp.15 :getHeartRateLimits;
-        %tmp.17 = invoke %tmp.15 %tmp.16();
-        lputv %hrLimits.2 %tmp.17;
-        symbol [ hrLimits %hrLimits.2 25 12 20 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 26 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop" ]
+        symbol [ hrLimits %hrLimits.2 21 12 20 ];
+        %tmp.9 = self;
+        symbol [ getHeartRateLimits %tmp.10 21 23 41 ];
+        %tmp.10 = getv function %tmp.9 :getHeartRateLimits;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %hrLimits.2 %tmp.11;
+        symbol [ hrLimits %hrLimits.2 21 12 20 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 22 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop" ]
         %minHr.3 = local;
-        symbol [ minHr %minHr.3 26 12 17 ];
-        %tmp.18 = lgetv %hrLimits.2;
-        symbol [ hrLimits %tmp.18 26 20 28 ];
-        %tmp.19 = 0;
-        %tmp.20 = agetv %tmp.18 %tmp.19;
-        lputv %minHr.3 %tmp.20;
-        symbol [ minHr %minHr.3 26 12 17 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 27 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop" ]
+        symbol [ minHr %minHr.3 22 12 17 ];
+        %tmp.12 = lgetv %hrLimits.2;
+        symbol [ hrLimits %tmp.12 22 20 28 ];
+        %tmp.13 = 0;
+        %tmp.14 = agetv %tmp.12 %tmp.13;
+        lputv %minHr.3 %tmp.14;
+        symbol [ minHr %minHr.3 22 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 23 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop" ]
         %maxHr.4 = local;
-        symbol [ maxHr %maxHr.4 27 12 17 ];
-        %tmp.21 = lgetv %hrLimits.2;
-        symbol [ hrLimits %tmp.21 27 20 28 ];
-        %tmp.22 = 1;
-        %tmp.23 = agetv %tmp.21 %tmp.22;
-        lputv %maxHr.4 %tmp.23;
-        symbol [ maxHr %maxHr.4 27 12 17 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 29 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop" ]
+        symbol [ maxHr %maxHr.4 23 12 17 ];
+        %tmp.15 = lgetv %hrLimits.2;
+        symbol [ hrLimits %tmp.15 23 20 28 ];
+        %tmp.16 = 1;
+        %tmp.17 = agetv %tmp.15 %tmp.16;
+        lputv %maxHr.4 %tmp.17;
+        symbol [ maxHr %maxHr.4 23 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 25 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop" ]
         %info.5 = local;
-        symbol [ info %info.5 29 12 16 ];
-        symbol [ Activity %tmp.24 29 19 27 ];
-        %tmp.24 = getm $.Toybox.Activity;
-        symbol [ getActivityInfo %tmp.25 29 28 43 ];
-        %tmp.25 = getv function %tmp.24 :getActivityInfo;
-        %tmp.26 = invoke %tmp.24 %tmp.25();
-        lputv %info.5 %tmp.26;
-        symbol [ info %info.5 29 12 16 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 30 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop" ]
+        symbol [ info %info.5 25 12 16 ];
+        symbol [ Activity %tmp.18 25 19 27 ];
+        %tmp.18 = getm $.Toybox.Activity;
+        symbol [ getActivityInfo %tmp.19 25 28 43 ];
+        %tmp.19 = getv function %tmp.18 :getActivityInfo;
+        %tmp.20 = invoke %tmp.18 %tmp.19();
+        lputv %info.5 %tmp.20;
+        symbol [ info %info.5 25 12 16 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 26 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop" ]
         %currentHr.6 = local;
-        symbol [ currentHr %currentHr.6 30 12 21 ];
-        %tmp.27 = 0;
-        lputv %currentHr.6 %tmp.27;
-        symbol [ currentHr %currentHr.6 30 12 21 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 31 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_31_8_33_8_if_stmt:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_31_12_31_53_begin:
-        %tmp.28 = lgetv %info.5;
-        symbol [ info %tmp.28 31 12 16 ];
-        %tmp.29 = null;
-        %tmp.30 = ne %tmp.28 %tmp.29;
-        bf %tmp.30 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_31_8_33_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_31_28_31_53_true:
+        symbol [ currentHr %currentHr.6 26 12 21 ];
+        %tmp.21 = 0;
+        lputv %currentHr.6 %tmp.21;
+        symbol [ currentHr %currentHr.6 26 12 21 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 27 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_27_8_29_8_if_stmt:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_27_12_27_53_begin:
+        %tmp.22 = lgetv %info.5;
+        symbol [ info %tmp.22 27 12 16 ];
+        %tmp.23 = null;
+        %tmp.24 = ne %tmp.22 %tmp.23;
+        bf %tmp.24 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_27_8_29_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_27_28_27_53_true:
+        %tmp.25 = lgetv %info.5;
+        symbol [ info %tmp.25 27 28 32 ];
+        %tmp.26 = as %tmp.25 { (!Null) };
+        symbol [ currentHeartRate %tmp.27 27 33 49 ];
+        %tmp.27 = getv %tmp.26 :currentHeartRate;
+        %tmp.28 = null;
+        %tmp.29 = ne %tmp.27 %tmp.28;
+        push %tmp.29;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_27_28_27_53_end:
+        %tmp.30 = phi [%tmp.24 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_27_12_27_53_begin] [%tmp.29 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_27_28_27_53_true] [%tmp.30 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_27_28_27_53_end];
+        bf %tmp.30 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_27_8_29_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_27_8_29_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_27_59_29_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 28 12 ]
         %tmp.31 = lgetv %info.5;
-        symbol [ info %tmp.31 31 28 32 ];
+        symbol [ info %tmp.31 28 24 28 ];
         %tmp.32 = as %tmp.31 { (!Null) };
-        symbol [ currentHeartRate %tmp.33 31 33 49 ];
+        symbol [ currentHeartRate %tmp.33 28 29 45 ];
         %tmp.33 = getv %tmp.32 :currentHeartRate;
-        %tmp.34 = null;
-        %tmp.35 = ne %tmp.33 %tmp.34;
-        push %tmp.35;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_31_28_31_53_end:
-        %tmp.36 = phi [%tmp.30 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_31_12_31_53_begin] [%tmp.35 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_31_28_31_53_true] [%tmp.36 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_31_28_31_53_end];
-        bf %tmp.36 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_31_8_33_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_31_8_33_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_31_59_33_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 32 12 ]
-        %tmp.37 = lgetv %info.5;
-        symbol [ info %tmp.37 32 24 28 ];
-        %tmp.38 = as %tmp.37 { (!Null) };
-        symbol [ currentHeartRate %tmp.39 32 29 45 ];
-        %tmp.39 = getv %tmp.38 :currentHeartRate;
-        lputv %currentHr.6 %tmp.39;
-        symbol [ currentHr %currentHr.6 32 12 21 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_31_59_33_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_31_8_33_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_31_8_33_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 35 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop" ]
+        lputv %currentHr.6 %tmp.33;
+        symbol [ currentHr %currentHr.6 28 12 21 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_27_59_29_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_27_8_29_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_27_8_29_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 32 8 ]
+        %tmp.34 = self;
+        symbol [ drawZoneArcs %tmp.35 32 8 20 ];
+        %tmp.35 = getv function %tmp.34 :drawZoneArcs;
+        %tmp.36 = lgetv %dc;
+        symbol [ dc %tmp.36 32 21 23 ];
+        %tmp.37 = lgetv %cx;
+        symbol [ cx %tmp.37 32 25 27 ];
+        %tmp.38 = lgetv %cy;
+        symbol [ cy %tmp.38 32 29 31 ];
+        %tmp.39 = lgetv %baseRadius.1;
+        symbol [ baseRadius %tmp.39 32 33 43 ];
+        %tmp.40 = self;
+        symbol [ getActiveZone %tmp.41 32 45 58 ];
+        %tmp.41 = getv function %tmp.40 :getActiveZone;
+        %tmp.42 = lgetv %currentHr.6;
+        symbol [ currentHr %tmp.42 32 59 68 ];
+        %tmp.43 = lgetv %hrLimits.2;
+        symbol [ hrLimits %tmp.43 32 70 78 ];
+        %tmp.44 = invoke %tmp.40 %tmp.41(%tmp.42, %tmp.43);
+        invoke %tmp.34 %tmp.35(%tmp.36, %tmp.37, %tmp.38, %tmp.39, %tmp.44);
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 34 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop" ]
         %angle.7 = local;
-        symbol [ angle %angle.7 35 12 17 ];
-        %tmp.40 = 140.0;
-        lputv %angle.7 %tmp.40;
-        symbol [ angle %angle.7 35 12 17 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 36 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_8_45_8_if_stmt:
-        %tmp.41 = lgetv %currentHr.6;
-        symbol [ currentHr %tmp.41 36 12 21 ];
-        %tmp.42 = 0;
-        %tmp.43 = gt %tmp.41 %tmp.42;
-        bf %tmp.43 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_8_45_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_8_45_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_27_45_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 37 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_37_12_44_12_if_stmt:
-        %tmp.44 = lgetv %currentHr.6;
-        symbol [ currentHr %tmp.44 37 16 25 ];
-        %tmp.45 = lgetv %minHr.3;
-        symbol [ minHr %tmp.45 37 29 34 ];
-        %tmp.46 = lte %tmp.44 %tmp.45;
-        bf %tmp.46 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_37_12_44_12_if_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_37_12_44_12_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_37_36_39_12_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 38 16 ]
-        %tmp.47 = 140.0;
-        lputv %angle.7 %tmp.47;
-        symbol [ angle %angle.7 38 16 21 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_37_36_39_12_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_37_12_44_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_37_12_44_12_if_false:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 39 19 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_39_19_44_12_if_stmt:
-        %tmp.48 = lgetv %currentHr.6;
-        symbol [ currentHr %tmp.48 39 23 32 ];
-        %tmp.49 = lgetv %maxHr.4;
-        symbol [ maxHr %tmp.49 39 36 41 ];
-        %tmp.50 = gte %tmp.48 %tmp.49;
-        bf %tmp.50 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_39_19_44_12_if_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_39_19_44_12_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_39_43_41_12_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 40 16 ]
-        %tmp.51 = 40.0;
-        lputv %angle.7 %tmp.51;
-        symbol [ angle %angle.7 40 16 21 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_39_43_41_12_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_39_19_44_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_39_19_44_12_if_else_false:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_41_19_44_12_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 42 16 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_41_19_44_12_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_41_19_44_12_stop" ]
+        symbol [ angle %angle.7 34 12 17 ];
+        %tmp.45 = 140.0;
+        lputv %angle.7 %tmp.45;
+        symbol [ angle %angle.7 34 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 35 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_35_8_44_8_if_stmt:
+        %tmp.46 = lgetv %currentHr.6;
+        symbol [ currentHr %tmp.46 35 12 21 ];
+        %tmp.47 = 0;
+        %tmp.48 = gt %tmp.46 %tmp.47;
+        bf %tmp.48 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_35_8_44_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_35_8_44_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_35_27_44_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 36 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_12_43_12_if_stmt:
+        %tmp.49 = lgetv %currentHr.6;
+        symbol [ currentHr %tmp.49 36 16 25 ];
+        %tmp.50 = lgetv %minHr.3;
+        symbol [ minHr %tmp.50 36 29 34 ];
+        %tmp.51 = lte %tmp.49 %tmp.50;
+        bf %tmp.51 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_12_43_12_if_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_12_43_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_36_38_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 37 16 ]
+        %tmp.52 = 140.0;
+        lputv %angle.7 %tmp.52;
+        symbol [ angle %angle.7 37 16 21 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_36_38_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_12_43_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_12_43_12_if_false:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 38 19 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_38_19_43_12_if_stmt:
+        %tmp.53 = lgetv %currentHr.6;
+        symbol [ currentHr %tmp.53 38 23 32 ];
+        %tmp.54 = lgetv %maxHr.4;
+        symbol [ maxHr %tmp.54 38 36 41 ];
+        %tmp.55 = gte %tmp.53 %tmp.54;
+        bf %tmp.55 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_38_19_43_12_if_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_38_19_43_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_38_43_40_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 39 16 ]
+        %tmp.56 = 40.0;
+        lputv %angle.7 %tmp.56;
+        symbol [ angle %angle.7 39 16 21 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_38_43_40_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_38_19_43_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_38_19_43_12_if_else_false:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_40_19_43_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 41 16 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_40_19_43_12_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_40_19_43_12_stop" ]
         %ratio.8 = local;
-        symbol [ ratio %ratio.8 42 20 25 ];
-        %tmp.52 = lgetv %currentHr.6;
-        symbol [ currentHr %tmp.52 42 29 38 ];
-        %tmp.53 = lgetv %minHr.3;
-        symbol [ minHr %tmp.53 42 41 46 ];
-        %tmp.54 = sub %tmp.52 %tmp.53;
-        symbol [ toFloat %tmp.55 42 48 55 ];
-        %tmp.55 = getv function %tmp.54 :toFloat;
-        %tmp.56 = invoke %tmp.54 %tmp.55();
-        %tmp.57 = lgetv %maxHr.4;
-        symbol [ maxHr %tmp.57 42 61 66 ];
+        symbol [ ratio %ratio.8 41 20 25 ];
+        %tmp.57 = lgetv %currentHr.6;
+        symbol [ currentHr %tmp.57 41 29 38 ];
         %tmp.58 = lgetv %minHr.3;
-        symbol [ minHr %tmp.58 42 69 74 ];
+        symbol [ minHr %tmp.58 41 41 46 ];
         %tmp.59 = sub %tmp.57 %tmp.58;
-        symbol [ toFloat %tmp.60 42 76 83 ];
+        symbol [ toFloat %tmp.60 41 48 55 ];
         %tmp.60 = getv function %tmp.59 :toFloat;
         %tmp.61 = invoke %tmp.59 %tmp.60();
-        %tmp.62 = div %tmp.56 %tmp.61;
-        lputv %ratio.8 %tmp.62;
-        symbol [ ratio %ratio.8 42 20 25 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 43 16 ]
-        %tmp.63 = 140.0;
-        %tmp.64 = lgetv %ratio.8;
-        symbol [ ratio %tmp.64 43 33 38 ];
-        %tmp.65 = 100.0;
-        %tmp.66 = mul %tmp.64 %tmp.65;
-        %tmp.67 = sub %tmp.63 %tmp.66;
-        lputv %angle.7 %tmp.67;
-        symbol [ angle %angle.7 43 16 21 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_41_19_44_12_stop:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_39_19_44_12_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_37_12_44_12_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_27_45_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_8_45_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_8_45_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 47 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop" ]
+        %tmp.62 = lgetv %maxHr.4;
+        symbol [ maxHr %tmp.62 41 61 66 ];
+        %tmp.63 = lgetv %minHr.3;
+        symbol [ minHr %tmp.63 41 69 74 ];
+        %tmp.64 = sub %tmp.62 %tmp.63;
+        symbol [ toFloat %tmp.65 41 76 83 ];
+        %tmp.65 = getv function %tmp.64 :toFloat;
+        %tmp.66 = invoke %tmp.64 %tmp.65();
+        %tmp.67 = div %tmp.61 %tmp.66;
+        lputv %ratio.8 %tmp.67;
+        symbol [ ratio %ratio.8 41 20 25 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 42 16 ]
+        %tmp.68 = 140.0;
+        %tmp.69 = lgetv %ratio.8;
+        symbol [ ratio %tmp.69 42 33 38 ];
+        %tmp.70 = 100.0;
+        %tmp.71 = mul %tmp.69 %tmp.70;
+        %tmp.72 = sub %tmp.68 %tmp.71;
+        lputv %angle.7 %tmp.72;
+        symbol [ angle %angle.7 42 16 21 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_40_19_43_12_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_38_19_43_12_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_36_12_43_12_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_35_27_44_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_35_8_44_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_35_8_44_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 46 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop" ]
         %rad.9 = local;
-        symbol [ rad %rad.9 47 12 15 ];
-        symbol [ Math %tmp.68 47 18 22 ];
-        %tmp.68 = getm $.Toybox.Math;
-        symbol [ toRadians %tmp.69 47 23 32 ];
-        %tmp.69 = getv function %tmp.68 :toRadians;
-        %tmp.70 = lgetv %angle.7;
-        symbol [ angle %tmp.70 47 33 38 ];
-        %tmp.71 = invoke %tmp.68 %tmp.69(%tmp.70);
-        lputv %rad.9 %tmp.71;
-        symbol [ rad %rad.9 47 12 15 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 48 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop" ]
+        symbol [ rad %rad.9 46 12 15 ];
+        symbol [ Math %tmp.73 46 18 22 ];
+        %tmp.73 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.74 46 23 32 ];
+        %tmp.74 = getv function %tmp.73 :toRadians;
+        %tmp.75 = lgetv %angle.7;
+        symbol [ angle %tmp.75 46 33 38 ];
+        %tmp.76 = invoke %tmp.73 %tmp.74(%tmp.75);
+        lputv %rad.9 %tmp.76;
+        symbol [ rad %rad.9 46 12 15 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 47 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop" ]
         %rInner.10 = local;
-        symbol [ rInner %rInner.10 48 12 18 ];
-        %tmp.72 = lgetv %baseRadius.1;
-        symbol [ baseRadius %tmp.72 48 21 31 ];
-        %tmp.73 = 6;
-        %tmp.74 = sub %tmp.72 %tmp.73;
-        lputv %rInner.10 %tmp.74;
-        symbol [ rInner %rInner.10 48 12 18 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 49 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop" ]
+        symbol [ rInner %rInner.10 47 12 18 ];
+        %tmp.77 = lgetv %baseRadius.1;
+        symbol [ baseRadius %tmp.77 47 21 31 ];
+        %tmp.78 = 6;
+        %tmp.79 = sub %tmp.77 %tmp.78;
+        lputv %rInner.10 %tmp.79;
+        symbol [ rInner %rInner.10 47 12 18 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 48 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop" ]
         %rOuter.11 = local;
-        symbol [ rOuter %rOuter.11 49 12 18 ];
-        %tmp.75 = lgetv %baseRadius.1;
-        symbol [ baseRadius %tmp.75 49 21 31 ];
-        %tmp.76 = 6;
-        %tmp.77 = add %tmp.75 %tmp.76;
-        lputv %rOuter.11 %tmp.77;
-        symbol [ rOuter %rOuter.11 49 12 18 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 51 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop" ]
+        symbol [ rOuter %rOuter.11 48 12 18 ];
+        %tmp.80 = lgetv %baseRadius.1;
+        symbol [ baseRadius %tmp.80 48 21 31 ];
+        %tmp.81 = 6;
+        %tmp.82 = add %tmp.80 %tmp.81;
+        lputv %rOuter.11 %tmp.82;
+        symbol [ rOuter %rOuter.11 48 12 18 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 50 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop" ]
         %x1.12 = local;
-        symbol [ x1 %x1.12 51 12 14 ];
-        %tmp.78 = lgetv %cx;
-        symbol [ cx %tmp.78 51 17 19 ];
-        %tmp.79 = lgetv %rInner.10;
-        symbol [ rInner %tmp.79 51 23 29 ];
-        symbol [ Math %tmp.80 51 32 36 ];
-        %tmp.80 = getm $.Toybox.Math;
-        symbol [ cos %tmp.81 51 37 40 ];
-        %tmp.81 = getv function %tmp.80 :cos;
-        %tmp.82 = lgetv %rad.9;
-        symbol [ rad %tmp.82 51 41 44 ];
-        %tmp.83 = invoke %tmp.80 %tmp.81(%tmp.82);
-        %tmp.84 = mul %tmp.79 %tmp.83;
-        %tmp.85 = add %tmp.78 %tmp.84;
-        lputv %x1.12 %tmp.85;
-        symbol [ x1 %x1.12 51 12 14 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 52 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop" ]
+        symbol [ x1 %x1.12 50 12 14 ];
+        %tmp.83 = lgetv %cx;
+        symbol [ cx %tmp.83 50 17 19 ];
+        %tmp.84 = lgetv %rInner.10;
+        symbol [ rInner %tmp.84 50 23 29 ];
+        symbol [ Math %tmp.85 50 32 36 ];
+        %tmp.85 = getm $.Toybox.Math;
+        symbol [ cos %tmp.86 50 37 40 ];
+        %tmp.86 = getv function %tmp.85 :cos;
+        %tmp.87 = lgetv %rad.9;
+        symbol [ rad %tmp.87 50 41 44 ];
+        %tmp.88 = invoke %tmp.85 %tmp.86(%tmp.87);
+        %tmp.89 = mul %tmp.84 %tmp.88;
+        %tmp.90 = add %tmp.83 %tmp.89;
+        lputv %x1.12 %tmp.90;
+        symbol [ x1 %x1.12 50 12 14 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 51 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop" ]
         %y1.13 = local;
-        symbol [ y1 %y1.13 52 12 14 ];
-        %tmp.86 = lgetv %cy;
-        symbol [ cy %tmp.86 52 17 19 ];
-        %tmp.87 = lgetv %rInner.10;
-        symbol [ rInner %tmp.87 52 23 29 ];
-        symbol [ Math %tmp.88 52 32 36 ];
-        %tmp.88 = getm $.Toybox.Math;
-        symbol [ sin %tmp.89 52 37 40 ];
-        %tmp.89 = getv function %tmp.88 :sin;
-        %tmp.90 = lgetv %rad.9;
-        symbol [ rad %tmp.90 52 41 44 ];
-        %tmp.91 = invoke %tmp.88 %tmp.89(%tmp.90);
-        %tmp.92 = mul %tmp.87 %tmp.91;
-        %tmp.93 = sub %tmp.86 %tmp.92;
-        lputv %y1.13 %tmp.93;
-        symbol [ y1 %y1.13 52 12 14 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 53 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop" ]
+        symbol [ y1 %y1.13 51 12 14 ];
+        %tmp.91 = lgetv %cy;
+        symbol [ cy %tmp.91 51 17 19 ];
+        %tmp.92 = lgetv %rInner.10;
+        symbol [ rInner %tmp.92 51 23 29 ];
+        symbol [ Math %tmp.93 51 32 36 ];
+        %tmp.93 = getm $.Toybox.Math;
+        symbol [ sin %tmp.94 51 37 40 ];
+        %tmp.94 = getv function %tmp.93 :sin;
+        %tmp.95 = lgetv %rad.9;
+        symbol [ rad %tmp.95 51 41 44 ];
+        %tmp.96 = invoke %tmp.93 %tmp.94(%tmp.95);
+        %tmp.97 = mul %tmp.92 %tmp.96;
+        %tmp.98 = sub %tmp.91 %tmp.97;
+        lputv %y1.13 %tmp.98;
+        symbol [ y1 %y1.13 51 12 14 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 52 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop" ]
         %x2.14 = local;
-        symbol [ x2 %x2.14 53 12 14 ];
-        %tmp.94 = lgetv %cx;
-        symbol [ cx %tmp.94 53 17 19 ];
-        %tmp.95 = lgetv %rOuter.11;
-        symbol [ rOuter %tmp.95 53 23 29 ];
-        symbol [ Math %tmp.96 53 32 36 ];
-        %tmp.96 = getm $.Toybox.Math;
-        symbol [ cos %tmp.97 53 37 40 ];
-        %tmp.97 = getv function %tmp.96 :cos;
-        %tmp.98 = lgetv %rad.9;
-        symbol [ rad %tmp.98 53 41 44 ];
-        %tmp.99 = invoke %tmp.96 %tmp.97(%tmp.98);
-        %tmp.100 = mul %tmp.95 %tmp.99;
-        %tmp.101 = add %tmp.94 %tmp.100;
-        lputv %x2.14 %tmp.101;
-        symbol [ x2 %x2.14 53 12 14 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 54 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop" ]
+        symbol [ x2 %x2.14 52 12 14 ];
+        %tmp.99 = lgetv %cx;
+        symbol [ cx %tmp.99 52 17 19 ];
+        %tmp.100 = lgetv %rOuter.11;
+        symbol [ rOuter %tmp.100 52 23 29 ];
+        symbol [ Math %tmp.101 52 32 36 ];
+        %tmp.101 = getm $.Toybox.Math;
+        symbol [ cos %tmp.102 52 37 40 ];
+        %tmp.102 = getv function %tmp.101 :cos;
+        %tmp.103 = lgetv %rad.9;
+        symbol [ rad %tmp.103 52 41 44 ];
+        %tmp.104 = invoke %tmp.101 %tmp.102(%tmp.103);
+        %tmp.105 = mul %tmp.100 %tmp.104;
+        %tmp.106 = add %tmp.99 %tmp.105;
+        lputv %x2.14 %tmp.106;
+        symbol [ x2 %x2.14 52 12 14 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 53 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop" ]
         %y2.15 = local;
-        symbol [ y2 %y2.15 54 12 14 ];
-        %tmp.102 = lgetv %cy;
-        symbol [ cy %tmp.102 54 17 19 ];
-        %tmp.103 = lgetv %rOuter.11;
-        symbol [ rOuter %tmp.103 54 23 29 ];
-        symbol [ Math %tmp.104 54 32 36 ];
-        %tmp.104 = getm $.Toybox.Math;
-        symbol [ sin %tmp.105 54 37 40 ];
-        %tmp.105 = getv function %tmp.104 :sin;
-        %tmp.106 = lgetv %rad.9;
-        symbol [ rad %tmp.106 54 41 44 ];
-        %tmp.107 = invoke %tmp.104 %tmp.105(%tmp.106);
-        %tmp.108 = mul %tmp.103 %tmp.107;
-        %tmp.109 = sub %tmp.102 %tmp.108;
-        lputv %y2.15 %tmp.109;
-        symbol [ y2 %y2.15 54 12 14 ];
+        symbol [ y2 %y2.15 53 12 14 ];
+        %tmp.107 = lgetv %cy;
+        symbol [ cy %tmp.107 53 17 19 ];
+        %tmp.108 = lgetv %rOuter.11;
+        symbol [ rOuter %tmp.108 53 23 29 ];
+        symbol [ Math %tmp.109 53 32 36 ];
+        %tmp.109 = getm $.Toybox.Math;
+        symbol [ sin %tmp.110 53 37 40 ];
+        %tmp.110 = getv function %tmp.109 :sin;
+        %tmp.111 = lgetv %rad.9;
+        symbol [ rad %tmp.111 53 41 44 ];
+        %tmp.112 = invoke %tmp.109 %tmp.110(%tmp.111);
+        %tmp.113 = mul %tmp.108 %tmp.112;
+        %tmp.114 = sub %tmp.107 %tmp.113;
+        lputv %y2.15 %tmp.114;
+        symbol [ y2 %y2.15 53 12 14 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 55 8 ]
+        %tmp.115 = lgetv %dc;
+        symbol [ dc %tmp.115 55 8 10 ];
+        symbol [ setColor %tmp.116 55 11 19 ];
+        %tmp.116 = getv function %tmp.115 :setColor;
+        symbol [ AppConfig %tmp.118 55 20 29 ];
+        %tmp.118 = getv ? :AppConfig;
+        symbol [ getTextColor %tmp.119 55 30 42 ];
+        %tmp.119 = getv function %tmp.118 :getTextColor;
+        %tmp.120 = invoke %tmp.118 %tmp.119();
+        symbol [ Graphics %tmp.121 55 46 54 ];
+        %tmp.121 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.122 55 55 72 ];
+        %tmp.122 = getv %tmp.121 :COLOR_TRANSPARENT;
+        invoke %tmp.115 %tmp.116(%tmp.120, %tmp.122);
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 56 8 ]
-        %tmp.110 = lgetv %dc;
-        symbol [ dc %tmp.110 56 8 10 ];
-        symbol [ setColor %tmp.111 56 11 19 ];
-        %tmp.111 = getv function %tmp.110 :setColor;
-        symbol [ AppConfig %tmp.113 56 20 29 ];
-        %tmp.113 = getv ? :AppConfig;
-        symbol [ getTextColor %tmp.114 56 30 42 ];
-        %tmp.114 = getv function %tmp.113 :getTextColor;
-        %tmp.115 = invoke %tmp.113 %tmp.114();
-        symbol [ Graphics %tmp.116 56 46 54 ];
-        %tmp.116 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.117 56 55 72 ];
-        %tmp.117 = getv %tmp.116 :COLOR_TRANSPARENT;
-        invoke %tmp.110 %tmp.111(%tmp.115, %tmp.117);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 57 8 ]
-        %tmp.118 = lgetv %dc;
-        symbol [ dc %tmp.118 57 8 10 ];
-        symbol [ drawLine %tmp.119 57 11 19 ];
-        %tmp.119 = getv function %tmp.118 :drawLine;
-        %tmp.120 = lgetv %x1.12;
-        symbol [ x1 %tmp.120 57 20 22 ];
-        symbol [ toNumber %tmp.121 57 23 31 ];
-        %tmp.121 = getv function %tmp.120 :toNumber;
-        %tmp.122 = invoke %tmp.120 %tmp.121();
-        %tmp.123 = lgetv %y1.13;
-        symbol [ y1 %tmp.123 57 35 37 ];
-        symbol [ toNumber %tmp.124 57 38 46 ];
-        %tmp.124 = getv function %tmp.123 :toNumber;
-        %tmp.125 = invoke %tmp.123 %tmp.124();
-        %tmp.126 = lgetv %x2.14;
-        symbol [ x2 %tmp.126 57 50 52 ];
-        symbol [ toNumber %tmp.127 57 53 61 ];
-        %tmp.127 = getv function %tmp.126 :toNumber;
-        %tmp.128 = invoke %tmp.126 %tmp.127();
-        %tmp.129 = lgetv %y2.15;
-        symbol [ y2 %tmp.129 57 65 67 ];
-        symbol [ toNumber %tmp.130 57 68 76 ];
-        %tmp.130 = getv function %tmp.129 :toNumber;
-        %tmp.131 = invoke %tmp.129 %tmp.130();
-        invoke %tmp.118 %tmp.119(%tmp.122, %tmp.125, %tmp.128, %tmp.131);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_58_4_stop:
+        %tmp.123 = lgetv %dc;
+        symbol [ dc %tmp.123 56 8 10 ];
+        symbol [ drawLine %tmp.124 56 11 19 ];
+        %tmp.124 = getv function %tmp.123 :drawLine;
+        %tmp.125 = lgetv %x1.12;
+        symbol [ x1 %tmp.125 56 20 22 ];
+        symbol [ toNumber %tmp.126 56 23 31 ];
+        %tmp.126 = getv function %tmp.125 :toNumber;
+        %tmp.127 = invoke %tmp.125 %tmp.126();
+        %tmp.128 = lgetv %y1.13;
+        symbol [ y1 %tmp.128 56 35 37 ];
+        symbol [ toNumber %tmp.129 56 38 46 ];
+        %tmp.129 = getv function %tmp.128 :toNumber;
+        %tmp.130 = invoke %tmp.128 %tmp.129();
+        %tmp.131 = lgetv %x2.14;
+        symbol [ x2 %tmp.131 56 50 52 ];
+        symbol [ toNumber %tmp.132 56 53 61 ];
+        %tmp.132 = getv function %tmp.131 :toNumber;
+        %tmp.133 = invoke %tmp.131 %tmp.132();
+        %tmp.134 = lgetv %y2.15;
+        symbol [ y2 %tmp.134 56 65 67 ];
+        symbol [ toNumber %tmp.135 56 68 76 ];
+        %tmp.135 = getv function %tmp.134 :toNumber;
+        %tmp.136 = invoke %tmp.134 %tmp.135();
+        invoke %tmp.123 %tmp.124(%tmp.127, %tmp.130, %tmp.133, %tmp.136);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_15_14_57_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc"; @line = 60; @symbol_functiondef = [drawZoneArcs,60,28,40]; @symbol_param<0> = [dc,60,41,43]; @symbol_param<0>_type<0> = [Graphics,60,47,55]; @symbol_param<0>_type<1> = [Dc,60,56,58]; @symbol_param<1> = [cx,60,60,62]; @symbol_param<1>_type<0> = [Number,60,66,72]; @symbol_param<2> = [cy,60,74,76]; @symbol_param<2>_type<0> = [Number,60,80,86]; @symbol_param<3> = [baseRadius,60,88,98]; @symbol_param<3>_type<0> = [Number,60,102,108]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc"; @line = 59; @symbol_functiondef = [drawZoneArcs,59,28,40]; @symbol_param<0> = [dc,60,8,10]; @symbol_param<0>_type<0> = [Graphics,60,14,22]; @symbol_param<0>_type<1> = [Dc,60,23,25]; @symbol_param<1> = [cx,61,8,10]; @symbol_param<1>_type<0> = [Number,61,14,20]; @symbol_param<2> = [cy,62,8,10]; @symbol_param<2>_type<0> = [Number,62,14,20]; @symbol_param<3> = [baseRadius,63,8,18]; @symbol_param<3>_type<0> = [Number,63,22,28]; @symbol_param<4> = [activeZone,64,8,18]; @symbol_param<4>_type<0> = [Number,64,22,28]; ]
     private static
-    function drawZoneArcs(dc as Graphics.Dc, cx as Number, cy as Number, baseRadius as Number) as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_60_118_84_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 61 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_60_118_84_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_60_118_84_4_stop" ]
+    function drawZoneArcs(dc as Graphics.Dc, cx as Number, cy as Number, baseRadius as Number, activeZone as Number) as Void {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_65_14_91_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 66 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_65_14_91_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_65_14_91_4_stop" ]
         %colors.1 = local;
-        symbol [ colors %colors.1 61 12 18 ];
+        symbol [ colors %colors.1 66 12 18 ];
         %tmp.1 = newa 5;
-        symbol [ Graphics %tmp.2 62 12 20 ];
+        symbol [ Graphics %tmp.2 67 12 20 ];
         %tmp.2 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLUE %tmp.3 62 21 31 ];
+        symbol [ COLOR_BLUE %tmp.3 67 21 31 ];
         %tmp.3 = getv %tmp.2 :COLOR_BLUE;
         %tmp.4 = dup %tmp.1;
         %tmp.5 = aputv %tmp.4 0 %tmp.3;
-        symbol [ Graphics %tmp.6 63 12 20 ];
+        symbol [ Graphics %tmp.6 68 12 20 ];
         %tmp.6 = getm $.Toybox.Graphics;
-        symbol [ COLOR_GREEN %tmp.7 63 21 32 ];
+        symbol [ COLOR_GREEN %tmp.7 68 21 32 ];
         %tmp.7 = getv %tmp.6 :COLOR_GREEN;
         %tmp.8 = dup %tmp.5;
         %tmp.9 = aputv %tmp.8 1 %tmp.7;
-        symbol [ Graphics %tmp.10 64 12 20 ];
+        symbol [ Graphics %tmp.10 69 12 20 ];
         %tmp.10 = getm $.Toybox.Graphics;
-        symbol [ COLOR_YELLOW %tmp.11 64 21 33 ];
+        symbol [ COLOR_YELLOW %tmp.11 69 21 33 ];
         %tmp.11 = getv %tmp.10 :COLOR_YELLOW;
         %tmp.12 = dup %tmp.9;
         %tmp.13 = aputv %tmp.12 2 %tmp.11;
-        symbol [ Graphics %tmp.14 65 12 20 ];
+        symbol [ Graphics %tmp.14 70 12 20 ];
         %tmp.14 = getm $.Toybox.Graphics;
-        symbol [ COLOR_ORANGE %tmp.15 65 21 33 ];
+        symbol [ COLOR_ORANGE %tmp.15 70 21 33 ];
         %tmp.15 = getv %tmp.14 :COLOR_ORANGE;
         %tmp.16 = dup %tmp.13;
         %tmp.17 = aputv %tmp.16 3 %tmp.15;
-        symbol [ Graphics %tmp.18 66 12 20 ];
+        symbol [ Graphics %tmp.18 71 12 20 ];
         %tmp.18 = getm $.Toybox.Graphics;
-        symbol [ COLOR_RED %tmp.19 66 21 30 ];
+        symbol [ COLOR_RED %tmp.19 71 21 30 ];
         %tmp.19 = getv %tmp.18 :COLOR_RED;
         %tmp.20 = dup %tmp.17;
         %tmp.21 = aputv %tmp.20 4 %tmp.19;
         lputv %colors.1 %tmp.21;
-        symbol [ colors %colors.1 61 12 18 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 69 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_60_118_84_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_60_118_84_4_stop" ]
+        symbol [ colors %colors.1 66 12 18 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 74 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_65_14_91_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_65_14_91_4_stop" ]
         %ranges.2 = local;
-        symbol [ ranges %ranges.2 69 12 18 ];
+        symbol [ ranges %ranges.2 74 12 18 ];
         %tmp.22 = newa 5;
         %tmp.23 = newa 2;
         %tmp.24 = 140;
@@ -476,339 +484,584 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_60_118_84_
         %tmp.66 = dup %tmp.58;
         %tmp.67 = aputv %tmp.66 4 %tmp.65;
         lputv %ranges.2 %tmp.67;
-        symbol [ ranges %ranges.2 69 12 18 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 77 8 ]
-        for @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_8_83_8_for_test @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_8_83_8_for_incr @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_8_83_8_for_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_8_83_8_for_init:
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_8_83_8_for_begin" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_8_83_8_for_end" ]
+        symbol [ ranges %ranges.2 74 12 18 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 82 8 ]
+        for @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_8_90_8_for_test @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_8_90_8_for_incr @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_8_90_8_for_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_8_90_8_for_init:
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_8_90_8_for_begin" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_8_90_8_for_end" ]
         %i.3 = local;
-        symbol [ i %i.3 77 17 18 ];
+        symbol [ i %i.3 82 17 18 ];
         %tmp.68 = 0;
         lputv %i.3 %tmp.68;
-        symbol [ i %i.3 77 17 18 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_8_83_8_for_test:
+        symbol [ i %i.3 82 17 18 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_8_90_8_for_test:
         %tmp.69 = lgetv %i.3;
-        symbol [ i %tmp.69 77 24 25 ];
+        symbol [ i %tmp.69 82 24 25 ];
         %tmp.70 = lgetv %colors.1;
-        symbol [ colors %tmp.70 77 28 34 ];
-        symbol [ size %tmp.71 77 35 39 ];
+        symbol [ colors %tmp.70 82 28 34 ];
+        symbol [ size %tmp.71 82 35 39 ];
         %tmp.71 = getv function %tmp.70 :size;
         %tmp.72 = invoke %tmp.70 %tmp.71();
         %tmp.73 = lt %tmp.69 %tmp.72;
-        bf %tmp.73 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_8_83_8_for_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_8_83_8_for_begin:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_48_83_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 78 12 ]
+        bf %tmp.73 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_8_90_8_for_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_8_90_8_for_begin:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_48_90_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 83 12 ]
         %tmp.74 = lgetv %dc;
-        symbol [ dc %tmp.74 78 12 14 ];
-        symbol [ setColor %tmp.75 78 15 23 ];
+        symbol [ dc %tmp.74 83 12 14 ];
+        symbol [ setColor %tmp.75 83 15 23 ];
         %tmp.75 = getv function %tmp.74 :setColor;
         %tmp.76 = lgetv %colors.1;
-        symbol [ colors %tmp.76 78 24 30 ];
+        symbol [ colors %tmp.76 83 24 30 ];
         %tmp.77 = lgetv %i.3;
-        symbol [ i %tmp.77 78 31 32 ];
+        symbol [ i %tmp.77 83 31 32 ];
         %tmp.78 = agetv %tmp.76 %tmp.77;
-        symbol [ Graphics %tmp.79 78 35 43 ];
+        symbol [ Graphics %tmp.79 83 35 43 ];
         %tmp.79 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.80 78 44 61 ];
+        symbol [ COLOR_TRANSPARENT %tmp.80 83 44 61 ];
         %tmp.80 = getv %tmp.79 :COLOR_TRANSPARENT;
         invoke %tmp.74 %tmp.75(%tmp.78, %tmp.80);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 79 12 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_48_83_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_48_83_8_stop" ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 84 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_48_90_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_48_90_8_stop" ]
         %range.4 = local;
-        symbol [ range %range.4 79 16 21 ];
+        symbol [ range %range.4 84 16 21 ];
         %tmp.81 = lgetv %ranges.2;
-        symbol [ ranges %tmp.81 79 24 30 ];
+        symbol [ ranges %tmp.81 84 24 30 ];
         %tmp.82 = lgetv %i.3;
-        symbol [ i %tmp.82 79 31 32 ];
+        symbol [ i %tmp.82 84 31 32 ];
         %tmp.83 = agetv %tmp.81 %tmp.82;
         lputv %range.4 %tmp.83;
-        symbol [ range %range.4 79 16 21 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 80 12 ]
-        for @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_80_12_82_12_for_test @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_80_12_82_12_for_incr @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_80_12_82_12_for_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_80_12_82_12_for_init:
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_80_12_82_12_for_begin" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_80_12_82_12_for_end" ]
-        %rOffset.5 = local;
-        symbol [ rOffset %rOffset.5 80 21 28 ];
-        %tmp.84 = -3;
-        lputv %rOffset.5 %tmp.84;
-        symbol [ rOffset %rOffset.5 80 21 28 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_80_12_82_12_for_test:
-        %tmp.85 = lgetv %rOffset.5;
-        symbol [ rOffset %tmp.85 80 35 42 ];
-        %tmp.86 = 2;
-        %tmp.87 = lte %tmp.85 %tmp.86;
-        bf %tmp.87 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_80_12_82_12_for_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_80_12_82_12_for_begin:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_80_60_82_12_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 81 16 ]
-        %tmp.88 = lgetv %dc;
-        symbol [ dc %tmp.88 81 16 18 ];
-        symbol [ drawArc %tmp.89 81 19 26 ];
-        %tmp.89 = getv function %tmp.88 :drawArc;
-        %tmp.90 = lgetv %cx;
-        symbol [ cx %tmp.90 81 27 29 ];
-        %tmp.91 = lgetv %cy;
-        symbol [ cy %tmp.91 81 31 33 ];
-        %tmp.92 = lgetv %baseRadius;
-        symbol [ baseRadius %tmp.92 81 35 45 ];
-        %tmp.93 = lgetv %rOffset.5;
-        symbol [ rOffset %tmp.93 81 48 55 ];
-        %tmp.94 = add %tmp.92 %tmp.93;
-        symbol [ Graphics %tmp.95 81 57 65 ];
-        %tmp.95 = getm $.Toybox.Graphics;
-        symbol [ ARC_CLOCKWISE %tmp.96 81 66 79 ];
-        %tmp.96 = getv %tmp.95 :ARC_CLOCKWISE;
-        %tmp.97 = lgetv %range.4;
-        symbol [ range %tmp.97 81 81 86 ];
-        %tmp.98 = 0;
-        %tmp.99 = agetv %tmp.97 %tmp.98;
-        %tmp.100 = lgetv %range.4;
-        symbol [ range %tmp.100 81 91 96 ];
-        %tmp.101 = 1;
-        %tmp.102 = agetv %tmp.100 %tmp.101;
-        invoke %tmp.88 %tmp.89(%tmp.90, %tmp.91, %tmp.94, %tmp.96, %tmp.99, %tmp.102);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_80_60_82_12_stop:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_80_12_82_12_for_incr:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 80 ]
-        %tmp.105 = lgetv %rOffset.5;
-        symbol [ rOffset %tmp.105 80 49 56 ];
-        %tmp.106 = add %tmp.105 1;
-        lputv %rOffset.5 %tmp.106;
-        symbol [ rOffset %rOffset.5 80 49 56 ];
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_80_12_82_12_for_test;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_80_12_82_12_for_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_48_83_8_stop:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_8_83_8_for_incr:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 77 ]
-        %tmp.109 = lgetv %i.3;
-        symbol [ i %tmp.109 77 43 44 ];
-        %tmp.110 = add %tmp.109 1;
-        lputv %i.3 %tmp.110;
-        symbol [ i %i.3 77 43 44 ];
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_8_83_8_for_test;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_77_8_83_8_for_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_60_118_84_4_stop:
+        symbol [ range %range.4 84 16 21 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 85 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_48_90_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_48_90_8_stop" ]
+        %innerOffset.5 = local;
+        symbol [ innerOffset %innerOffset.5 85 16 27 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_85_30_85_56_begin:
+        %tmp.84 = lgetv %i.3;
+        symbol [ i %tmp.84 85 31 32 ];
+        %tmp.85 = lgetv %activeZone;
+        symbol [ activeZone %tmp.85 85 36 46 ];
+        %tmp.86 = eq %tmp.84 %tmp.85;
+        bf %tmp.86 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_85_30_85_56_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_85_30_85_56_true:
+        %tmp.87 = -5;
+        push %tmp.87;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_85_30_85_56_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_85_30_85_56_else_false:
+        %tmp.88 = -2;
+        push %tmp.88;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_85_30_85_56_end:
+        %tmp.89 = phi [%tmp.86 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_85_30_85_56_begin] [%tmp.87 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_85_30_85_56_true] [%tmp.88 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_85_30_85_56_else_false] [%tmp.89 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_85_30_85_56_end];
+        lputv %innerOffset.5 %tmp.89;
+        symbol [ innerOffset %innerOffset.5 85 16 27 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 86 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_48_90_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_48_90_8_stop" ]
+        %outerOffset.6 = local;
+        symbol [ outerOffset %outerOffset.6 86 16 27 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_30_86_54_begin:
+        %tmp.90 = lgetv %i.3;
+        symbol [ i %tmp.90 86 31 32 ];
+        %tmp.91 = lgetv %activeZone;
+        symbol [ activeZone %tmp.91 86 36 46 ];
+        %tmp.92 = eq %tmp.90 %tmp.91;
+        bf %tmp.92 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_30_86_54_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_30_86_54_true:
+        %tmp.93 = 4;
+        push %tmp.93;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_30_86_54_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_30_86_54_else_false:
+        %tmp.94 = 1;
+        push %tmp.94;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_30_86_54_end:
+        %tmp.95 = phi [%tmp.92 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_30_86_54_begin] [%tmp.93 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_30_86_54_true] [%tmp.94 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_30_86_54_else_false] [%tmp.95 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_30_86_54_end];
+        lputv %outerOffset.6 %tmp.95;
+        symbol [ outerOffset %outerOffset.6 86 16 27 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 87 12 ]
+        for @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_87_12_89_12_for_test @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_87_12_89_12_for_incr @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_87_12_89_12_for_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_87_12_89_12_for_init:
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_87_12_89_12_for_begin" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_87_12_89_12_for_end" ]
+        %rOffset.7 = local;
+        symbol [ rOffset %rOffset.7 87 21 28 ];
+        %tmp.96 = lgetv %innerOffset.5;
+        symbol [ innerOffset %tmp.96 87 31 42 ];
+        lputv %rOffset.7 %tmp.96;
+        symbol [ rOffset %rOffset.7 87 21 28 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_87_12_89_12_for_test:
+        %tmp.97 = lgetv %rOffset.7;
+        symbol [ rOffset %tmp.97 87 44 51 ];
+        %tmp.98 = lgetv %outerOffset.6;
+        symbol [ outerOffset %tmp.98 87 55 66 ];
+        %tmp.99 = lte %tmp.97 %tmp.98;
+        bf %tmp.99 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_87_12_89_12_for_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_87_12_89_12_for_begin:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_87_79_89_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 88 16 ]
+        %tmp.100 = lgetv %dc;
+        symbol [ dc %tmp.100 88 16 18 ];
+        symbol [ drawArc %tmp.101 88 19 26 ];
+        %tmp.101 = getv function %tmp.100 :drawArc;
+        %tmp.102 = lgetv %cx;
+        symbol [ cx %tmp.102 88 27 29 ];
+        %tmp.103 = lgetv %cy;
+        symbol [ cy %tmp.103 88 31 33 ];
+        %tmp.104 = lgetv %baseRadius;
+        symbol [ baseRadius %tmp.104 88 35 45 ];
+        %tmp.105 = lgetv %rOffset.7;
+        symbol [ rOffset %tmp.105 88 48 55 ];
+        %tmp.106 = add %tmp.104 %tmp.105;
+        symbol [ Graphics %tmp.107 88 57 65 ];
+        %tmp.107 = getm $.Toybox.Graphics;
+        symbol [ ARC_CLOCKWISE %tmp.108 88 66 79 ];
+        %tmp.108 = getv %tmp.107 :ARC_CLOCKWISE;
+        %tmp.109 = lgetv %range.4;
+        symbol [ range %tmp.109 88 81 86 ];
+        %tmp.110 = 0;
+        %tmp.111 = agetv %tmp.109 %tmp.110;
+        %tmp.112 = lgetv %range.4;
+        symbol [ range %tmp.112 88 91 96 ];
+        %tmp.113 = 1;
+        %tmp.114 = agetv %tmp.112 %tmp.113;
+        invoke %tmp.100 %tmp.101(%tmp.102, %tmp.103, %tmp.106, %tmp.108, %tmp.111, %tmp.114);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_87_79_89_12_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_87_12_89_12_for_incr:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 87 ]
+        %tmp.117 = lgetv %rOffset.7;
+        symbol [ rOffset %tmp.117 87 68 75 ];
+        %tmp.118 = add %tmp.117 1;
+        lputv %rOffset.7 %tmp.118;
+        symbol [ rOffset %rOffset.7 87 68 75 ];
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_87_12_89_12_for_test;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_87_12_89_12_for_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_48_90_8_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_8_90_8_for_incr:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 82 ]
+        %tmp.121 = lgetv %i.3;
+        symbol [ i %tmp.121 82 43 44 ];
+        %tmp.122 = add %tmp.121 1;
+        lputv %i.3 %tmp.122;
+        symbol [ i %i.3 82 43 44 ];
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_8_90_8_for_test;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_82_8_90_8_for_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_65_14_91_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc"; @line = 86; @symbol_functiondef = [getHeartRateLimits,86,28,46]; @symbol_return<0> = [Array,86,52,57]; @symbol_return<1> = [Number,86,58,64]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc"; @line = 93; @symbol_functiondef = [getActiveZone,93,28,41]; @symbol_param<0> = [currentHr,93,42,51]; @symbol_param<0>_type<0> = [Number,93,55,61]; @symbol_param<1> = [hrLimits,93,63,71]; @symbol_param<1>_type<0> = [Array,93,75,80]; @symbol_param<1>_type<1> = [Number,93,81,87]; @symbol_return<0> = [Number,93,93,99]; ]
+    private static
+    function getActiveZone(currentHr as Number, hrLimits as Array<Number>) as Number {
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_93_100_110_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 94 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_94_8_96_8_if_stmt:
+        %tmp.1 = lgetv %currentHr;
+        symbol [ currentHr %tmp.1 94 12 21 ];
+        %tmp.2 = 0;
+        %tmp.3 = lte %tmp.1 %tmp.2;
+        bf %tmp.3 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_94_8_96_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_94_8_96_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_94_28_96_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 95 12 ]
+        %tmp.4 = -1;
+        ret %tmp.4;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_94_28_96_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_94_8_96_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_94_8_96_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 98 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_93_100_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_93_100_110_4_stop" ]
+        %minHr.1 = local;
+        symbol [ minHr %minHr.1 98 12 17 ];
+        %tmp.5 = lgetv %hrLimits;
+        symbol [ hrLimits %tmp.5 98 20 28 ];
+        %tmp.6 = 0;
+        %tmp.7 = agetv %tmp.5 %tmp.6;
+        lputv %minHr.1 %tmp.7;
+        symbol [ minHr %minHr.1 98 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 99 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_93_100_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_93_100_110_4_stop" ]
+        %maxHr.2 = local;
+        symbol [ maxHr %maxHr.2 99 12 17 ];
+        %tmp.8 = lgetv %hrLimits;
+        symbol [ hrLimits %tmp.8 99 20 28 ];
+        %tmp.9 = 1;
+        %tmp.10 = agetv %tmp.8 %tmp.9;
+        lputv %maxHr.2 %tmp.10;
+        symbol [ maxHr %maxHr.2 99 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 100 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_100_8_102_8_if_stmt:
+        %tmp.11 = lgetv %currentHr;
+        symbol [ currentHr %tmp.11 100 12 21 ];
+        %tmp.12 = lgetv %minHr.1;
+        symbol [ minHr %tmp.12 100 25 30 ];
+        %tmp.13 = lte %tmp.11 %tmp.12;
+        bf %tmp.13 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_100_8_102_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_100_8_102_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_100_32_102_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 101 12 ]
+        %tmp.14 = 0;
+        ret %tmp.14;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_100_32_102_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_100_8_102_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_100_8_102_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 103 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_103_8_105_8_if_stmt:
+        %tmp.15 = lgetv %currentHr;
+        symbol [ currentHr %tmp.15 103 12 21 ];
+        %tmp.16 = lgetv %maxHr.2;
+        symbol [ maxHr %tmp.16 103 25 30 ];
+        %tmp.17 = gte %tmp.15 %tmp.16;
+        bf %tmp.17 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_103_8_105_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_103_8_105_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_103_32_105_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 104 12 ]
+        %tmp.18 = 4;
+        ret %tmp.18;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_103_32_105_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_103_8_105_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_103_8_105_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 107 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_93_100_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_93_100_110_4_stop" ]
+        %ratio.3 = local;
+        symbol [ ratio %ratio.3 107 12 17 ];
+        %tmp.19 = lgetv %currentHr;
+        symbol [ currentHr %tmp.19 107 21 30 ];
+        %tmp.20 = lgetv %minHr.1;
+        symbol [ minHr %tmp.20 107 33 38 ];
+        %tmp.21 = sub %tmp.19 %tmp.20;
+        symbol [ toFloat %tmp.22 107 40 47 ];
+        %tmp.22 = getv function %tmp.21 :toFloat;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        %tmp.24 = lgetv %maxHr.2;
+        symbol [ maxHr %tmp.24 107 53 58 ];
+        %tmp.25 = lgetv %minHr.1;
+        symbol [ minHr %tmp.25 107 61 66 ];
+        %tmp.26 = sub %tmp.24 %tmp.25;
+        symbol [ toFloat %tmp.27 107 68 75 ];
+        %tmp.27 = getv function %tmp.26 :toFloat;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        %tmp.29 = div %tmp.23 %tmp.28;
+        lputv %ratio.3 %tmp.29;
+        symbol [ ratio %ratio.3 107 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 108 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_93_100_110_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_93_100_110_4_stop" ]
+        %zone.4 = local;
+        symbol [ zone %zone.4 108 12 16 ];
+        %tmp.30 = lgetv %ratio.3;
+        symbol [ ratio %tmp.30 108 20 25 ];
+        %tmp.31 = 5.0;
+        %tmp.32 = mul %tmp.30 %tmp.31;
+        symbol [ toNumber %tmp.33 108 33 41 ];
+        %tmp.33 = getv function %tmp.32 :toNumber;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        lputv %zone.4 %tmp.34;
+        symbol [ zone %zone.4 108 12 16 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 109 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_109_15_109_30_begin:
+        %tmp.35 = lgetv %zone.4;
+        symbol [ zone %tmp.35 109 15 19 ];
+        %tmp.36 = 4;
+        %tmp.37 = gt %tmp.35 %tmp.36;
+        bf %tmp.37 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_109_15_109_30_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_109_15_109_30_true:
+        %tmp.38 = 4;
+        push %tmp.38;
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_109_15_109_30_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_109_15_109_30_else_false:
+        %tmp.39 = lgetv %zone.4;
+        symbol [ zone %tmp.39 109 30 34 ];
+        push %tmp.39;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_109_15_109_30_end:
+        %tmp.40 = phi [%tmp.37 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_109_15_109_30_begin] [%tmp.38 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_109_15_109_30_true] [%tmp.39 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_109_15_109_30_else_false] [%tmp.40 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_109_15_109_30_end];
+        ret %tmp.40;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_93_100_110_4_stop:
+    }
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc"; @line = 112; @symbol_functiondef = [getHeartRateLimits,112,28,46]; @symbol_return<0> = [Array,112,52,57]; @symbol_return<1> = [Number,112,58,64]; ]
     private static
     function getHeartRateLimits() as Array<Number> {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_66_113_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 87 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_66_113_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_66_113_4_stop" ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_112_66_147_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 113 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_112_66_147_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_112_66_147_4_stop" ]
         %minHr.1 = local;
-        symbol [ minHr %minHr.1 87 12 17 ];
-        %tmp.1 = 100;
+        symbol [ minHr %minHr.1 113 12 17 ];
+        %tmp.1 = 100.0;
         lputv %minHr.1 %tmp.1;
-        symbol [ minHr %minHr.1 87 12 17 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 88 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_66_113_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_66_113_4_stop" ]
+        symbol [ minHr %minHr.1 113 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 114 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_112_66_147_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_112_66_147_4_stop" ]
         %maxHr.2 = local;
-        symbol [ maxHr %maxHr.2 88 12 17 ];
-        %tmp.2 = 190;
+        symbol [ maxHr %maxHr.2 114 12 17 ];
+        %tmp.2 = 190.0;
         lputv %maxHr.2 %tmp.2;
-        symbol [ maxHr %maxHr.2 88 12 17 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 90 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_90_8_105_8_if_stmt:
-        symbol [ UserProfile %tmp.3 90 12 23 ];
-        %tmp.3 = getm $.Toybox.UserProfile;
-        %tmp.5 = const :getHeartRateZones;
-        symbol [ getHeartRateZones %tmp.5 90 29 46 const ];
-        %tmp.6 = canhazplz %tmp.3 %tmp.5;
-        bf %tmp.6 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_90_8_105_8_if_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_90_8_105_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_90_48_96_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 91 12 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_90_48_96_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_90_48_96_8_stop" ]
-        %zones.3 = local;
-        symbol [ zones %zones.3 91 16 21 ];
-        symbol [ UserProfile %tmp.7 91 24 35 ];
-        %tmp.7 = getm $.Toybox.UserProfile;
-        symbol [ getHeartRateZones %tmp.8 91 36 53 ];
-        %tmp.8 = getv function %tmp.7 :getHeartRateZones;
-        symbol [ UserProfile %tmp.9 91 54 65 ];
-        %tmp.9 = getm $.Toybox.UserProfile;
-        symbol [ HR_ZONE_SPORT_GENERIC %tmp.10 91 66 87 ];
-        %tmp.10 = getv %tmp.9 :HR_ZONE_SPORT_GENERIC;
-        %tmp.11 = invoke %tmp.7 %tmp.8(%tmp.10);
-        lputv %zones.3 %tmp.11;
-        symbol [ zones %zones.3 91 16 21 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 92 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_92_12_95_12_if_stmt:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_92_16_92_49_begin:
-        %tmp.12 = lgetv %zones.3;
-        symbol [ zones %tmp.12 92 16 21 ];
-        %tmp.13 = null;
-        %tmp.14 = ne %tmp.12 %tmp.13;
-        bf %tmp.14 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_92_12_95_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_92_33_92_49_true:
-        %tmp.15 = lgetv %zones.3;
-        symbol [ zones %tmp.15 92 33 38 ];
-        %tmp.16 = as %tmp.15 { (!Null) };
-        symbol [ size %tmp.17 92 39 43 ];
-        %tmp.17 = getv function %tmp.16 :size;
-        %tmp.18 = invoke %tmp.16 %tmp.17();
-        %tmp.19 = 6;
-        %tmp.20 = gte %tmp.18 %tmp.19;
-        push %tmp.20;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_92_33_92_49_end:
-        %tmp.21 = phi [%tmp.14 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_92_16_92_49_begin] [%tmp.20 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_92_33_92_49_true] [%tmp.21 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_92_33_92_49_end];
-        bf %tmp.21 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_92_12_95_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_92_12_95_12_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_92_52_95_12_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 93 16 ]
-        %tmp.22 = lgetv %zones.3;
-        symbol [ zones %tmp.22 93 24 29 ];
-        %tmp.23 = as %tmp.22 { (!Null) };
-        %tmp.24 = 0;
-        %tmp.25 = agetv %tmp.23 %tmp.24;
-        lputv %minHr.1 %tmp.25;
-        symbol [ minHr %minHr.1 93 16 21 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 94 16 ]
-        %tmp.26 = lgetv %zones.3;
-        symbol [ zones %tmp.26 94 24 29 ];
-        %tmp.27 = as %tmp.26 { (!Null) };
-        %tmp.28 = 5;
-        %tmp.29 = agetv %tmp.27 %tmp.28;
-        lputv %maxHr.2 %tmp.29;
-        symbol [ maxHr %maxHr.2 94 16 21 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_92_52_95_12_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_92_12_95_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_92_12_95_12_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_90_48_96_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_90_8_105_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_90_8_105_8_if_else_false:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_96_15_105_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 97 12 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_96_15_105_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_96_15_105_8_stop" ]
-        %profile.4 = local;
-        symbol [ profile %profile.4 97 16 23 ];
-        symbol [ UserProfile %tmp.30 97 26 37 ];
-        %tmp.30 = getm $.Toybox.UserProfile;
-        symbol [ getProfile %tmp.31 97 38 48 ];
-        %tmp.31 = getv function %tmp.30 :getProfile;
-        %tmp.32 = invoke %tmp.30 %tmp.31();
-        lputv %profile.4 %tmp.32;
-        symbol [ profile %profile.4 97 16 23 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 98 12 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_96_15_105_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_96_15_105_8_stop" ]
-        %age.5 = local;
-        symbol [ age %age.5 98 16 19 ];
-        %tmp.33 = 30;
-        lputv %age.5 %tmp.33;
-        symbol [ age %age.5 98 16 19 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 99 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_12_102_12_if_stmt:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_16_99_56_begin:
-        %tmp.34 = lgetv %profile.4;
-        symbol [ profile %tmp.34 99 16 23 ];
-        %tmp.35 = null;
-        %tmp.36 = ne %tmp.34 %tmp.35;
-        bf %tmp.36 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_12_102_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_35_99_56_true:
-        %tmp.37 = lgetv %profile.4;
-        symbol [ profile %tmp.37 99 35 42 ];
-        %tmp.38 = as %tmp.37 { (!Null) };
-        symbol [ birthYear %tmp.39 99 43 52 ];
-        %tmp.39 = getv %tmp.38 :birthYear;
-        %tmp.40 = null;
-        %tmp.41 = ne %tmp.39 %tmp.40;
-        push %tmp.41;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_35_99_56_end:
-        %tmp.42 = phi [%tmp.36 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_16_99_56_begin] [%tmp.41 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_35_99_56_true] [%tmp.42 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_35_99_56_end];
-        bf %tmp.42 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_12_102_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_12_102_12_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_62_102_12_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 100 16 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_62_102_12_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_62_102_12_stop" ]
-        %currentYear.6 = local;
-        symbol [ currentYear %currentYear.6 100 20 31 ];
-        symbol [ Time %tmp.43 100 34 38 ];
-        %tmp.43 = getm $.Toybox.Time;
-        symbol [ Gregorian %tmp.44 100 39 48 ];
-        %tmp.44 = getv %tmp.43 :Gregorian;
-        symbol [ info %tmp.45 100 49 53 ];
-        %tmp.45 = getv function %tmp.44 :info;
-        symbol [ Time %tmp.46 100 54 58 ];
-        %tmp.46 = getm $.Toybox.Time;
-        symbol [ now %tmp.47 100 59 62 ];
-        %tmp.47 = getv function %tmp.46 :now;
+        symbol [ maxHr %maxHr.2 114 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 115 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_112_66_147_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_112_66_147_4_stop" ]
+        %hasValidProfileZones.3 = local;
+        symbol [ hasValidProfileZones %hasValidProfileZones.3 115 12 32 ];
+        %tmp.3 = false;
+        lputv %hasValidProfileZones.3 %tmp.3;
+        symbol [ hasValidProfileZones %hasValidProfileZones.3 115 12 32 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 117 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_117_8_124_8_if_stmt:
+        symbol [ UserProfile %tmp.4 117 12 23 ];
+        %tmp.4 = getm $.Toybox.UserProfile;
+        %tmp.6 = const :getHeartRateZones;
+        symbol [ getHeartRateZones %tmp.6 117 29 46 const ];
+        %tmp.7 = canhazplz %tmp.4 %tmp.6;
+        bf %tmp.7 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_117_8_124_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_117_8_124_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_117_48_124_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 118 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_117_48_124_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_117_48_124_8_stop" ]
+        %zones.4 = local;
+        symbol [ zones %zones.4 118 16 21 ];
+        symbol [ UserProfile %tmp.8 118 24 35 ];
+        %tmp.8 = getm $.Toybox.UserProfile;
+        symbol [ getHeartRateZones %tmp.9 118 36 53 ];
+        %tmp.9 = getv function %tmp.8 :getHeartRateZones;
+        symbol [ UserProfile %tmp.10 118 54 65 ];
+        %tmp.10 = getm $.Toybox.UserProfile;
+        symbol [ HR_ZONE_SPORT_GENERIC %tmp.11 118 66 87 ];
+        %tmp.11 = getv %tmp.10 :HR_ZONE_SPORT_GENERIC;
+        %tmp.12 = invoke %tmp.8 %tmp.9(%tmp.11);
+        lputv %zones.4 %tmp.12;
+        symbol [ zones %zones.4 118 16 21 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 119 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_119_12_123_12_if_stmt:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_119_16_119_49_begin:
+        %tmp.13 = lgetv %zones.4;
+        symbol [ zones %tmp.13 119 16 21 ];
+        %tmp.14 = null;
+        %tmp.15 = ne %tmp.13 %tmp.14;
+        bf %tmp.15 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_119_12_123_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_119_33_119_49_true:
+        %tmp.16 = lgetv %zones.4;
+        symbol [ zones %tmp.16 119 33 38 ];
+        %tmp.17 = as %tmp.16 { (!Null) };
+        symbol [ size %tmp.18 119 39 43 ];
+        %tmp.18 = getv function %tmp.17 :size;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = 6;
+        %tmp.21 = gte %tmp.19 %tmp.20;
+        push %tmp.21;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_119_33_119_49_end:
+        %tmp.22 = phi [%tmp.15 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_119_16_119_49_begin] [%tmp.21 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_119_33_119_49_true] [%tmp.22 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_119_33_119_49_end];
+        bf %tmp.22 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_119_12_123_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_119_12_123_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_119_52_123_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 120 16 ]
+        %tmp.23 = lgetv %zones.4;
+        symbol [ zones %tmp.23 120 24 29 ];
+        %tmp.24 = as %tmp.23 { (!Null) };
+        %tmp.25 = 0;
+        %tmp.26 = agetv %tmp.24 %tmp.25;
+        symbol [ toFloat %tmp.27 120 33 40 ];
+        %tmp.27 = getv function %tmp.26 :toFloat;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        lputv %minHr.1 %tmp.28;
+        symbol [ minHr %minHr.1 120 16 21 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 121 16 ]
+        %tmp.29 = lgetv %zones.4;
+        symbol [ zones %tmp.29 121 24 29 ];
+        %tmp.30 = as %tmp.29 { (!Null) };
+        %tmp.31 = 5;
+        %tmp.32 = agetv %tmp.30 %tmp.31;
+        symbol [ toFloat %tmp.33 121 33 40 ];
+        %tmp.33 = getv function %tmp.32 :toFloat;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        lputv %maxHr.2 %tmp.34;
+        symbol [ maxHr %maxHr.2 121 16 21 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 122 16 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_122_39_122_60_begin:
+        %tmp.35 = lgetv %minHr.1;
+        symbol [ minHr %tmp.35 122 39 44 ];
+        %tmp.36 = 0;
+        %tmp.37 = gt %tmp.35 %tmp.36;
+        %tmp.38 = dup %tmp.37;
+        bf %tmp.38 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_122_52_122_60_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_122_52_122_60_true:
+        %tmp.39 = lgetv %maxHr.2;
+        symbol [ maxHr %tmp.39 122 52 57 ];
+        %tmp.40 = lgetv %minHr.1;
+        symbol [ minHr %tmp.40 122 60 65 ];
+        %tmp.41 = gt %tmp.39 %tmp.40;
+        %tmp.42 = and %tmp.37 %tmp.41;
+        push %tmp.42;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_122_52_122_60_end:
+        %tmp.43 = phi [%tmp.38 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_122_39_122_60_begin] [%tmp.42 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_122_52_122_60_true] [%tmp.43 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_122_52_122_60_end];
+        lputv %hasValidProfileZones.3 %tmp.43;
+        symbol [ hasValidProfileZones %hasValidProfileZones.3 122 16 36 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_119_52_123_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_119_12_123_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_119_12_123_12_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_117_48_124_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_117_8_124_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_117_8_124_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 126 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_126_8_139_8_if_stmt:
+        %tmp.44 = lgetv %hasValidProfileZones.3;
+        symbol [ hasValidProfileZones %tmp.44 126 13 33 ];
+        %tmp.45 = not %tmp.44;
+        bf %tmp.45 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_126_8_139_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_126_8_139_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_126_35_139_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 127 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_126_35_139_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_126_35_139_8_stop" ]
+        %profile.5 = local;
+        symbol [ profile %profile.5 127 16 23 ];
+        symbol [ UserProfile %tmp.46 127 26 37 ];
+        %tmp.46 = getm $.Toybox.UserProfile;
+        symbol [ getProfile %tmp.47 127 38 48 ];
+        %tmp.47 = getv function %tmp.46 :getProfile;
         %tmp.48 = invoke %tmp.46 %tmp.47();
-        symbol [ Time %tmp.49 100 66 70 ];
-        %tmp.49 = getm $.Toybox.Time;
-        symbol [ FORMAT_SHORT %tmp.50 100 71 83 ];
-        %tmp.50 = getv %tmp.49 :FORMAT_SHORT;
-        %tmp.51 = invoke %tmp.44 %tmp.45(%tmp.48, %tmp.50);
-        symbol [ year %tmp.52 100 85 89 ];
-        %tmp.52 = getv %tmp.51 :year;
-        lputv %currentYear.6 %tmp.52;
-        symbol [ currentYear %currentYear.6 100 20 31 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 101 16 ]
-        %tmp.53 = lgetv %currentYear.6;
-        symbol [ currentYear %tmp.53 101 22 33 ];
-        %tmp.54 = lgetv %profile.4;
-        symbol [ profile %tmp.54 101 36 43 ];
-        %tmp.55 = as %tmp.54 { (!Null) };
-        symbol [ birthYear %tmp.56 101 44 53 ];
-        %tmp.56 = getv %tmp.55 :birthYear;
-        %tmp.57 = sub %tmp.53 %tmp.56;
-        lputv %age.5 %tmp.57;
-        symbol [ age %age.5 101 16 19 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_62_102_12_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_12_102_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_99_12_102_12_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 103 12 ]
-        %tmp.58 = 220;
-        %tmp.59 = lgetv %age.5;
-        symbol [ age %tmp.59 103 26 29 ];
-        %tmp.60 = sub %tmp.58 %tmp.59;
-        lputv %maxHr.2 %tmp.60;
-        symbol [ maxHr %maxHr.2 103 12 17 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 104 12 ]
-        %tmp.61 = lgetv %maxHr.2;
-        symbol [ maxHr %tmp.61 104 21 26 ];
-        %tmp.62 = 0.5;
-        %tmp.63 = mul %tmp.61 %tmp.62;
-        symbol [ toNumber %tmp.64 104 34 42 ];
-        %tmp.64 = getv function %tmp.63 :toNumber;
-        %tmp.65 = invoke %tmp.63 %tmp.64();
-        lputv %minHr.1 %tmp.65;
-        symbol [ minHr %minHr.1 104 12 17 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_96_15_105_8_stop:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_90_8_105_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 107 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_107_8_110_8_if_stmt:
-        %tmp.66 = lgetv %minHr.1;
-        symbol [ minHr %tmp.66 107 12 17 ];
-        %tmp.67 = lgetv %maxHr.2;
-        symbol [ maxHr %tmp.67 107 21 26 ];
-        %tmp.68 = gte %tmp.66 %tmp.67;
-        bf %tmp.68 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_107_8_110_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_107_8_110_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_107_28_110_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 108 12 ]
-        %tmp.69 = 100;
-        lputv %minHr.1 %tmp.69;
-        symbol [ minHr %minHr.1 108 12 17 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 109 12 ]
-        %tmp.70 = 190;
-        lputv %maxHr.2 %tmp.70;
-        symbol [ maxHr %maxHr.2 109 12 17 ];
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_107_28_110_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_107_8_110_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_107_8_110_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 112 8 ]
-        %tmp.71 = newa 2;
-        %tmp.72 = lgetv %minHr.1;
-        symbol [ minHr %tmp.72 112 16 21 ];
-        %tmp.73 = dup %tmp.71;
-        %tmp.74 = aputv %tmp.73 0 %tmp.72;
-        %tmp.75 = lgetv %maxHr.2;
-        symbol [ maxHr %tmp.75 112 23 28 ];
-        %tmp.76 = dup %tmp.74;
-        %tmp.77 = aputv %tmp.76 1 %tmp.75;
-        ret %tmp.77;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_86_66_113_4_stop:
+        lputv %profile.5 %tmp.48;
+        symbol [ profile %profile.5 127 16 23 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 128 12 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_126_35_139_8_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_126_35_139_8_stop" ]
+        %age.6 = local;
+        symbol [ age %age.6 128 16 19 ];
+        %tmp.49 = 30;
+        lputv %age.6 %tmp.49;
+        symbol [ age %age.6 128 16 19 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 129 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_12_132_12_if_stmt:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_16_129_56_begin:
+        %tmp.50 = lgetv %profile.5;
+        symbol [ profile %tmp.50 129 16 23 ];
+        %tmp.51 = null;
+        %tmp.52 = ne %tmp.50 %tmp.51;
+        bf %tmp.52 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_12_132_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_35_129_56_true:
+        %tmp.53 = lgetv %profile.5;
+        symbol [ profile %tmp.53 129 35 42 ];
+        %tmp.54 = as %tmp.53 { (!Null) };
+        symbol [ birthYear %tmp.55 129 43 52 ];
+        %tmp.55 = getv %tmp.54 :birthYear;
+        %tmp.56 = null;
+        %tmp.57 = ne %tmp.55 %tmp.56;
+        push %tmp.57;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_35_129_56_end:
+        %tmp.58 = phi [%tmp.52 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_16_129_56_begin] [%tmp.57 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_35_129_56_true] [%tmp.58 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_35_129_56_end];
+        bf %tmp.58 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_12_132_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_12_132_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_62_132_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 130 16 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_62_132_12_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_62_132_12_stop" ]
+        %currentYear.7 = local;
+        symbol [ currentYear %currentYear.7 130 20 31 ];
+        symbol [ Time %tmp.59 130 34 38 ];
+        %tmp.59 = getm $.Toybox.Time;
+        symbol [ Gregorian %tmp.60 130 39 48 ];
+        %tmp.60 = getv %tmp.59 :Gregorian;
+        symbol [ info %tmp.61 130 49 53 ];
+        %tmp.61 = getv function %tmp.60 :info;
+        symbol [ Time %tmp.62 130 54 58 ];
+        %tmp.62 = getm $.Toybox.Time;
+        symbol [ now %tmp.63 130 59 62 ];
+        %tmp.63 = getv function %tmp.62 :now;
+        %tmp.64 = invoke %tmp.62 %tmp.63();
+        symbol [ Time %tmp.65 130 66 70 ];
+        %tmp.65 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.66 130 71 83 ];
+        %tmp.66 = getv %tmp.65 :FORMAT_SHORT;
+        %tmp.67 = invoke %tmp.60 %tmp.61(%tmp.64, %tmp.66);
+        symbol [ year %tmp.68 130 85 89 ];
+        %tmp.68 = getv %tmp.67 :year;
+        lputv %currentYear.7 %tmp.68;
+        symbol [ currentYear %currentYear.7 130 20 31 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 131 16 ]
+        %tmp.69 = lgetv %currentYear.7;
+        symbol [ currentYear %tmp.69 131 22 33 ];
+        %tmp.70 = lgetv %profile.5;
+        symbol [ profile %tmp.70 131 36 43 ];
+        %tmp.71 = as %tmp.70 { (!Null) };
+        symbol [ birthYear %tmp.72 131 44 53 ];
+        %tmp.72 = getv %tmp.71 :birthYear;
+        %tmp.73 = sub %tmp.69 %tmp.72;
+        lputv %age.6 %tmp.73;
+        symbol [ age %age.6 131 16 19 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_62_132_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_12_132_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_129_12_132_12_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 134 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_134_12_136_12_if_stmt:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_134_16_134_34_begin:
+        %tmp.74 = lgetv %age.6;
+        symbol [ age %tmp.74 134 16 19 ];
+        %tmp.75 = 13;
+        %tmp.76 = lt %tmp.74 %tmp.75;
+        bt %tmp.76 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_134_12_136_12_if_true;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_134_28_134_34_false:
+        %tmp.77 = lgetv %age.6;
+        symbol [ age %tmp.77 134 28 31 ];
+        %tmp.78 = 100;
+        %tmp.79 = gt %tmp.77 %tmp.78;
+        push %tmp.79;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_134_28_134_34_end:
+        %tmp.80 = phi [%tmp.76 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_134_16_134_34_begin] [%tmp.79 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_134_28_134_34_false] [%tmp.80 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_134_28_134_34_end];
+        bf %tmp.80 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_134_12_136_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_134_12_136_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_134_39_136_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 135 16 ]
+        %tmp.81 = 30;
+        lputv %age.6 %tmp.81;
+        symbol [ age %age.6 135 16 19 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_134_39_136_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_134_12_136_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_134_12_136_12_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 137 12 ]
+        %tmp.82 = 208;
+        %tmp.83 = 0.7;
+        %tmp.84 = lgetv %age.6;
+        symbol [ age %tmp.84 137 34 37 ];
+        %tmp.85 = mul %tmp.83 %tmp.84;
+        %tmp.86 = sub %tmp.82 %tmp.85;
+        symbol [ toFloat %tmp.87 137 40 47 ];
+        %tmp.87 = getv function %tmp.86 :toFloat;
+        %tmp.88 = invoke %tmp.86 %tmp.87();
+        lputv %maxHr.2 %tmp.88;
+        symbol [ maxHr %maxHr.2 137 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 138 12 ]
+        %tmp.89 = lgetv %maxHr.2;
+        symbol [ maxHr %tmp.89 138 21 26 ];
+        %tmp.90 = 0.5;
+        %tmp.91 = mul %tmp.89 %tmp.90;
+        symbol [ toFloat %tmp.92 138 34 41 ];
+        %tmp.92 = getv function %tmp.91 :toFloat;
+        %tmp.93 = invoke %tmp.91 %tmp.92();
+        lputv %minHr.1 %tmp.93;
+        symbol [ minHr %minHr.1 138 12 17 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_126_35_139_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_126_8_139_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_126_8_139_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 141 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_141_8_144_8_if_stmt:
+        %tmp.94 = lgetv %minHr.1;
+        symbol [ minHr %tmp.94 141 12 17 ];
+        %tmp.95 = lgetv %maxHr.2;
+        symbol [ maxHr %tmp.95 141 21 26 ];
+        %tmp.96 = gte %tmp.94 %tmp.95;
+        bf %tmp.96 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_141_8_144_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_141_8_144_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_141_28_144_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 142 12 ]
+        %tmp.97 = 100;
+        lputv %minHr.1 %tmp.97;
+        symbol [ minHr %minHr.1 142 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 143 12 ]
+        %tmp.98 = 190;
+        lputv %maxHr.2 %tmp.98;
+        symbol [ maxHr %maxHr.2 143 12 17 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_141_28_144_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_141_8_144_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_141_8_144_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc" 146 8 ]
+        %tmp.99 = newa 2;
+        %tmp.100 = lgetv %minHr.1;
+        symbol [ minHr %tmp.100 146 16 21 ];
+        %tmp.101 = dup %tmp.99;
+        %tmp.102 = aputv %tmp.101 0 %tmp.100;
+        %tmp.103 = lgetv %maxHr.2;
+        symbol [ maxHr %tmp.103 146 23 28 ];
+        %tmp.104 = dup %tmp.102;
+        %tmp.105 = aputv %tmp.104 1 %tmp.103;
+        ret %tmp.105;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_HrArcRenderer_mc_112_66_147_4_stop:
     }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\HrArcRenderer.mc"; @line = 1; ]

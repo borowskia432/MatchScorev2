@@ -427,143 +427,147 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_94_74_102_12_st
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 98 16 ]
         %tmp.94 = lgetv %summaryData.2;
         symbol [ summaryData %tmp.94 98 16 27 ];
-        symbol [ AppConfig %tmp.96 98 41 50 ];
-        %tmp.96 = getv ? :AppConfig;
-        symbol [ matchScoreA %tmp.97 98 51 62 ];
-        %tmp.97 = getv %tmp.96 :matchScoreA;
+        symbol [ ScoreManager %tmp.96 98 41 53 ];
+        %tmp.96 = getv ? :ScoreManager;
+        symbol [ getMatchScoreA %tmp.97 98 54 68 ];
+        %tmp.97 = getv function %tmp.96 :getMatchScoreA;
+        %tmp.98 = invoke %tmp.96 %tmp.97();
         symbol [ scoreTeamA ? 98 28 38 ];
-        putv %tmp.94 :scoreTeamA %tmp.97;
+        putv %tmp.94 :scoreTeamA %tmp.98;
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 99 16 ]
-        %tmp.98 = lgetv %summaryData.2;
-        symbol [ summaryData %tmp.98 99 16 27 ];
-        symbol [ AppConfig %tmp.100 99 41 50 ];
-        %tmp.100 = getv ? :AppConfig;
-        symbol [ matchScoreB %tmp.101 99 51 62 ];
-        %tmp.101 = getv %tmp.100 :matchScoreB;
+        %tmp.99 = lgetv %summaryData.2;
+        symbol [ summaryData %tmp.99 99 16 27 ];
+        symbol [ ScoreManager %tmp.101 99 41 53 ];
+        %tmp.101 = getv ? :ScoreManager;
+        symbol [ getMatchScoreB %tmp.102 99 54 68 ];
+        %tmp.102 = getv function %tmp.101 :getMatchScoreB;
+        %tmp.103 = invoke %tmp.101 %tmp.102();
         symbol [ scoreTeamB ? 99 28 38 ];
-        putv %tmp.98 :scoreTeamB %tmp.101;
+        putv %tmp.99 :scoreTeamB %tmp.103;
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 100 16 ]
-        %tmp.102 = lgetv %summaryData.2;
-        symbol [ summaryData %tmp.102 100 16 27 ];
-        symbol [ AppConfig %tmp.104 100 40 49 ];
-        %tmp.104 = getv ? :AppConfig;
-        symbol [ volleyballSetsA %tmp.105 100 50 65 ];
-        %tmp.105 = getv %tmp.104 :volleyballSetsA;
+        %tmp.104 = lgetv %summaryData.2;
+        symbol [ summaryData %tmp.104 100 16 27 ];
+        symbol [ ScoreManager %tmp.106 100 40 52 ];
+        %tmp.106 = getv ? :ScoreManager;
+        symbol [ getSetsA %tmp.107 100 53 61 ];
+        %tmp.107 = getv function %tmp.106 :getSetsA;
+        %tmp.108 = invoke %tmp.106 %tmp.107();
         symbol [ setsTeamA ? 100 28 37 ];
-        putv %tmp.102 :setsTeamA %tmp.105;
+        putv %tmp.104 :setsTeamA %tmp.108;
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 101 16 ]
-        %tmp.106 = lgetv %summaryData.2;
-        symbol [ summaryData %tmp.106 101 16 27 ];
-        symbol [ AppConfig %tmp.108 101 40 49 ];
-        %tmp.108 = getv ? :AppConfig;
-        symbol [ volleyballSetsB %tmp.109 101 50 65 ];
-        %tmp.109 = getv %tmp.108 :volleyballSetsB;
+        %tmp.109 = lgetv %summaryData.2;
+        symbol [ summaryData %tmp.109 101 16 27 ];
+        symbol [ ScoreManager %tmp.111 101 40 52 ];
+        %tmp.111 = getv ? :ScoreManager;
+        symbol [ getSetsB %tmp.112 101 53 61 ];
+        %tmp.112 = getv function %tmp.111 :getSetsB;
+        %tmp.113 = invoke %tmp.111 %tmp.112();
         symbol [ setsTeamB ? 101 28 37 ];
-        putv %tmp.106 :setsTeamB %tmp.109;
+        putv %tmp.109 :setsTeamB %tmp.113;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_94_74_102_12_stop:
         goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_94_12_112_12_if_end;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_94_12_112_12_if_else_false:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_102_19_112_12_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 104 16 ]
-        %tmp.110 = lgetv %summaryData.2;
-        symbol [ summaryData %tmp.110 104 16 27 ];
-        %tmp.111 = false;
+        %tmp.114 = lgetv %summaryData.2;
+        symbol [ summaryData %tmp.114 104 16 27 ];
+        %tmp.115 = false;
         symbol [ isVolleyball ? 104 28 40 ];
-        putv %tmp.110 :isVolleyball %tmp.111;
+        putv %tmp.114 :isVolleyball %tmp.115;
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 105 16 ]
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_105_16_111_16_if_stmt:
-        symbol [ _isFromView2 %tmp.113 105 20 32 ];
-        %tmp.113 = getv ? :_isFromView2;
-        bf %tmp.113 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_105_16_111_16_if_else_false;
+        symbol [ _isFromView2 %tmp.117 105 20 32 ];
+        %tmp.117 = getv ? :_isFromView2;
+        bf %tmp.117 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_105_16_111_16_if_else_false;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_105_16_111_16_if_true:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_105_34_109_16_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 106 20 ]
-        %tmp.114 = lgetv %summaryData.2;
-        symbol [ summaryData %tmp.114 106 20 31 ];
-        %tmp.115 = true;
+        %tmp.118 = lgetv %summaryData.2;
+        symbol [ summaryData %tmp.118 106 20 31 ];
+        %tmp.119 = true;
         symbol [ hasScore ? 106 32 40 ];
-        putv %tmp.114 :hasScore %tmp.115;
+        putv %tmp.118 :hasScore %tmp.119;
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 107 20 ]
-        %tmp.116 = lgetv %summaryData.2;
-        symbol [ summaryData %tmp.116 107 20 31 ];
-        symbol [ ScoreManager %tmp.118 107 45 57 ];
-        %tmp.118 = getv ? :ScoreManager;
-        symbol [ scoreA %tmp.119 107 58 64 ];
-        %tmp.119 = getv %tmp.118 :scoreA;
-        symbol [ scoreTeamA ? 107 32 42 ];
-        putv %tmp.116 :scoreTeamA %tmp.119;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 108 20 ]
         %tmp.120 = lgetv %summaryData.2;
-        symbol [ summaryData %tmp.120 108 20 31 ];
-        symbol [ ScoreManager %tmp.122 108 45 57 ];
+        symbol [ summaryData %tmp.120 107 20 31 ];
+        symbol [ ScoreManager %tmp.122 107 45 57 ];
         %tmp.122 = getv ? :ScoreManager;
-        symbol [ scoreB %tmp.123 108 58 64 ];
-        %tmp.123 = getv %tmp.122 :scoreB;
+        symbol [ scoreA %tmp.123 107 58 64 ];
+        %tmp.123 = getv %tmp.122 :scoreA;
+        symbol [ scoreTeamA ? 107 32 42 ];
+        putv %tmp.120 :scoreTeamA %tmp.123;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 108 20 ]
+        %tmp.124 = lgetv %summaryData.2;
+        symbol [ summaryData %tmp.124 108 20 31 ];
+        symbol [ ScoreManager %tmp.126 108 45 57 ];
+        %tmp.126 = getv ? :ScoreManager;
+        symbol [ scoreB %tmp.127 108 58 64 ];
+        %tmp.127 = getv %tmp.126 :scoreB;
         symbol [ scoreTeamB ? 108 32 42 ];
-        putv %tmp.120 :scoreTeamB %tmp.123;
+        putv %tmp.124 :scoreTeamB %tmp.127;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_105_34_109_16_stop:
         goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_105_16_111_16_if_end;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_105_16_111_16_if_else_false:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_109_23_111_16_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 110 20 ]
-        %tmp.124 = lgetv %summaryData.2;
-        symbol [ summaryData %tmp.124 110 20 31 ];
-        %tmp.125 = false;
+        %tmp.128 = lgetv %summaryData.2;
+        symbol [ summaryData %tmp.128 110 20 31 ];
+        %tmp.129 = false;
         symbol [ hasScore ? 110 32 40 ];
-        putv %tmp.124 :hasScore %tmp.125;
+        putv %tmp.128 :hasScore %tmp.129;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_109_23_111_16_stop:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_105_16_111_16_if_end:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_102_19_112_12_stop:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_94_12_112_12_if_end:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 115 12 ]
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_115_12_127_12_if_stmt:
-        %tmp.126 = lgetv %summaryData.2;
-        symbol [ summaryData %tmp.126 115 16 27 ];
-        symbol [ isVolleyball %tmp.127 115 28 40 ];
-        %tmp.127 = getv %tmp.126 :isVolleyball;
-        bf %tmp.127 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_115_12_127_12_if_else_false;
+        %tmp.130 = lgetv %summaryData.2;
+        symbol [ summaryData %tmp.130 115 16 27 ];
+        symbol [ isVolleyball %tmp.131 115 28 40 ];
+        %tmp.131 = getv %tmp.130 :isVolleyball;
+        bf %tmp.131 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_115_12_127_12_if_else_false;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_115_12_127_12_if_true:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_115_42_121_12_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 116 16 ]
-        symbol [ WatchUi %tmp.128 116 16 23 ];
-        %tmp.128 = getm $.Toybox.WatchUi;
-        symbol [ switchToView %tmp.129 116 24 36 ];
-        %tmp.129 = getv function %tmp.128 :switchToView;
-        symbol [ VolleyballSummaryView %tmp.133 117 24 45 ];
-        %tmp.133 = getv ? :VolleyballSummaryView;
-        %tmp.134 = lgetv %summaryData.2;
-        symbol [ summaryData %tmp.134 117 46 57 ];
-        %tmp.130 = newc %tmp.133 (%tmp.134);
-        symbol [ SummaryDelegate %tmp.138 118 24 39 ];
-        %tmp.138 = getv ? :SummaryDelegate;
-        %tmp.135 = newc %tmp.138 ();
-        symbol [ WatchUi %tmp.139 119 20 27 ];
-        %tmp.139 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_LEFT %tmp.140 119 28 38 ];
-        %tmp.140 = getv %tmp.139 :SLIDE_LEFT;
-        invoke %tmp.128 %tmp.129(%tmp.130, %tmp.135, %tmp.140);
+        symbol [ WatchUi %tmp.132 116 16 23 ];
+        %tmp.132 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.133 116 24 36 ];
+        %tmp.133 = getv function %tmp.132 :switchToView;
+        symbol [ VolleyballSummaryView %tmp.137 117 24 45 ];
+        %tmp.137 = getv ? :VolleyballSummaryView;
+        %tmp.138 = lgetv %summaryData.2;
+        symbol [ summaryData %tmp.138 117 46 57 ];
+        %tmp.134 = newc %tmp.137 (%tmp.138);
+        symbol [ SummaryDelegate %tmp.142 118 24 39 ];
+        %tmp.142 = getv ? :SummaryDelegate;
+        %tmp.139 = newc %tmp.142 ();
+        symbol [ WatchUi %tmp.143 119 20 27 ];
+        %tmp.143 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_LEFT %tmp.144 119 28 38 ];
+        %tmp.144 = getv %tmp.143 :SLIDE_LEFT;
+        invoke %tmp.132 %tmp.133(%tmp.134, %tmp.139, %tmp.144);
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_115_42_121_12_stop:
         goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_115_12_127_12_if_end;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_115_12_127_12_if_else_false:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_121_19_127_12_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 122 16 ]
-        symbol [ WatchUi %tmp.141 122 16 23 ];
-        %tmp.141 = getm $.Toybox.WatchUi;
-        symbol [ switchToView %tmp.142 122 24 36 ];
-        %tmp.142 = getv function %tmp.141 :switchToView;
-        symbol [ SummaryView %tmp.146 123 24 35 ];
-        %tmp.146 = getv ? :SummaryView;
-        %tmp.147 = lgetv %summaryData.2;
-        symbol [ summaryData %tmp.147 123 36 47 ];
-        %tmp.143 = newc %tmp.146 (%tmp.147);
-        symbol [ SummaryDelegate %tmp.151 124 24 39 ];
-        %tmp.151 = getv ? :SummaryDelegate;
-        %tmp.148 = newc %tmp.151 ();
-        symbol [ WatchUi %tmp.152 125 20 27 ];
-        %tmp.152 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_LEFT %tmp.153 125 28 38 ];
-        %tmp.153 = getv %tmp.152 :SLIDE_LEFT;
-        invoke %tmp.141 %tmp.142(%tmp.143, %tmp.148, %tmp.153);
+        symbol [ WatchUi %tmp.145 122 16 23 ];
+        %tmp.145 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.146 122 24 36 ];
+        %tmp.146 = getv function %tmp.145 :switchToView;
+        symbol [ SummaryView %tmp.150 123 24 35 ];
+        %tmp.150 = getv ? :SummaryView;
+        %tmp.151 = lgetv %summaryData.2;
+        symbol [ summaryData %tmp.151 123 36 47 ];
+        %tmp.147 = newc %tmp.150 (%tmp.151);
+        symbol [ SummaryDelegate %tmp.155 124 24 39 ];
+        %tmp.155 = getv ? :SummaryDelegate;
+        %tmp.152 = newc %tmp.155 ();
+        symbol [ WatchUi %tmp.156 125 20 27 ];
+        %tmp.156 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_LEFT %tmp.157 125 28 38 ];
+        %tmp.157 = getv %tmp.156 :SLIDE_LEFT;
+        invoke %tmp.145 %tmp.146(%tmp.147, %tmp.152, %tmp.157);
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_121_19_127_12_stop:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_115_12_127_12_if_end:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_62_31_128_8_stop:
@@ -571,69 +575,69 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_62_31_128_8_sto
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_62_8_139_8_if_false:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 129 13 ]
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_129_13_139_8_if_stmt:
-        %tmp.154 = lgetv %id.1;
-        symbol [ id %tmp.154 129 17 19 ];
-        symbol [ equals %tmp.155 129 20 26 ];
-        %tmp.155 = getv function %tmp.154 :equals;
-        %tmp.156 = "discard";
-        %tmp.157 = invoke %tmp.154 %tmp.155(%tmp.156);
-        bf %tmp.157 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_129_13_139_8_if_false;
+        %tmp.158 = lgetv %id.1;
+        symbol [ id %tmp.158 129 17 19 ];
+        symbol [ equals %tmp.159 129 20 26 ];
+        %tmp.159 = getv function %tmp.158 :equals;
+        %tmp.160 = "discard";
+        %tmp.161 = invoke %tmp.158 %tmp.159(%tmp.160);
+        bf %tmp.161 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_129_13_139_8_if_false;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_129_13_139_8_if_true:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_129_39_136_8_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 130 12 ]
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_130_12_132_12_if_stmt:
-        symbol [ TimerManager %tmp.159 130 16 28 ];
-        %tmp.159 = getv ? :TimerManager;
-        symbol [ isRunning %tmp.160 130 29 38 ];
-        %tmp.160 = getv %tmp.159 :isRunning;
-        bf %tmp.160 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_130_12_132_12_if_end;
+        symbol [ TimerManager %tmp.163 130 16 28 ];
+        %tmp.163 = getv ? :TimerManager;
+        symbol [ isRunning %tmp.164 130 29 38 ];
+        %tmp.164 = getv %tmp.163 :isRunning;
+        bf %tmp.164 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_130_12_132_12_if_end;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_130_12_132_12_if_true:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_130_40_132_12_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 131 16 ]
-        symbol [ TimerManager %tmp.162 131 16 28 ];
-        %tmp.162 = getv ? :TimerManager;
-        symbol [ toggleTimer %tmp.163 131 29 40 ];
-        %tmp.163 = getv function %tmp.162 :toggleTimer;
-        invoke %tmp.162 %tmp.163();
+        symbol [ TimerManager %tmp.166 131 16 28 ];
+        %tmp.166 = getv ? :TimerManager;
+        symbol [ toggleTimer %tmp.167 131 29 40 ];
+        %tmp.167 = getv function %tmp.166 :toggleTimer;
+        invoke %tmp.166 %tmp.167();
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_130_40_132_12_stop:
         goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_130_12_132_12_if_end;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_130_12_132_12_if_end:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 134 12 ]
-        symbol [ SessionManager %tmp.165 134 12 26 ];
-        %tmp.165 = getv ? :SessionManager;
-        symbol [ discardSession %tmp.166 134 27 41 ];
-        %tmp.166 = getv function %tmp.165 :discardSession;
-        invoke %tmp.165 %tmp.166();
+        symbol [ SessionManager %tmp.169 134 12 26 ];
+        %tmp.169 = getv ? :SessionManager;
+        symbol [ discardSession %tmp.170 134 27 41 ];
+        %tmp.170 = getv function %tmp.169 :discardSession;
+        invoke %tmp.169 %tmp.170();
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 135 12 ]
-        symbol [ System %tmp.167 135 12 18 ];
-        %tmp.167 = getm $.Toybox.System;
-        symbol [ exit %tmp.168 135 19 23 ];
-        %tmp.168 = getv function %tmp.167 :exit;
-        invoke %tmp.167 %tmp.168();
+        symbol [ System %tmp.171 135 12 18 ];
+        %tmp.171 = getm $.Toybox.System;
+        symbol [ exit %tmp.172 135 19 23 ];
+        %tmp.172 = getv function %tmp.171 :exit;
+        invoke %tmp.171 %tmp.172();
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_129_39_136_8_stop:
         goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_129_13_139_8_if_end;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_129_13_139_8_if_false:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 137 13 ]
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_137_13_139_8_if_stmt:
-        %tmp.169 = lgetv %id.1;
-        symbol [ id %tmp.169 137 17 19 ];
-        symbol [ equals %tmp.170 137 20 26 ];
-        %tmp.170 = getv function %tmp.169 :equals;
-        %tmp.171 = "cancel";
-        %tmp.172 = invoke %tmp.169 %tmp.170(%tmp.171);
-        bf %tmp.172 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_137_13_139_8_if_end;
+        %tmp.173 = lgetv %id.1;
+        symbol [ id %tmp.173 137 17 19 ];
+        symbol [ equals %tmp.174 137 20 26 ];
+        %tmp.174 = getv function %tmp.173 :equals;
+        %tmp.175 = "cancel";
+        %tmp.176 = invoke %tmp.173 %tmp.174(%tmp.175);
+        bf %tmp.176 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_137_13_139_8_if_end;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_137_13_139_8_if_true:
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_137_38_139_8_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\ExitMenu.mc" 138 12 ]
-        symbol [ WatchUi %tmp.173 138 12 19 ];
-        %tmp.173 = getm $.Toybox.WatchUi;
-        symbol [ popView %tmp.174 138 20 27 ];
-        %tmp.174 = getv function %tmp.173 :popView;
-        symbol [ WatchUi %tmp.175 138 28 35 ];
-        %tmp.175 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_DOWN %tmp.176 138 36 46 ];
-        %tmp.176 = getv %tmp.175 :SLIDE_DOWN;
-        invoke %tmp.173 %tmp.174(%tmp.176);
+        symbol [ WatchUi %tmp.177 138 12 19 ];
+        %tmp.177 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.178 138 20 27 ];
+        %tmp.178 = getv function %tmp.177 :popView;
+        symbol [ WatchUi %tmp.179 138 28 35 ];
+        %tmp.179 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.180 138 36 46 ];
+        %tmp.180 = getv %tmp.179 :SLIDE_DOWN;
+        invoke %tmp.177 %tmp.178(%tmp.180);
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_137_38_139_8_stop:
         goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_137_13_139_8_if_end;
 C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_ExitMenu_mc_137_13_139_8_if_end:

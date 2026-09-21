@@ -10,6 +10,8 @@ module ScoreManager {
     // Wygrane sety w meczu (Wynik w setach np. 1:0, 2:1)
     var setsA as Number = 0;
     var setsB as Number = 0;
+    var matchScoreA as Number = 0;
+    var matchScoreB as Number = 0;
 
     class PointEvent {
         var team as String;          // "A" lub "B"
@@ -38,6 +40,9 @@ module ScoreManager {
 
     // Dodanie punktu dla Drużyny A
     function addScoreA(delta as Number) as Void {
+        if (setsA + setsB >= 5) {
+            return;
+        }
         scoreA += delta;
         if (scoreA < 0) {
             scoreA = 0;
@@ -47,11 +52,13 @@ module ScoreManager {
         pointHistory.add(event);
         System.println("PUNKT dla A | Sete Score: " + scoreA + ":" + scoreB + " | Sets: " + setsA + ":" + setsB);
         
-        checkSetWinCondition();
     }
 
     // Dodanie punktu dla Drużyny B
     function addScoreB(delta as Number) as Void {
+        if (setsA + setsB >= 5) {
+            return;
+        }
         scoreB += delta;
         if (scoreB < 0) {
             scoreB = 0;
@@ -61,22 +68,69 @@ module ScoreManager {
         pointHistory.add(event);
         System.println("PUNKT dla B | Sete Score: " + scoreA + ":" + scoreB + " | Sets: " + setsA + ":" + setsB);
         
-        checkSetWinCondition();
     }
 
-    // Sprawdzenie warunku wygrania seta (Siatkówka: do 25 pkt, z zachowaniem 2 pkt przewagi od 24:24)
-    function checkSetWinCondition() as Void {
-        // Warunek 1: Ktoś osiągnął >= 25 punktów i ma co najmniej 2 punkty przewagi
-        if ((scoreA >= 25 || scoreB >= 25) && (scoreA - scoreB >= 2 || scoreB - scoreA >= 2)) {
-            if (scoreA > scoreB) {
-                setsA += 1;
-                System.println(">>> DRUŻYNA A WYGRYWA SET! Stan setów: " + setsA + ":" + setsB);
-            } else {
-                setsB += 1;
-                System.println(">>> DRUŻYNA B WYGRYWA SET! Stan setów: " + setsA + ":" + setsB);
-            }
+    function removeScoreA() as Void {
+        if (scoreA > 0) {
+            scoreA--;
         }
     }
+
+    function removeScoreB() as Void {
+        if (scoreB > 0) {
+            scoreB--;
+        }
+    }
+
+    function isCurrentSetWon() as Boolean {
+        var target = (setsA + setsB >= 4) ? 15 : 25;
+        var scoreDifference = scoreA - scoreB;
+        return (scoreA >= target || scoreB >= target) &&
+            (scoreDifference >= 2 || scoreDifference <= -2);
+    }
+
+    function completeCurrentSet() as Boolean {
+        if (!isCurrentSetWon() || setsA + setsB >= 5) {
+            return false;
+        }
+
+        matchScoreA += scoreA;
+        matchScoreB += scoreB;
+        if (scoreA > scoreB) {
+            setsA++;
+        } else {
+            setsB++;
+        }
+
+        resetSetScore();
+        return true;
+    }
+
+    function finishCurrentSet() as Boolean {
+        if (scoreA == 0 && scoreB == 0) {
+            return false;
+        }
+
+        matchScoreA += scoreA;
+        matchScoreB += scoreB;
+        if (isCurrentSetWon() && setsA + setsB < 5) {
+            if (scoreA > scoreB) {
+                setsA++;
+            } else {
+                setsB++;
+            }
+        }
+
+        resetSetScore();
+        return true;
+    }
+
+    function getScoreA() as Number { return scoreA; }
+    function getScoreB() as Number { return scoreB; }
+    function getSetsA() as Number { return setsA; }
+    function getSetsB() as Number { return setsB; }
+    function getMatchScoreA() as Number { return matchScoreA + scoreA; }
+    function getMatchScoreB() as Number { return matchScoreB + scoreB; }
 
     // Reset punktów w bieżącym secie (wywoływane np. przy starcie nowego seta)
     function resetSetScore() as Void {
@@ -91,6 +145,8 @@ module ScoreManager {
         scoreB = 0;
         setsA = 0;
         setsB = 0;
+        matchScoreA = 0;
+        matchScoreB = 0;
         pointHistory = [] as Array<PointEvent>;
     }
 }

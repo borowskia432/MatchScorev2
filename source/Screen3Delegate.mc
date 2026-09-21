@@ -32,9 +32,7 @@ class Screen3Delegate extends WatchUi.BehaviorDelegate {
                 tUp.stop();
                 _upTimer = null;
                 // Podwójne kliknięcie UP: odejmij punkt Drużynie A (min. 0)
-                if (AppConfig.volleyballScoreA > 0) {
-                    AppConfig.volleyballScoreA--;
-                }
+                ScoreManager.removeScoreA();
                 WatchUi.requestUpdate();
             } else {
                 var timer = new Timer.Timer();
@@ -49,9 +47,7 @@ class Screen3Delegate extends WatchUi.BehaviorDelegate {
                 tDown.stop();
                 _downTimer = null;
                 // Podwójne kliknięcie DOWN: odejmij punkt Drużynie B (min. 0)
-                if (AppConfig.volleyballScoreB > 0) {
-                    AppConfig.volleyballScoreB--;
-                }
+                ScoreManager.removeScoreB();
                 WatchUi.requestUpdate();
             } else {
                 var timer = new Timer.Timer();
@@ -69,13 +65,13 @@ class Screen3Delegate extends WatchUi.BehaviorDelegate {
 
     function onKeyUpTimeout() as Void {
         _upTimer = null;
-        AppConfig.volleyballScoreA++;
+        ScoreManager.addScoreA(1);
         WatchUi.requestUpdate();
     }
 
     function onKeyDownTimeout() as Void {
         _downTimer = null;
-        AppConfig.volleyballScoreB++;
+        ScoreManager.addScoreB(1);
         WatchUi.requestUpdate();
     }
 
@@ -105,9 +101,9 @@ class Screen3Delegate extends WatchUi.BehaviorDelegate {
 
         // Ekran dotykowy - lewa strona dla drużyny A, prawa dla drużyny B
         if (coords[0] < screenWidth / 2) {
-            AppConfig.volleyballScoreA++;
+            ScoreManager.addScoreA(1);
         } else {
-            AppConfig.volleyballScoreB++;
+            ScoreManager.addScoreB(1);
         }
 
         WatchUi.requestUpdate();

@@ -23,7 +23,11 @@ class SummaryDelegate extends WatchUi.BehaviorDelegate {
         // Zapis sesji FIT do pamięci zegarka.
         // SessionManager pobiera końcowe statystyki
         // bezpośrednio z SportsMetricsManager.
-        SessionManager.saveSession();
+        var saved = SessionManager.saveSession();
+        if (!saved) {
+            System.println("SessionManager: Nie udalo sie zapisac sesji.");
+            return;
+        }
 
         // Po zapisie zamykamy aplikacje i wracamy do ekranu zegarka.
         System.exit();

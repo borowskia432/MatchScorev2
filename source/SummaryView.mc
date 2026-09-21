@@ -12,7 +12,7 @@ class SummaryView extends WatchUi.View {
     }
 
     function onUpdate(dc as Graphics.Dc) as Void {
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        dc.setColor(AppConfig.getBackgroundColor(), AppConfig.getBackgroundColor());
         dc.clear();
 
         var width = dc.getWidth();

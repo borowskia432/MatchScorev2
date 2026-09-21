@@ -61,9 +61,9 @@
     <string id="GoalUnits">goals</string>
     <string id="BurstLabel">Bursts</string>
     <string id="BurstUnits">bursts</string>
-    <string id="SetsALabel">Sety (A)</string>
-    <string id="SetsBLabel">Sety (B)</string>
-    <string id="SetsUnits">sety</string>
+    <string id="SetsALabel">Sets (A)</string>
+    <string id="SetsBLabel">Sets (B)</string>
+    <string id="SetsUnits">sets</string>
     <string id="SetResultLabel">Set result</string>
     <string id="SetResultUnits">set</string>
     <string id="Set1ALabel">Set 1 A</string>
@@ -79,12 +79,10 @@
     <!-- Zrywy i wysyskoki (widoki treningowe) -->
     <string id="LabelBursts">Sprints</string>
     <string id="LabelJumps">Jumps</string>
-    <string id="LabelSummarySprints">Sprints count</string>
-    <string id="LabelSummaryJumps">Jumps count</string>
+    <string id="LabelSummarySprints">Sprints</string>
+    <string id="LabelSummaryJumps">Jumps</string>
     <string id="JumpLabel">Jumps</string>
     <string id="JumpUnits">Jumps</string>
-    <string id="JumpChartLabel">Total jumps</string>
-    <string id="JumpChartTitle">Jumps over time</string>
     <!-- Wykres różnicy punktowej -->
     <string id="ScoreMarginChartLabel">Score Difference (A - B)</string>
     <string id="ScoreMarginDataLabel">Margin</string>

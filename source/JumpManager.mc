@@ -15,6 +15,8 @@ module JumpManager {
     var _calibrationSamples as Number = 0;
     var _calibrationSum as Float = 0.0;
     var _calibrationSumSquares as Float = 0.0;
+    var _calibrationMinG as Float = 10.0;
+    var _calibrationMaxG as Float = 0.0;
     var _restBaselineG as Float = 1.0;
     var _noiseG as Float = 0.05;
 
@@ -90,6 +92,8 @@ module JumpManager {
                 _calibrationSamples++;
                 _calibrationSum += magnitudeG;
                 _calibrationSumSquares += magnitudeG * magnitudeG;
+                if (magnitudeG < _calibrationMinG) { _calibrationMinG = magnitudeG; }
+                if (magnitudeG > _calibrationMaxG) { _calibrationMaxG = magnitudeG; }
             } else {
                 processSample(magnitudeG);
             }
@@ -104,6 +108,8 @@ module JumpManager {
         _calibrationSamples = 0;
         _calibrationSum = 0.0;
         _calibrationSumSquares = 0.0;
+        _calibrationMinG = 10.0;
+        _calibrationMaxG = 0.0;
         resetDetectionState();
     }
 
@@ -111,9 +117,16 @@ module JumpManager {
         if (_calibrationSamples > 10) {
             var average = _calibrationSum / _calibrationSamples;
             var variance = (_calibrationSumSquares / _calibrationSamples) - (average * average);
-            _restBaselineG = average;
-            _noiseG = Math.sqrt(variance > 0.0 ? variance : 0.0).toFloat();
-            Application.Storage.setValue(CALIBRATION_STORAGE_KEY, [_restBaselineG, _noiseG]);
+            var noise = Math.sqrt(variance > 0.0 ? variance : 0.0).toFloat();
+            var stable = (_calibrationMaxG - _calibrationMinG) <= 0.35;
+            var plausible = average >= 0.75 && average <= 1.25;
+            if (stable && plausible && noise <= 0.15) {
+                _restBaselineG = average;
+                _noiseG = noise;
+                Application.Storage.setValue(CALIBRATION_STORAGE_KEY, [_restBaselineG, _noiseG]);
+            } else {
+                System.println("JumpManager: kalibracja odrzucona - nadgarstek byl niestabilny");
+            }
         }
         _isCalibrating = false;
         resetDetectionState();
@@ -230,7 +243,6 @@ module JumpManager {
     // =====================================================
     function addJump() as Void {
         SportsMetricsManager.addJump();
-        SessionManager.recordJumpCount(SportsMetricsManager.getTotalJumps());
 
         System.println(
             "JumpManager: Wykryto wyskok! " +
@@ -245,7 +257,6 @@ module JumpManager {
     // =====================================================
     function addManualJump() as Void {
         SportsMetricsManager.addJump();
-        SessionManager.recordJumpCount(SportsMetricsManager.getTotalJumps());
 
         System.println(
             "JumpManager: Ręcznie dodano wyskok. " +

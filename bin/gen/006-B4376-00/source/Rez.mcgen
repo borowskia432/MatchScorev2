@@ -68,7 +68,6 @@ module Rez {
         (:initialized) var CloseHint as ResourceId;
         (:initialized) var SummaryTitle as ResourceId;
         (:initialized) var Set3ALabel as ResourceId;
-        (:initialized) var JumpChartTitle as ResourceId;
         (:initialized) var FootballRun as ResourceId;
         (:initialized) var DistanceUnit as ResourceId;
         (:initialized) var SetResultLabel as ResourceId;
@@ -93,7 +92,6 @@ module Rez {
         (:initialized) var ModeAuto as ResourceId;
         (:initialized) var BurstUnits as ResourceId;
         (:initialized) var Set2ALabel as ResourceId;
-        (:initialized) var JumpChartLabel as ResourceId;
         (:initialized) var JumpUnits as ResourceId;
         (:initialized) var GoalUnits as ResourceId;
         (:initialized) var ScreenColor as ResourceId;

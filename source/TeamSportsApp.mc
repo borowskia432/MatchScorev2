@@ -12,6 +12,9 @@ class MatchScoreV2App extends Application.AppBase {
     }
 
     function onStop(state as Dictionary or Null) as Void {
+        JumpManager.stop();
+        TimerManager.stopBackgroundTick();
+        GPSManager.stopGPS();
     }
 
     // Jawne rzutowanie na tablicę [ WatchUi.View, WatchUi.InputDelegate ] 

@@ -24,6 +24,8 @@ class JumpCalibrationView extends WatchUi.View {
     }
 
     function onShow() as Void {
+        _seconds = 0;
+        _complete = false;
         JumpManager.beginCalibration();
         _timer = new Timer.Timer();
         _timer.start(method(:onTick), 1000, true);

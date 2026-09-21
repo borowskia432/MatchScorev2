@@ -32,13 +32,9 @@ class Screen1View extends WatchUi.View {
     }
 
     function onShow() as Void {
-        // Uruchamiamy główny, modułowy timer z logiką
-        TimerManager.startBackgroundTick();
     }
 
     function onHide() as Void {
-        // Zatrzymujemy timer z logiką, gdy wychodzimy z widoku
-        TimerManager.stopBackgroundTick();
     }
 
     function onUpdate(dc as Graphics.Dc) as Void {

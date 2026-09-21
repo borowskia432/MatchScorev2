@@ -95,10 +95,10 @@ summaryData.jumpsCount = SportsMetricsManager.getTotalJumps();
                 // Konfiguracja dla siatkówki
                 summaryData.isVolleyball = true;
                 summaryData.hasScore = true;
-                summaryData.scoreTeamA = AppConfig.matchScoreA; 
-                summaryData.scoreTeamB = AppConfig.matchScoreB;
-                summaryData.setsTeamA = AppConfig.volleyballSetsA;
-                summaryData.setsTeamB = AppConfig.volleyballSetsB;
+                summaryData.scoreTeamA = ScoreManager.getMatchScoreA();
+                summaryData.scoreTeamB = ScoreManager.getMatchScoreB();
+                summaryData.setsTeamA = ScoreManager.getSetsA();
+                summaryData.setsTeamB = ScoreManager.getSetsB();
             } else {
                 // Konfiguracja dla piłki nożnej
                 summaryData.isVolleyball = false;

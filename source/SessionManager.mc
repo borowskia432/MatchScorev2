@@ -24,7 +24,6 @@ module SessionManager {
     var _footballScoreBField as FitContributor.Field or Null = null;
     var _burstSummaryField as FitContributor.Field or Null = null;
     var _jumpSummaryField as FitContributor.Field or Null = null;
-    var _jumpChartField as FitContributor.Field or Null = null;
     
     // NOWE: Pola podsumowania wyniku w setach
     var _setsASummaryField as FitContributor.Field or Null = null;
@@ -49,7 +48,6 @@ module SessionManager {
     const FIT_JUMP_SUM_ID = 14;
     const FIT_FOOTBALL_SCORE_A_ID = 15;
     const FIT_FOOTBALL_SCORE_B_ID = 16;
-    const FIT_JUMP_CHART_ID = 17;
 
     function isSessionActive() as Boolean {
         return (session != null) && session.isRecording();
@@ -116,12 +114,8 @@ module SessionManager {
                     { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "wyskoki" }
                 );
 
-                _jumpChartField = s.createField(
-                    "jump_count_total", FIT_JUMP_CHART_ID, FitContributor.DATA_TYPE_UINT16,
-                    { :mesgType => FitContributor.MESG_TYPE_RECORD, :units => "wyskoki" }
-                );
-
                 s.start();
+                TimerManager.startBackgroundTick();
                 if (sport == Activity.SPORT_VOLLEYBALL) {
                     JumpManager.start();
                 }
@@ -151,12 +145,6 @@ module SessionManager {
                     }
                 }
             }
-        }
-    }
-
-    function recordJumpCount(jumpCount as Number) as Void {
-        if (_jumpChartField != null) {
-            _jumpChartField.setData(jumpCount);
         }
     }
 
@@ -195,23 +183,19 @@ module SessionManager {
 
     // Wywoływane przy kliknięciu "Nowy set" z menu
     function finalizeCurrentSet() as Void {
-        var currentScoreA = AppConfig.volleyballScoreA;
-        var currentScoreB = AppConfig.volleyballScoreB;
-        var setNumber = AppConfig.volleyballSetsA + AppConfig.volleyballSetsB + 1;
+        var currentScoreA = ScoreManager.getScoreA();
+        var currentScoreB = ScoreManager.getScoreB();
+        var setNumber = ScoreManager.getSetsA() + ScoreManager.getSetsB() + 1;
 
-        if (setNumber <= 5 && (currentScoreA > 0 || currentScoreB > 0)) {
+        if (currentScoreA == 0 && currentScoreB == 0) {
+            return;
+        }
+
+        if (setNumber <= 5) {
             writeSetScore(setNumber, currentScoreA, currentScoreB);
         }
 
-        if (currentScoreA > currentScoreB) {
-            AppConfig.volleyballSetsA++;
-        } else if (currentScoreB > currentScoreA) {
-            AppConfig.volleyballSetsB++;
-        }
-
-        AppConfig.matchScoreA += currentScoreA;
-        AppConfig.matchScoreB += currentScoreB;
-        AppConfig.resetVolleyballScores();
+        ScoreManager.finishCurrentSet();
         SportsMetricsManager.resetSet();
     }
 
@@ -219,17 +203,17 @@ module SessionManager {
         var s = session;
         if (s != null) {
             JumpManager.stop();
+            TimerManager.stopBackgroundTick();
             
             // Zapisz niezatwierdzony, aktualnie wyświetlany set jako kolejny set sesji.
-            if (s.isRecording() && (AppConfig.volleyballScoreA > 0 || AppConfig.volleyballScoreB > 0)) {
-                var currentScoreA = AppConfig.volleyballScoreA;
-                var currentScoreB = AppConfig.volleyballScoreB;
-                var setNumber = AppConfig.volleyballSetsA + AppConfig.volleyballSetsB + 1;
+            if (ScoreManager.getScoreA() > 0 || ScoreManager.getScoreB() > 0) {
+                var currentScoreA = ScoreManager.getScoreA();
+                var currentScoreB = ScoreManager.getScoreB();
+                var setNumber = ScoreManager.getSetsA() + ScoreManager.getSetsB() + 1;
 
-                if (setNumber <= 5) { writeSetScore(setNumber, currentScoreA, currentScoreB); }
-                // Nie zwiększamy liczby setów tutaj, bo to już zostało policzone w finalizeCurrentSet().
-                AppConfig.matchScoreA += currentScoreA;
-                AppConfig.matchScoreB += currentScoreB;
+                if (setNumber <= 5) {
+                    writeSetScore(setNumber, currentScoreA, currentScoreB);
+                }
             }
 
             // Zapisz końcowy wynik setów oraz statystyki całej sesji.
@@ -238,8 +222,8 @@ module SessionManager {
                 if (_footballScoreBField != null) { _footballScoreBField.setData(ScoreManager.scoreB); }
             }
 
-            if (_setsASummaryField != null) { _setsASummaryField.setData(AppConfig.volleyballSetsA); }
-            if (_setsBSummaryField != null) { _setsBSummaryField.setData(AppConfig.volleyballSetsB); }
+            if (_setsASummaryField != null) { _setsASummaryField.setData(ScoreManager.getSetsA()); }
+            if (_setsBSummaryField != null) { _setsBSummaryField.setData(ScoreManager.getSetsB()); }
 
             if (_burstSummaryField != null) {
     _burstSummaryField.setData(
@@ -258,30 +242,32 @@ if (_jumpSummaryField != null) {
             }
 
             var success = s.save();
-            session = null;
-            _set1AField = null;
-            _set1BField = null;
-            _set2AField = null;
-            _set2BField = null;
-            _set3AField = null;
-            _set3BField = null;
-            _set4AField = null;
-            _set4BField = null;
-            _set5AField = null;
-            _set5BField = null;
-            _footballScoreAField = null;
-            _footballScoreBField = null;
-            _setsASummaryField = null;
-            _setsBSummaryField = null;
-            _burstSummaryField = null;
-            _jumpSummaryField = null;
-            _jumpChartField = null;
+            if (success) {
+                session = null;
+                _set1AField = null;
+                _set1BField = null;
+                _set2AField = null;
+                _set2BField = null;
+                _set3AField = null;
+                _set3BField = null;
+                _set4AField = null;
+                _set4BField = null;
+                _set5AField = null;
+                _set5BField = null;
+                _footballScoreAField = null;
+                _footballScoreBField = null;
+                _setsASummaryField = null;
+                _setsBSummaryField = null;
+                _burstSummaryField = null;
+                _jumpSummaryField = null;
+            }
 
             GPSManager.stopGPS();
             return success;
         }
 
         GPSManager.stopGPS();
+        TimerManager.stopBackgroundTick();
         return false;
     }
 
@@ -289,6 +275,7 @@ if (_jumpSummaryField != null) {
         var s = session;
         if (s != null) {
             JumpManager.stop();
+            TimerManager.stopBackgroundTick();
             if (s.isRecording()) {
                 s.stop();
             }
@@ -311,10 +298,10 @@ if (_jumpSummaryField != null) {
             _setsBSummaryField = null;
             _burstSummaryField = null;
             _jumpSummaryField = null;
-            _jumpChartField = null;
         }
 
         GPSManager.stopGPS();
+        TimerManager.stopBackgroundTick();
     }
 
     function isRecording() as Boolean {

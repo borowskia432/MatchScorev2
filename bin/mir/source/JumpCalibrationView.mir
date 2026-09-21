@@ -132,440 +132,448 @@ C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_17_2
     }
     [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 26; @symbol_functiondef = [onShow,26,13,19]; ]
     function onShow() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_26_30_30_4_start:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_26_30_32_4_start:
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 27 8 ]
-        symbol [ JumpManager %tmp.2 27 8 19 ];
-        %tmp.2 = getv ? :JumpManager;
-        symbol [ beginCalibration %tmp.3 27 20 36 ];
-        %tmp.3 = getv function %tmp.2 :beginCalibration;
-        invoke %tmp.2 %tmp.3();
+        %tmp.1 = 0;
+        symbol [ _seconds ? 27 8 16 ];
+        putv self :_seconds %tmp.1;
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 28 8 ]
-        symbol [ Timer %tmp.6 28 21 26 ];
-        %tmp.6 = getm $.Toybox.Timer;
-        symbol [ Timer %tmp.7 28 27 32 ];
-        %tmp.7 = getv function ? %tmp.6 :Timer;
-        %tmp.4 = newc %tmp.7 ();
-        symbol [ _timer ? 28 8 14 ];
-        putv self :_timer %tmp.4;
+        %tmp.2 = false;
+        symbol [ _complete ? 28 8 17 ];
+        putv self :_complete %tmp.2;
 [ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 29 8 ]
-        symbol [ _timer %tmp.9 29 8 14 ];
-        %tmp.9 = getv ? :_timer;
-        symbol [ start %tmp.10 29 15 20 ];
-        %tmp.10 = getv function %tmp.9 :start;
-        %tmp.11 = self;
-        symbol [ method %tmp.12 29 21 27 ];
-        %tmp.12 = getv function %tmp.11 :method;
-        %tmp.14 = const :onTick;
-        symbol [ onTick %tmp.14 29 29 35 const ];
-        %tmp.15 = invoke %tmp.11 %tmp.12(%tmp.14);
-        %tmp.16 = 1000;
-        %tmp.17 = true;
-        invoke %tmp.9 %tmp.10(%tmp.15, %tmp.16, %tmp.17);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_26_30_30_4_stop:
+        symbol [ JumpManager %tmp.4 29 8 19 ];
+        %tmp.4 = getv ? :JumpManager;
+        symbol [ beginCalibration %tmp.5 29 20 36 ];
+        %tmp.5 = getv function %tmp.4 :beginCalibration;
+        invoke %tmp.4 %tmp.5();
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 30 8 ]
+        symbol [ Timer %tmp.8 30 21 26 ];
+        %tmp.8 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.9 30 27 32 ];
+        %tmp.9 = getv function ? %tmp.8 :Timer;
+        %tmp.6 = newc %tmp.9 ();
+        symbol [ _timer ? 30 8 14 ];
+        putv self :_timer %tmp.6;
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 31 8 ]
+        symbol [ _timer %tmp.11 31 8 14 ];
+        %tmp.11 = getv ? :_timer;
+        symbol [ start %tmp.12 31 15 20 ];
+        %tmp.12 = getv function %tmp.11 :start;
+        %tmp.13 = self;
+        symbol [ method %tmp.14 31 21 27 ];
+        %tmp.14 = getv function %tmp.13 :method;
+        %tmp.16 = const :onTick;
+        symbol [ onTick %tmp.16 31 29 35 const ];
+        %tmp.17 = invoke %tmp.13 %tmp.14(%tmp.16);
+        %tmp.18 = 1000;
+        %tmp.19 = true;
+        invoke %tmp.11 %tmp.12(%tmp.17, %tmp.18, %tmp.19);
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_26_30_32_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 32; @symbol_functiondef = [onHide,32,13,19]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 34; @symbol_functiondef = [onHide,34,13,19]; ]
     function onHide() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_32_30_40_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 33 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_33_8_36_8_if_stmt:
-        symbol [ _timer %tmp.2 33 12 18 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_34_30_42_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 35 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_35_8_38_8_if_stmt:
+        symbol [ _timer %tmp.2 35 12 18 ];
         %tmp.2 = getv ? :_timer;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_33_8_36_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_33_8_36_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_33_28_36_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 34 12 ]
-        symbol [ _timer %tmp.6 34 12 18 ];
+        bf %tmp.4 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_35_8_38_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_35_8_38_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_35_28_38_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 36 12 ]
+        symbol [ _timer %tmp.6 36 12 18 ];
         %tmp.6 = getv ? :_timer;
         %tmp.7 = as %tmp.6 { (!Null) };
-        symbol [ stop %tmp.8 34 19 23 ];
+        symbol [ stop %tmp.8 36 19 23 ];
         %tmp.8 = getv function %tmp.7 :stop;
         invoke %tmp.7 %tmp.8();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 35 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 37 12 ]
         %tmp.9 = null;
-        symbol [ _timer ? 35 12 18 ];
+        symbol [ _timer ? 37 12 18 ];
         putv self :_timer %tmp.9;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_33_28_36_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_33_8_36_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_33_8_36_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 37 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_37_8_39_8_if_stmt:
-        symbol [ JumpManager %tmp.11 37 12 23 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_35_28_38_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_35_8_38_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_35_8_38_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 39 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_39_8_41_8_if_stmt:
+        symbol [ JumpManager %tmp.11 39 12 23 ];
         %tmp.11 = getv ? :JumpManager;
-        symbol [ isCalibrating %tmp.12 37 24 37 ];
+        symbol [ isCalibrating %tmp.12 39 24 37 ];
         %tmp.12 = getv function %tmp.11 :isCalibrating;
         %tmp.13 = invoke %tmp.11 %tmp.12();
-        bf %tmp.13 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_37_8_39_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_37_8_39_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_37_41_39_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 38 12 ]
-        symbol [ JumpManager %tmp.15 38 12 23 ];
+        bf %tmp.13 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_39_8_41_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_39_8_41_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_39_41_41_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 40 12 ]
+        symbol [ JumpManager %tmp.15 40 12 23 ];
         %tmp.15 = getv ? :JumpManager;
-        symbol [ cancelCalibration %tmp.16 38 24 41 ];
+        symbol [ cancelCalibration %tmp.16 40 24 41 ];
         %tmp.16 = getv function %tmp.15 :cancelCalibration;
         invoke %tmp.15 %tmp.16();
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_37_41_39_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_37_8_39_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_37_8_39_8_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_32_30_40_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_39_41_41_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_39_8_41_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_39_8_41_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_34_30_42_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 42; @symbol_functiondef = [onTick,42,13,19]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 44; @symbol_functiondef = [onTick,44,13,19]; ]
     function onTick() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_42_30_53_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 43 8 ]
-        symbol [ _seconds %tmp.3 43 8 16 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_44_30_55_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 45 8 ]
+        symbol [ _seconds %tmp.3 45 8 16 ];
         %tmp.3 = getv ? :_seconds;
         %tmp.4 = add %tmp.3 1;
-        symbol [ _seconds ? 43 8 16 ];
+        symbol [ _seconds ? 45 8 16 ];
         putv self :_seconds dup %tmp.4;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 44 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_44_8_51_8_if_stmt:
-        symbol [ _seconds %tmp.6 44 12 20 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 46 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_46_8_53_8_if_stmt:
+        symbol [ _seconds %tmp.6 46 12 20 ];
         %tmp.6 = getv ? :_seconds;
         %tmp.7 = 10;
         %tmp.8 = gte %tmp.6 %tmp.7;
-        bf %tmp.8 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_44_8_51_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_44_8_51_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_44_28_51_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 45 12 ]
-        symbol [ JumpManager %tmp.10 45 12 23 ];
+        bf %tmp.8 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_46_8_53_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_46_8_53_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_46_28_53_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 47 12 ]
+        symbol [ JumpManager %tmp.10 47 12 23 ];
         %tmp.10 = getv ? :JumpManager;
-        symbol [ finishCalibration %tmp.11 45 24 41 ];
+        symbol [ finishCalibration %tmp.11 47 24 41 ];
         %tmp.11 = getv function %tmp.10 :finishCalibration;
         invoke %tmp.10 %tmp.11();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 46 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 48 12 ]
         %tmp.12 = true;
-        symbol [ _complete ? 46 12 21 ];
+        symbol [ _complete ? 48 12 21 ];
         putv self :_complete %tmp.12;
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 47 12 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_47_12_50_12_if_stmt:
-        symbol [ _timer %tmp.14 47 16 22 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 49 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_49_12_52_12_if_stmt:
+        symbol [ _timer %tmp.14 49 16 22 ];
         %tmp.14 = getv ? :_timer;
         %tmp.15 = null;
         %tmp.16 = ne %tmp.14 %tmp.15;
-        bf %tmp.16 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_47_12_50_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_47_12_50_12_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_47_32_50_12_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 48 16 ]
-        symbol [ _timer %tmp.18 48 16 22 ];
+        bf %tmp.16 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_49_12_52_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_49_12_52_12_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_49_32_52_12_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 50 16 ]
+        symbol [ _timer %tmp.18 50 16 22 ];
         %tmp.18 = getv ? :_timer;
         %tmp.19 = as %tmp.18 { (!Null) };
-        symbol [ stop %tmp.20 48 23 27 ];
+        symbol [ stop %tmp.20 50 23 27 ];
         %tmp.20 = getv function %tmp.19 :stop;
         invoke %tmp.19 %tmp.20();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 49 16 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 51 16 ]
         %tmp.21 = null;
-        symbol [ _timer ? 49 16 22 ];
+        symbol [ _timer ? 51 16 22 ];
         putv self :_timer %tmp.21;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_47_32_50_12_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_47_12_50_12_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_47_12_50_12_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_44_28_51_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_44_8_51_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_44_8_51_8_if_end:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 52 8 ]
-        symbol [ WatchUi %tmp.22 52 8 15 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_49_32_52_12_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_49_12_52_12_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_49_12_52_12_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_46_28_53_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_46_8_53_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_46_8_53_8_if_end:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 54 8 ]
+        symbol [ WatchUi %tmp.22 54 8 15 ];
         %tmp.22 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.23 52 16 29 ];
+        symbol [ requestUpdate %tmp.23 54 16 29 ];
         %tmp.23 = getv function %tmp.22 :requestUpdate;
         invoke %tmp.22 %tmp.23();
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_42_30_53_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_44_30_55_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 55; @symbol_functiondef = [isComplete,55,13,23]; @symbol_return<0> = [Boolean,55,29,36]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 57; @symbol_functiondef = [isComplete,57,13,23]; @symbol_return<0> = [Boolean,57,29,36]; ]
     function isComplete() as Boolean {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_55_37_57_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 56 8 ]
-        symbol [ _complete %tmp.2 56 15 24 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_57_37_59_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 58 8 ]
+        symbol [ _complete %tmp.2 58 15 24 ];
         %tmp.2 = getv ? :_complete;
         ret %tmp.2;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_55_37_57_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_57_37_59_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 59; @symbol_functiondef = [onUpdate,59,13,21]; @symbol_param<0> = [dc,59,22,24]; @symbol_param<0>_type<0> = [Graphics,59,28,36]; @symbol_param<0>_type<1> = [Dc,59,37,39]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 61; @symbol_functiondef = [onUpdate,61,13,21]; @symbol_param<0> = [dc,61,22,24]; @symbol_param<0>_type<0> = [Graphics,61,28,36]; @symbol_param<0>_type<1> = [Dc,61,37,39]; ]
     function onUpdate(dc as Graphics.Dc) as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_59_49_77_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 60 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_59_49_77_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_59_49_77_4_stop" ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_61_49_79_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 62 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_61_49_79_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_61_49_79_4_stop" ]
         %width.1 = local;
-        symbol [ width %width.1 60 12 17 ];
+        symbol [ width %width.1 62 12 17 ];
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 60 20 22 ];
-        symbol [ getWidth %tmp.2 60 23 31 ];
+        symbol [ dc %tmp.1 62 20 22 ];
+        symbol [ getWidth %tmp.2 62 23 31 ];
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %width.1 %tmp.3;
-        symbol [ width %width.1 60 12 17 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 61 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_59_49_77_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_59_49_77_4_stop" ]
+        symbol [ width %width.1 62 12 17 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 63 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_61_49_79_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_61_49_79_4_stop" ]
         %height.2 = local;
-        symbol [ height %height.2 61 12 18 ];
+        symbol [ height %height.2 63 12 18 ];
         %tmp.4 = lgetv %dc;
-        symbol [ dc %tmp.4 61 21 23 ];
-        symbol [ getHeight %tmp.5 61 24 33 ];
+        symbol [ dc %tmp.4 63 21 23 ];
+        symbol [ getHeight %tmp.5 63 24 33 ];
         %tmp.5 = getv function %tmp.4 :getHeight;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         lputv %height.2 %tmp.6;
-        symbol [ height %height.2 61 12 18 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 62 8 ]
-        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_59_49_77_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_59_49_77_4_stop" ]
+        symbol [ height %height.2 63 12 18 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 64 8 ]
+        [ "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_61_49_79_4_start" "C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_61_49_79_4_stop" ]
         %cx.3 = local;
-        symbol [ cx %cx.3 62 12 14 ];
+        symbol [ cx %cx.3 64 12 14 ];
         %tmp.7 = lgetv %width.1;
-        symbol [ width %tmp.7 62 17 22 ];
+        symbol [ width %tmp.7 64 17 22 ];
         %tmp.8 = 2;
         %tmp.9 = div %tmp.7 %tmp.8;
         lputv %cx.3 %tmp.9;
-        symbol [ cx %cx.3 62 12 14 ];
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 64 8 ]
+        symbol [ cx %cx.3 64 12 14 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 66 8 ]
         %tmp.10 = lgetv %dc;
-        symbol [ dc %tmp.10 64 8 10 ];
-        symbol [ setColor %tmp.11 64 11 19 ];
+        symbol [ dc %tmp.10 66 8 10 ];
+        symbol [ setColor %tmp.11 66 11 19 ];
         %tmp.11 = getv function %tmp.10 :setColor;
-        symbol [ Graphics %tmp.12 64 20 28 ];
+        symbol [ Graphics %tmp.12 66 20 28 ];
         %tmp.12 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.13 64 29 40 ];
+        symbol [ COLOR_BLACK %tmp.13 66 29 40 ];
         %tmp.13 = getv %tmp.12 :COLOR_BLACK;
-        symbol [ Graphics %tmp.14 64 42 50 ];
+        symbol [ Graphics %tmp.14 66 42 50 ];
         %tmp.14 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.15 64 51 62 ];
+        symbol [ COLOR_BLACK %tmp.15 66 51 62 ];
         %tmp.15 = getv %tmp.14 :COLOR_BLACK;
         invoke %tmp.10 %tmp.11(%tmp.13, %tmp.15);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 65 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 67 8 ]
         %tmp.16 = lgetv %dc;
-        symbol [ dc %tmp.16 65 8 10 ];
-        symbol [ clear %tmp.17 65 11 16 ];
+        symbol [ dc %tmp.16 67 8 10 ];
+        symbol [ clear %tmp.17 67 11 16 ];
         %tmp.17 = getv function %tmp.16 :clear;
         invoke %tmp.16 %tmp.17();
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 66 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 68 8 ]
         %tmp.18 = lgetv %dc;
-        symbol [ dc %tmp.18 66 8 10 ];
-        symbol [ setColor %tmp.19 66 11 19 ];
+        symbol [ dc %tmp.18 68 8 10 ];
+        symbol [ setColor %tmp.19 68 11 19 ];
         %tmp.19 = getv function %tmp.18 :setColor;
-        symbol [ Graphics %tmp.20 66 20 28 ];
+        symbol [ Graphics %tmp.20 68 20 28 ];
         %tmp.20 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.21 66 29 40 ];
+        symbol [ COLOR_WHITE %tmp.21 68 29 40 ];
         %tmp.21 = getv %tmp.20 :COLOR_WHITE;
-        symbol [ Graphics %tmp.22 66 42 50 ];
+        symbol [ Graphics %tmp.22 68 42 50 ];
         %tmp.22 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.23 66 51 68 ];
+        symbol [ COLOR_TRANSPARENT %tmp.23 68 51 68 ];
         %tmp.23 = getv %tmp.22 :COLOR_TRANSPARENT;
         invoke %tmp.18 %tmp.19(%tmp.21, %tmp.23);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 68 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 70 8 ]
         %tmp.24 = lgetv %dc;
-        symbol [ dc %tmp.24 68 8 10 ];
-        symbol [ drawText %tmp.25 68 11 19 ];
+        symbol [ dc %tmp.24 70 8 10 ];
+        symbol [ drawText %tmp.25 70 11 19 ];
         %tmp.25 = getv function %tmp.24 :drawText;
         %tmp.26 = lgetv %cx.3;
-        symbol [ cx %tmp.26 68 20 22 ];
+        symbol [ cx %tmp.26 70 20 22 ];
         %tmp.27 = lgetv %height.2;
-        symbol [ height %tmp.27 68 24 30 ];
+        symbol [ height %tmp.27 70 24 30 ];
         %tmp.28 = 0.18;
         %tmp.29 = mul %tmp.27 %tmp.28;
-        symbol [ Graphics %tmp.30 68 39 47 ];
+        symbol [ Graphics %tmp.30 70 39 47 ];
         %tmp.30 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.31 68 48 58 ];
+        symbol [ FONT_SMALL %tmp.31 70 48 58 ];
         %tmp.31 = getv %tmp.30 :FONT_SMALL;
-        symbol [ _title %tmp.33 68 60 66 ];
+        symbol [ _title %tmp.33 70 60 66 ];
         %tmp.33 = getv ? :_title;
-        symbol [ Graphics %tmp.34 68 68 76 ];
+        symbol [ Graphics %tmp.34 70 68 76 ];
         %tmp.34 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.35 68 77 96 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.35 70 77 96 ];
         %tmp.35 = getv %tmp.34 :TEXT_JUSTIFY_CENTER;
-        symbol [ Graphics %tmp.36 68 99 107 ];
+        symbol [ Graphics %tmp.36 70 99 107 ];
         %tmp.36 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.37 68 108 128 ];
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.37 70 108 128 ];
         %tmp.37 = getv %tmp.36 :TEXT_JUSTIFY_VCENTER;
         %tmp.38 = bitor %tmp.35 %tmp.37;
         invoke %tmp.24 %tmp.25(%tmp.26, %tmp.29, %tmp.31, %tmp.33, %tmp.38);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 70 8 ]
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_70_8_76_8_if_stmt:
-        symbol [ _complete %tmp.40 70 12 21 ];
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 72 8 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_72_8_78_8_if_stmt:
+        symbol [ _complete %tmp.40 72 12 21 ];
         %tmp.40 = getv ? :_complete;
-        bf %tmp.40 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_70_8_76_8_if_else_false;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_70_8_76_8_if_true:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_70_23_73_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 71 12 ]
+        bf %tmp.40 @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_72_8_78_8_if_else_false;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_72_8_78_8_if_true:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_72_23_75_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 73 12 ]
         %tmp.41 = lgetv %dc;
-        symbol [ dc %tmp.41 71 12 14 ];
-        symbol [ drawText %tmp.42 71 15 23 ];
+        symbol [ dc %tmp.41 73 12 14 ];
+        symbol [ drawText %tmp.42 73 15 23 ];
         %tmp.42 = getv function %tmp.41 :drawText;
         %tmp.43 = lgetv %cx.3;
-        symbol [ cx %tmp.43 71 24 26 ];
+        symbol [ cx %tmp.43 73 24 26 ];
         %tmp.44 = lgetv %height.2;
-        symbol [ height %tmp.44 71 28 34 ];
+        symbol [ height %tmp.44 73 28 34 ];
         %tmp.45 = 0.43;
         %tmp.46 = mul %tmp.44 %tmp.45;
-        symbol [ Graphics %tmp.47 71 43 51 ];
+        symbol [ Graphics %tmp.47 73 43 51 ];
         %tmp.47 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.48 71 52 62 ];
+        symbol [ FONT_SMALL %tmp.48 73 52 62 ];
         %tmp.48 = getv %tmp.47 :FONT_SMALL;
-        symbol [ _done %tmp.50 71 64 69 ];
+        symbol [ _done %tmp.50 73 64 69 ];
         %tmp.50 = getv ? :_done;
-        symbol [ Graphics %tmp.51 71 71 79 ];
+        symbol [ Graphics %tmp.51 73 71 79 ];
         %tmp.51 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.52 71 80 99 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.52 73 80 99 ];
         %tmp.52 = getv %tmp.51 :TEXT_JUSTIFY_CENTER;
-        symbol [ Graphics %tmp.53 71 102 110 ];
+        symbol [ Graphics %tmp.53 73 102 110 ];
         %tmp.53 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.54 71 111 131 ];
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.54 73 111 131 ];
         %tmp.54 = getv %tmp.53 :TEXT_JUSTIFY_VCENTER;
         %tmp.55 = bitor %tmp.52 %tmp.54;
         invoke %tmp.41 %tmp.42(%tmp.43, %tmp.46, %tmp.48, %tmp.50, %tmp.55);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 72 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 74 12 ]
         %tmp.56 = lgetv %dc;
-        symbol [ dc %tmp.56 72 12 14 ];
-        symbol [ drawText %tmp.57 72 15 23 ];
+        symbol [ dc %tmp.56 74 12 14 ];
+        symbol [ drawText %tmp.57 74 15 23 ];
         %tmp.57 = getv function %tmp.56 :drawText;
         %tmp.58 = lgetv %cx.3;
-        symbol [ cx %tmp.58 72 24 26 ];
+        symbol [ cx %tmp.58 74 24 26 ];
         %tmp.59 = lgetv %height.2;
-        symbol [ height %tmp.59 72 28 34 ];
+        symbol [ height %tmp.59 74 28 34 ];
         %tmp.60 = 0.68;
         %tmp.61 = mul %tmp.59 %tmp.60;
-        symbol [ Graphics %tmp.62 72 43 51 ];
+        symbol [ Graphics %tmp.62 74 43 51 ];
         %tmp.62 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.63 72 52 62 ];
+        symbol [ FONT_XTINY %tmp.63 74 52 62 ];
         %tmp.63 = getv %tmp.62 :FONT_XTINY;
-        symbol [ _ready %tmp.65 72 64 70 ];
+        symbol [ _ready %tmp.65 74 64 70 ];
         %tmp.65 = getv ? :_ready;
-        symbol [ Graphics %tmp.66 72 72 80 ];
+        symbol [ Graphics %tmp.66 74 72 80 ];
         %tmp.66 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.67 72 81 100 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.67 74 81 100 ];
         %tmp.67 = getv %tmp.66 :TEXT_JUSTIFY_CENTER;
-        symbol [ Graphics %tmp.68 72 103 111 ];
+        symbol [ Graphics %tmp.68 74 103 111 ];
         %tmp.68 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.69 72 112 132 ];
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.69 74 112 132 ];
         %tmp.69 = getv %tmp.68 :TEXT_JUSTIFY_VCENTER;
         %tmp.70 = bitor %tmp.67 %tmp.69;
         invoke %tmp.56 %tmp.57(%tmp.58, %tmp.61, %tmp.63, %tmp.65, %tmp.70);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_70_23_73_8_stop:
-        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_70_8_76_8_if_end;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_70_8_76_8_if_else_false:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_73_15_76_8_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 74 12 ]
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_72_23_75_8_stop:
+        goto @C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_72_8_78_8_if_end;
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_72_8_78_8_if_else_false:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_75_15_78_8_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 76 12 ]
         %tmp.71 = lgetv %dc;
-        symbol [ dc %tmp.71 74 12 14 ];
-        symbol [ drawText %tmp.72 74 15 23 ];
+        symbol [ dc %tmp.71 76 12 14 ];
+        symbol [ drawText %tmp.72 76 15 23 ];
         %tmp.72 = getv function %tmp.71 :drawText;
         %tmp.73 = lgetv %cx.3;
-        symbol [ cx %tmp.73 74 24 26 ];
+        symbol [ cx %tmp.73 76 24 26 ];
         %tmp.74 = lgetv %height.2;
-        symbol [ height %tmp.74 74 28 34 ];
+        symbol [ height %tmp.74 76 28 34 ];
         %tmp.75 = 0.36;
         %tmp.76 = mul %tmp.74 %tmp.75;
-        symbol [ Graphics %tmp.77 74 43 51 ];
+        symbol [ Graphics %tmp.77 76 43 51 ];
         %tmp.77 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.78 74 52 62 ];
+        symbol [ FONT_XTINY %tmp.78 76 52 62 ];
         %tmp.78 = getv %tmp.77 :FONT_XTINY;
-        symbol [ _instruction %tmp.80 74 64 76 ];
+        symbol [ _instruction %tmp.80 76 64 76 ];
         %tmp.80 = getv ? :_instruction;
-        symbol [ Graphics %tmp.81 74 78 86 ];
+        symbol [ Graphics %tmp.81 76 78 86 ];
         %tmp.81 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.82 74 87 106 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.82 76 87 106 ];
         %tmp.82 = getv %tmp.81 :TEXT_JUSTIFY_CENTER;
-        symbol [ Graphics %tmp.83 74 109 117 ];
+        symbol [ Graphics %tmp.83 76 109 117 ];
         %tmp.83 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.84 74 118 138 ];
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.84 76 118 138 ];
         %tmp.84 = getv %tmp.83 :TEXT_JUSTIFY_VCENTER;
         %tmp.85 = bitor %tmp.82 %tmp.84;
         invoke %tmp.71 %tmp.72(%tmp.73, %tmp.76, %tmp.78, %tmp.80, %tmp.85);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 75 12 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 77 12 ]
         %tmp.86 = lgetv %dc;
-        symbol [ dc %tmp.86 75 12 14 ];
-        symbol [ drawText %tmp.87 75 15 23 ];
+        symbol [ dc %tmp.86 77 12 14 ];
+        symbol [ drawText %tmp.87 77 15 23 ];
         %tmp.87 = getv function %tmp.86 :drawText;
         %tmp.88 = lgetv %cx.3;
-        symbol [ cx %tmp.88 75 24 26 ];
+        symbol [ cx %tmp.88 77 24 26 ];
         %tmp.89 = lgetv %height.2;
-        symbol [ height %tmp.89 75 28 34 ];
+        symbol [ height %tmp.89 77 28 34 ];
         %tmp.90 = 0.58;
         %tmp.91 = mul %tmp.89 %tmp.90;
-        symbol [ Graphics %tmp.92 75 43 51 ];
+        symbol [ Graphics %tmp.92 77 43 51 ];
         %tmp.92 = getm $.Toybox.Graphics;
-        symbol [ FONT_NUMBER_HOT %tmp.93 75 52 67 ];
+        symbol [ FONT_NUMBER_HOT %tmp.93 77 52 67 ];
         %tmp.93 = getv %tmp.92 :FONT_NUMBER_HOT;
-        symbol [ Lang %tmp.94 75 69 73 ];
+        symbol [ Lang %tmp.94 77 69 73 ];
         %tmp.94 = getm $.Toybox.Lang;
-        symbol [ format %tmp.95 75 74 80 ];
+        symbol [ format %tmp.95 77 74 80 ];
         %tmp.95 = getv function %tmp.94 :format;
-        symbol [ _progress %tmp.97 75 81 90 ];
+        symbol [ _progress %tmp.97 77 81 90 ];
         %tmp.97 = getv ? :_progress;
         %tmp.98 = newa 1;
-        symbol [ _seconds %tmp.100 75 93 101 ];
+        symbol [ _seconds %tmp.100 77 93 101 ];
         %tmp.100 = getv ? :_seconds;
         %tmp.101 = dup %tmp.98;
         %tmp.102 = aputv %tmp.101 0 %tmp.100;
         %tmp.103 = invoke %tmp.94 %tmp.95(%tmp.97, %tmp.102);
-        symbol [ Graphics %tmp.104 75 105 113 ];
+        symbol [ Graphics %tmp.104 77 105 113 ];
         %tmp.104 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.105 75 114 133 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.105 77 114 133 ];
         %tmp.105 = getv %tmp.104 :TEXT_JUSTIFY_CENTER;
-        symbol [ Graphics %tmp.106 75 136 144 ];
+        symbol [ Graphics %tmp.106 77 136 144 ];
         %tmp.106 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.107 75 145 165 ];
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.107 77 145 165 ];
         %tmp.107 = getv %tmp.106 :TEXT_JUSTIFY_VCENTER;
         %tmp.108 = bitor %tmp.105 %tmp.107;
         invoke %tmp.86 %tmp.87(%tmp.88, %tmp.91, %tmp.93, %tmp.103, %tmp.108);
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_73_15_76_8_stop:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_70_8_76_8_if_end:
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_59_49_77_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_75_15_78_8_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_72_8_78_8_if_end:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_61_49_79_4_stop:
     }
 }
-[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 80; @symbol_classdef = [JumpCalibrationDelegate,80,6,29]; @symbol_extends<0> = [WatchUi,80,38,45]; @symbol_extends<1> = [BehaviorDelegate,80,46,62]; ]
+[ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 82; @symbol_classdef = [JumpCalibrationDelegate,82,6,29]; @symbol_extends<0> = [WatchUi,82,38,45]; @symbol_extends<1> = [BehaviorDelegate,82,46,62]; ]
 class JumpCalibrationDelegate extends WatchUi.BehaviorDelegate {
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 80; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 82; ]
     <init> {
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 80; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 82; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 82; @symbol_functiondef = [initialize,82,13,23]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 84; @symbol_functiondef = [initialize,84,13,23]; ]
     function initialize() as Void {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_82_26_84_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 83 8 ]
-        symbol [ BehaviorDelegate %tmp.2 83 8 24 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_84_26_86_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 85 8 ]
+        symbol [ BehaviorDelegate %tmp.2 85 8 24 ];
         %tmp.2 = getv ? :BehaviorDelegate;
-        symbol [ initialize %tmp.3 83 25 35 ];
+        symbol [ initialize %tmp.3 85 25 35 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_82_26_84_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_84_26_86_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 86; @symbol_functiondef = [onBack,86,13,19]; @symbol_return<0> = [Boolean,86,25,32]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 88; @symbol_functiondef = [onBack,88,13,19]; @symbol_return<0> = [Boolean,88,25,32]; ]
     function onBack() as Boolean {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_86_33_89_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 87 8 ]
-        symbol [ WatchUi %tmp.1 87 8 15 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_88_33_91_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 89 8 ]
+        symbol [ WatchUi %tmp.1 89 8 15 ];
         %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ popView %tmp.2 87 16 23 ];
+        symbol [ popView %tmp.2 89 16 23 ];
         %tmp.2 = getv function %tmp.1 :popView;
-        symbol [ WatchUi %tmp.3 87 24 31 ];
+        symbol [ WatchUi %tmp.3 89 24 31 ];
         %tmp.3 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_DOWN %tmp.4 87 32 42 ];
+        symbol [ SLIDE_DOWN %tmp.4 89 32 42 ];
         %tmp.4 = getv %tmp.3 :SLIDE_DOWN;
         invoke %tmp.1 %tmp.2(%tmp.4);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 88 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 90 8 ]
         %tmp.5 = true;
         ret %tmp.5;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_86_33_89_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_88_33_91_4_stop:
     }
-    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 91; @symbol_functiondef = [onSelect,91,13,21]; @symbol_return<0> = [Boolean,91,27,34]; ]
+    [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 93; @symbol_functiondef = [onSelect,93,13,21]; @symbol_return<0> = [Boolean,93,27,34]; ]
     function onSelect() as Boolean {
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_91_35_94_4_start:
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 92 8 ]
-        symbol [ WatchUi %tmp.1 92 8 15 ];
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_93_35_96_4_start:
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 94 8 ]
+        symbol [ WatchUi %tmp.1 94 8 15 ];
         %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ popView %tmp.2 92 16 23 ];
+        symbol [ popView %tmp.2 94 16 23 ];
         %tmp.2 = getv function %tmp.1 :popView;
-        symbol [ WatchUi %tmp.3 92 24 31 ];
+        symbol [ WatchUi %tmp.3 94 24 31 ];
         %tmp.3 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_DOWN %tmp.4 92 32 42 ];
+        symbol [ SLIDE_DOWN %tmp.4 94 32 42 ];
         %tmp.4 = getv %tmp.3 :SLIDE_DOWN;
         invoke %tmp.1 %tmp.2(%tmp.4);
-[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 93 8 ]
+[ "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc" 95 8 ]
         %tmp.5 = true;
         ret %tmp.5;
-C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_91_35_94_4_stop:
+C__Users_Arek_Desktop_MatchScore_MatchScoreV2_source_JumpCalibrationView_mc_93_35_96_4_stop:
     }
 }
 [ @file = "C:\Users\Arek\Desktop\MatchScore\MatchScoreV2\source\JumpCalibrationView.mc"; @line = 1; ]

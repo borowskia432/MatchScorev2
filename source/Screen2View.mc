@@ -28,7 +28,6 @@ class Screen2View extends WatchUi.View {
     }
 
     function onRefresh() as Void {
-        BurstManager.update();
         WatchUi.requestUpdate();
     }
 

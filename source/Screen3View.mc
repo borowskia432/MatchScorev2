@@ -33,13 +33,9 @@ class Screen3View extends WatchUi.View {
     }
 
     function onShow() as Void {
-        // Uruchamiamy główny, modułowy timer z logiką
-        TimerManager.startBackgroundTick();
     }
 
     function onHide() as Void {
-        // Zatrzymujemy timer z logiką, gdy wychodzimy z widoku
-        TimerManager.stopBackgroundTick();
     }
 
     function onUpdate(dc as Graphics.Dc) as Void {
@@ -58,14 +54,14 @@ class Screen3View extends WatchUi.View {
         HrArcRenderer.draw(dc, cx, height / 2, screenSize);
 
         // 1. Stan setów
-        var setsString = _setsLabel + ": " + AppConfig.volleyballSetsA.toString() + " - " + AppConfig.volleyballSetsB.toString();
+        var setsString = _setsLabel + ": " + ScoreManager.getSetsA().toString() + " - " + ScoreManager.getSetsB().toString();
         dc.drawText(cx, height * 0.161, Graphics.FONT_XTINY, setsString, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
  // 2. Etykiety Drużyn
         dc.drawText(cx - (65 * horizontalScale), height * 0.286, Graphics.FONT_SMALL, _teamALabel, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.drawText(cx + (65 * horizontalScale), height * 0.286, Graphics.FONT_SMALL, _teamBLabel, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         // 3. Wyniki
-        var scoreString = AppConfig.volleyballScoreA.toString() + " : " + AppConfig.volleyballScoreB.toString();
+        var scoreString = ScoreManager.getScoreA().toString() + " : " + ScoreManager.getScoreB().toString();
         dc.drawText(cx, height * 0.464, Graphics.FONT_NUMBER_HOT, scoreString, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         // Dane aktywności

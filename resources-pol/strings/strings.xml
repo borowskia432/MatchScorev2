@@ -45,10 +45,25 @@
     <string id="SetsALabel">Sety (A)</string>
     <string id="SetsBLabel">Sety (B)</string>
     <string id="SetsUnits">sety</string>
+    <string id="SetResultLabel">Wynik seta</string>
+    <string id="SetResultUnits">set</string>
+    <string id="Set1ALabel">Set 1 A</string>
+    <string id="Set1BLabel">Set 1 B</string>
+    <string id="Set2ALabel">Set 2 A</string>
+    <string id="Set2BLabel">Set 2 B</string>
+    <string id="Set3ALabel">Set 3 A</string>
+    <string id="Set3BLabel">Set 3 B</string>
+    <string id="Set4ALabel">Set 4 A</string>
+    <string id="Set4BLabel">Set 4 B</string>
+    <string id="Set5ALabel">Set 5 A</string>
+    <string id="Set5BLabel">Set 5 B</string>
     <!-- Wyniki i Statystyki bieżące -->
     <string id="ScoreALabel">Wynik Drużyny A</string>
     <string id="ScoreBLabel">Wynik Drużyny B</string>
     <string id="ScoreUnits">pkt</string>
+    <string id="FootballScoreALabel">Drużyna A</string>
+    <string id="FootballScoreBLabel">Drużyna B</string>
+    <string id="GoalUnits">bramki</string>
     <string id="BurstLabel">Zrywy</string>
     <string id="BurstUnits">zrywów</string>
     

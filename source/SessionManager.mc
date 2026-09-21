@@ -9,9 +9,19 @@ module SessionManager {
 
     var session as ActivityRecording.Session or Null = null;
 
-    // Pola podsumowania końcowego sesji (cały mecz)
-    var _scoreASummaryField as FitContributor.Field or Null = null;
-    var _scoreBSummaryField as FitContributor.Field or Null = null;
+    // Wynik każdego seta zapisany jako osobne pole sesji FIT
+    var _set1AField as FitContributor.Field or Null = null;
+    var _set1BField as FitContributor.Field or Null = null;
+    var _set2AField as FitContributor.Field or Null = null;
+    var _set2BField as FitContributor.Field or Null = null;
+    var _set3AField as FitContributor.Field or Null = null;
+    var _set3BField as FitContributor.Field or Null = null;
+    var _set4AField as FitContributor.Field or Null = null;
+    var _set4BField as FitContributor.Field or Null = null;
+    var _set5AField as FitContributor.Field or Null = null;
+    var _set5BField as FitContributor.Field or Null = null;
+    var _footballScoreAField as FitContributor.Field or Null = null;
+    var _footballScoreBField as FitContributor.Field or Null = null;
     var _burstSummaryField as FitContributor.Field or Null = null;
     var _jumpSummaryField as FitContributor.Field or Null = null;
     
@@ -19,35 +29,25 @@ module SessionManager {
     var _setsASummaryField as FitContributor.Field or Null = null;
     var _setsBSummaryField as FitContributor.Field or Null = null;
 
-    // Pola przypisane do konkretnego lapa / seta (rozpiska na każdy set)
-    var _lapScoreAField as FitContributor.Field or Null = null;
-    var _lapScoreBField as FitContributor.Field or Null = null;
-    var _lapSetResultField as FitContributor.Field or Null = null;
-    var _lapBurstField as FitContributor.Field or Null = null;
-    var _lapJumpField as FitContributor.Field or Null = null;
-
     var _nextLapDistanceMeters as Float = 1000.0;
-    var _lastLapScoreA as Number = 0;
-    var _lastLapScoreB as Number = 0;
 
     // Unikalne ID dla pól FIT (Session)
-    const FIT_SCORE_A_SUM_ID = 1;
-    const FIT_SCORE_B_SUM_ID = 2;
-    const FIT_BURST_SUM_ID = 3;
-    const FIT_JUMP_SUM_ID = 4;
-    const FIT_SETS_A_SUM_ID = 5; // ID dla setów
-    const FIT_SETS_B_SUM_ID = 6; // ID dla setów
-
-    // Unikalne ID dla pól FIT (Lap / Set)
-    const FIT_LAP_SCORE_A_ID = 11;
-    const FIT_LAP_SCORE_B_ID = 12;
-    const FIT_LAP_SET_RESULT_ID = 13;
-    const FIT_LAP_BURST_ID = 14;
-    const FIT_LAP_JUMP_ID = 15;
-
-    function formatSetResultLabel(setNumber as Number, scoreA as Number, scoreB as Number) as String {
-        return "Set " + setNumber.toString() + " A" + scoreA.toString() + ":" + scoreB.toString() + "B";
-    }
+    const FIT_SET_1_A_ID = 1;
+    const FIT_SET_1_B_ID = 2;
+    const FIT_SET_2_A_ID = 3;
+    const FIT_SET_2_B_ID = 4;
+    const FIT_SET_3_A_ID = 5;
+    const FIT_SET_3_B_ID = 6;
+    const FIT_SET_4_A_ID = 7;
+    const FIT_SET_4_B_ID = 8;
+    const FIT_SET_5_A_ID = 9;
+    const FIT_SET_5_B_ID = 10;
+    const FIT_SETS_A_SUM_ID = 11;
+    const FIT_SETS_B_SUM_ID = 12;
+    const FIT_BURST_SUM_ID = 13;
+    const FIT_JUMP_SUM_ID = 14;
+    const FIT_FOOTBALL_SCORE_A_ID = 15;
+    const FIT_FOOTBALL_SCORE_B_ID = 16;
 
     function isSessionActive() as Boolean {
         return (session != null) && session.isRecording();
@@ -59,10 +59,11 @@ module SessionManager {
             
             // Wyresetuj stan meczu przy starcie nowej sesji
             AppConfig.resetMatch();
+            ScoreManager.resetScore();
             GPSManager.startGPS();
-SportsMetricsManager.resetSession();
-BurstManager.reset();
-JumpManager.reset();
+            SportsMetricsManager.resetSession();
+            BurstManager.reset();
+            JumpManager.reset();
             session = ActivityRecording.createSession({
                 :name => sessionName,
                 :sport => sport,
@@ -73,18 +74,24 @@ JumpManager.reset();
 
             var s = session;
             if (s != null) {
-                // --- POLA SESJI (Podsumowanie całego meczu) ---
-                _scoreASummaryField = s.createField(
-                    "score_a_final", FIT_SCORE_A_SUM_ID, FitContributor.DATA_TYPE_UINT16,
-                    { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "pkt" }
-                );
+                if (sport == Activity.SPORT_VOLLEYBALL) {
+                    // --- WYNIKI POSZCZEGOLNYCH SETOW (pola sesji) ---
+                    _set1AField = s.createField("set_1_a", FIT_SET_1_A_ID, FitContributor.DATA_TYPE_UINT16, { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "pkt" });
+                    _set1BField = s.createField("set_1_b", FIT_SET_1_B_ID, FitContributor.DATA_TYPE_UINT16, { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "pkt" });
+                    _set2AField = s.createField("set_2_a", FIT_SET_2_A_ID, FitContributor.DATA_TYPE_UINT16, { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "pkt" });
+                    _set2BField = s.createField("set_2_b", FIT_SET_2_B_ID, FitContributor.DATA_TYPE_UINT16, { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "pkt" });
+                    _set3AField = s.createField("set_3_a", FIT_SET_3_A_ID, FitContributor.DATA_TYPE_UINT16, { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "pkt" });
+                    _set3BField = s.createField("set_3_b", FIT_SET_3_B_ID, FitContributor.DATA_TYPE_UINT16, { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "pkt" });
+                    _set4AField = s.createField("set_4_a", FIT_SET_4_A_ID, FitContributor.DATA_TYPE_UINT16, { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "pkt" });
+                    _set4BField = s.createField("set_4_b", FIT_SET_4_B_ID, FitContributor.DATA_TYPE_UINT16, { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "pkt" });
+                    _set5AField = s.createField("set_5_a", FIT_SET_5_A_ID, FitContributor.DATA_TYPE_UINT16, { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "pkt" });
+                    _set5BField = s.createField("set_5_b", FIT_SET_5_B_ID, FitContributor.DATA_TYPE_UINT16, { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "pkt" });
+                } else {
+                    _footballScoreAField = s.createField("football_score_a", FIT_FOOTBALL_SCORE_A_ID, FitContributor.DATA_TYPE_UINT16, { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "bramki" });
+                    _footballScoreBField = s.createField("football_score_b", FIT_FOOTBALL_SCORE_B_ID, FitContributor.DATA_TYPE_UINT16, { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "bramki" });
+                }
 
-                _scoreBSummaryField = s.createField(
-                    "score_b_final", FIT_SCORE_B_SUM_ID, FitContributor.DATA_TYPE_UINT16,
-                    { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "pkt" }
-                );
-                
-                // NOWE: Pola do zapisu ostatecznego wyniku w setach
+                // --- POLA PODSUMOWANIA SESJI ---
                 _setsASummaryField = s.createField(
                     "sets_a_final", FIT_SETS_A_SUM_ID, FitContributor.DATA_TYPE_UINT8,
                     { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "sety" }
@@ -105,34 +112,8 @@ JumpManager.reset();
                     { :mesgType => FitContributor.MESG_TYPE_SESSION, :units => "wyskoki" }
                 );
 
-                // --- POLA LAPA (Statystyki dla każdego seta z osobna) ---
-                _lapScoreAField = s.createField(
-                    "set_score_a", FIT_LAP_SCORE_A_ID, FitContributor.DATA_TYPE_UINT16,
-                    { :mesgType => FitContributor.MESG_TYPE_LAP, :units => "pkt" }
-                );
-
-                _lapScoreBField = s.createField(
-                    "set_score_b", FIT_LAP_SCORE_B_ID, FitContributor.DATA_TYPE_UINT16,
-                    { :mesgType => FitContributor.MESG_TYPE_LAP, :units => "pkt" }
-                );
-
-                _lapSetResultField = s.createField(
-                    "set_result_label", FIT_LAP_SET_RESULT_ID, FitContributor.DATA_TYPE_STRING,
-                    { :mesgType => FitContributor.MESG_TYPE_LAP, :units => "set" }
-                );
-
-                _lapBurstField = s.createField(
-                    "set_bursts", FIT_LAP_BURST_ID, FitContributor.DATA_TYPE_UINT16,
-                    { :mesgType => FitContributor.MESG_TYPE_LAP, :units => "zrywów" }
-                );
-
-                _lapJumpField = s.createField(
-                    "set_jumps", FIT_LAP_JUMP_ID, FitContributor.DATA_TYPE_UINT16,
-                    { :mesgType => FitContributor.MESG_TYPE_LAP, :units => "wyskoki" }
-                );
-
                 s.start();
-                System.println("SessionManager: Sesja wystartowała z obsługą pól FIT (Sesja + Lapy).");
+                System.println("SessionManager: Sesja wystartowała z polami FIT dla setów.");
             }
         }
     }
@@ -175,21 +156,34 @@ JumpManager.reset();
         }
     }
 
-    function writeLapSnapshot(scoreA as Number, scoreB as Number, bursts as Number, jumps as Number, setNumber as Number) as Void {
-        _lastLapScoreA = scoreA;
-        _lastLapScoreB = scoreB;
-
-        if (_lapScoreAField != null) { _lapScoreAField.setData(scoreA); }
-        if (_lapScoreBField != null) { _lapScoreBField.setData(scoreB); }
-        if (_lapSetResultField != null) { _lapSetResultField.setData(formatSetResultLabel(setNumber, scoreA, scoreB)); }
-        if (_lapBurstField != null)  { _lapBurstField.setData(bursts); }
-        if (_lapJumpField != null)   { _lapJumpField.setData(jumps); }
+    function writeSetScore(setNumber as Number, scoreA as Number, scoreB as Number) as Void {
+        if (setNumber == 1) {
+            if (_set1AField != null) { _set1AField.setData(scoreA); }
+            if (_set1BField != null) { _set1BField.setData(scoreB); }
+        } else if (setNumber == 2) {
+            if (_set2AField != null) { _set2AField.setData(scoreA); }
+            if (_set2BField != null) { _set2BField.setData(scoreB); }
+        } else if (setNumber == 3) {
+            if (_set3AField != null) { _set3AField.setData(scoreA); }
+            if (_set3BField != null) { _set3BField.setData(scoreB); }
+        } else if (setNumber == 4) {
+            if (_set4AField != null) { _set4AField.setData(scoreA); }
+            if (_set4BField != null) { _set4BField.setData(scoreB); }
+        } else if (setNumber == 5) {
+            if (_set5AField != null) { _set5AField.setData(scoreA); }
+            if (_set5BField != null) { _set5BField.setData(scoreB); }
+        }
     }
 
     // Wywoływane przy kliknięciu "Nowy set" z menu
     function finalizeCurrentSet() as Void {
         var currentScoreA = AppConfig.volleyballScoreA;
         var currentScoreB = AppConfig.volleyballScoreB;
+        var setNumber = AppConfig.volleyballSetsA + AppConfig.volleyballSetsB + 1;
+
+        if (setNumber <= 5 && (currentScoreA > 0 || currentScoreB > 0)) {
+            writeSetScore(setNumber, currentScoreA, currentScoreB);
+        }
 
         if (currentScoreA > currentScoreB) {
             AppConfig.volleyballSetsA++;
@@ -197,62 +191,33 @@ JumpManager.reset();
             AppConfig.volleyballSetsB++;
         }
 
-        addManualLap();
-    }
-
-    function addManualLap() as Void {
-        var s = session;
-        if (s != null && s.isRecording()) {
-            var currentScoreA = AppConfig.volleyballScoreA;
-            var currentScoreB = AppConfig.volleyballScoreB;
-            var currentBursts = SportsMetricsManager.getSetBursts();
-            var currentJumps = SportsMetricsManager.getSetJumps();
-            var setNumber = AppConfig.volleyballSetsA + AppConfig.volleyballSetsB;
-
-            if (setNumber <= 0) {
-                setNumber = 1;
-            }
-
-            writeLapSnapshot(currentScoreA, currentScoreB, currentBursts, currentJumps, setNumber);
-            AppConfig.matchScoreA += currentScoreA;
-            AppConfig.matchScoreB += currentScoreB;
-
-            s.addLap();
-            AppConfig.resetVolleyballScores();
-            SportsMetricsManager.resetSet();
-        }
+        AppConfig.matchScoreA += currentScoreA;
+        AppConfig.matchScoreB += currentScoreB;
+        AppConfig.resetVolleyballScores();
+        SportsMetricsManager.resetSet();
     }
 
     function saveSession() as Boolean {
         var s = session;
         if (s != null) {
             
-            // 1. Zapisz dane OSTATNIEGO (aktywnego) seta do pól lapa przed zamknięciem sesji
-            if (s.isRecording()) {
+            // Zapisz niezatwierdzony, aktualnie wyświetlany set jako kolejny set sesji.
+            if (s.isRecording() && (AppConfig.volleyballScoreA > 0 || AppConfig.volleyballScoreB > 0)) {
                 var currentScoreA = AppConfig.volleyballScoreA;
                 var currentScoreB = AppConfig.volleyballScoreB;
-                var currentBursts = SportsMetricsManager.getSetBursts();
-                var currentJumps  = SportsMetricsManager.getSetJumps();
                 var setNumber = AppConfig.volleyballSetsA + AppConfig.volleyballSetsB + 1;
 
-                if (currentScoreA == 0 && currentScoreB == 0 && (_lastLapScoreA > 0 || _lastLapScoreB > 0)) {
-                    currentScoreA = _lastLapScoreA;
-                    currentScoreB = _lastLapScoreB;
-                }
-
-                writeLapSnapshot(currentScoreA, currentScoreB, currentBursts, currentJumps, setNumber);
-
+                if (setNumber <= 5) { writeSetScore(setNumber, currentScoreA, currentScoreB); }
                 // Nie zwiększamy liczby setów tutaj, bo to już zostało policzone w finalizeCurrentSet().
-                // Wartości session summary zapisujemy jako bieżące, już zatwierdzone stany.
                 AppConfig.matchScoreA += currentScoreA;
                 AppConfig.matchScoreB += currentScoreB;
-
-                s.addLap();
             }
 
-            // 2. Zapisz skumulowane dane całego meczu w polach sesji FIT (PUNKTY I SETY)
-            if (_scoreASummaryField != null) { _scoreASummaryField.setData(AppConfig.matchScoreA); }
-            if (_scoreBSummaryField != null) { _scoreBSummaryField.setData(AppConfig.matchScoreB); }
+            // Zapisz końcowy wynik setów oraz statystyki całej sesji.
+            if (AppConfig.selectedSportEnum != Activity.SPORT_VOLLEYBALL) {
+                if (_footballScoreAField != null) { _footballScoreAField.setData(ScoreManager.scoreA); }
+                if (_footballScoreBField != null) { _footballScoreBField.setData(ScoreManager.scoreB); }
+            }
 
             if (_setsASummaryField != null) { _setsASummaryField.setData(AppConfig.volleyballSetsA); }
             if (_setsBSummaryField != null) { _setsBSummaryField.setData(AppConfig.volleyballSetsB); }
@@ -275,17 +240,22 @@ if (_jumpSummaryField != null) {
 
             var success = s.save();
             session = null;
-            _scoreASummaryField = null;
-            _scoreBSummaryField = null;
+            _set1AField = null;
+            _set1BField = null;
+            _set2AField = null;
+            _set2BField = null;
+            _set3AField = null;
+            _set3BField = null;
+            _set4AField = null;
+            _set4BField = null;
+            _set5AField = null;
+            _set5BField = null;
+            _footballScoreAField = null;
+            _footballScoreBField = null;
             _setsASummaryField = null;
             _setsBSummaryField = null;
             _burstSummaryField = null;
             _jumpSummaryField = null;
-            _lapScoreAField = null;
-            _lapScoreBField = null;
-            _lapSetResultField = null;
-            _lapBurstField = null;
-            _lapJumpField = null;
 
             GPSManager.stopGPS();
             return success;
@@ -304,17 +274,22 @@ if (_jumpSummaryField != null) {
             s.discard();
             session = null;
             
-            _scoreASummaryField = null;
-            _scoreBSummaryField = null;
+            _set1AField = null;
+            _set1BField = null;
+            _set2AField = null;
+            _set2BField = null;
+            _set3AField = null;
+            _set3BField = null;
+            _set4AField = null;
+            _set4BField = null;
+            _set5AField = null;
+            _set5BField = null;
+            _footballScoreAField = null;
+            _footballScoreBField = null;
             _setsASummaryField = null;
             _setsBSummaryField = null;
             _burstSummaryField = null;
             _jumpSummaryField = null;
-            _lapScoreAField = null;
-            _lapScoreBField = null;
-            _lapSetResultField = null;
-            _lapBurstField = null;
-            _lapJumpField = null;
         }
 
         GPSManager.stopGPS();

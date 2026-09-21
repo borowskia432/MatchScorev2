@@ -46,11 +46,26 @@
     <string id="ScoreALabel">Team A Score</string>
     <string id="ScoreBLabel">Team B Score</string>
     <string id="ScoreUnits">pts</string>
+    <string id="FootballScoreALabel">Team A</string>
+    <string id="FootballScoreBLabel">Team B</string>
+    <string id="GoalUnits">goals</string>
     <string id="BurstLabel">Bursts</string>
     <string id="BurstUnits">bursts</string>
     <string id="SetsALabel">Sety (A)</string>
     <string id="SetsBLabel">Sety (B)</string>
     <string id="SetsUnits">sety</string>
+    <string id="SetResultLabel">Set result</string>
+    <string id="SetResultUnits">set</string>
+    <string id="Set1ALabel">Set 1 A</string>
+    <string id="Set1BLabel">Set 1 B</string>
+    <string id="Set2ALabel">Set 2 A</string>
+    <string id="Set2BLabel">Set 2 B</string>
+    <string id="Set3ALabel">Set 3 A</string>
+    <string id="Set3BLabel">Set 3 B</string>
+    <string id="Set4ALabel">Set 4 A</string>
+    <string id="Set4BLabel">Set 4 B</string>
+    <string id="Set5ALabel">Set 5 A</string>
+    <string id="Set5BLabel">Set 5 B</string>
     <!-- Zrywy i wysyskoki (widoki treningowe) -->
     <string id="LabelBursts">Sprints</string>
     <string id="LabelJumps">Jumps</string>
